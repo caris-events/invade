@@ -151,7 +151,7 @@
                     <template x-for="vocab in vocabs(12)">
                         <div class="column">
                             <a :href="`{{ .BaseURL }}/v/${vocab.word}`" class="ts-box">
-                                <div class="ts-content is-horizontally-padded">
+                                <div class="ts-content tablet+:is-horizontally-padded">
                                     <div class="ts-text is-bold is-1-lines tablet+:has-16px mobile:has-15px" x-text="vocab.word"></div>
                                     <div class="ts-text is-secondary is-1-lines" x-text="vocab.correct_word"></div>
                                 </div>

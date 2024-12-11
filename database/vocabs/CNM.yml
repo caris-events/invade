@@ -1,0 +1,19 @@
+#
+word    : CNM
+bopomofo:
+
+#
+category: SWEAR
+explicit: LANGUAGE
+
+#
+description: |
+  中文是「操你媽」。
+
+#
+examples:
+  - words      : [幹你娘]
+    correct    : |
+      {{幹你娘}}，遊戲這麼簡單都不會玩？
+    incorrect  : |
+      {{CNM}}，遊戲這麼簡單都不會玩？

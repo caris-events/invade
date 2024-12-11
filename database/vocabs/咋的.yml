@@ -1,0 +1,25 @@
+#
+word    : 咋的
+bopomofo: ㄗㄚˊ ㄉㄧˋ
+
+#
+category: ADVERB
+explicit:
+
+#
+description: |
+  是中國方言，用來表示「怎麼樣」「如何」的意思。注音可作「ㄓㄚˋ」或「ㄗㄚˊ」。
+
+#
+examples:
+  - words      : [怎麼樣]
+    correct    : |
+      那家餐廳吃起來不{{怎麼樣}}。
+    incorrect  : |
+      那家餐廳吃起來不{{咋的}}。
+
+  - words      : [不管怎樣]
+    correct    : |
+      今天{{不管怎樣}}也要做完這份工作。
+    incorrect  : |
+      今天{{咋的}}也要做完這份工作。

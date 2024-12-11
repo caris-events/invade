@@ -1,0 +1,19 @@
+#
+word    : 毛玻璃
+bopomofo: ㄇㄠˊ ㄅㄛ ㄌㄧˊ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  指一種表面粗糙、不透明的玻璃材質，常用於隔間、窗戶等裝飾。
+
+#
+examples:
+  - words      : [磨砂玻璃, 霧面玻璃]
+    correct    : |
+      客廳採用{{磨砂玻璃}}，可以避免外面看進來。
+    incorrect  : |
+      客廳採用{{毛玻璃}}，可以避免外面看進來。

@@ -1,0 +1,25 @@
+#
+word    : 沒誰了
+bopomofo: ㄇㄟˊ ㄕㄟˊ ㄌㄜ˙
+
+#
+category: SLANG
+explicit:
+
+#
+description: |
+  通常用於貶義，形容某人的行為太愚蠢而沒辦法被超越。
+
+#
+examples:
+  - words      : [無人能敵, 沒人能超越]
+    correct    : |
+      你這理解能力也是{{無人能敵}}。
+    incorrect  : |
+      你這理解能力也是{{沒誰了}}。
+
+  - words      : [敗給你]
+    correct    : |
+      你能說出這種話，還真是{{敗給你}}了。
+    incorrect  : |
+      你能說出這種話，也是{{沒誰了}}。

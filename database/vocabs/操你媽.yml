@@ -1,0 +1,19 @@
+#
+word    : 操你媽
+bopomofo: ㄘㄠˋ ㄋㄧˇ ㄇㄚ
+
+#
+category: SWEAR
+explicit: LANGUAGE
+
+#
+description: |
+  也做「肏/糙/草你媽」，是辱罵對方的母親的詞彙。中國拼音為「CNM」。
+
+#
+examples:
+  - words      : [幹你娘]
+    correct    : |
+      {{幹你娘}}，遊戲這麼簡單都不會玩？
+    incorrect  : |
+      {{操你媽}}，遊戲這麼簡單都不會玩？

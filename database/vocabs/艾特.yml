@@ -1,0 +1,25 @@
+#
+word    : 艾特
+bopomofo: ㄞˋ ㄊㄜˋ
+
+#
+category: INTERNET
+explicit:
+
+#
+description: |
+  在網路上透過「@」標註他人，讓對方知道某則消息。
+
+#
+examples:
+  - words      : [標註]
+    correct    : |
+      被我{{標註}}的人，記得要來參加聚會。
+    incorrect  : |
+      被我{{艾特}}的人，記得要來參加聚會。
+
+  - words      : [提醒]
+    correct    : |
+      有什麼最新消息，記得{{提醒}}我。
+    incorrect  : |
+      有什麼最新消息，記得{{艾特}}我。

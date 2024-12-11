@@ -1,0 +1,19 @@
+#
+word    : 傻逼
+bopomofo: ㄕㄚˇ ㄅㄧ
+
+#
+category: SWEAR
+explicit: LANGUAGE
+
+#
+description: |
+  指一個人比笨蛋還蠢，常被寫成中國拼音「SB」。
+
+#
+examples:
+  - words      : [白痴]
+    correct    : |
+      他什麼都能搞砸，真是個{{白痴}}。
+    incorrect  : |
+      他什麼都能搞砸，真是個{{傻逼}}。
