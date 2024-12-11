@@ -2,8 +2,10 @@ package main
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/caris-events/invade/cmd/build/compiler"
+	"github.com/caris-events/invade/cmd/build/config"
 	"github.com/caris-events/invade/cmd/build/draw"
 	"github.com/caris-events/invade/cmd/build/serialize"
 	"github.com/caris-events/invade/cmd/build/view"
@@ -11,6 +13,10 @@ import (
 )
 
 func build(c *cli.Context) error {
+	if err := os.RemoveAll(config.PathDocs); err != nil {
+		return fmt.Errorf("remove docs: %w", err)
+	}
+
 	items, err := compiler.CompileItems()
 	if err != nil {
 		return fmt.Errorf("compile items: %w", err)
