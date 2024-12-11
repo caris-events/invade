@@ -1,0 +1,31 @@
+#
+code       : news-market
+parent_code:
+
+#
+name       : 上下游新聞
+name_alias : News&Market
+name_others: [上下游新聞市集, 上下游文化工場有限公司]
+
+#
+category: MEDIA
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.newsmarket.com.tw/
+description: |
+  [[news-market]] 是著重在農業的台灣新聞平台，在 2023 年的《雞蛋事件》炒作而獲不少知名度。
+
+#
+information:
+  - year       : 2023
+    invasion   : MANIPULATED
+    description: |
+      [[news-market]] 在未經查證下，發布「缺蛋會缺到明年春節」新聞而引起民眾恐慌。
+
+  - year       : 2023
+    invasion   : MANIPULATED
+    description: |
+      [[news-market]] 在《Facebook》表示「台灣已經缺蛋 3、4 年」，過幾天卻改口表示「全台灣雞蛋目前剩餘太多」。
+

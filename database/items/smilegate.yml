@@ -1,0 +1,29 @@
+#
+code       : smilegate
+parent_code:
+
+#
+name       : 微笑之門
+name_alias : SmileGate
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.smilegate.com/
+description: |
+  [[smilegate]] 是韓國的遊戲開發與代理公司。
+
+#
+information:
+  - invasion   : SUPPORTED
+    description: |
+      [[smilegate]] 旗下 [[stove]] 註冊頁面將台灣納入中國的一省。
+
+  - year       : 2023
+    invasion   : COLLABORATED
+    description: |
+      [[smilegate]] 旗下《失落的方舟》台灣伺服器暫停營運，只因開服時間比中國早。

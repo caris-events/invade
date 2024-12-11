@@ -1,0 +1,21 @@
+#
+code       : long-cheng
+parent_code: xd-network
+
+#
+name       : 龍成網路
+name_alias : Long Cheng
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.txwy.tw/
+description: |
+  [[long-cheng]] 是在台空殼公司，主要代理中國遊戲。當 [[long-cheng]] 試圖規避 [[xd-network]] 名義時，可能會改用 [[peiyu-digital]] 代理中國遊戲。
+
+#
+information:

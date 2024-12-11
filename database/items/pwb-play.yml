@@ -1,0 +1,21 @@
+#
+code       : pwb-play
+parent_code:
+
+#
+name       : 品玩邦藝術
+name_alias : PWB Play
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : http://pwbplay.com/
+description: |
+  [[pwb-play]] 是在台灣註冊的空殼公司，專門代理中國遊戲。
+
+#
+information:

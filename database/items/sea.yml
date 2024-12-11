@@ -1,0 +1,24 @@
+#
+code       : sea
+parent_code:
+
+#
+name       : 冬海集團
+name_alias : Sea Limited
+name_others:
+
+#
+category: GROUP
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.sea.com/
+description: |
+  [[sea]] 是新加坡的一間大型控股公司。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[sea]] 的創辦人是中國商人李小冬，大股東是 [[tencent]]。

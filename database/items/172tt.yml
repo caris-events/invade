@@ -1,0 +1,21 @@
+#
+code       : 172tt
+parent_code: baitian
+
+#
+name       : 天梯互娛
+name_alias : 172TT
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.172tt.com/
+description: |
+  [[172tt]] 是廣州百田信息集團旗下的綜合娛樂品牌，以遊戲研發與發行為核心業務。
+
+#
+information:

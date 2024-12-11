@@ -1,0 +1,24 @@
+#
+code       : rolling-dice-labs
+parent_code:
+
+#
+name       : Rolling Dice Labs
+name_alias :
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://mjmeta.io/zh-cht/index
+description: |
+    [[rolling-dice-labs]] 是區塊鏈遊戲公司，這是間沒有可靠背景的空殼公司。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[rolling-dice-labs]] 的創辦人是中國商人 Brice Vong，網站表示員工曾任職於 [[tencent]]、[[netease]]。

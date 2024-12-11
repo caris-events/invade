@@ -1,0 +1,21 @@
+#
+code       : mobimon
+parent_code: shenqu-games
+
+#
+name       : 移動怪獸
+name_alias : MobiMon
+name_others: [Gamon]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://secure.gamon.net/
+description: |
+  [[mobimon]] 是在台灣註冊的公司，主要代理中國手機遊戲。
+
+#
+information:

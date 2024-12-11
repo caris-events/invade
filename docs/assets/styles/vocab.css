@@ -1,0 +1,120 @@
+#單字-板岩 {
+    position: relative;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--ts-gray-300);
+    overflow: hidden;
+}
+.裝置-行動 #單字-板岩 {
+    background: var(--ts-gray-50);
+    padding: 1.5rem 1rem;
+    margin-top: -1.5rem;
+}
+
+#單字-板岩-角落文字 {
+    font-size: 130px;
+    position: absolute;
+    bottom: -71px;
+    right: -26px;
+    font-weight: bold;
+    color: var(--ts-gray-300);
+    opacity: 0.4;
+    user-select: none;
+    pointer-events: none;
+}
+.裝置-行動 #單字-板岩-角落文字 {
+    font-size: 45px;
+    right: -8px;
+    bottom: -22px;
+    opacity: 0.3;
+}
+
+.單字-板岩-每個分解 {
+    display: inline-flex;
+    min-width: 90px;
+    min-height: 95px;
+    gap: 0.5rem;
+    border: 3px solid var(--ts-gray-300);
+    padding: 0.8em;
+    line-height: 1;
+    border-radius: 1rem;
+    z-index: 1;
+    background: var(--ts-gray-50);
+}
+.裝置-行動 .單字-板岩-每個分解 {
+    border: 0;
+    padding: 0;
+    min-width: auto;
+    min-height: auto;
+    gap: 0.25rem;
+}
+
+.單字-板岩-每個分解-漢字 {
+    flex: 1;
+    font-size: 45px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.裝置-行動 .單字-板岩-每個分解-漢字 {
+    font-size: 30px;
+}
+
+.單字-板岩-每個分解-注音 {
+    position: relative;
+}
+.裝置-行動 .單字-板岩-每個分解-注音 {
+    font-size: 12px;
+}
+
+.單字-板岩-每個分解-注音:has(.單字-板岩-每個分解-注音-標點符號) {
+    margin-right: 0.5rem;
+}
+
+.單字-板岩-每個分解-注音-標點符號 {
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    transform: translateY(-50%);
+    font-size: 22px;
+}
+.裝置-行動 .單字-板岩-每個分解-注音-標點符號 {
+    font-size: 18px;
+}
+
+#單字-板岩-說明 {
+    width: 50%;
+    position: relative;
+    z-index: 1;
+}
+.裝置-行動 #單字-板岩-說明 {
+    width: 100%;
+}
+
+.單字-螢光標記-重點 {
+    text-decoration: underline wavy var(--ts-gray-500);
+    text-underline-offset: 2px;
+}
+
+.單字-螢光標記-其他單字 {
+    text-decoration: underline dotted var(--ts-gray-500);
+    text-underline-offset: 2px;
+}
+
+#單字-板岩-消歧義 {
+    color: #00adea;
+}
+
+.單字-範例符號 {
+    margin-right: 0.5rem;
+    font-size: var(--ts-font-size-14px);
+}
+
+.單字-對應國家 {
+    padding: 0 0.7rem;
+    display: inline-block;
+    border: 1px solid var(--ts-gray-300);
+    white-space: nowrap;
+    line-height: 1.7;
+    font-size: var(--ts-font-size-14px);
+}

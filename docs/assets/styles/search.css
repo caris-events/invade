@@ -1,0 +1,13 @@
+.搜尋-項目 {
+    text-decoration: none;
+}
+.搜尋-項目 .ts-divider {
+    pointer-events: none;
+}
+.搜尋-項目:last-child .ts-divider {
+    display: none;
+}
+.裝置-行動 #搜尋-項目容器 {
+    border-top: 0;
+    margin-top: 1px;
+}

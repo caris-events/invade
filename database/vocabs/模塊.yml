@@ -1,0 +1,19 @@
+#
+word    : 模塊
+bopomofo: ㄇㄛˊ ㄎㄨㄞˋ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  指可以獨立拆卸的功能或零件。
+
+#
+examples:
+  - words      : [模組]
+    correct    : |
+      這款手機的每個{{模組}}都可以獨立拆卸。
+    incorrect  : |
+      這款手機的每個{{模塊}}都可以獨立拆卸。

@@ -1,0 +1,21 @@
+#
+code       : kingsgroup
+parent_code: funplus
+
+#
+name       : 王者在線
+name_alias : KingsGroup
+name_others: [北京能量盒科技]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.kingsgroup.cn/
+description: |
+  [[kingsgroup]] 是中國北京的一間遊戲開發商。
+
+#
+information:

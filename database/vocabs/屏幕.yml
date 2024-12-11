@@ -1,0 +1,19 @@
+#
+word    : 屏幕
+bopomofo: ㄆㄧㄥˊ ㄇㄨˋ
+
+#
+category: HARDWARE
+explicit:
+
+#
+description: |
+  指呈現內容畫面的螢幕。
+
+#
+examples:
+  - words      : [螢幕]
+    correct    : |
+      我的智慧型手機{{螢幕}}大小是六吋。
+    incorrect  : |
+      我的[[智能]]手機{{屏幕}}大小是六吋。

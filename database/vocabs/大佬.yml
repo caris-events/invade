@@ -1,0 +1,25 @@
+#
+word    : 大佬
+bopomofo: ㄉㄚˋ ㄌㄠˇ
+
+#
+category: PRONOUN
+explicit:
+
+#
+description: |
+  對有經驗之人的尊稱，有時用於調侃對方永遠都比自己厲害。
+
+#
+examples:
+  - words      : [高手]
+    correct    : |
+      真厲害！不愧是{{高手}}。
+    incorrect  : |
+      真[[牛逼]]！不愧是{{大佬}}。
+
+  - words      : [大大]
+    correct    : |
+      想請教{{大大}}，這題該怎麼解決？
+    incorrect  : |
+      想請教{{大佬}}，這題該怎麼解決？

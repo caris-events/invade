@@ -1,0 +1,24 @@
+#
+code       : trip-com
+parent_code: ctrip
+
+#
+name       : Trip.com
+name_alias :
+name_others:
+
+#
+category: TRAVEL
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://trip.com/
+description: |
+  [[trip-com]] 是中國上海的一間旅遊訂票網站。
+
+#
+information:
+  - invasion   : MANIPULATED
+    description: |
+      [[trip-com]] 網站的語系設定裡，台灣國旗被拿掉並改為「繁」字。

@@ -1,0 +1,24 @@
+#
+code       : tangren-media
+parent_code:
+
+#
+name       : 唐人影視
+name_alias : Tangren Media
+name_others: [Chinese Entertainment Tianjin Limited]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.tangrenmedia.com
+description: |
+  [[tangren-media]] 是中國天津的一家影音文化製作公司，旗下亦有藝人經紀業務，播送管道有電視、網際網路。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[tangren-media]] 的主要營運者是中國商人蔡藝儂，也是 [[zlon-game]] 營運者的老婆。

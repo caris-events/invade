@@ -1,0 +1,25 @@
+#
+code       : koimi-studio
+parent_code: 172tt
+
+#
+name       : 箜羽工作室
+name_alias : Koimi Studio
+name_others: [光核工作室]
+
+#
+category: ENTERTAINMENT
+type    : GROUP
+owner   : CHINESE
+
+#
+website    : https://weibo.com/u/7754127341
+description: |
+  [[koimi-studio]] 是中國廣州的一家遊戲開發工作室。
+
+#
+information:
+  - year       : 2023
+    invasion   : FUNDED
+    description: |
+      [[koimi-studio]] 的主要負責人是中國商人周劍，但已離職並自行成立了 [[bluepoch]]。

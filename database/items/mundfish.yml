@@ -1,0 +1,24 @@
+#
+code       : mundfish
+parent_code:
+
+#
+name       : Mundfish
+name_alias :
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://mundfish.com/
+description: |
+  [[mundfish]] 是俄羅斯的一間電腦遊戲開發公司。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[mundfish]] 的主要投資者是 [[tencent]] 與 [[gaijin-entertainment]]。

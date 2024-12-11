@@ -1,0 +1,33 @@
+#
+code       : cover-corporation
+parent_code:
+
+#
+name       : Cover 株式會社
+name_alias : Cover Corporation
+name_others:
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://cover-corp.com/
+description: |
+  [[cover-corporation]] 是一間主攻 AR、VR 技術的日本科技公司。
+
+#
+information:
+  - year       : 2020
+    invasion   : SUPPORTED
+    description: |
+      [[cover-corporation]] 旗下 [[hololive]] 藝人在分享 YouTube 後台數據時，因報表將台灣列為國家，[[cover-corporation]] 在微博發表聲明道歉並支持「一個中國」政策。
+
+  - year       : 2024
+    invasion   : COLLABORATED
+    source     : https://web.archive.org/web/20241202163702/https://ibb.co/jvb8WtD
+    description: |
+      [[cover-corporation]] 旗下 [[hololive]] 工商宣傳 [[huawei]] 智慧型手錶。
+
+

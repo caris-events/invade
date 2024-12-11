@@ -1,0 +1,24 @@
+#
+code       : douyu
+parent_code:
+
+#
+name       : 鬥魚
+name_alias : Douyu
+name_others: [鬥魚直播, 鬥魚網路]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.douyu.com/
+description: |
+  [[douyu]] 是中國的一間線上直播網站，多數為遊戲或電競內容。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[douyu]] 的大股東是中國商人陳少杰，投資者有 [[netease]] 與 [[sequoia-china]]。

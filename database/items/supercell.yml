@@ -1,0 +1,21 @@
+#
+code       : supercell
+parent_code: tencent
+
+#
+name       : 超級細胞
+name_alias : Supercell Oy
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://supercell.com/en/
+description: |
+  [[supercell]] 是芬蘭的一間手機遊戲開發、發行商，開發的遊戲大多免費但有內購。
+
+#
+information:

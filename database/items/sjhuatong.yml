@@ -1,0 +1,24 @@
+#
+code      : sjhuatong
+parent_code:
+
+#
+name       : 世紀華通
+name_alias : CHT
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.sjhuatong.com/
+description: |
+  [[sjhuatong]] 是中國浙江的一家汽車零件公司，後續轉型網路遊戲產業。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[sjhuatong]] 的大股東是中國商人王佶。

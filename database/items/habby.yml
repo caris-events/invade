@@ -1,0 +1,24 @@
+#
+code       : habby
+parent_code:
+
+#
+name       : 海彼網路
+name_alias : Habby
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.habby.cn/
+description: |
+  [[habby]] 是中國的手機遊戲開發商。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[habby]] 的大股東是中國商人王嗣恩，是前 [[cheetah_mobile]] 的遊戲業務負責人。

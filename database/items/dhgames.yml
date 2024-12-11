@@ -1,0 +1,24 @@
+#
+code       : dhgames
+parent_code:
+
+#
+name       : 卓杭科技
+name_alias : DHGames
+name_others: [Droid Hang]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.droidhang.com/
+description: |
+  [[dhgames]] 是中國成都的一家手機遊戲開發公司。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[dhgames]] 的大股東是中國商人王偉與 [[lilith-games]]。

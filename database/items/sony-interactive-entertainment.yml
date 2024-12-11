@@ -1,0 +1,21 @@
+#
+code       : sony-interactive-entertainment
+parent_code: sony
+
+#
+name       : 索尼互動娛樂
+name_alias : Sony Interactive Entertainment
+name_others: [SIE]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.playstation.com/
+description: |
+  [[sony-interactive-entertainment]] 是日本的電子遊戲製造與發行商。
+
+#
+information:

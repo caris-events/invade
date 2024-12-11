@@ -1,0 +1,25 @@
+#
+word    : 直白
+bopomofo: ㄓˊ ㄅㄞˊ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  直接明確使人易懂。
+
+#
+examples:
+  - words      : [直接]
+    correct    : |
+      你可以把話說得更{{直接}}一點嗎？
+    incorrect  : |
+      你可以把話說得更{{直白}}一點嗎？
+
+  - words      : [明確]
+    correct    : |
+      這個故事設計不夠{{明確}}，無法一目瞭然。
+    incorrect  : |
+      這個故事設計不夠{{直白}}，無法一目瞭然。

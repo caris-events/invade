@@ -1,0 +1,21 @@
+#
+code       : mover-games
+parent_code: tencent
+
+#
+name       : 魔塊遊戲
+name_alias : Mover Games
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.movergames.com/
+description: |
+  [[mover-games]] 是在台空殼公司，主要代理中國手機遊戲，網站的營運平台前身是 [[efun-tw]]。
+
+#
+information:

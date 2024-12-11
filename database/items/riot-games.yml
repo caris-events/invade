@@ -1,0 +1,21 @@
+#
+code       : riot-games
+parent_code: tencent
+
+#
+name       : 拳頭遊戲
+name_alias : Riot Games
+name_others: [銳玩遊戲]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.riotgames.com/
+description: |
+  [[riot-games]] 是一家大型遊戲開發與發行商，主要開發電腦競技類遊戲。
+
+#
+information:

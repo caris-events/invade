@@ -1,0 +1,25 @@
+#
+code       : game-beans
+parent_code: zlon-game
+
+#
+name       : 遊戲種子
+name_alias : Game Beans
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.game-beans.com/
+description: |
+  [[game-beans]] 是一間中國手機遊戲代理廠商。
+
+#
+information:
+  - year       : 2019
+    invasion   : SUPPORTED
+    description: |
+      [[game-beans]] 強制凍結香港玩家「Remez」與其遊戲公會，因該玩家被中國網友惡意檢舉為「港獨」。

@@ -1,0 +1,21 @@
+#
+code       : central-military-commission
+parent_code: chinese-communist-party
+
+#
+name       : 中央軍事委員會
+name_alias : CMC
+name_others: [中國共產黨中央軍事委員會, Central Military Commission]
+
+#
+category: POLITICAL
+type    : GROUP
+owner   : CHINESE
+
+#
+website    : http://www.mod.gov.cn/
+description: |
+  [[central-military-commission]] 是中國的最高級軍事機構，類似於台灣的國防部。
+
+#
+information:

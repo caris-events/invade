@@ -1,0 +1,21 @@
+#
+code       : komoe-game
+parent_code: bilibili
+
+#
+name       : 小萌科技
+name_alias : Komoe Game
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.komoejoy.com/tw/
+description: |
+  [[komoe-game]] 是只有宣傳業務的在台空殼公司，主要代理中國的手機遊戲。
+
+#
+information:

@@ -1,0 +1,24 @@
+#
+code       : kingsoft
+parent_code:
+
+#
+name       : 金山軟件
+name_alias : Kingsoft
+name_others: [WPS]
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.kingsoft.com/
+description: |
+  [[kingsoft]] 是中國最大的電腦、手機應用程式開發商之ㄧ，其生產的軟體經常排斥他廠軟體，而被人稱流氓軟體。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[kingsoft]] 的大股東是中國商人求伯君，畢業於 [[national-university-of-defense-technology]]。

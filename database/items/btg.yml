@@ -1,0 +1,24 @@
+#
+code       : btg
+parent_code: chinese-communist-party
+
+#
+name       : 首旅集團
+name_alias : Beijing Tourism Group
+name_others: [北京首旅]
+
+#
+category: TRAVEL
+type    : GROUP
+owner   : CHINESE
+
+#
+website    : https://www.btg.com.cn/
+description: |
+  [[btg]] 是中國北京政府持有的旅遊集團，是中國最大的旅遊企業之一。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[btg]] 是中國北京市人民政府監管的企業。

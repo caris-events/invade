@@ -1,0 +1,48 @@
+#新聞-內文 {
+    min-height: 300px;
+    margin-bottom: 5rem;
+}
+.裝置-行動 #新聞-內文 {
+    min-height: initial;
+    margin-bottom: 0;
+}
+#新聞-內文 :where(p) {
+    margin-block-start: 1.5em;
+    margin-block-end: 1.5em;
+}
+#新聞-內文 :where(p):first-child {
+    margin-block-start: 0;
+}
+#新聞-內文 :where(p):last-child {
+    margin-block-end: 0;
+}
+#新聞-容器 {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.裝置-行動 #新聞-容器 .ts-box {
+    border-top: 0;
+}
+.新聞-內文容器 {
+    padding: 2rem 3rem;
+}
+.新聞-內文容器-不重要的 {
+    padding: 1rem 3rem;
+}
+.裝置-行動 .新聞-內文容器 {
+    padding: 1.5rem 1rem;
+}
+.裝置-行動 .新聞-內文容器-不重要的 {
+    padding: 1rem 1rem;
+}
+#新聞-時間 {
+    font-size: 16px;
+}
+#新聞-總結 {
+    font-size: 17px;
+    color: var(--ts-gray-600);
+    font-weight: normal;
+}
+.裝置-行動 #新聞-總結 {
+    font-size: 16px;
+}

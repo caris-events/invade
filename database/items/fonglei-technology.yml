@@ -1,0 +1,23 @@
+#
+code       : fonglei-technology
+parent_code:
+
+#
+name       : 風雷科技
+name_alias : Fonglei Technology
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://fonglei.com/
+description: |
+  [[fonglei-technology]] 是在台灣註冊的公司，主要代理中國遊戲。
+
+#
+information:
+  - description: |
+      [[fonglei-technology]] 是新的《忍者必須死》代理商，但原代理商是 [[peiyu-digital]]，兩者被懷疑有相聯關係。

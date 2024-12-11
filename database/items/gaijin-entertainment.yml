@@ -1,0 +1,25 @@
+#
+code       : gaijin-entertainment
+parent_code: gaea
+
+#
+name       : Gaijin Entertainment
+name_alias :
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://gaijin.net/tw
+description: |
+  [[gaijin-entertainment]] 是俄羅斯的一間電腦遊戲開發、發行商。
+
+#
+information:
+    - year       : 2019
+      invasion   : SUPPORTED
+      description: |
+          [[gaijin-entertainment]] 旗下《戰爭雷霆》遊戲裡的「中華民國」國旗被移除，並將屬於中華民國陸軍的載具改以中國五星旗呈現。

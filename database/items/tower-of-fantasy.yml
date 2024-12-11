@@ -1,0 +1,25 @@
+#
+code       : tower-of-fantasy
+parent_code: perfect-world
+
+#
+name       : 幻塔
+name_alias : Tower of Fantasy
+name_others: [TOF, Hotta]
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://www.hotta.com.tw/main.html
+description: |
+    [[tower-of-fantasy]] 是 [[perfect-world]] 旗下 Hotta Studio 開發的多人線上遊戲，在台灣由 [[iwplay-world]] 代理。
+
+#
+information:
+  - year       : 2022
+    invasion   : MANIPULATED
+    description: |
+        [[tower-of-fantasy]] 的角色命名不能使用「台灣」關鍵字，亦有《巴哈姆特》玩家因敏感詞彙而被禁言數年。

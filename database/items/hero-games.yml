@@ -1,0 +1,25 @@
+#
+code       : hero-games
+parent_code:
+
+#
+name       : 英雄遊戲
+name_alias : Hero Games
+name_others: [英雄互娛, Hero Entertainment]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.hero.com/
+description: |
+  [[hero-games]] 是中國的手機遊戲開發與發行商。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[hero-games]] 的主要營運者是中國商人吳旦，其於股東皆為中資。
+

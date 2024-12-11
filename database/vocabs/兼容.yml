@@ -1,0 +1,19 @@
+#
+word    : 兼容
+bopomofo: ㄐㄧㄢ ㄖㄨㄥˊ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  與某個東西能夠相互使用而不起衝突。
+
+#
+examples:
+  - words      : [相容]
+    correct    : |
+      這款軟體相容許多不同的作業系統。
+    incorrect  : |
+      這款[[軟件]]{{兼容}}許多不同的[[操作系統]]。

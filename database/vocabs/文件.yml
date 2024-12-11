@@ -1,0 +1,26 @@
+#
+word    : 文件
+bopomofo: ㄨㄣˊ ㄐㄧㄢˋ
+notice  : 這個條目指的不是紙本文件。
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  中國常以「文件」統稱電腦資料，但台灣會使用「檔案」和「資料」來區分。
+
+#
+examples:
+  - words      : [資料]
+    correct    : |
+      使用者{{資料}}會儲存在電腦的「個人{{資料}}夾」裡。
+    incorrect  : |
+      使用者{{文件}}會儲存在電腦的「個人{{文件}}夾」裡。
+
+  - words      : [檔案]
+    correct    : |
+      花了不少時間，才下載完這些遊戲{{檔案}}。
+    incorrect  : |
+      花了不少時間，才下載完這些遊戲{{文件}}。

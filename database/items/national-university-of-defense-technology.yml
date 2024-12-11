@@ -1,0 +1,21 @@
+#
+code       : national-university-of-defense-technology
+parent_code: central-military-commission
+
+#
+name       : 國防科技大學
+name_alias : NUDT
+name_others: [National University of Defense Technology]
+
+#
+category: EDUCATION
+type    : GROUP
+owner   : CHINESE
+
+#
+website    : https://www.nudt.edu.cn/
+description: |
+  [[national-university-of-defense-technology]] 是中國頂尖高校之一。
+
+#
+information:

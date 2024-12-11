@@ -1,0 +1,21 @@
+#
+code       : fun-hope
+parent_code: boltrend-games
+
+#
+name       : 峰禾科技
+name_alias : FunHope
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://boltrend.com/zh-tw
+description: |
+    [[fun-hope]] 是在台灣註冊的空殼公司，主要代理中國的手機遊戲。
+
+#
+information:

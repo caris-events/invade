@@ -1,0 +1,32 @@
+#
+word    : 炸魚
+bopomofo: ㄓㄚˋ ㄩˊ
+notice  : 這個條目指的不是製作菜餚而油炸魚類。
+
+#
+category: GAME
+explicit:
+
+#
+description: |
+  將鞭炮丟入河流中轟炸魚群，指仗勢著自己多年的遊戲經驗而欺凌新手，英文為 Smurf。
+
+#
+examples:
+  - words      : [碾壓]
+    correct    : |
+      憑藉他多年的技術，他{{碾壓}}了在場的所有人。
+    incorrect  : |
+      憑藉他多年的技術，他{{炸}}了在場的所有人。
+
+  - words      : [虐菜]
+    correct    : |
+      我現在準備好要來{{虐菜}}了。
+    incorrect  : |
+      我現在準備好要來{{炸魚}}了。
+
+  - words      : [欺負新手]
+    correct    : |
+      你怎麼整天開分身帳號{{欺負新手}}？
+    incorrect  : |
+      你怎麼整天開[[小號]]{{炸魚}}？

@@ -1,0 +1,21 @@
+#
+code       : shenqu-games
+parent_code: sjhuatong
+
+#
+name       : 盛趣遊戲
+name_alias : Shenqu Games
+name_others: [盛大網路, Shenqu Technology]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.shengqugames.com/cn/index
+description: |
+  [[shenqu-games]] 是中國上海的一間遊戲公司。
+
+#
+information:

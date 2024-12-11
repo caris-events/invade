@@ -1,0 +1,25 @@
+#
+word    : 尿性
+bopomofo: ㄋㄧㄠˋ ㄒㄧㄥˋ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+examples:
+  - words      : [個性]
+    description: |
+      以不入流的方式強調某個人的個性十分鮮明。
+    correct    : |
+      他真有{{個性}}！才出國一年就有好幾個女朋友。
+    incorrect  : |
+      他真{{尿性}}！才出國一年就有好幾個女朋友。
+
+  - words      : [德性]
+    description: |
+      通常表示某個人的態度十分糟糕。
+    correct    : |
+      依照政府的那付{{德性}}，大概要等到一年後才會有結果。
+    incorrect  : |
+      依照政府的{{尿性}}，大概要等到一年後才會有結果。

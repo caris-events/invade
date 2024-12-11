@@ -1,0 +1,24 @@
+#
+code       : r2-games
+parent_code:
+
+#
+name       : 燦和兄弟
+name_alias : R2 Games
+name_others: [Reality Squared Game, F5 Game Company, Can Brother Technologies]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.r2games.com/
+description: |
+  [[r2-games]] 是中國深圳的一間遊戲公司，開發的遊戲主要面向東南亞或是英文語系的國家。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[r2-games]] 的大股東是中國商人羅燦與陳志平。

@@ -1,0 +1,24 @@
+#
+code      : pandada-studio
+parent_code:
+
+#
+name       : 炎魂網路
+name_alias : Pandada Studio
+name_others: [小白工作室, Yanhun Network Technology]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.pandadastudio.com/
+description: |
+  [[pandada-studio]] 是中國杭州的一家遊戲公司，原為《小白工作室》。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[pandada-studio]] 的大股東是中國商人陸葉青。

@@ -1,0 +1,30 @@
+#
+code       : mc-hotdog
+parent_code:
+
+#
+name       : 熱狗
+name_alias : MC HotDog
+name_others: [姚中仁]
+
+#
+category: PERSON
+type    : PERSON
+owner   : TAIWANESE
+
+#
+website    : https://www.facebook.com/mchotdogmusic
+description: |
+  [[mc-hotdog]] 出生於台灣台北，是台灣早期的饒舌歌手之一，曾被譽為「台灣地下饒舌第一人」。
+
+#
+information:
+    - year       : 2017
+      invasion   : COLLABORATED
+      description: |
+          [[mc-hotdog]] 擔任《中國有嘻哈》明星製作人兼評審並正式進軍中國娛樂圈。
+
+    - year       : 2023
+      invasion   : MANIPULATED
+      description: |
+          [[mc-hotdog]] 參加《中國說唱巔峰對決 2023》並將歌曲《九局下半》的歌詞從「我也想宣佈獨立」修改為「我也想宣佈勝利」以符合中國政府規定。

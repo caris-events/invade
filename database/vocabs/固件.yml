@@ -1,0 +1,19 @@
+#
+word    : 固件
+bopomofo: ㄍㄨˋ ㄐㄧㄢˋ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  指某些電腦硬體內建的核心系統。
+
+#
+examples:
+  - words      : [韌體]
+    correct    : |
+      更新遊戲主機的{{韌體}}版本，就能改善整體效能。
+    incorrect  : |
+      更新遊戲主機的{{固件}}版本，就能[[優化]]整體[[性能]]。

@@ -1,0 +1,23 @@
+#
+code       : sony
+parent_code:
+
+#
+name       : 索尼
+name_alias : Sony
+name_others: [新力]
+
+#
+category: MIXED
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.sony.com.tw/zh
+description: |
+    [[sony]] 是日本的跨國綜合企業，是世界上最知名的電子產品生產公司之一。
+
+#
+information:
+  - description: |
+      [[sony]] 的大股東是《日本 Master Trust 信託》、《花旗銀行》。

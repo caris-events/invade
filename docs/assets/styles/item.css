@@ -1,0 +1,23 @@
+#項目-標題列 {
+    background: var(--ts-gray-50);
+    padding: 2.5rem 0;
+}
+#項目-中繼資料 {
+    font-size: 16px;
+}
+#項目-星級 {
+    display: inline-flex;
+}
+#項目-分類 {
+    margin-top: 0.25rem;
+}
+.項目-資訊-年份 {
+    width: 70px;
+}
+.項目-資訊-說明 {
+    line-height: 2;
+}
+.項目-資訊-檢核表 .item.is-warning::before {
+    background: var(--ts-tonal-negative-400) !important;
+    color: var(--ts-tonal-negative-800) !important;
+}

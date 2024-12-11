@@ -1,0 +1,15 @@
+#
+word    : 當前
+bopomofo: ㄉㄤ ㄑㄧㄢˊ
+
+#
+category: ADVERB
+explicit:
+
+#
+examples:
+  - words      : [目前]
+    correct    : |
+      你{{目前}}持有五瓶恢復藥水。
+    incorrect  : |
+      你{{當前}}持有五瓶恢復藥水。

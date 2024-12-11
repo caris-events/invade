@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="is-secondary">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>詞彙列表 - 中國侵略資料庫</title>
+        <!-- Tocas UI -->
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/tocas/tocas.min.css" />
+        <script src="{{ .BaseURL }}/assets/tocas/tocas.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+
+        <!-- Assets -->
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/styles/style.css" />
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/styles/search.css" />
+        <script src="{{ .BaseURL }}/assets/scripts/db_store.js" defer></script>
+        <script src="{{ .BaseURL }}/assets/scripts/db_vocabs.js" defer></script>
+        <script src="{{ .BaseURL }}/assets/scripts/vocab_store.js" defer></script>
+
+        <!-- Dependencies -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.5/cdn.min.js" defer></script>
+
+        <!-- Meta -->
+        <meta name="description" content="侵略性詞彙是指經過中國的言論審查、中共思想而產生的詞彙，若長時間使用這些詞彙，可能會在無形之中影響自己的思考方式。" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="詞彙列表 - 中國侵略資料庫" />
+        <meta name="twitter:description" content="侵略性詞彙是指經過中國的言論審查、中共思想而產生的詞彙，若長時間使用這些詞彙，可能會在無形之中影響自己的思考方式。" />
+        <meta name="twitter:image" content="{{ .BaseURL }}/assets/images/og.png" />
+        <meta property="og:title" content="詞彙列表 - 中國侵略資料庫" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="{{ .BaseURL }}/assets/images/og.png" />
+        <meta property="og:url" content="{{ .BaseURL }}/vocabs" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:description" content="侵略性詞彙是指經過中國的言論審查、中共思想而產生的詞彙，若長時間使用這些詞彙，可能會在無形之中影響自己的思考方式。" />
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ .BaseURL }}/assets/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ .BaseURL }}/assets/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ .BaseURL }}/assets/favicons/favicon-16x16.png" />
+        <link rel="manifest" href="{{ .BaseURL }}/assets/favicons/site.webmanifest" />
+        <link rel="mask-icon" href="{{ .BaseURL }}/assets/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="shortcut icon" href="{{ .BaseURL }}/assets/favicons/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="msapplication-config" content="{{ .BaseURL }}/assets/favicons/browserconfig.xml" />
+        <meta name="theme-color" content="#ffffff" />
+    </head>
+    <body class="tablet:裝置-平板 mobile:裝置-行動" x-data="vocab_store">
+        <div class="has-flex-1">
+            {{ template "searchbar" . }}
+
+            <!-- drawer filter -->
+            <dialog class="ts-app-drawer is-end" id="篩選欄" style="--width: 300px">
+                <div class="content has-flex-column">
+                    <div class="ts-content is-padded has-top-padded">
+                        <div class="ts-text is-bold">
+                            <span class="ts-icon is-filter-icon is-end-spaced"></span>
+                            篩選條件
+                        </div>
+                        <div class="ts-text is-label has-top-spaced-large">分類</div>
+                        <div class="ts-select is-fluid has-top-spaced">
+                            <select x-model="search_category" @change="search">
+                                <template x-for="category in categories">
+                                    <option
+                                        :value="category.code"
+                                        x-text="`${category.str} (${calculateCategory(category.code)})`"
+                                        :selected="category.code == search_category"
+                                    ></option>
+                                </template>
+                            </select>
+                        </div>
+                        <div class="ts-text is-label has-top-spaced-large">其他</div>
+                        <div class="ts-wrap is-vertical is-compact has-top-spaced">
+                            <label class="瀏覽-篩選區塊-開關 ts-switch">
+                                顯示粗俗詞彙
+                                <input type="checkbox" x-model="search_show_language" @change="search" />
+                            </label>
+                            <label class="瀏覽-篩選區塊-開關 ts-switch">
+                                顯示性暗示詞彙
+                                <input type="checkbox" x-model="search_show_sexual" @change="search" />
+                            </label>
+                        </div>
+                        <template x-if="search_keyword === '' || search_category == 'SWEAR'">
+                            <div>
+                                <div class="ts-divider is-section"></div>
+                                <div class="ts-wrap is-compact is-vertical">
+                                    <template x-if="search_keyword === ''">
+                                        <div class="ts-text is-description">
+                                            <span class="ts-icon is-circle-info-icon is-end-spaced"></span>
+                                            現在顯示的搜尋結果以最近更新的資料為優先。
+                                        </div>
+                                    </template>
+                                    <template x-if="search_category == 'SWEAR'">
+                                        <div class="ts-text is-description">
+                                            <span class="ts-icon is-circle-info-icon is-end-spaced"></span>
+                                            瀏覽「髒話」分類時，會同時顯示粗俗詞彙。
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="ts-content has-top-spaced-auto">
+                        <div class="ts-wrap is-vertical">
+                            <button class="ts-button is-outlined is-fluid" data-dialog="篩選欄" @click="resetFilter">重設</button>
+                            <button class="ts-button is-fluid" data-dialog="篩選欄">套用並關閉</button>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+            <!-- / drawer filter -->
+
+            <div class="ts-container tablet-:has-vertically-padded-large desktop+:has-vertically-padded-big">
+                <div class="ts-grid desktop+:is-relaxed">
+                    <div class="column tablet:is-5-wide desktop+:is-4-wide mobile:has-hidden">
+                        <div class="ts-box">
+                            <div class="ts-content is-padded has-top-padded">
+                                <div class="ts-grid is-bottom-aligned">
+                                    <div class="column is-fluid">
+                                        <div class="ts-text is-bold">
+                                            <span class="ts-icon is-filter-icon is-end-spaced"></span>
+                                            篩選條件
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <button class="ts-text is-link is-undecorated" @click="resetFilter">重設</button>
+                                    </div>
+                                </div>
+                                <div class="ts-text is-label has-top-spaced-large">分類</div>
+                                <div class="ts-select is-fluid has-top-spaced">
+                                    <select x-model="search_category" @change="search">
+                                        <template x-for="category in categories">
+                                            <option
+                                                :value="category.code"
+                                                x-text="`${category.str} (${calculateCategory(category.code)})`"
+                                                :selected="category.code == search_category"
+                                            ></option>
+                                        </template>
+                                    </select>
+                                </div>
+                                <div class="ts-text is-label has-top-spaced-large">其他</div>
+                                <div class="ts-wrap is-vertical is-compact has-top-spaced">
+                                    <label class="瀏覽-篩選區塊-開關 ts-switch">
+                                        顯示粗俗詞彙
+                                        <input type="checkbox" x-model="search_show_language" @change="search" />
+                                    </label>
+                                    <label class="瀏覽-篩選區塊-開關 ts-switch">
+                                        顯示性暗示詞彙
+                                        <input type="checkbox" x-model="search_show_sexual" @change="search" />
+                                    </label>
+                                </div>
+                                <template x-if="search_keyword === '' || search_category == 'SWEAR'">
+                                    <div>
+                                        <div class="ts-divider is-section"></div>
+                                        <div class="ts-wrap is-compact is-vertical">
+                                            <template x-if="search_keyword === ''">
+                                                <div class="ts-text is-description">
+                                                    <span class="ts-icon is-circle-info-icon is-end-spaced"></span>
+                                                    現在顯示的搜尋結果以最近更新的資料為優先。
+                                                </div>
+                                            </template>
+                                            <template x-if="search_category == 'SWEAR'">
+                                                <div class="ts-text is-description">
+                                                    <span class="ts-icon is-circle-info-icon is-end-spaced"></span>
+                                                    瀏覽「髒話」分類時，會同時顯示粗俗詞彙。
+                                                </div>
+                                            </template>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column tablet:is-11-wide desktop+:is-12-wide mobile:is-16-wide">
+                        <template x-if="shown_results.length > 0 || is_loading">
+                            <div class="ts-grid tablet+:is-3-columns mobile:is-2-columns">
+                                <template x-for="result in shown_results">
+                                    <div class="column">
+                                        <a class="ts-box" :href="`{{ .BaseURL }}/v/${result.word}`">
+                                            <div class="ts-content tablet+:is-horizontally-padded">
+                                                <div class="ts-text is-bold is-1-lines tablet+:has-16px mobile:has-15px" x-text="result.word"></div>
+                                                <div class="ts-text is-secondary is-1-lines" x-text="result.correct_word"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </template>
+                            </div>
+                        </template>
+
+                        <template x-if="!is_loading && hidden_results.length > 0">
+                            <div>
+                                <button @click="showMore" class="ts-text is-link is-undecorated has-full-width">
+                                    <div class="ts-content is-vertically-padded is-secondary is-center-aligned mobile:has-bottom-fitted">載入更多項目…</div>
+                                </button>
+                            </div>
+                        </template>
+
+                        <!-- 正在搜尋 -->
+                        <template x-if="is_loading">
+                            <div class="ts-content is-secondary is-center-aligned">
+                                <div class="ts-loading is-centered"></div>
+                                <div class="ts-text is-center-aligned is-secondary has-bottom-spaced-small">正在搜尋</div>
+                            </div>
+                        </template>
+                        <!-- / 正在搜尋 -->
+
+                        <!-- 沒有關聯內容 -->
+                        <template x-if="!is_loading && shown_results.length === 0">
+                            <div class="ts-content is-tertiary is-rounded is-fitted">
+                                <div class="ts-blankslate is-secondary">
+                                    <div class="header">找不到任何項目</div>
+                                </div>
+                            </div>
+                        </template>
+                        <!-- / 沒有關聯內容 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ts-divider"></div>
+        {{ template "footer" . }}
+    </body>
+</html>

@@ -1,0 +1,25 @@
+#
+word    : 破防
+bopomofo: ㄆㄨㄛˋ ㄈㄤˊ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  內心的防壁被攻破而深受打擊，有時也被用以調侃玻璃心。
+
+#
+examples:
+  - words      : [深受打擊, 受不了]
+    correct    : |
+      他的冷言冷語讓我{{深受打擊}}。
+    incorrect  : |
+      他的冷言冷語讓我{{破防}}了。
+
+  - words      : [玻璃心碎滿地]
+    correct    : |
+      你這樣罵他，人家都{{玻璃心碎滿地}}了。
+    incorrect  : |
+      你這樣罵他，人家都{{破防}}了。

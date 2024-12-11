@@ -1,0 +1,24 @@
+#
+code       : forgame
+parent_code:
+
+#
+name       : 雲遊控股
+name_alias : Forgame
+name_others: [雲遊]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.forgame.com/
+description: |
+  [[forgame]] 是中國廣州的一間控股公司，其子公司通常是與網頁遊戲開發有關。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+        [[forgame]] 的大股東是中國商人汪東風。

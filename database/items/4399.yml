@@ -1,0 +1,24 @@
+#
+code       : 4399
+parent_code:
+
+#
+name       : 四三九九網路
+name_alias : 4399
+name_others: [游家網路]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.4399.com/
+description: |
+  [[4399]] 是中國廈門的一間網頁小遊戲公司。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[4399]] 的大股東包含中國商人李興平，且李興平還是 [[hao123]] 的創辦人。

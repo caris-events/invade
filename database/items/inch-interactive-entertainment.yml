@@ -1,0 +1,21 @@
+#
+code       : inch-interactive-entertainment
+parent_code: efun
+
+#
+name       : 英旗互動娛樂
+name_alias : Inch
+name_others: [Inch Interactive Entertainment]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.efuntw.com/
+description: |
+  [[inch-interactive-entertainment]] 是代理中國手機遊戲的公司。
+
+#
+information:

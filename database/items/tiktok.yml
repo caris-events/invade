@@ -1,0 +1,24 @@
+#
+code       : tiktok
+parent_code: bytedance
+
+#
+name       : 抖音
+name_alias : TikTok
+name_others: []
+
+#
+category: MEDIA
+type    : PLATFORM
+owner   : CHINESE
+
+#
+website    : https://www.douyin.com/
+description: |
+  [[tiktok]] 是中國知名的短影音平台之一，其原始設計抄襲《Vine》。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[tiktok]] 的創辦人是中國商人張一鳴，最大股東是《廈門星辰啟點科技有限公司》，疑中國政府持有的空殼公司。

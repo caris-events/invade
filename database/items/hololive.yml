@@ -1,0 +1,21 @@
+#
+code       : hololive
+parent_code: cover-corporation
+
+#
+name       : Hololive Production
+name_alias :
+name_others: [Hololive, Holo, Yagoo]
+
+#
+category: ENTERTAINMENT
+type    : GROUP
+owner   : FOREIGN
+
+#
+website    : https://www.hololive.tv/
+description: |
+  [[hololive]] 是日本虛擬實況主團體。
+
+#
+information:

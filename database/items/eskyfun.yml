@@ -1,0 +1,24 @@
+#
+code       : eskyfun
+parent_code:
+
+#
+name       : 天游網路
+name_alias : Eskyfun
+name_others: [廣州天游]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.eskyfun.cn/
+description: |
+  [[eskyfun]] 是中國廣州的一家遊戲開發、代理商。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[eskyfun]] 的大股東是中國商人王永康、夏恒，而王永康曾任職於 [[4399]] 和 [[mobvista]]。

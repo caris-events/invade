@@ -1,0 +1,19 @@
+#
+word    : 小區
+bopomofo: ㄒㄧㄠˇ ㄑㄩ
+
+#
+category: PLACE
+explicit:
+
+#
+description: |
+  住宅的一種單位。
+
+#
+examples:
+  - words      : [社區]
+    correct    : |
+      我們{{社區}}明天有烤肉活動。
+    incorrect  : |
+      我們{{小區}}明天有烤肉活動。

@@ -1,0 +1,24 @@
+#
+code       : perfect-world
+parent_code:
+
+#
+name       : 完美世界
+name_alias : Perfect World
+name_others: [完美時空]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.wanmei.com/
+description: |
+  [[perfect-world]] 是一間遊戲公司。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[perfect-world]] 的大股東包括中國商人池宇峰。

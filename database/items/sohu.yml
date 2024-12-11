@@ -1,0 +1,24 @@
+#
+code       : sohu
+parent_code:
+
+#
+name       : 搜狐
+name_alias : Sohu
+name_others:
+
+#
+category: INTERNET
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.sohu.com/
+description: |
+  [[sohu]] 是中國最大的網路入口之一，主要作為新聞資訊的傳播網站。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[sohu]] 的大股東是 [[orient-international]]、[[roshow]] 與中國商人魯小均。

@@ -1,0 +1,22 @@
+{{ define "random_vocabs" }}
+<div class="ts-grid is-bottom-aligned tablet+:has-top-spaced-big mobile:has-top-spaced-large mobile:has-horizontally-padded">
+    <div class="column is-fluid">
+        <div class="ts-header">看看這些詞彙</div>
+    </div>
+    <div class="column">
+        <a href="{{ .BaseURL }}/vocabs" class="ts-button is-outlined">檢視更多</a>
+    </div>
+</div>
+<div id="隨機詞彙" class="ts-grid is-3-columns has-top-spaced tablet+:is-3-columns mobile:is-2-columns mobile:has-horizontally-padded">
+    <template x-for="vocab in vocabs(9)">
+        <div class="column">
+            <a :href="`{{ .BaseURL }}/v/${vocab.word}`" class="ts-box">
+                <div class="ts-content is-horizontally-padded">
+                    <div class="ts-text is-bold is-1-lines tablet+:has-16px mobile:has-15px" x-text="vocab.word"></div>
+                    <div class="ts-text is-secondary is-1-lines" x-text="vocab.correct_word"></div>
+                </div>
+            </a>
+        </div>
+    </template>
+</div>
+{{ end }}

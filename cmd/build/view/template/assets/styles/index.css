@@ -1,0 +1,27 @@
+#首頁-主要標題 {
+    font-size: 2.8rem;
+    line-height: 1.4;
+    font-weight: 900;
+    color: #000;
+}
+.首頁-說明 {
+}
+#首頁-搜尋欄位 {
+    max-width: 500px;
+}
+#首頁-數據網格 {
+    --gap: 4rem;
+}
+.首頁-標題中繼 {
+    align-items: center;
+}
+.首頁-主要網格 {
+    --gap: 5rem;
+}
+.裝置-行動 .首頁-主要網格 {
+    --gap: 1px;
+}
+
+.裝置-平板 .首頁-主要網格 {
+    --gap: 1.5rem;
+}

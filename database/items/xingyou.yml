@@ -1,0 +1,24 @@
+#
+code       : xingyou
+parent_code:
+
+#
+name       : 星遊科技
+name_alias : XingYou
+name_others: [玩星游, WanXingYou]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    :
+description: |
+  [[xingyou]] 是中國北京的一間影音與遊戲開發商，包含手機遊戲合作或影片宣傳播送。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[xingyou]] 的大股東是中國商人時素俠。

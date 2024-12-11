@@ -1,0 +1,20 @@
+#
+word    : 很好的
+bopomofo: ㄏㄣˇ ㄏㄠˇ ㄉㄜ˙
+notice  : 這個條目指的不是某個事物很棒。
+
+#
+category: SLANG
+explicit:
+
+#
+description: |
+  指十分友善（Friendly），通常出現於中國翻譯外語的疏失。
+
+#
+examples:
+  - words      : [妥善地]
+    correct    : |
+      這個設計能夠讓兩個系統{{妥善地}}相互溝通。
+    incorrect  : |
+      這個設計能夠讓兩個系統{{很好的}}相互溝通。

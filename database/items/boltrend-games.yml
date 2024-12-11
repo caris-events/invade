@@ -1,0 +1,21 @@
+#
+code       : boltrend-games
+parent_code: netease
+
+#
+name       : 寶船遊戲
+name_alias : Boltrend Games
+name_others: [網易寶船]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://boltrend.com/zh-tw
+description: |
+  [[boltrend-games]] 是手機遊戲開發、代理公司。
+
+#
+information:

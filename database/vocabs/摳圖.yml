@@ -1,0 +1,19 @@
+#
+word    : 摳圖
+bopomofo: ㄎㄡ ㄊㄨˊ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  將某個主體從圖像中抽離。
+
+#
+examples:
+  - words      : [去背]
+    correct    : |
+      一鍵{{去背}}，可以將人像從風景照裡獨立出來。
+    incorrect  : |
+      一鍵{{摳圖}}，可以將人像從風景照裡獨立出來。

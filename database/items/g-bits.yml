@@ -1,0 +1,24 @@
+#
+code       : g-bits
+parent_code:
+
+#
+name       : 吉比特
+name_alias : G-bits
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.g-bits.com/zh/
+description: |
+    [[g-bits]] 是中國廈門的一家遊戲開發、發行商，曾入選中國 500 強民營企業之一。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[g-bits]] 的大股東是盧竑岩，曾為 [[zte]] 的軟體開發工程師。

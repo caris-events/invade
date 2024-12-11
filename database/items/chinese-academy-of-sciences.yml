@@ -1,0 +1,21 @@
+#
+code       : chinese-academy-of-sciences
+parent_code: chinese-communist-party
+
+#
+name       : 中國科學院
+name_alias : Chinese Academy Of Sciences
+name_others: [CAS]
+
+#
+category: TECHNOLOGY
+type    : GROUP
+owner   : CHINESE
+
+#
+website    : https://www.cas.cn/
+description: |
+  [[chinese-academy-of-sciences]] 是中國科學技術方面最高的學術機構。
+
+#
+information:

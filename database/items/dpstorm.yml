@@ -1,0 +1,24 @@
+#
+code       : dpstorm
+parent_code:
+
+#
+name       : 龍拳風暴
+name_alias : DP.STORM
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.dpstorm.com/
+description: |
+  [[dpstorm]] 是中國北京的一家手機遊戲開發商，核心成員來自 [[playcrab]]。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[dpstorm]] 的大股東是中國商人曹楠、劉志鵬，公司曾穫 [[huayi-brothers-media]]、[[changyou]]、[[tencent]] 的投資。

@@ -1,0 +1,21 @@
+#
+code       : reverse-1999
+parent_code: bluepoch
+
+#
+name       : 重返未來：1999
+name_alias : "Reverse: 1999"
+name_others: [Re 1999]
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://re1999.movergames.com/
+description: |
+  [[reverse-1999]] 是 [[bluepoch]] 的首款遊戲，在台灣由 [[mover-games]] 代理。
+
+#
+information:

@@ -1,0 +1,20 @@
+#
+word    : 沙雕
+bopomofo: ㄕㄚ ㄉㄧㄠ
+notice  : 這個條目指的不是以沙子塑造的雕像。
+
+#
+category: SWEAR
+explicit: LANGUAGE
+
+#
+description: |
+  指「傻屌」，用來形容某個人的行為或言論很蠢。
+
+#
+examples:
+  - words      : [無腦, 白痴, 傻瓜]
+    correct    : |
+      他很{{無腦}}，整天只會說沒意義的話。
+    incorrect  : |
+      他很{{沙雕}}，整天只會說沒意義的話。

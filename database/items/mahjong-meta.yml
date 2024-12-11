@@ -1,0 +1,30 @@
+#
+code       : mahjong-meta
+parent_code: rolling-dice-labs
+
+#
+name       : Mahjong Meta
+name_alias :
+name_others:
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://mjmeta.io/zh-cht/index
+description: |
+  [[mahjong-meta]] 是一款區塊鏈麻將遊戲。
+
+#
+information:
+  - year       : 2023
+    invasion   : MANIPULATED
+    description: |
+      [[mahjong-meta]] 的角色命名有言論審查，不能提及「獨立」。
+
+  - year       : 2023
+    invasion   : SUPPORTED
+    description: |
+      [[mahjong-meta]] 的遊戲地區將台灣顯示為「中國台灣」。

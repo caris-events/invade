@@ -1,0 +1,24 @@
+#
+code       : paper-games
+parent_code:
+
+#
+name       : 疊紙遊戲
+name_alias : Paper Games
+name_others: [Pape Studio, Nikki Games]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.papegames.com/
+description: |
+  [[paper-games]] 是中國蘇州的一家女性向遊戲開發廠商。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[paper-games]] 的大股東是中國商人姚潤昊。

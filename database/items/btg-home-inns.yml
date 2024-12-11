@@ -1,0 +1,24 @@
+#
+code       : btg-home-inns
+parent_code: btg
+
+#
+name       : 首旅如家
+name_alias : BTG Home Inns
+name_others: [如家酒店]
+
+#
+category: TRAVEL
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.bthhotels.com/
+description: |
+    [[btg-home-inns]] 是中國上海的一間酒店集團，其提供酒店預約網站與服務。
+
+#
+information:
+    - invasion   : FUNDED
+      description: |
+          [[btg-home-inns]] 的大股東是 [[btg]] 和 [[ctrip]]。

@@ -1,0 +1,21 @@
+#
+code       : funplus-phoenix
+parent_code: funplus
+
+#
+name       : FPX 電子競技俱樂部
+name_alias : FunPlus Phoneix
+name_others: [FPX]
+
+#
+category: ENTERTAINMENT
+type    : GROUP
+owner   : CHINESE
+
+#
+website    : https://funplus.com/
+description: |
+  [[funplus-phoenix]] 是中國北京的一個電子競技團隊。
+
+#
+information:

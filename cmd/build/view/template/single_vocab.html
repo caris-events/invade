@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="is-secondary">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>《{{ .Word }}》單字解釋 - 中國侵略性詞彙</title>
+        <!-- Tocas UI -->
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/tocas/tocas.min.css" />
+        <script src="{{ .BaseURL }}/assets/tocas/tocas.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+
+        <!-- Assets -->
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/styles/style.css" />
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/styles/vocab.css" />
+        <script src="{{ .BaseURL }}/assets/scripts/db_store.js" defer></script>
+        <script src="{{ .BaseURL }}/assets/scripts/db_random_items.js" defer></script>
+        <script src="{{ .BaseURL }}/assets/scripts/db_random_vocabs.js" defer></script>
+        <script src="{{ .BaseURL }}/assets/scripts/random_store.js" defer></script>
+
+        <!-- Dependencies -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.5/cdn.min.js" defer></script>
+
+        <!-- Meta -->
+        <meta name="description" content="{{ if .Description }}{{ .Word }}的意思是：{{ .Description }}{{ else }}誤用「{{ .Word }}」詞彙可能會傳達不正確的訊息。{{ end }}" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="《{{ .Word }}》單字解釋 - 中國侵略性詞彙" />
+        <meta name="twitter:description" content="{{ if .Description }}{{ .Word }}的意思是：{{ .Description }}{{ else }}誤用「{{ .Word }}」詞彙可能會傳達不正確的訊息。{{ end }}" />
+        <meta name="twitter:image" content="{{ .BaseURL }}/assets/vocab_covers/{{ .Word | safe64 }}.png" />
+        <meta property="og:title" content="《{{ .Word }}》單字解釋 - 中國侵略性詞彙" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="{{ .BaseURL }}/assets/vocab_covers/{{ .Word | safe64 }}.png" />
+        <meta property="og:url" content="{{ .BaseURL }}/v/{{ .Word }}" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:description" content="{{ if .Description }}{{ .Word }}的意思是：{{ .Description }}{{ else }}誤用「{{ .Word }}」詞彙可能會傳達不正確的訊息。{{ end }}" />
+        <meta property="og:updated_time" content="{{ .ModUnix | iso8601 }}" />
+        <meta property="article:modified_time" content="{{ .ModUnix | iso8601 }}" />
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ .BaseURL }}/assets/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ .BaseURL }}/assets/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ .BaseURL }}/assets/favicons/favicon-16x16.png" />
+        <link rel="manifest" href="{{ .BaseURL }}/assets/favicons/site.webmanifest" />
+        <link rel="mask-icon" href="{{ .BaseURL }}/assets/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="shortcut icon" href="{{ .BaseURL }}/assets/favicons/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="msapplication-config" content="{{ .BaseURL }}/assets/favicons/browserconfig.xml" />
+        <meta name="theme-color" content="#ffffff" />
+    </head>
+    <body class="tablet:裝置-平板 mobile:裝置-行動" x-data="random_store">
+        {{ template "navbar" . }}
+
+        <div class="ts-container tablet-:has-vertically-padded-large desktop+:has-vertically-padded-big mobile:is-fitted">
+            <div id="單字-板岩">
+                <div class="ts-grid">
+                    <div class="column is-fluid">
+                        {{ if .Notice }}
+                        <div id="單字-板岩-消歧義" class="ts-text is-bold tablet+:has-bottom-spaced-large mobile:has-bottom-spaced tablet+:has-16px mobile:has-14px">
+                            <span class="ts-icon tablet+:is-large is-end-spaced is-circle-info-icon"></span>{{ .Notice }}
+                        </div>
+                        {{ end }}
+
+                        <div class="ts-wrap is-compact has-bottom-spaced tablet+:has-hidden">
+                            <a href="{{ .BaseURL }}/vocabs?c={{ .Category }}" class="ts-badge is-secondary">{{ .CategoryStr }}</a>
+                            {{ if eq .Explicit "LANGUAGE" }}
+                            <a href="{{ .BaseURL }}/vocabs?ss=true" class="ts-badge is-negative">粗俗語言</a>
+                            {{ end }} {{ if eq .Explicit "SEXUAL" }}
+                            <a href="{{ .BaseURL }}/vocabs?se=true" class="ts-badge is-negative">性暗示</a>
+                            {{ end }}
+                        </div>
+
+                        <div class="ts-wrap mobile:is-compact">
+                            {{ range .Breakdowns }}
+                            <div class="單字-板岩-每個分解">
+                                <div class="單字-板岩-每個分解-漢字">{{ .Character }}</div>
+                                {{ if .Bopomofo }}
+                                <div class="單字-板岩-每個分解-注音 has-flex-center">
+                                    {{ range .Bopomofo }}
+                                    <div class="ts-text is-bold">{{ . }}</div>
+                                    {{ end }} {{ if .Accent }}
+                                    <div class="單字-板岩-每個分解-注音-標點符號">{{ .Accent }}</div>
+                                    {{ end }}
+                                </div>
+                                {{ end }}
+                            </div>
+                            {{ end }}
+                        </div>
+                        <div id="單字-板岩-說明" class="tablet+:has-top-spaced-large mobile:has-top-spaced tablet+:has-16px mobile:has-15px">{{ .Description }}</div>
+                    </div>
+
+                    <div class="column mobile:has-hidden">
+                        <div class="ts-wrap is-compact is-end-aligned">
+                            <span class="ts-text is-secondary">分類：</span>
+                            <a href="{{ .BaseURL }}/vocabs?c={{ .Category }}" class="ts-badge is-secondary">{{ .CategoryStr }}</a>
+                            {{ if eq .Explicit "LANGUAGE" }}
+                            <a href="{{ .BaseURL }}/vocabs?ss=true" class="ts-badge is-negative">粗俗語言</a>
+                            {{ end }} {{ if eq .Explicit "SEXUAL" }}
+                            <a href="{{ .BaseURL }}/vocabs?se=true" class="ts-badge is-negative">性暗示</a>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+
+                <div id="單字-板岩-角落文字">侵略性詞彙</div>
+            </div>
+
+            <div class="ts-grid tablet+:is-relaxed tablet+:has-top-spaced-big mobile:has-top-spaced-large mobile:is-stacked">
+                <div class="column tablet:is-11-wide desktop+:is-12-wide">
+                    <div class="ts-header mobile:has-horizontally-padded">用法與例句</div>
+
+                    <div class="ts-box has-top-spaced mobile:has-edged">
+                        <div class="ts-content tablet+:is-padded mobile:is-vertically-padded">
+                            {{ range .Examples }}
+                            <div class="ts-header">
+                                <span class="單字-範例符號">◆</span>
+                                {{ .WordsStr }}
+                            </div>
+                            {{ if .Description }}
+                            <div class="ts-text has-top-spaced-small">{{ .Description | vocab_content }}</div>
+                            {{ end }}
+                            <div class="ts-content is-rounded is-secondary has-top-spaced">
+                                <div class="ts-grid mobile:is-compact">
+                                    <div class="column">
+                                        <span class="單字-對應國家">台灣</span>
+                                    </div>
+                                    <div class="column is-fluid">{{ .Correct | vocab_content }}</div>
+                                </div>
+                                {{ if .Incorrect }}
+                                <div class="ts-grid mobile:is-compact has-top-spaced">
+                                    <div class="column">
+                                        <span class="單字-對應國家">中國</span>
+                                    </div>
+                                    <div class="column is-fluid">{{ .Incorrect | vocab_content }}</div>
+                                </div>
+                                {{ end }}
+                            </div>
+                            <div class="ts-divider has-vertically-spaced-large has-hidden-last"></div>
+                            {{ end }}
+                        </div>
+                    </div>
+
+                    {{ template "random_vocabs" . }} {{ template "random_items" . }}
+                </div>
+                <div class="column tablet:is-5-wide desktop+:is-4-wide mobile:has-horizontally-padded">
+                    <div class="ts-header mobile:has-top-spaced">侵略性詞彙是什麼？</div>
+                    <div class="ts-text is-secondary has-top-spaced">
+                        <p>經過中國的言論審查、中共思想而產生的詞彙，例如：中國常以「領導」代稱台灣總統；或以「台灣地區」來暗喻台灣不是國家。</p>
+                        <p>語言代表一個國家的文化與思想，若長時間誤用這些詞彙，可能會在無形之中影響自己的思考方式。</p>
+                    </div>
+                    <div class="ts-divider has-vertically-spaced-large"></div>
+                    <div class="ts-header">透過匿名方式提供內容</div>
+                    <div class="ts-text is-secondary has-top-spaced">保持匿名性來協助新增、編輯條目，請透過此 Google 表單填寫資料。</div>
+                    <a target="_blank" rel="noopener noreferrer" href="{{ .BaseURL }}/contribute" class="ts-button is-circular is-outlined has-top-spaced">填寫 Google 表單</a>
+                </div>
+            </div>
+        </div>
+        <div class="ts-divider"></div>
+        {{ template "footer" . }}
+    </body>
+</html>

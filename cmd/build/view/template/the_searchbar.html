@@ -1,0 +1,130 @@
+{{ define "searchbar" }}
+<div id="搜尋列">
+    <div class="ts-container">
+        <div class="ts-grid is-middle-aligned mobile:has-hidden">
+            <div class="column is-fluid">
+                {{ if eq .Page "index" }}
+                <a class="導覽列-項目" href="{{ .BaseURL }}/items">
+                    <span class="ts-icon is-regular is-compass-icon"></span>
+                    瀏覽所有項目
+                </a>
+                {{ else }}
+                <a class="導覽列-項目" href="{{ .BaseURL }}">
+                    <span class="ts-icon is-arrow-left-icon"></span>
+                    返回首頁
+                </a>
+                {{ end }}
+            </div>
+            <div class="column">
+                <div class="ts-wrap is-relaxed">
+                    <a class="導覽列-項目" href="{{ .BaseURL }}/about">
+                        <span class="ts-icon is-regular is-circle-question-icon"></span>
+                        關於
+                    </a>
+                    <a class="導覽列-項目" href="{{ .BaseURL }}/news">
+                        <span class="ts-icon is-regular is-message-icon"></span>
+                        新聞
+                    </a>
+                    <a class="導覽列-項目" target="_blank" href="{{ .GitHubURL }}">
+                        <span class="ts-icon is-brand is-github-icon"></span>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ts-grid is-middle-aligned tablet+:has-hidden">
+            <div class="column is-fluid">
+                <div class="ts-wrap is-middle-aligned is-relaxed">
+                    <button id="導覽列-漢堡按鈕" type="button" class="ts-button is-icon is-large is-ghost" data-dialog="側邊欄">
+                        <span class="ts-icon is-bars-icon"></span>
+                    </button>
+                    <a href="{{ .BaseURL }}" class="ts-image has-leading-none">
+                        <img id="導覽列-商標" src="{{ .BaseURL }}/assets/images/logo-text.svg" />
+                    </a>
+                </div>
+            </div>
+            <div class="column">
+                <a class="ts-button is-icon is-large is-ghost {{ if ne .Page "index" }}mobile:has-hidden{{ end }}" href="{{ .BaseURL }}/items">
+                    <span class="ts-icon is-magnifying-glass-icon"></span>
+                </a>
+                <a class="ts-button is-icon is-large is-ghost" href="{{ .GitHubURL }}" target="_blank">
+                    <span class="ts-icon is-brand is-github-icon"></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="ts-grid is-relaxed tablet+:has-top-spaced-big mobile:has-top-spaced ">
+            <div class="column tablet:is-5-wide desktop+:is-4-wide mobile:has-hidden">
+                <a id="搜尋列-商標" href="{{ .BaseURL }}" class="ts-image">
+                    <img src="{{ .BaseURL }}/assets/images/logo-text.svg" />
+                </a>
+            </div>
+            <div class="column is-fluid">
+                {{ if or (eq .Page "index") (eq .Page "about") }}
+                <form action="{{ .BaseURL }}/items" method="GET">
+                    <div class="ts-grid tablet+:is-relaxed mobile:has-bottom-spaced-large">
+                        <div class="column is-fluid">
+                            <div class="ts-input is-solid tablet+:is-large">
+                                <input type="search" name="q" placeholder="搜尋組織、產品…"  />
+                            </div>
+                        </div>
+                        <div class="column">
+                            <button type="submit" class="ts-button tablet+:is-large mobile:is-icon">
+                                <span class="ts-icon is-magnifying-glass-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div id="搜尋列-隨機條目" class="ts-wrap mobile:has-hidden">
+                    <span>隨機條目：</span>
+                    <template x-for="item of items(5)">
+                        <a class="ts-text is-undecorated" :href="`{{ .BaseURL }}/${item.code}`" x-text="item.name"></a>
+                    </template>
+                </div>
+                {{ else }}
+                <div class="ts-grid tablet+:is-relaxed">
+                    <div class="column is-fluid">
+                        <div class="ts-input is-solid tablet+:is-large">
+                            <input type="search" placeholder="搜尋組織、產品…" @input="search" x-model="search_keyword" />
+                        </div>
+                    </div>
+                    <div class="column">
+                        <button class="ts-button tablet+:is-large mobile:is-icon" @click="search">
+                            <span class="ts-icon is-magnifying-glass-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div id="搜尋列-分頁" class="ts-grid is-middle-aligned">
+                    <div class="column is-fluid">
+                        <div  class="ts-tab mobile:is-short-indicated">
+                            <a href="{{ .BaseURL }}/items" class="item {{ if eq .Page "search_items" }}is-active{{ end }}">
+                                <span class="ts-icon is-regular is-chess-knight-icon mobile:has-hidden"></span>
+                                組織或項目
+                            </a>
+                            <a href="{{ .BaseURL }}/vocabs" class="item {{ if eq .Page "search_vocabs" }}is-active{{ end }}">
+                                <span class="ts-icon is-regular is-comment-dots-icon mobile:has-hidden"></span>
+                                侵略性詞彙
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column  tablet+:has-hidden">
+                        <button class="ts-text is-link is-undecorated is-secondardy has-leading-large" data-dialog="篩選欄">
+                            <span class="ts-icon is-filter-icon is-end-spaced"></span>
+                                篩選
+                        </button>
+                    </div>
+                </div>
+
+
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ts-divider"></div>
+
+{{ template "drawer" . }}
+{{ end }}

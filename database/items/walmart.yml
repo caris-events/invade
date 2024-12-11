@@ -1,0 +1,21 @@
+#
+code       : walmart
+parent_code:
+
+#
+name       : 沃爾瑪
+name_alias : Walmart
+name_others:
+
+#
+category: SHOPPING
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.walmart.com/
+description: |
+  [[walmart]] 是美國的跨國零售企業，也是世界上最大的零售商。
+
+#
+information:

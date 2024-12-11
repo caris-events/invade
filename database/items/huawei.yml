@@ -1,0 +1,24 @@
+#
+code       : huawei
+parent_code:
+
+#
+name       : 華為
+name_alias : Huawei
+name_others:
+
+#
+category: TELECOM
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.mobvista.com/
+description: |
+  [[huawei]] 是中國最大的電信裝置製造商之一，業務也有處理晶片、系統與人工智慧。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[huawei]] 的創辦人是中國商人任正非。

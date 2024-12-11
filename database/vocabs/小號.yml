@@ -1,0 +1,20 @@
+#
+word    : 小號
+bopomofo: ㄒㄧㄠˇ ㄏㄠˋ
+notice  : 這個條目指的不是上廁所或銅管樂器。
+
+#
+category: INTERNET
+explicit:
+
+#
+description: |
+  在網路上額外建立的分身帳號，用來規避別人認出自己。
+
+#
+examples:
+  - words      : [分身帳號]
+    correct    : |
+      維基百科禁止使用者建立{{分身帳號}}。
+    incorrect  : |
+      維基百科禁止使用者[[創建]]{{小號}}。

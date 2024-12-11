@@ -1,0 +1,24 @@
+#
+code       : 37-interactive-entertainment
+parent_code:
+
+#
+name       : 三七互娛
+name_alias : 37 Games
+name_others: [Sanqi, 37 Interactive Entertainment]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.37wan.net/
+description: |
+  [[37-interactive-entertainment]] 是中國廣州的一間遊戲開發公司。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[37-interactive-entertainment]] 的大股東是中國商人李逸飛、曾開天、胡宇航。

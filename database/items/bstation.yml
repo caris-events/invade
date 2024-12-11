@@ -1,0 +1,21 @@
+#
+code       : bstation
+parent_code: bilibili
+
+#
+name       : Bstation
+name_alias :
+name_others:
+
+#
+category: MEDIA
+type    : PLATFORM
+owner   : CHINESE
+
+#
+website    : https://www.bilibili.tv/id
+description: |
+  [[bstation]] 是專為印尼與東南亞市場所成立的中國漫畫、影片、直播網站平台。
+
+#
+information:

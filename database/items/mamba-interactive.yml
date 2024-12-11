@@ -1,0 +1,21 @@
+#
+code       : mamba-interactive
+parent_code: dpstorm
+
+#
+name       : 曼巴互娛
+name_alias : Mamba Interactive
+name_others: [香港商曼巴互動娛樂]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.onmyojigame.com/zh/
+description: |
+    [[mamba-interactive]] 是在台註冊的空殼公司，主要代理中國遊戲，後期亦與 [[netease]] 合作。
+
+#
+information:

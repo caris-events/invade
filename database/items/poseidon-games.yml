@@ -1,0 +1,21 @@
+#
+code       : poseidon-games
+parent_code: gamesparcs
+
+#
+name       : 海淯遊戲
+name_alias : Poseidon Games
+name_others: [波賽頓遊戲]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.poseidongame.com/
+description: |
+  [[poseidon-games]] 是一間台灣公司，主要代理中國的手機遊戲。
+
+#
+information:

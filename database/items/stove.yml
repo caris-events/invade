@@ -1,0 +1,23 @@
+#
+code       : stove
+parent_code: smilegate
+
+#
+name       : Stove
+name_alias :
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : PLATFORM
+owner   : FOREIGN
+
+#
+website    : https://www.onstove.com/
+description: |
+  [[stove]] 是韓國的獨立遊戲販售平台。
+
+#
+information:
+
+

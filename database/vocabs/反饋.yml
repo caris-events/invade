@@ -1,0 +1,25 @@
+#
+word    : 反饋
+bopomofo: ㄈㄢˇ ㄎㄨㄟˋ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  對某件事情的迴響與反應。
+
+#
+examples:
+  - words      : [反應]
+    correct    : |
+      大家對這篇貼文的{{反應}}十分熱烈。
+    incorrect  : |
+      大家對這篇[[帖子]]的{{反饋}}十分熱烈。
+
+  - words      : [回饋]
+    correct    : |
+      如果你有遇到問題，可以{{回饋}}意見給我們。
+    incorrect  : |
+      如果你有遇到問題，可以{{反饋}}意見給我們。

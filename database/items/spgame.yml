@@ -1,0 +1,21 @@
+#
+code       : spgame
+parent_code: skymoons
+
+#
+name       : 成都露珠
+name_alias : Spring Game
+name_others: [SPGame]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.sp-games.com/
+description: |
+  [[spgame]] 是中國成都的一家遊戲開發商。
+
+#
+information:

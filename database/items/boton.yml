@@ -1,0 +1,24 @@
+#
+code       : boton
+parent_code:
+
+#
+name       : 寶通科技
+name_alias : Boton
+name_others: [無錫寶通, 百年通]
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.btdy.com/
+description: |
+  [[boton]] 是開發現代工業輸送和網路娛樂的中國公司。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[boton]] 的大股東包括中國商人包志方。

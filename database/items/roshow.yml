@@ -1,0 +1,24 @@
+#
+code       : roshow
+parent_code:
+
+#
+name       : 露笑集團
+name_alias : Roshow
+name_others: [露笑科技]
+
+#
+category: MANUFACTURE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.roshowgroup.com/
+description: |
+  [[roshow]] 是中國諸暨的一間製造業集團，曾入選中國前 500 強製造業名單中。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+        [[roshow]] 的大股東是中國商人魯小均。

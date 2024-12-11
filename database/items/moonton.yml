@@ -1,0 +1,21 @@
+#
+code       : moonton
+parent_code: bytedance
+
+#
+name       : 沐瞳科技
+name_alias : Moonton
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://en.moonton.com/
+description: |
+  [[moonton]] 是中國上海的一個遊戲開發、發行商。
+
+#
+information:

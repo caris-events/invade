@@ -1,0 +1,25 @@
+#
+code       : asus
+parent_code:
+
+#
+name       : 華碩電腦
+name_alias : ASUSTeK Computer
+name_others: [華碩, ASUS, 共碩]
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://asus.com/
+description: |
+    [[asus]] 是源自臺灣的科技公司，是現今最大的電腦品牌之一。
+
+#
+information:
+  - year       : 2020
+    invasion   : SUPPORTED
+    description: |
+      [[asus]] 旗下 [[rog]] 與 [[hololive]] 合作，但 [[hololive]] 藝人曾稱台灣為國家，為此 [[asus]] 於微博表示自己是「中國公司」而撤回合作關係。

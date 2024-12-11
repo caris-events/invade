@@ -1,0 +1,19 @@
+#
+word    : 硬件
+bopomofo: ㄧㄥˋ ㄐㄧㄢˋ
+
+#
+category: HARDWARE
+explicit:
+
+#
+description: |
+  通常指肉眼可見、身體可觸碰到的硬體裝置，如：機殼、儲存裝置、晶片、鍵盤。
+
+#
+examples:
+  - words      : [硬體]
+    correct    : |
+      剛領到薪水，我要來升級電腦{{硬體}}。
+    incorrect  : |
+      剛領到工資，我要來升級電腦{{硬件}}。

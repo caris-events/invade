@@ -1,0 +1,19 @@
+#
+word    : 發光二極管
+bopomofo: ㄈㄚ ㄍㄨㄤ ㄦˋ ㄐㄧˊ ㄍㄨㄢˇ
+
+#
+category: HARDWARE
+explicit:
+
+#
+description: |
+  俗稱 LED 的「發光二極體」。
+
+#
+examples:
+  - words      : [發光二極體]
+    correct    : |
+      {{發光二極體}}被應用在許多地方，例如：省電燈泡。
+    incorrect  : |
+      {{發光二極管}}被應用在許多地方，例如：省電燈泡。

@@ -1,0 +1,21 @@
+#
+code       : iwplay-world
+parent_code: perfect-world
+
+#
+name       : 艾玩天地
+name_alias : Iwplay World
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.iwplay.com.tw/
+description: |
+  [[iwplay-world]] 以代理中國遊戲為名義，藉此管道直營中國遊戲給台灣玩家遊玩。
+
+#
+information:

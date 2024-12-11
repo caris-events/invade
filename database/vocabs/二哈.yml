@@ -1,0 +1,19 @@
+#
+word    : 二哈
+bopomofo: ㄦˋ ㄏㄚ
+
+#
+category: ANIMAL
+explicit:
+
+#
+description: |
+  指哈士奇，「二」是中國用以形容很蠢、很傻的樣子，類似於「二逼」低俗詞彙。
+
+#
+examples:
+  - words      : [哈士奇]
+    correct    : |
+      我家的{{哈士奇}}十分可愛。
+    incorrect  : |
+      我家的{{二哈}}十分可愛。

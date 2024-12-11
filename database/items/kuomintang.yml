@@ -1,0 +1,21 @@
+#
+code       : kuomintang
+parent_code:
+
+#
+name       : 中國國民黨
+name_alias : Kuomintang
+name_others: [KMT, Chinese Nationalist Party, 車輪黨, 中國黨, 國民黨]
+
+#
+category: POLITICAL
+type    : GROUP
+owner   : TAIWANESE
+
+#
+website    : http://www.kmt.org.tw/
+description: |
+  [[kuomintang]] 由孫中山成立，是台灣最大政黨之一。主張支持中國統一並對 [[chinese-communist-party]] 態度友好。
+
+#
+information:

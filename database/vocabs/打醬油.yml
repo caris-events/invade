@@ -1,0 +1,25 @@
+#
+word    : 打醬油
+bopomofo: ㄉㄚˇ ㄐㄧㄤˋ ㄧㄡˊ
+
+#
+category: SLANG
+explicit:
+
+#
+description: |
+  事不關己的模樣。
+
+#
+examples:
+  - words      : [湊熱鬧]
+    correct    : |
+      你們繼續吵，我只是來{{湊熱鬧}}的。
+    incorrect  : |
+      你們繼續吵，我只是來{{打醬油}}的。
+
+  - words      : [偶然路過]
+    correct    : |
+      我只是{{偶然路過}}，但他講的也蠻有道理。
+    incorrect  : |
+      我只是{{打個醬油}}，但他講的也蠻有道理。

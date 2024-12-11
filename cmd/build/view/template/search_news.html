@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="is-secondary">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>新聞資訊 - 中國侵略資料庫</title>
+        <!-- Tocas UI -->
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/tocas/tocas.min.css" />
+        <script src="{{ .BaseURL }}/assets/tocas/tocas.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+
+        <!-- Assets -->
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/styles/style.css" />
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/styles/news.css" />
+
+        <!-- Meta -->
+        <meta name="description" content="這個網路資料庫記載了與中共政府有關的企業、團體與服務還有侵略性行為（例如：言論審查、侵害人權）。" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="新聞資訊 - 中國侵略資料庫" />
+        <meta name="twitter:description" content="這個網路資料庫記載了與中共政府有關的企業、團體與服務還有侵略性行為（例如：言論審查、侵害人權）。" />
+        <meta name="twitter:image" content="{{ .BaseURL }}/assets/images/og.png" />
+        <meta property="og:title" content="新聞資訊 - 中國侵略資料庫" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="{{ .BaseURL }}/assets/images/og.png" />
+        <meta property="og:url" content="{{ .BaseURL }}/news" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:description" content="這個網路資料庫記載了與中共政府有關的企業、團體與服務還有侵略性行為（例如：言論審查、侵害人權）。" />
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ .BaseURL }}/assets/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ .BaseURL }}/assets/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ .BaseURL }}/assets/favicons/favicon-16x16.png" />
+        <link rel="manifest" href="{{ .BaseURL }}/assets/favicons/site.webmanifest" />
+        <link rel="mask-icon" href="{{ .BaseURL }}/assets/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="shortcut icon" href="{{ .BaseURL }}/assets/favicons/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="msapplication-config" content="{{ .BaseURL }}/assets/favicons/browserconfig.xml" />
+        <meta name="theme-color" content="#ffffff" />
+    </head>
+    <body class="tablet:裝置-平板 mobile:裝置-行動" x-data="random_store">
+        <div class="has-flex-1">
+            {{ template "navbar" . }}
+
+            <div class="ts-content is-fitted is-tertiary">
+                <div class="ts-container tablet+:has-vertically-padded-big mobile:has-vertically-padded-large">
+                    <div class="ts-header is-center-aligned is-heavy tablet+:is-huge mobile:is-large">官方新聞</div>
+                </div>
+            </div>
+            <div class="ts-divider mobile:has-hidden"></div>
+            <div class="ts-container desktop+:has-vertically-padded-big tablet:has-vertically-padded-large mobile:is-fitted">
+                <div id="新聞-容器" class="ts-box mobile:has-edged">
+                    <div class="ts-content tablet+:is-padded mobile:is-vertically-padded">
+                        {{ range .News }}
+                        <div>
+                            <div>
+                                <a href="{{ $.BaseURL }}/n/{{ .Title }}" class="ts-text is-link is-bold is-undecorated tablet+:is-big mobile:is-large">{{ .Title }}</a>
+                            </div>
+                            <div class="ts-text has-top-spaced-small">{{ .Summary }}</div>
+                            <div class="ts-text is-secondary has-top-spaced-small">{{ .ReadableDate }}</div>
+                        </div>
+                        <div class="ts-divider has-vertically-spaced-large has-hidden-last"></div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ts-divider mobile:has-hidden"></div>
+        {{ template "footer" . }}
+    </body>
+</html>

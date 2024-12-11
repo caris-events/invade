@@ -1,0 +1,30 @@
+#
+code       : bilibili
+parent_code:
+
+#
+name       : 嗶哩嗶哩
+name_alias : Bilibili
+name_others: [哔哩哔哩, B站]
+
+#
+category: MEDIA
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.bilibili.com/
+description: |
+  [[bilibili]] 總部位於中國上海，是中國最大的漫畫、影片、直播網站。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[bilibili]] 的大股東包括中國商人陳睿、徐逸。
+
+  - date       : 2020
+    invasion   : SUPPORTED
+    description: |
+      [[bilibili]] 封鎖 [[hololive]] 藝人「桐生ココ」的頻道，因為該藝人於《YouTube》直播時將台灣視為國家。
+

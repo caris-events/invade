@@ -1,0 +1,24 @@
+#
+code       : wanda-group
+parent_code:
+
+#
+name       : 萬達集團
+name_alias : Wanda Group
+name_others:
+
+#
+category: GROUP
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.wanda.cn/
+description: |
+  [[wanda-group]] 是中國北京的一家跨國企業集團，業務涉及商管、文化、地產、投資等領域。曾位列《財富》世界五百強企業。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[wanda-group]] 的大股東為中國商人王健林，而 [[tencent]]、[[alibaba]] 和 [[jd]] 都是股東之一。

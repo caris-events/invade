@@ -1,0 +1,19 @@
+#
+word    : 開盒
+bopomofo: ㄎㄞ ㄏㄜˊ
+
+#
+category: INTERNET
+explicit:
+
+#
+description: |
+  暴露他人隱私、地址、聯絡方式等資訊。
+
+#
+examples:
+  - words      : [肉搜, 人肉搜索]
+    correct    : |
+      只因遊戲打輸了，他就{{肉搜}}對方，公開對方的住址。
+    incorrect  : |
+      只因遊戲打輸了，他就{{開盒}}對方，公開對方的住址。

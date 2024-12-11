@@ -1,0 +1,18 @@
+#
+word    : 中國台灣
+bopomofo: ㄓㄨㄥ ㄍㄨㄛˊ ㄊㄞˊ ㄨㄢ
+
+#
+category: PLACE
+explicit:
+
+description: |
+  中國在政治主張台灣不是一個國家而經常使用的詞彙。
+
+#
+examples:
+  - words      : [台灣]
+    correct    : |
+      {{台灣}}是主權獨立的國家。
+    incorrect  : |
+      {{中國台灣}}自古以來就是與中國密不可分的省級地區。

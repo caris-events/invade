@@ -1,0 +1,24 @@
+#
+code       : qingci-games
+parent_code:
+
+#
+name       : 青瓷數碼
+name_alias : Qingci Games
+name_others: [青瓷文化, QCPlay, Qcplay Digital]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.qcplay.com/
+description: |
+  [[qingci-games]] 是中國廈門的一家遊戲開發商，同時也有經營教育動畫傳播。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[qingci-games]] 的大股東是陽煦，其他股東有：[[g-bits]]、[[tencent]]、[[alibaba]] 和 [[bilibili]]。

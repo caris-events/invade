@@ -1,0 +1,38 @@
+{{ define "footer" }}
+
+<div class="ts-container tablet+:has-top-padded-big tablet:has-bottom-padded-big desktop+:has-bottom-padded-huge mobile:has-top-padded-large mobile:has-bottom-padded-big">
+    <div class="ts-grid is-bottom-aligned is-relaxed mobile:is-stacked">
+        <div class="column tablet:is-11-wide desktop+:is-12-wide">
+            <div id="頁腳-文字">
+                笨他侵略來自
+                <span id="頁腳-國旗" class="ts-flag is-taiwan-flag is-rounded is-small"></span> 台灣，內容與商標源自網路，應自行查證正確性。原始碼授權為
+                <a href="{{ .GitHubURL }}/blob/master/LICENSE" target="_blank">MIT</a>，文字段落以
+                <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW" target="_blank" rel="license noopener noreferrer">CC 0 公眾領域</a
+                ><img class="頁腳-CC圖示" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img
+                    class="頁腳-CC圖示"
+                    src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1"
+                />
+                釋出，你可以盡情分享、改寫。笨他侵略是<a href="https://caris.events" target="_blank">卡莉絲伊繁星</a>的資料來源，而卡莉絲伊繁星屬<a
+                    href="https://sorae.co"
+                    target="_blank"
+                    >對空音商事</a
+                >。
+            </div>
+
+            <div class="ts-wrap tablet+:is-relaxed has-top-spaced-large">
+                <button class="ts-text is-secondary" onclick="window.scrollTo(0, 0)"><span class="ts-icon is-arrow-up-icon is-end-spaced"></span> 回到頂部</button>
+                <a class="ts-text is-undecorated" href="{{ .BaseURL }}">首頁</a>
+                <a class="ts-text is-undecorated" href="{{ .BaseURL }}/items">瀏覽</a>
+                <a class="ts-text is-undecorated" href="{{ .BaseURL }}/about">關於</a>
+                <a class="ts-text is-undecorated" href="{{ .BaseURL }}/news">新聞</a>
+                <a class="ts-text is-undecorated" href="{{ .GitHubURL }}" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <div class="column tablet:is-5-wide desktop+:is-4-wide desktop+:is-end-aligned tablet-:is-center-aligned">
+            <div id="頁腳-商標" class="ts-image tablet+:has-bottom-spaced">
+                <img src="{{ .BaseURL }}/assets/images/caris-events.svg" width="130" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

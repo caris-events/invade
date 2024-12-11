@@ -1,0 +1,18 @@
+#關於-容器 {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 2;
+}
+.裝置-行動 #關於-容器 {
+    line-height: 1.8;
+}
+
+.關於-國旗 {
+    width: calc(4 / 3 * 2.2rem) !important;
+    height: 2.1rem !important;
+    margin: 0 0.25rem 0.2rem !important;
+}
+.裝置-行動 .關於-國旗 {
+    width: calc(4 / 3 * 1.5rem) !important;
+    height: 1.4rem !important;
+}

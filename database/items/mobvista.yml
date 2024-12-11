@@ -1,0 +1,24 @@
+#
+code       : mobvista
+parent_code:
+
+#
+name       : 匯量科技
+name_alias : Mobvista
+name_others:
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.mobvista.com/
+description: |
+  [[mobvista]] 是中國廣州的一間雲端服務科技公司。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[mobvista]] 的大股東是中國商人段威，且擔任過 [[huawei]] 的海外市場產品經理。

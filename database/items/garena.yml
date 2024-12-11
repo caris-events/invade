@@ -1,0 +1,21 @@
+#
+code       : garena
+parent_code: sea
+
+#
+name       : 競舞娛樂
+name_alias : Garena
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.garena.tw/
+description: |
+  [[garena]] 是新加坡的一間線上遊戲開發與代理商，代理的遊戲多數來自中國或中資（如：[[tencent]]）。
+
+#
+information:

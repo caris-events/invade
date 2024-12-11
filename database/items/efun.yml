@@ -1,0 +1,21 @@
+#
+code       : efun
+parent_code: boton
+
+#
+name       : 易幻網路
+name_alias : Efun
+name_others: [廣州易幻網絡科技]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.efun.com/
+description: |
+  [[efun]] 主要開發、代理海外手機遊戲的中國公司。
+
+#
+information:

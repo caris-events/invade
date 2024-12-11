@@ -1,0 +1,21 @@
+#
+code       : gamepanda
+parent_code: babeltime
+
+#
+name       : 熊貓遊戲
+name_alias : Game Panda
+name_others: [香港商熊貓遊戲]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.gamepanda.tw/
+description: |
+  [[gamepanda]] 是在台灣註冊的空殼公司，主要代理中國遊戲。
+
+#
+information:

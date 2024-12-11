@@ -1,0 +1,19 @@
+#
+word    : 丟失
+bopomofo: ㄉㄧㄡ ㄕ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  弄丟某項物品。
+
+#
+examples:
+  - words      : [遺失]
+    correct    : |
+      若你不存檔，這些未儲存的變更將會{{遺失}}！
+    incorrect  : |
+      若你不存檔，這些未儲存的變更將會{{丟失}}！

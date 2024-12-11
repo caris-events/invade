@@ -1,0 +1,19 @@
+#
+word    : 高玩
+bopomofo: ㄍㄠ ㄨㄢˊ
+
+#
+category: GAME
+explicit:
+
+#
+description: |
+  指對於遊戲或技術十分擅長的「高端玩家」，取自「睪丸」的低俗諧音。
+
+#
+examples:
+  - words      : [高手]
+    correct    : |
+      哇！馬上就贏了，真不愧是{{高手}}。
+    incorrect  : |
+      哇！馬上就贏了，真不愧是{{高玩}}。

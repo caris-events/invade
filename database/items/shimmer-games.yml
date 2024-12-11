@@ -1,0 +1,24 @@
+#
+code       : shimmer-games
+parent_code:
+
+#
+name       : 微光互動
+name_alias : Shimmer Games
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://shimmergames.com/
+description: |
+  [[shimmer-games]] 是中國成都的一家遊戲開發商。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[shimmer-games]] 的大股東是中國商人劉祺。

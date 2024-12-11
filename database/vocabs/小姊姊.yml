@@ -1,0 +1,19 @@
+#
+word    : 小姊姊
+bopomofo: ㄒㄧㄠˇ ㄐㄧㄝˇ ㄐㄧㄝ˙
+
+#
+category: PRONOUN
+explicit:
+
+#
+description: |
+  美麗好看、身材苗條的女性。
+
+#
+examples:
+  - words      : [正妹]
+    correct    : |
+      我的 Instagram 都是一堆{{正妹}}照。
+    incorrect  : |
+      我的 Instagram 都是一堆{{小姊姊}}的照片。

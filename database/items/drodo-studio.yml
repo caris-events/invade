@@ -1,0 +1,21 @@
+#
+code       : drodo-studio
+parent_code: dragonest
+
+#
+name       : 巨鳥多多工作室
+name_alias : Drodo Studio
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : GROUP
+owner   : CHINESE
+
+#
+website    : https://weibo.com/u/6937884512
+description: |
+  [[drodo-studio]] 是開發「刀塔自走棋」而成名的工作室。
+
+#
+information:

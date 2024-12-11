@@ -1,0 +1,16 @@
+#
+word    : 智能
+bopomofo: ㄓˋ ㄋㄥˊ
+notice  : 這個條目指的不是動物的智商或能力。
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+examples:
+  - words      : [智慧]
+    correct    : |
+      每個人幾乎都有一隻{{智慧}}型手機。
+    incorrect  : |
+      每個人幾乎都有一隻{{智能}}手機。

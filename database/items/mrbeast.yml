@@ -1,0 +1,35 @@
+#
+code       : mrbeast
+parent_code:
+
+#
+name       : MrBeast
+name_alias :
+name_others: [Jimmy Donaldson]
+
+#
+category: PERSON
+type    : PERSON
+owner   : FOREIGN
+
+#
+website    : https://www.youtube.com/channel/UCX6OQ3DkcsbYNE6H8uQQuVA
+description: |
+  [[mrbeast]] 是《YouTube》最多人訂閱的 YouTuber 之一，影片內容以公益與娛樂為主。
+
+#
+information:
+  - year       : 2023
+    invasion   : SUPPORTED
+    source     : https://web.archive.org/web/20241202154607/https://ibb.co/WPpXtM6
+    description: |
+      [[mrbeast]] 邀請每個國家的參賽者，而台灣被視為中國的一部分。
+
+  - year       : 2024
+    invasion   : SUPPORTED
+    source     : https://web.archive.org/web/20241202152822/https://www.bilibili.com/video/BV1Nw411E7MW/
+    description: |
+      [[mrbeast]] 進駐 [[bilibili]] 平台，在首支影片的地圖將台灣劃為中國的一部分。
+
+
+

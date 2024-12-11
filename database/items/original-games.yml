@@ -1,0 +1,21 @@
+#
+code       : original-games
+parent_code: lilith-games
+
+#
+name       : 奧瑞吉
+name_alias : Original Games
+name_others: [Ori]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.ori.tw/
+description: |
+  [[original-games]] 是在台灣成立的空殼公司，主要代理中國遊戲。
+
+#
+information:

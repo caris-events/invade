@@ -1,0 +1,24 @@
+#
+code       : zte
+parent_code:
+
+#
+name       : 中興通訊
+name_alias : ZTE
+name_others:
+
+#
+category: TELECOM
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.zte.com.cn/china/
+description: |
+  [[zte]] 是中國深圳的一家無線通訊開發公司，亦是中國五大手機製造商之一。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[zte]] 的創辦人是中國商人侯為貴。

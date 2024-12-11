@@ -1,0 +1,24 @@
+#
+code       : gamesparcs
+parent_code:
+
+#
+name       : 隆中網路
+name_alias : GameSparcs
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.gamesparcs.com/
+description: |
+  [[gamesparcs]] 是在台上櫃的公司（股票代號：6542），主要開發、代理與中國的相關手機遊戲。
+
+#
+information:
+  - year       : 2017
+    description: |
+      [[gamesparcs]] 的前員工在《求職天眼通》表示是台皮陸骨的公司。

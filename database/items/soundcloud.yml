@@ -1,0 +1,25 @@
+#
+code       : soundcloud
+parent_code:
+
+#
+name       : SoundCloud
+name_alias :
+name_others:
+
+#
+category: MEDIA
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://soundcloud.com/
+description: |
+  [[soundcloud]] 是德國的線上音樂串流平台，可以上傳音樂供大眾閱聽。
+
+#
+information:
+  - year       : 2016
+    invasion   : SUPPORTED
+    description: |
+      [[soundcloud]] 的使用者「國家欄位」表示台灣是中華人民共和國的一省。

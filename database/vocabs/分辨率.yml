@@ -1,0 +1,29 @@
+#
+word    : 分辨率
+bopomofo: ㄈㄣ ㄅㄧㄢˋ ㄌㄩˋ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+examples:
+  - words      : [解析度]
+    description: |
+      用於畫面的解析尺寸。
+    correct    : |
+      這款螢幕{{解析度}}是 1920 x 1080。
+    incorrect  : |
+      這款[[屏幕]]{{分辨率}}是 1920 x 1080。
+
+  - words      : [取樣頻率]
+    description: |
+      用於聲音的取樣次數，通常以赫茲（Hz）表示單位。
+    correct    : |
+      這首歌的{{取樣頻率}}是 44,100 Hz。
+    incorrect  : |
+      這首歌的{{分辨率}}是 44,100 Hz。
+
+
+
+

@@ -1,0 +1,19 @@
+#
+word    : 適配器
+bopomofo: ㄕˋ ㄆㄟˋ ㄑㄧˋ
+
+#
+category: HARDWARE
+explicit:
+
+#
+description: |
+  通常是指電源的供應、變壓器。
+
+#
+examples:
+  - words      : [變壓器, 供應器]
+    correct    : |
+      這台電腦的電源{{變壓器}}是 110V 的。
+    incorrect  : |
+      這台電腦的電源{{適配器}}是 110V 的。

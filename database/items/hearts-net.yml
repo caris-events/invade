@@ -1,0 +1,21 @@
+#
+code       : hearts-net
+parent_code: skymoons
+
+#
+name       : 紅心網路
+name_alias : Hearts Net
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.heartsnet.hk/
+description: |
+  [[hearts-net]] 是台灣的公司，主要代理中國手機遊戲。
+
+#
+information:

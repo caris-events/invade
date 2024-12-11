@@ -1,0 +1,21 @@
+#
+code       : hao123
+parent_code: baidu
+
+#
+name       : Hao123
+name_alias :
+name_others: [網址之家]
+
+#
+category: INTERNET
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.hao123.com/
+description: |
+  [[hao123]] 是中國的資訊與連結彙整網站，類似早期《Yahoo》的經營模式。由於 [[hao123]] 經常綁架瀏覽器的首頁而被唾棄。
+
+#
+information:

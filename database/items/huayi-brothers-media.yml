@@ -1,0 +1,24 @@
+#
+code       : huayi-brothers-media
+parent_code:
+
+#
+name       : 華誼兄弟
+name_alias : Huayi Brothers Media
+name_others:
+
+#
+category: MEDIA
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.huayimedia.com/
+description: |
+  [[huayi-brothers-media]] 是中國的一家知名影音傳播集團。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[huayi-brothers-media]] 的大股東是中國商人王忠軍與 [[tencent]]、[[alibaba]]、馬雲。

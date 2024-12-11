@@ -1,0 +1,24 @@
+#
+code       : new-margin
+parent_code:
+
+#
+name       : 聯創永宣
+name_alias : New Margin
+name_others:
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.newmargin.cn/
+description: |
+    [[new-margin]] 是中國最早成立的風險投資事業之一。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[new-margin]] 由中國上海市政府、[[chinese-academy-of-sciences]] 成立。

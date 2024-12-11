@@ -1,0 +1,30 @@
+#
+code       : bungie
+parent_code: sony-interactive-entertainment
+
+#
+name       : Bungie
+name_alias :
+name_others: [棒雞]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.bungie.net/
+description: |
+  [[bungie]] 是美國著名的電子遊戲開發商，以強大的美術聞名。於 2022 年初被 [[sony-interactive-entertainment]] 收購。
+
+#
+information:
+  - year       : 2023
+    invasion   : MANIPULATED
+    description: |
+      [[bungie]] 的《Steam》帳號連結表單裡，國家選項只有中國、香港，沒有台灣。
+
+  - year       : 2023
+    invasion   : MANIPULATED
+    description: |
+      [[bungie]] 在「同志驕傲月」感謝許多國家的努力，其中包括台灣。在中國網友反應之後，[[bungie]] 從文章中移除了台灣的字樣。

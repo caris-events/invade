@@ -1,0 +1,19 @@
+#
+word    : 實時
+bopomofo: ㄕˊ ㄕˊ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  立即性的。
+
+#
+examples:
+  - words      : [即時]
+    correct    : |
+      這些資訊會{{即時}}更新。
+    incorrect  : |
+      這些資訊會{{實時}}更新。

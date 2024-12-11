@@ -1,0 +1,21 @@
+#
+code       : taiwan-peoples-party
+parent_code:
+
+#
+name       : 台灣民眾黨
+name_alias : Taiwan People's Party
+name_others: [TPP, 民眾黨, 民眾堂, 白色力量]
+
+#
+category: POLITICAL
+type    : GROUP
+owner   : TAIWANESE
+
+#
+website    : https://www.tpp.org.tw/
+description: |
+    [[taiwan-peoples-party]] 是由柯文哲成立的台灣政黨，政治傾向偏好與中國友好往來。
+
+#
+information:

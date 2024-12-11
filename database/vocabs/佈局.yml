@@ -1,0 +1,20 @@
+#
+word    : 佈局
+bopomofo: ㄅㄨˋ ㄐㄩˊ
+notice  : 這個條目指的不是某個人佈下的局。
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  形容視覺排版或是建築上的結構設計。
+
+#
+examples:
+  - words      : [格局]
+    correct    : |
+      這棟建築的室內{{格局}}適合全家大小一同生活。
+    incorrect  : |
+      這棟建築的室內{{佈局}}適合全家大小一同生活。

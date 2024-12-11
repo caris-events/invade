@@ -1,0 +1,19 @@
+#
+word    : 互噴
+bopomofo: ㄏㄨˋ ㄆㄣ
+
+#
+category: INTERNET
+explicit:
+
+#
+description: |
+  唇槍舌戰並互相辱罵，通常指網路論戰。
+
+#
+examples:
+  - words      : [互罵]
+    correct    : |
+      我常透過電腦跟人在網路上{{互罵}}。
+    incorrect  : |
+      我常透過電腦跟人在[[互聯網]]上{{互噴}}。

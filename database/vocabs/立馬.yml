@@ -1,0 +1,21 @@
+#
+word    : 立馬
+bopomofo: ㄌㄧˋ ㄇㄚˇ
+
+#
+category: ADVERB
+explicit:
+
+#
+examples:
+  - words      : [馬上]
+    correct    : |
+      我{{馬上}}就把照片傳給你。
+    incorrect  : |
+      我{{立馬}}把照片傳給你。
+
+  - words      : [立刻]
+    correct    : |
+      我{{立刻}}就去做。
+    incorrect  : |
+      我{{立馬}}去做。

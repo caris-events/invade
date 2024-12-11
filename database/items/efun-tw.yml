@@ -1,0 +1,28 @@
+#
+code       : efun-tw
+parent_code: inch-interactive-entertainment
+
+#
+name       : Efun遊戲平台
+name_alias : efuntw
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : PLATFORM
+owner   : TAIWANESE
+
+#
+website    : https://www.efuntw.com/
+description: |
+  [[efun-tw]] 是在台灣營運的中國手機遊戲平台網站。
+
+#
+information:
+  - year       : 2018
+    description: |
+      [[efun-tw]] 未知原因凍結多名玩家帳號，引發玩家至 Facebook 粉絲專頁抱怨。
+
+  - year       : 2021
+    description: |
+      [[efun-tw]] 的營運權限從原先的 [[inch-interactive-entertainment]] 轉交給 [[mover-games]]，其平台外觀與內容完全相同。

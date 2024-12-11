@@ -1,0 +1,23 @@
+#
+code       : gamedreamer
+parent_code: gamesparcs
+
+#
+name       : 晶綺科技
+name_alias : GameDreamer
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.gamedreamer.com.tw/
+description: |
+  [[gamedreamer]] 主要開發、代理與中國的相關手機遊戲。
+
+#
+information:
+  - description: |
+      [[gamedreamer]] 研發據點分佈於杭州、西安、廣州及香港。

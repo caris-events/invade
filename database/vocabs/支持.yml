@@ -1,0 +1,20 @@
+#
+word    : 支持
+bopomofo: ㄓ ㄔˊ
+notice  : 這個條目指的不是精神層面上的支持。
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  有能力足以使用某個功能。
+
+#
+examples:
+  - words      : [支援]
+    correct    : |
+      這個社群網站{{支援}}多種語言。
+    incorrect  : |
+      這個社群網站{{支持}}多種語言。

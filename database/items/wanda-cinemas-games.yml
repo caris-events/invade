@@ -1,0 +1,21 @@
+#
+code       : wanda-cinemas-games
+parent_code: wanda-group
+
+#
+name       : 萬達院線遊戲
+name_alias : Wanda Cinemas Games
+name_others: [互愛互動]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.wdyxgames.com/
+description: |
+  [[wanda-cinemas-games]] 是中國的手機遊戲發行商。
+
+#
+information:

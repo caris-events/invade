@@ -1,0 +1,21 @@
+#
+code       : timi-studio
+parent_code: tencent
+
+#
+name       : 天美工作室
+name_alias : TiMi Studio Group
+name_others: [TiMi, 天美藝遊]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://timi.qq.com/
+description: |
+  [[timi-studio]] 是中國上海的一間手機遊戲開發工作室，由 [[tencent]] 旗下的多個工作室拆散重組而成。
+
+#
+information:

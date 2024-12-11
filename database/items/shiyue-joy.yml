@@ -1,0 +1,24 @@
+#
+code       : shiyue-joy
+parent_code: 37-interactive-entertainment
+
+#
+name       : 詩悅網路
+name_alias : ShiYue Joy
+name_others: [詩悅遊戲]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.shiyue.com/
+description: |
+  [[shiyue-joy]] 是中國廣州的一間手機遊戲開發公司。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[shiyue-joy]] 的大股東是中國商人林金城，曾擔任過 [[jieyou]] 遊戲製作人。由於公司成長性飛快且無融資紀錄，被懷疑是 [[37-interactive-entertainment]] 的子公司。

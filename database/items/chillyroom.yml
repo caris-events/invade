@@ -1,0 +1,24 @@
+#
+code       : chillyroom
+parent_code:
+
+#
+name       : 涼屋遊戲
+name_alias : ChillyRoom
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.chillyroom.com/zh
+description: |
+    [[chillyroom]] 是中國深圳的一間手機遊戲開發商。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[chillyroom]] 的大股東是中國商人李澤陽、曹侃。

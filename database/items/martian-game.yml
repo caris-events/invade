@@ -1,0 +1,24 @@
+#
+code       : martian-game
+parent_code:
+
+#
+name       : 火星人互動娛樂
+name_alias : Martian Game
+name_others: [6363game]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.6263game.com/index
+description: |
+  [[martian-game]] 是中國深圳的一間手機遊戲開發公司。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[martian-game]] 的大股東是中國商人朱瓊。

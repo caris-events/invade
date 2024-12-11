@@ -1,0 +1,24 @@
+#
+code       : chinese-communist-party
+parent_code:
+
+#
+name       : 中國共產黨
+name_alias : CCP
+name_others: [黨中央, 中央委員會, Central Committee of the Chinese Communist Party]
+
+#
+category: POLITICAL
+type    : GROUP
+owner   : CHINESE
+
+#
+website    : https://www.gov.cn/
+description: |
+  [[chinese-communist-party]] 是中國最大的權利機關，類似於台灣的總統府機構。
+
+#
+information:
+  - invasion   : SUPPORTED
+    description: |
+      [[chinese-communist-party]] 的總書記與主要領導人是習近平。

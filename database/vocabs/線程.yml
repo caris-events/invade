@@ -1,0 +1,17 @@
+#
+word    : 線程
+bopomofo: ㄒㄧㄢˋ ㄔㄥˊ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+examples:
+  - words      : [執行緒]
+    description: |
+      電腦執行程式時，都會替每個程式指派執行緒。多個執行緒表示電腦在同一時間執行多個程式、工作，而單執行緒是同時間只能處理一個。
+    correct    : |
+      這款處理器支援多{{執行緒}}，可以同時執行大量的工作。
+    incorrect  : |
+      這款處理器支援多{{線程}}，可以同時[[運行]]大量的工作。

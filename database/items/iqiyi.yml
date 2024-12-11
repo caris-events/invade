@@ -1,0 +1,21 @@
+#
+code       : iqiyi
+parent_code: baidu
+
+#
+name       : 愛奇藝
+name_alias : iQiyi
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.iq.com/
+description: |
+  [[iqiyi]] 是中國最大的影音平台與製作商之一，原先以盜版影音內容起家。
+
+#
+information:

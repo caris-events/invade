@@ -1,0 +1,21 @@
+#
+code       : jieyou
+parent_code: forgame
+
+#
+name       : 捷遊軟件
+name_alias : Jieyou
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.jieyou.com/
+description: |
+  [[jieyou]] 是中國廣州的一間網頁遊戲開發公司。
+
+#
+information:

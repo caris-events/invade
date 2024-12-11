@@ -1,0 +1,23 @@
+#
+code       : peiyu-digital
+parent_code:
+
+#
+name       : 沛羽數位
+name_alias : Peiyu Digital
+name_others: [沛羽數位娛樂]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.pde.tw/
+description: |
+    [[peiyu-digital]] 是在台灣註冊的空殼公司，主要代理中國遊戲。
+
+#
+information:
+  - description: |
+      [[peiyu-digital]] 的創辦人是郭天貴，與 [[long-cheng]] 為同一人物。

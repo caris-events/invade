@@ -1,0 +1,19 @@
+#
+word    : 演示
+bopomofo: ㄧㄢˇ ㄕˋ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  示範某個東西，供大家參考或效仿。
+
+#
+examples:
+  - words      : [範例, 展示, 示範]
+    correct    : |
+      蘋果公司在技術{{展示}}中{{示範}}了最新的功能。
+    incorrect  : |
+      蘋果公司在技術{{演示}}中{{演示}}了最新的功能。

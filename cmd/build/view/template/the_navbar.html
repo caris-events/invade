@@ -1,0 +1,73 @@
+{{ define "navbar" }}
+<div id="導覽列">
+    <div class="ts-container">
+        <div class="ts-grid is-middle-aligned is-relaxed mobile:has-hidden">
+            <div class="column">
+                <div class="ts-wrap is-middle-aligned is-relaxed">
+                    <a href="{{ .BaseURL }}" class="ts-image has-leading-none">
+                        <img id="導覽列-商標" src="{{ .BaseURL }}/assets/images/logo-text.svg" />
+                    </a>
+                    <a class="導覽列-項目" href="{{ .BaseURL }}/items">
+                        <span class="ts-icon is-regular is-compass-icon"></span>
+                        瀏覽
+                    </a>
+                </div>
+            </div>
+            <div class="column is-center-aligned is-fluid">
+                <form action="{{ .BaseURL }}/items" method="GET">
+                    <div id="導覽列-搜尋欄位" class="ts-input is-solid is-start-icon tablet:has-hidden">
+                        <span class="ts-icon is-magnifying-glass-icon"></span>
+                        <input type="search" name="q" placeholder="搜尋組織、產品…" />
+                    </div>
+                </form>
+            </div>
+            <div class="column">
+                <div class="ts-wrap is-relaxed is-end-aligned">
+                    <a class="導覽列-項目" href="{{ .BaseURL }}/about">
+                        <span class="ts-icon is-regular is-circle-question-icon"></span>
+                        關於
+                    </a>
+                    <a class="導覽列-項目" href="{{ .BaseURL }}/news">
+                        <span class="ts-icon is-regular is-message-icon"></span>
+                        新聞
+                    </a>
+                    <a class="導覽列-項目" target="_blank" href="{{ .GitHubURL }}">
+                        <span class="ts-icon is-brand is-github-icon"></span>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ts-grid is-middle-aligned tablet+:has-hidden">
+            <div class="column is-fluid">
+                <div class="ts-wrap is-middle-aligned is-relaxed">
+                    <button id="導覽列-漢堡按鈕" type="button" class="ts-button is-icon is-large is-ghost" data-dialog="側邊欄">
+                        <span class="ts-icon is-bars-icon"></span>
+                    </button>
+                    <a href="{{ .BaseURL }}" class="ts-image has-leading-none">
+                        <img id="導覽列-商標" src="{{ .BaseURL }}/assets/images/logo-text.svg" />
+                    </a>
+                </div>
+            </div>
+            <div class="column">
+                {{ if eq .Page "single_vocab" }}
+                <a class="ts-button is-icon is-large is-ghost" href="{{ .BaseURL }}/vocabs">
+                    <span class="ts-icon is-magnifying-glass-icon"></span>
+                </a>
+                {{ else }}
+                <a class="ts-button is-icon is-large is-ghost" href="{{ .BaseURL }}/items">
+                    <span class="ts-icon is-magnifying-glass-icon"></span>
+                </a>
+                {{ end }}
+                <a class="ts-button is-icon is-large is-ghost" href="{{ .GitHubURL }}" target="_blank">
+                    <span class="ts-icon is-brand is-github-icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ts-divider"></div>
+
+{{ template "drawer" . }} {{ end }}

@@ -1,0 +1,21 @@
+#
+code       : rog
+parent_code: asus
+
+#
+name       : 玩家國度
+name_alias : Republic of Games
+name_others: [敗家之眼, ROG]
+
+#
+category: ELECTRONIC
+type    : BRAND
+owner   : TAIWANESE
+
+#
+website    : https://rog.asus.com/
+description: |
+  [[rog]] 是為電競遊戲而成立的子品牌，主要販售商品有電腦硬體、路由器、手機、耳機等。
+
+#
+information:

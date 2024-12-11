@@ -1,0 +1,21 @@
+#
+code       : playcrab
+parent_code: ourpalm
+
+#
+name       : 玩蟹科技
+name_alias : Playcrab
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.playcrab.com/
+description: |
+  [[playcrab]] 是中國的手機遊戲開發商。
+
+#
+information:

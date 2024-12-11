@@ -1,0 +1,24 @@
+#
+code       : zlon-game
+parent_code:
+
+#
+name       : 紫龍遊戲
+name_alias : Zlon Game
+name_others: [Zilong, Zlong Games]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.zlongame.com/
+description: |
+  [[zlon-game]] 是中國北京的一家手機遊戲開發商。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[zlon-game]] 的主要創辦人是中國商人王一，其同時為 [[tangren-media]] 的總裁，亦曾擔任過 [[changyou]] 的總裁。

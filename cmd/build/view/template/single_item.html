@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="is-secondary">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ .Name }} - 中國侵略資料庫</title>
+        <!-- Tocas UI -->
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/tocas/tocas.min.css" />
+        <script src="{{ .BaseURL }}/assets/tocas/tocas.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+
+        <!-- Assets -->
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/styles/style.css" />
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/styles/item.css" />
+        <script src="{{ .BaseURL }}/assets/scripts/db_store.js" defer></script>
+        <script src="{{ .BaseURL }}/assets/scripts/db_random_items.js" defer></script>
+        <script src="{{ .BaseURL }}/assets/scripts/db_random_vocabs.js" defer></script>
+        <script src="{{ .BaseURL }}/assets/scripts/random_store.js" defer></script>
+        <script src="{{ .BaseURL }}/assets/scripts/util_store.js" defer></script>
+
+        <!-- Dependencies -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.5/cdn.min.js" defer></script>
+
+        <!-- Meta -->
+        <meta name="description" content="{{ .Summary }}" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="{{ .Name }} - 中國侵略資料庫" />
+        <meta name="twitter:description" content="{{ .Summary }}" />
+        <meta name="twitter:image" content="{{ .BaseURL }}/assets/item_covers/{{ .Code }}.png" />
+        <meta property="og:title" content="{{ .Name }} - 中國侵略資料庫" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="{{ .BaseURL }}/assets/item_covers/{{ .Code }}.png" />
+        <meta property="og:url" content="{{ .BaseURL }}/{{ .Code }}" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:description" content="{{ .Summary }}" />
+        <meta property="og:updated_time" content="{{ .ModUnix | iso8601 }}" />
+        <meta property="article:modified_time" content="{{ .ModUnix | iso8601 }}" />
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ .BaseURL }}/assets/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ .BaseURL }}/assets/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ .BaseURL }}/assets/favicons/favicon-16x16.png" />
+        <link rel="manifest" href="{{ .BaseURL }}/assets/favicons/site.webmanifest" />
+        <link rel="mask-icon" href="{{ .BaseURL }}/assets/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="shortcut icon" href="{{ .BaseURL }}/assets/favicons/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="msapplication-config" content="{{ .BaseURL }}/assets/favicons/browserconfig.xml" />
+        <meta name="theme-color" content="#ffffff" />
+    </head>
+    <body class="tablet:裝置-平板 mobile:裝置-行動" x-data="random_store">
+        <div class="has-flex-1">
+            {{ template "navbar" . }}
+
+            <div id="項目-標題列">
+                <div class="ts-container">
+                    <div class="ts-grid is-middle-aligned tablet+:is-relaxed">
+                        <div class="column">
+                            <div class="商標圖示 商標圖示-單個項目 ts-image">
+                                <img src="{{ .BaseURL }}/assets/item_logos/{{ .Code }}.jpg" />
+                            </div>
+                        </div>
+                        <div class="column is-fluid">
+                            <div class="ts-text is-heavy mobile:is-large tablet+:is-huge">
+                                {{ .Name }} {{ if .NameAlias }}
+                                <span>（{{ .NameAlias }}）</span>
+                                {{ end }}
+                            </div>
+
+                            <div id="項目-中繼資料" class="ts-meta is-secondary">
+                                <a href="{{ .BaseURL }}/items?i={{ .Invasion }}" class="item has-hover-target mobile:has-hidden">
+                                    <div id="項目-星級" class="ts-wrap is-compact is-middle-aligned">
+                                        <div class="ts-rating is-red">
+                                            <div class="star {{ if gt .InvasionLevel 0 }}is-active{{ end }}"></div>
+                                            <div class="star {{ if gt .InvasionLevel 1 }}is-active{{ end }}"></div>
+                                            <div class="star {{ if gt .InvasionLevel 2 }}is-active{{ end }}"></div>
+                                            <div class="star {{ if gt .InvasionLevel 3 }}is-active{{ end }}"></div>
+                                        </div>
+                                        <div class="ts-text {{ if gt .InvasionLevel 3 }}is-bold is-negative{{ end }} has-target-underline">{{ .InvasionStr }}</div>
+                                    </div>
+                                </a>
+                                <span class="item">
+                                    <a class="ts-text is-undecorated" href="{{ .BaseURL }}/items?o={{ .Owner }}">{{ .OwnerStr }}{{ .TypeStr }}</a>
+                                </span>
+                            </div>
+                            <div class="ts-text is-secondary tablet+:has-hidden">
+                                <a href="{{ .BaseURL }}/items?i={{ .Invasion }}" class="item has-hover-target">
+                                    <div id="項目-星級" class="ts-wrap is-compact is-middle-aligned">
+                                        <div class="ts-rating is-red">
+                                            <div class="star {{ if gt .InvasionLevel 0 }}is-active{{ end }}"></div>
+                                            <div class="star {{ if gt .InvasionLevel 1 }}is-active{{ end }}"></div>
+                                            <div class="star {{ if gt .InvasionLevel 2 }}is-active{{ end }}"></div>
+                                            <div class="star {{ if gt .InvasionLevel 3 }}is-active{{ end }}"></div>
+                                        </div>
+                                        <div class="ts-text {{ if gt .InvasionLevel 3 }}is-bold is-negative{{ end }} has-target-underline">{{ .InvasionStr }}</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ts-divider"></div>
+            <div class="ts-container mobile:is-fitted tablet-:has-vertically-padded-large desktop+:has-vertically-padded-big">
+                <div class="ts-grid desktop+:is-relaxed mobile:is-stacked">
+                    <div class="column tablet:is-11-wide desktop+:is-12-wide">
+                        <div class="ts-grid is-bottom-aligned mobile:has-horizontally-padded">
+                            <div class="column is-fluid">
+                                <div class="ts-header">基本資料</div>
+                            </div>
+                            <div class="column">
+                                <div class="ts-tab is-dense is-segmented mobile:has-14px">
+                                    <button type="button" class="item" data-tab="tab-plain">純文字</button>
+                                    <button type="button" class="item is-active" data-tab="tab-default">標準</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ts-box has-top-spaced mobile:has-edged">
+                            <div id="tab-default" class="ts-content tablet+:is-padded mobile:is-vertically-padded">
+                                <div class="ts-text is-secondary is-small">簡介</div>
+                                <div>{{ .Description | item_content }}</div>
+                                <div class="ts-grid mobile:is-1-columns desktop+:is-relaxed desktop+:is-3-columns tablet:is-2-columns has-top-spaced-large">
+                                    {{ if .NameOthers }}
+                                    <div class="column">
+                                        <div class="ts-text is-secondary is-small">其他稱呼</div>
+                                        {{ range .NameOthers }}
+                                        <span>{{ . }}</span>
+                                        <span class="has-hidden-last">、</span>
+                                        {{ end }}
+                                    </div>
+                                    {{ end }} {{ if .Website }}
+                                    <div class="column">
+                                        <div class="ts-text is-small is-secondary">官方網站</div>
+                                        <a href="{{ .Website }}" target="_blank" rel="noopener noreferrer" class="ts-text is-small is-link is-undecorated has-break-all">
+                                            {{ .Website }}
+                                        </a>
+                                    </div>
+                                    {{ end }}
+                                    <div class="column">
+                                        <div class="ts-text is-secondary is-small">分類</div>
+                                        <a id="項目-分類" class="ts-badge is-secondary" href="{{ .BaseURL }}/items?c={{ .Category }}">{{ .CategoryStr }}</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tab-plain" class="ts-content tablet+:is-padded mobile:is-vertically-padded has-break-all">{{ .PlainText }}</div>
+                        </div>
+
+                        <div class="ts-header tablet+:has-top-spaced-big mobile:has-top-spaced-large mobile:has-horizontally-padded">相關資訊</div>
+                        {{ if .Information }}
+                        <div class="ts-box has-top-spaced mobile:has-edged">
+                            {{ range .Information }}
+                            <div class="ts-content tablet+:is-padded mobile:is-vertically-padded">
+                                <div class="ts-grid tablet-:is-stacked tablet-:is-compact desktop+:is-relaxed">
+                                    <div class="項目-資訊-年份 column">
+                                        <div class="ts-text is-secondary desktop+:is-end-aligned">{{ if .Year }} {{ .Year }} 年 {{ else }} — {{ end }}</div>
+                                    </div>
+                                    <div class="column is-fluid">
+                                        <div class="項目-資訊-說明">{{ .Description | item_content }}</div>
+                                        {{ if .Note }}
+                                        <div class="ts-content is-rounded is-secondary has-top-spaced">
+                                            <div class="項目-資訊-檢核表 ts-checklist">
+                                                <div class="item is-warning">{{ .Note }}</div>
+                                            </div>
+                                        </div>
+                                        {{ end }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ts-divider has-hidden-last"></div>
+                            {{ end }}
+                        </div>
+                        {{ else }}
+                        <div class="ts-content is-tertiary is-rounded is-fitted has-top-spaced mobile:has-edged">
+                            <div class="ts-blankslate is-secondary">
+                                <div class="header">沒有相關資訊</div>
+                            </div>
+                        </div>
+                        {{ end }}
+                        <div class="ts-header tablet+:has-top-spaced-big mobile:has-top-spaced-large mobile:has-horizontally-padded">關聯項目</div>
+                        {{ if .ShownRelates }}
+                        <div class="ts-box has-top-spaced mobile:has-edged">
+                            {{ range .ShownRelates }}
+                            <a href="{{ $.BaseURL }}/{{ .Code }}" class="ts-content is-padded">
+                                <div class="ts-grid is-middle-aligned">
+                                    <div class="column">
+                                        <div class="商標圖示 商標圖示-相關項目 ts-image">
+                                            <img src="{{ $.BaseURL }}/assets/item_logos/{{ .Code }}.jpg" />
+                                        </div>
+                                    </div>
+                                    <div class="column is-fluid">
+                                        <div class="ts-text is-1-lines tablet+:has-16px mobile:has-15px">{{ .Name }}</div>
+                                        <div class="ts-meta is-secondary is-1-lines mobile:has-hidden">
+                                            {{ if .NameAlias }}
+                                            <span class="item">{{ .NameAlias }}</span>
+                                            {{ end }}
+                                            <span class="item">{{ .OwnerStr }}{{ .TypeStr }}</span>
+                                        </div>
+
+                                        <div class="ts-text is-secondary is-1-lines tablet+:has-hidden">
+                                            <span class="item">{{ if .NameAlias }}{{ .NameAlias }}{{ else }}{{ .OwnerStr }}{{ .TypeStr }}{{ end }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="ts-divider has-hidden-last"></div>
+                            {{ end }} {{ if .HiddenRelates }}
+                            <a href="{{ .BaseURL }}/items?r={{ .Code }}" class="ts-text is-link is-undecorated">
+                                <div class="ts-content is-secondary is-dense is-center-aligned">還有其他 {{ .HiddenRelates }} 個項目…</div>
+                            </a>
+                            {{ end }}
+                        </div>
+                        {{ else }}
+                        <div class="ts-content is-tertiary is-rounded is-fitted has-top-spaced mobile:has-edged">
+                            <div class="ts-blankslate is-secondary">
+                                <div class="header">沒有關聯項目</div>
+                            </div>
+                        </div>
+                        {{ end }} {{ template "random_items" . }} {{ template "random_vocabs" . }}
+                    </div>
+                    <div class="column tablet:is-5-wide desktop+:is-4-wide mobile:has-horizontally-padded">
+                        <div class="mobile:has-hidden">
+                            <div class="ts-box">
+                                <div class="ts-content is-secondary is-padded">
+                                    <div class="ts-header">透過匿名方式提供內容</div>
+                                    <div class="ts-text is-secondary has-top-spaced-small">保持匿名性來協助新增、編輯條目，請透過此 Google 表單填寫資料。</div>
+                                    <a target="_blank" rel="noopener noreferrer" href="{{ .BaseURL }}/contribute" class="ts-button is-wide is-circular is-outlined has-top-spaced">
+                                        填寫 Google 表單
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="ts-box has-top-spaced-large">
+                                <div class="ts-content is-secondary is-padded">
+                                    <div class="ts-header">檢視、下載所有資料</div>
+                                    <div class="ts-text is-secondary has-top-spaced-small">這些資料都公開在 GitHub 上，你可以使用這些資料。</div>
+                                    <a target="_blank" rel="noopener noreferrer" href="{{ .GitHubURL }}" class="ts-button is-wide is-circular is-outlined has-top-spaced">
+                                        前往 GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="has-top-spaced has-bottom-spaced tablet+:has-hidden">
+                            <div class="ts-header">透過匿名方式提供內容</div>
+                            <div class="ts-text is-secondary has-top-spaced-small">保持匿名性來協助新增、編輯條目，請透過此 Google 表單填寫資料。</div>
+                            <a target="_blank" rel="noopener noreferrer" href="{{ .BaseURL }}/contribute" class="ts-button is-wide is-circular is-outlined has-top-spaced">
+                                填寫 Google 表單
+                            </a>
+                            <div class="ts-divider has-vertically-spaced-large"></div>
+                            <div class="ts-header">檢視、下載所有資料</div>
+                            <div class="ts-text is-secondary has-top-spaced-small">這些資料都公開在 GitHub 上，你可以使用這些資料。</div>
+                            <a target="_blank" rel="noopener noreferrer" href="{{ .GitHubURL }}" class="ts-button is-wide is-circular is-outlined has-top-spaced"> 前往 GitHub </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div x-data="util_store">
+            <div class="ts-divider"></div>
+            <div class="ts-container has-vertically-padded-small">
+                <div class="ts-grid">
+                    <div class="column desktop+:is-12-wide tablet:is-11-wide mobile:is-16-wide">
+                        <div class="ts-grid is-middle-aligned">
+                            <div class="column">
+                                <span class="ts-icon is-clock-rotate-left-icon is-large is-secondary"></span>
+                            </div>
+                            <div class="column is-fluid">
+                                <span class="ts-text is-description" x-text="`這個條目最後更新於${relativeTime({{ .ModUnix }})}。`"></span>
+                            </div>
+                            <div class="column">
+                                <a href="{{ .GitHubURL }}/blob/master/database/items/{{ .Code }}.yml" target="_blank" class="ts-text is-small is-link is-icon-link is-undecorated">
+                                    檢視更新紀錄
+                                    <span class="ts-icon is-chevron-right-icon"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ts-divider"></div>
+        {{ template "footer" . }}
+    </body>
+</html>

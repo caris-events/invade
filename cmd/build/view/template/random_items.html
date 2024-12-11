@@ -1,0 +1,32 @@
+{{ define "random_items" }}
+<div class="ts-grid is-bottom-aligned tablet+:has-top-spaced-big mobile:has-top-spaced-large mobile:has-horizontally-padded">
+    <div class="column is-fluid">
+        <div class="ts-header">看看這些品牌</div>
+    </div>
+    <div class="column">
+        <a href="{{ .BaseURL }}/items" class="ts-button is-outlined">檢視更多</a>
+    </div>
+</div>
+<div id="隨機條目" class="ts-grid has-top-spaced desktop+:is-5-columns tablet:is-3-columns mobile:is-2-columns mobile:has-horizontally-padded">
+    <template x-for="item in items(10)">
+        <div class="column">
+            <a :href="`{{ .BaseURL }}/${item.code}`" class="ts-box">
+                <div class="ts-content is-center-aligned">
+                    <div class="商標圖示 商標圖示-隨機項目 ts-image">
+                        <img :src="`{{ .BaseURL }}/assets/item_logos/${item.code}.jpg`" />
+                    </div>
+                    <div class="ts-text is-1-lines is-center-aligned has-15px" x-text="item.name"></div>
+                    <div class="ts-text is-secondary is-1-lines">
+                        <template x-if="item.name_alias !== ''">
+                            <span x-text="item.name_alias"></span>
+                        </template>
+                        <template x-if="item.name_alias === ''">
+                            <span x-text="`${item.owner_str}${item.type_str}`"></span>
+                        </template>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </template>
+</div>
+{{ end }}

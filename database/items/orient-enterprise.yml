@@ -1,0 +1,21 @@
+#
+code       : orient-enterprise
+parent_code: orient-international
+
+#
+name       : 東方創業
+name_alias : Orient Enterprise
+name_others:
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.oie.com.cn/
+description: |
+  [[orient-enterprise]] 是中國的創業投資集團。
+
+#
+information:

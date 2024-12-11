@@ -1,0 +1,23 @@
+#
+code       : paradise-entertainment
+parent_code:
+
+#
+name       : 匯彩控股
+name_alias : Paradise Entertainment
+name_others: [生命科技集團]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : HONGKONGESE
+
+#
+website    : https://www.hk1180.com/
+description: |
+  [[paradise-entertainment]] 是香港的一間博奕遊戲與機台開發公司（HKEX：1180），主要娛樂場包括金碧滙彩娛樂場。
+
+#
+information:
+  - description: |
+      [[paradise-entertainment]] 開發的大多數博奕遊戲與機台都是簡體字內容。

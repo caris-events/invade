@@ -1,0 +1,24 @@
+#
+code       : xd-network
+parent_code:
+
+#
+name       : 心動網路
+name_alias : X.D. Network
+name_others: [XD, 心動公司]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.xd.com/
+description: |
+  [[xd-network]] 是中國的遊戲公司，為中國網際網路百強企業之一，主要業務是開發、發行遊戲。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[xd-network]] 的大股東是中國商人黃一孟。

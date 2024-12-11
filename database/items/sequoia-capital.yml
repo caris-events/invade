@@ -1,0 +1,23 @@
+#
+code      : sequoia-capital
+parent_code:
+
+#
+name       : 紅杉資本
+name_alias : Sequoia Capital
+name_others:
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.sequoiacap.com/
+description: |
+  [[sequoia-capital]] 是美國的一間投資機構。
+
+#
+information:
+  - description: |
+      [[sequoia-capital]] 的創辦人是 Don Valentine。

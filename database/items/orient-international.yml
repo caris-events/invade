@@ -1,0 +1,24 @@
+#
+code       : orient-international
+parent_code: chinese-communist-party
+
+#
+name       : 東方國際
+name_alias : Orient International
+name_others: [東方集團]
+
+#
+category: GROUP
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.oih.com.cn/
+description: |
+  [[orient-international]] 是中國最大的進出口商之一，為跨國貿易集團。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[orient-international]] 是中國政府機構《上海市國資委》監管的企業。

@@ -1,0 +1,228 @@
+.ts-grid.is-gapless {
+    --gap: 1px;
+}
+.has-gapless {
+    --gap: 0;
+}
+.has-block {
+    display: block;
+}
+.has-end-aligned {
+    justify-content: flex-end;
+}
+.has-inline-flex {
+    display: inline-flex;
+}
+.has-inline-block {
+    display: inline-block;
+}
+.has-14px {
+    font-size: 14px !important;
+}
+.has-15px {
+    font-size: 15px !important;
+}
+.has-16px {
+    font-size: 16px !important;
+}
+.has-17px {
+    font-size: 17px !important;
+}
+.has-full-edged {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    border-radius: 0 !important;
+}
+body:not(.裝置-行動) .ts-container {
+    --gap: 1.5rem;
+}
+
+.標題中繼 {
+    align-items: flex-end;
+}
+.標題中繼 .ts-header {
+    display: inline-flex;
+}
+
+.有隱藏項目:last-child .有隱藏項目-最後隱藏 {
+    display: none;
+}
+
+#導覽列 {
+    padding: 1.5rem 0;
+    background: var(--ts-gray-50);
+}
+#導覽列-商標 {
+    width: 150px;
+}
+#導覽列-商標:hover {
+    opacity: 0.8;
+}
+#導覽列-搜尋欄位 {
+    width: 100%;
+    max-width: 420px;
+}
+.導覽列-項目 {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    text-decoration: none;
+}
+.導覽列-項目:hover {
+    text-decoration: underline;
+}
+.導覽列-項目 .ts-icon {
+    font-size: 1.3em;
+    margin-top: 2px;
+}
+
+#頁腳-國旗 {
+    margin-bottom: 3px;
+    margin-right: 3px;
+    border-radius: 3px;
+}
+
+#搜尋列 {
+    padding-top: 1.2rem;
+    background: var(--ts-gray-50);
+}
+.裝置-行動 #搜尋列 {
+    padding-top: 0.65rem;
+}
+
+#搜尋列-商標 {
+    width: 180px;
+}
+#搜尋列-商標:hover {
+    opacity: 0.8;
+}
+#搜尋列-隨機條目 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+#搜尋列-分頁 {
+    margin-top: 2rem;
+}
+#搜尋列-分頁 .item:not(.is-active) {
+    opacity: 0.8;
+}
+#搜尋列-分頁 .item .ts-icon {
+    font-size: 1.2em;
+}
+body.裝置-行動 #搜尋列-分頁 {
+    margin-top: 0.5rem;
+}
+
+.商標圖示 {
+    --size: 90px;
+    height: var(--size);
+    width: var(--size);
+}
+.商標圖示-隨機項目 {
+    --size: 70px;
+    margin-bottom: 0.5rem;
+}
+.商標圖示-相關項目 {
+    --size: 65px;
+    margin: -0.5rem 0.5rem;
+}
+.商標圖示-搜尋項目 {
+    --size: 65px;
+    margin-right: 0.5rem;
+}
+.商標圖示-單個項目 {
+    --size: 90px;
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    #導覽列-商標 {
+        filter: invert(1);
+    }
+    #搜尋列-商標 {
+        filter: invert(1);
+    }
+
+    .商標圖示 {
+        background: var(--ts-white);
+        border-radius: var(--ts-border-radius-element);
+        padding: 0.5rem;
+    }
+
+    #頁腳-商標 {
+        filter: invert(1);
+    }
+}
+
+#頁腳-文字 {
+    color: var(--ts-gray-600);
+    line-height: 2;
+}
+.頁腳-CC圖示 {
+    height: 22px !important;
+    margin-left: 3px;
+    vertical-align: text-bottom;
+    opacity: 0.8;
+}
+
+.瀏覽-單個項目-商標容器 {
+    width: 64px;
+    height: 64px;
+}
+.瀏覽-單個項目-連結 {
+    text-decoration: none;
+}
+.瀏覽-篩選區塊-開關 input[type="checkbox"] {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+body.裝置-行動 #隨機條目 > div:nth-child(1n + 8),
+body.裝置-平板 #隨機條目 > div:nth-child(1n + 8) {
+    display: none;
+}
+
+body.裝置-行動 #隨機詞彙 > div:nth-child(1n + 10),
+body.裝置-平板 #隨機詞彙 > div:nth-child(1n + 11) {
+    display: none;
+}
+
+body.裝置-行動 #導覽列-商標 {
+    width: 115px;
+}
+
+body.裝置-行動 #項目-標題列 {
+    padding: 1.5rem 0;
+}
+
+body.裝置-行動 #導覽列 {
+    padding: 0.65rem 0;
+}
+
+#導覽列-漢堡按鈕 {
+    margin-right: -1.5rem;
+    margin-left: -0.5rem;
+}
+
+#側邊欄 {
+    --width: 300px;
+}
+#側邊欄-標頭 {
+    padding: 1.17rem 1rem;
+}
+#側邊欄-選單 .ts-icon {
+    font-size: 1.3em;
+}
+#側邊欄-關閉按鈕 {
+    height: 24px;
+    width: 24px;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}

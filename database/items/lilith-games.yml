@@ -1,0 +1,24 @@
+#
+code       : lilith-games
+parent_code:
+
+#
+name       : 莉莉絲遊戲
+name_alias : Lilith Games
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://lilith.com/
+description: |
+  [[lilith-games]] 是中國上海的一間手機遊戲開發公司。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[lilith-games]] 的大股東是中國商人王信文。

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="is-secondary">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ .Title }} - 中國侵略資料庫</title>
+        <!-- Tocas UI -->
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/tocas/tocas.min.css" />
+        <script src="{{ .BaseURL }}/assets/tocas/tocas.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+
+        <!-- Assets -->
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/styles/style.css" />
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/styles/news.css" />
+
+        <!-- Meta -->
+        <meta name="description" content="{{ .Summary }}" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="{{ .Title }} - 中國侵略資料庫" />
+        <meta name="twitter:description" content="{{ .Summary }}" />
+        <meta name="twitter:image" content="{{ .BaseURL }}/assets/images/og.png" />
+        <meta property="og:title" content="{{ .Title }} - 中國侵略資料庫" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="{{ .BaseURL }}/assets/images/og.png" />
+        <meta property="og:url" content="{{ .BaseURL }}/n/{{ .Title }}" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:description" content="{{ .Summary }}" />
+        <meta property="article:published_time" content="{{ .ISO8601 }}" />
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ .BaseURL }}/assets/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ .BaseURL }}/assets/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ .BaseURL }}/assets/favicons/favicon-16x16.png" />
+        <link rel="manifest" href="{{ .BaseURL }}/assets/favicons/site.webmanifest" />
+        <link rel="mask-icon" href="{{ .BaseURL }}/assets/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="shortcut icon" href="{{ .BaseURL }}/assets/favicons/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="msapplication-config" content="{{ .BaseURL }}/assets/favicons/browserconfig.xml" />
+        <meta name="theme-color" content="#ffffff" />
+    </head>
+    <body class="tablet:裝置-平板 mobile:裝置-行動" x-data="random_store">
+        <div class="has-flex-1">
+            {{ template "navbar" . }}
+
+            <div class="ts-container desktop+:has-vertically-padded-big tablet:has-vertically-padded-large mobile:is-fitted">
+                <div id="新聞-容器" class="ts-box mobile:has-full-edged">
+                    <div class="新聞-內文容器 ts-content">
+                        <div class="ts-meta is-center-aligned is-secondary tablet+:has-16px mobile:has-15px">
+                            <span class="item">{{ .ReadableDate }}</span>
+                            <a href="{{ .BaseURL }}/news" class="item">官方新聞</a>
+                        </div>
+                        <div class="ts-header is-center-aligned is-heavy tablet+:is-huge mobile:is-big">{{ .Title }}</div>
+                        <div id="新聞-總結" class="ts-quote is-heading has-top-spaced">{{ .Summary }}</div>
+                    </div>
+                    <div class="ts-divider"></div>
+                    <div class="新聞-內文容器 ts-content">
+                        <div id="新聞-內文" class="has-leading-large tablet+:has-16px mobile:has-15px">{{ .Content | news_content }}</div>
+                    </div>
+                    <div class="ts-divider"></div>
+                    <div class="新聞-內文容器 新聞-內文容器-不重要的 ts-content is-secondary">
+                        <div class="ts-wrap is-vertical tablet+:has-hidden">
+                            {{ if .NextNews }}
+                            <div>
+                                <div class="ts-text is-secondary">較新的</div>
+                                <a href="{{ .BaseURL }}/n/{{ .NextNews.Title }}" class="ts-header">{{ .NextNews.Title }}</a>
+                            </div>
+                            {{ end }} {{ if .PreviousNews }}
+                            <div>
+                                <div class="ts-text is-secondary">較舊的</div>
+                                <a href="{{ .BaseURL }}/n/{{ .PreviousNews.Title }}" class="ts-header">{{ .PreviousNews.Title }}</a>
+                            </div>
+                            {{ end }}
+                        </div>
+                        <div class="ts-grid is-2-columns mobile:has-hidden tablet+:has-vertically-spaced-small">
+                            <div class="column">
+                                {{ if .NextNews }}
+                                <div class="ts-text is-secondary">較新的</div>
+                                <a href="{{ .BaseURL }}/n/{{ .NextNews.Title }}" class="ts-header">{{ .NextNews.Title }}</a>
+                                {{ end }}
+                            </div>
+                            <div class="column tablet+:is-end-aligned">
+                                {{ if .PreviousNews }}
+                                <div class="ts-text is-secondary">較舊的</div>
+                                <a href="{{ .BaseURL }}/n/{{ .PreviousNews.Title }}" class="ts-header">{{ .PreviousNews.Title }}</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ts-divider"></div>
+                    <div class="新聞-內文容器 新聞-內文容器-不重要的 ts-content is-secondary">
+                        <a href="{{ .BaseURL }}/news" class="ts-text is-icon-link is-link is-undecorated"><span class="ts-icon is-arrow-left-icon"></span>返回新聞列表</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ts-divider"></div>
+        {{ template "footer" . }}
+    </body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="is-secondary">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>項目列表 - 中國侵略資料庫</title>
+        <!-- Tocas UI -->
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/tocas/tocas.min.css" />
+        <script src="{{ .BaseURL }}/assets/tocas/tocas.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+
+        <!-- Assets -->
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/styles/style.css" />
+        <link rel="stylesheet" href="{{ .BaseURL }}/assets/styles/search.css" />
+        <script src="{{ .BaseURL }}/assets/scripts/db_store.js" defer></script>
+        <script src="{{ .BaseURL }}/assets/scripts/db_items.js" defer></script>
+        <script src="{{ .BaseURL }}/assets/scripts/item_store.js" defer></script>
+
+        <!-- Dependencies -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.5/cdn.min.js" defer></script>
+
+        <!-- Meta -->
+        <meta name="description" content="這個網路資料庫記載了與中共政府有關的企業、團體與服務還有侵略性行為（例如：言論審查、侵害人權）。" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="項目列表 - 中國侵略資料庫" />
+        <meta name="twitter:description" content="這個網路資料庫記載了與中共政府有關的企業、團體與服務還有侵略性行為（例如：言論審查、侵害人權）。" />
+        <meta name="twitter:image" content="{{ .BaseURL }}/assets/images/og.png" />
+        <meta property="og:title" content="項目列表 - 中國侵略資料庫" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="{{ .BaseURL }}/assets/images/og.png" />
+        <meta property="og:url" content="{{ .BaseURL }}/items" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:description" content="這個網路資料庫記載了與中共政府有關的企業、團體與服務還有侵略性行為（例如：言論審查、侵害人權）。" />
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ .BaseURL }}/assets/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ .BaseURL }}/assets/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ .BaseURL }}/assets/favicons/favicon-16x16.png" />
+        <link rel="manifest" href="{{ .BaseURL }}/assets/favicons/site.webmanifest" />
+        <link rel="mask-icon" href="{{ .BaseURL }}/assets/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="shortcut icon" href="{{ .BaseURL }}/assets/favicons/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="msapplication-config" content="{{ .BaseURL }}/assets/favicons/browserconfig.xml" />
+        <meta name="theme-color" content="#ffffff" />
+    </head>
+    <body class="tablet:裝置-平板 mobile:裝置-行動" x-data="item_store">
+        <!-- drawer filter -->
+        <dialog class="ts-app-drawer is-end" id="篩選欄" style="--width: 300px">
+            <div class="content has-flex-column">
+                <div class="ts-content is-padded has-top-padded">
+                    <div class="ts-text is-bold">
+                        <span class="ts-icon is-filter-icon is-end-spaced"></span>
+                        篩選條件
+                    </div>
+                    <div class="ts-text is-label has-top-spaced-large">分類</div>
+                    <div class="ts-select is-fluid has-top-spaced">
+                        <select x-model="search_category" @change="search">
+                            <template x-for="category in categories">
+                                <option
+                                    :value="category.code"
+                                    x-text="`${category.str} (${calculateCategory(category.code)})`"
+                                    :selected="category.code == search_category"
+                                ></option>
+                            </template>
+                        </select>
+                    </div>
+                    <div class="ts-text is-label has-top-spaced-large">國家</div>
+                    <div class="ts-select is-fluid has-top-spaced">
+                        <select x-model="search_owner" @change="search">
+                            <template x-for="owner in owners">
+                                <option :value="owner.code" x-text="owner.str" :selected="owner.code == search_owner"></option>
+                            </template>
+                        </select>
+                    </div>
+                    <div class="ts-text is-label has-top-spaced-large">分級程度</div>
+                    <div class="ts-select is-fluid has-top-spaced">
+                        <select x-model="search_invasion" @change="search">
+                            <template x-for="invasion in invasions">
+                                <option :value="invasion.code" x-text="invasion.str" :selected="invasion.code == search_invasion"></option>
+                            </template>
+                        </select>
+                    </div>
+                    <template x-if="search_keyword === ''">
+                        <div>
+                            <div class="ts-divider is-section"></div>
+                            <div class="ts-text is-description">
+                                <span class="ts-icon is-circle-info-icon is-end-spaced"></span>
+                                現在顯示的搜尋結果以最近更新的資料為優先。
+                            </div>
+                        </div>
+                    </template>
+                </div>
+                <div class="ts-content has-top-spaced-auto">
+                    <div class="ts-wrap is-vertical">
+                        <button class="ts-button is-outlined is-fluid" data-dialog="篩選欄" @click="resetFilter">重設</button>
+                        <button class="ts-button is-fluid" data-dialog="篩選欄">套用並關閉</button>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+        <!-- / drawer filter -->
+
+        <div class="has-flex-1">
+            {{ template "searchbar" . }}
+            <div class="ts-container tablet:has-vertically-padded-large desktop+:has-vertically-padded-big mobile:is-fitted">
+                <div class="ts-grid desktop+:is-relaxed">
+                    <div class="column mobile:has-hidden tablet:is-5-wide desktop+:is-4-wide">
+                        <div class="ts-box">
+                            <div class="ts-content is-padded has-top-padded">
+                                <div class="ts-grid is-bottom-aligned">
+                                    <div class="column is-fluid">
+                                        <div class="ts-text is-bold">
+                                            <span class="ts-icon is-filter-icon is-end-spaced"></span>
+                                            篩選條件
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <button class="ts-text is-link is-undecorated" @click="resetFilter">重設</button>
+                                    </div>
+                                </div>
+                                <div class="ts-text is-label has-top-spaced-large">分類</div>
+                                <div class="ts-select is-fluid has-top-spaced">
+                                    <select x-model="search_category" @change="search">
+                                        <template x-for="category in categories">
+                                            <option
+                                                :value="category.code"
+                                                x-text="`${category.str} (${calculateCategory(category.code)})`"
+                                                :selected="category.code == search_category"
+                                            ></option>
+                                        </template>
+                                    </select>
+                                </div>
+                                <div class="ts-text is-label has-top-spaced-large">國家</div>
+                                <div class="ts-select is-fluid has-top-spaced">
+                                    <select x-model="search_owner" @change="search">
+                                        <template x-for="owner in owners">
+                                            <option :value="owner.code" x-text="owner.str" :selected="owner.code == search_owner"></option>
+                                        </template>
+                                    </select>
+                                </div>
+                                <div class="ts-text is-label has-top-spaced-large">分級程度</div>
+                                <div class="ts-wrap is-vertical is-compact has-top-spaced">
+                                    <template x-for="invasion in invasions">
+                                        <label class="ts-radio">
+                                            <input name="invasion" type="radio" x-model="search_invasion" @change="search" :value="invasion.code" />
+                                            <span x-text="invasion.str"></span>
+                                        </label>
+                                    </template>
+                                </div>
+                                <template x-if="search_keyword === ''">
+                                    <div>
+                                        <div class="ts-divider is-section"></div>
+                                        <div class="ts-text is-description">
+                                            <span class="ts-icon is-circle-info-icon is-end-spaced"></span>
+                                            現在顯示的搜尋結果以最近更新的資料為優先。
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column mobile:is-16-wide tablet:is-11-wide desktop+:is-12-wide">
+                        <template x-if="search_related_code !== ''">
+                            <div class="ts-snackbar tablet+:has-bottom-spaced-large has-flex mobile:has-edged">
+                                <div class="content has-flex-1">搜尋範圍被限制在與《<span x-text="findItem(search_related_code).name"></span>》相關的項目。</div>
+                                <button class="action" @click="resetRelatedCode">重設搜尋條件</button>
+                            </div>
+                        </template>
+                        <template x-if="shown_results.length > 0 || is_loading">
+                            <div id="搜尋-項目容器" class="ts-box mobile:has-edged">
+                                <div>
+                                    <template x-for="(result, index) in shown_results">
+                                        <div class="搜尋-項目">
+                                            <a :href="`{{ .BaseURL }}/${result.code}`" class="ts-content tablet+:is-horizontally-padded">
+                                                <div class="ts-grid is-middle-aligned">
+                                                    <div class="column">
+                                                        <div class="商標圖示 商標圖示-搜尋項目 ts-image">
+                                                            <img :src="`{{ .BaseURL }}/assets/item_logos/${result.code}.jpg`" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="column is-fluid">
+                                                        <div class="ts-text is-1-lines tablet+:has-16px mobile:has-15px" x-text="result.name"></div>
+                                                        <div class="ts-meta is-secondary is-1-lines mobile:has-hidden">
+                                                            <template x-if="result.name_alias">
+                                                                <span class="item" x-text="result.name_alias"></span>
+                                                            </template>
+                                                            <span class="item" x-text="`${result.owner_str}${result.type_str}`"> </span>
+                                                        </div>
+                                                        <div class="ts-text is-secondary is-1-lines tablet+:has-hidden">
+                                                            <span class="item" x-text="result.name_alias || `${result.owner_str}${result.type_str}`"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="ts-rating is-red" :data-tooltip="result.invasion_str">
+                                                            <div class="star" :class="{ 'is-active': result.invasion_index > 0 }"></div>
+                                                            <div class="star" :class="{ 'is-active': result.invasion_index > 1 }"></div>
+                                                            <div class="star" :class="{ 'is-active': result.invasion_index > 2 }"></div>
+                                                            <div class="star" :class="{ 'is-active': result.invasion_index > 3 }"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="ts-divider"></div>
+                                        </div>
+                                    </template>
+                                </div>
+                                <template x-if="!is_loading && hidden_results.length > 0">
+                                    <div>
+                                        <div class="ts-divider"></div>
+                                        <button @click="showMore" class="ts-text is-link is-undecorated has-full-width">
+                                            <div class="ts-content is-secondary is-center-aligned">載入更多項目…</div>
+                                        </button>
+                                    </div>
+                                </template>
+                                <template x-if="is_loading">
+                                    <div>
+                                        <template x-if="shown_results.length > 0">
+                                            <div class="ts-divider"></div>
+                                        </template>
+                                        <div class="ts-content is-secondary is-center-aligned">
+                                            <div class="ts-loading is-centered"></div>
+                                            <div class="ts-text is-center-aligned is-secondary has-bottom-spaced-small">正在搜尋</div>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </template>
+                        <template x-if="!is_loading && shown_results.length === 0">
+                            <div class="ts-content is-tertiary is-rounded is-fitted mobile:has-vertically-spaced-large mobile:has-horizontally-spaced">
+                                <div class="ts-blankslate is-secondary">
+                                    <div class="header">找不到任何項目</div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ts-divider mobile:has-hidden"></div>
+        {{ template "footer" . }}
+    </body>
+</html>

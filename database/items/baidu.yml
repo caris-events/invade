@@ -1,0 +1,24 @@
+#
+code       : baidu
+parent_code:
+
+#
+name       : 百度
+name_alias : Baidu
+name_others:
+
+#
+category: INTERNET
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.baidu.com/
+description: |
+  [[baidu]] 是中國最大的網路內容搜尋引擎，可以說是中國版的《Google》。其業務內容涵蓋非常廣泛，亦有遊戲、影音與雲端硬碟。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[baidu]] 的大股東是中國商人李彥宏。
