@@ -37,6 +37,7 @@ func Prepare(items []*entity.CompiledItem) error {
 
 	fn := template.FuncMap{
 		"item_content":  ParseItemText(items),
+		"item_children": ParseItemChildren(),
 		"vocab_content": ParseVocabText(),
 		"news_content":  ParseNewsText(),
 		"safe64":        util.Safe64,

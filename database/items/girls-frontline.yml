@@ -1,0 +1,22 @@
+#
+code       : girls-frontline
+parent_code: sunborn
+
+#
+name       : 少女前線
+name_alias : Girls' Frontline
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://gf.sunborngame.com/
+description: |
+  [[girls-frontline]] 是一款以戰術策略與收集為核心的二次元槍械擬人化手機遊戲。
+
+#
+information:
+

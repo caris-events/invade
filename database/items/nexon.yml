@@ -1,0 +1,30 @@
+#
+code       : nexon
+parent_code:
+
+#
+name       : 樂線
+name_alias : Nexon
+name_others: [樂線股份有限公司, 樂線韓國, 內褲松]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.nexon.co.jp/
+description: |
+  [[nexon]] 是韓國知名電腦遊戲公司，後將總部遷至東京。公司以開發休閒類網絡遊戲著稱，在全球遊戲市場佔有重要地位。
+
+#
+information:
+  - year       : 2024
+    invasion   : MANIPULATED
+    description: |
+      [[nexon]] 旗下 [[blue-archive]] 在直播中將台灣列為國家，經中國玩家投訴，[[nexon]] 隨後移除了相關直播。
+
+  - year       : 2024
+    invasion   : SUPPORTED
+    description: |
+      [[nexon]] 旗下 [[blue-archive]] 在 [[bilibili]] 與《Facebook》發表多國語言聲明，表示台灣和香港皆屬於中國，並尊重《一中原則》。

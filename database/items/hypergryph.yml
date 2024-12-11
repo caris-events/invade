@@ -1,0 +1,26 @@
+#
+code       : hypergryph
+parent_code:
+
+#
+name       : 鷹角網絡
+name_alias : HYPERGRYPH
+name_others: [上海鷹角網路科技有限公司, YJ]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.hypergryph.com/
+description: |
+  [[hypergryph]] 是中國上海的一間遊戲開發商。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[hypergryph]] 的創辦人是中國商人鍾祺翔（海貓絡合物），大股東是 [[yostar]]。兩者的股東曾共同開發 [[girls-frontline]]。
+
+

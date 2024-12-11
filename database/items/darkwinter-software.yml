@@ -1,0 +1,21 @@
+#
+code       : darkwinter-software
+parent_code: sunborn
+
+#
+name       : 暗冬網路
+name_alias : Darkwinter Software
+name_others: [上海暗冬網路科技有限公司]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    :
+description: |
+  [[darkwinter-software]] 是中國上海的一家遊戲發行商，主要代理 [[sunborn]] 開發的遊戲。
+
+#
+information:

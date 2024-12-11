@@ -1,0 +1,21 @@
+#
+code       : blue-archive
+parent_code: nexon
+
+#
+name       : 蔚藍檔案
+name_alias : Blue Archive
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://bluearchive.nexon.com/home
+description: |
+  [[blue-archive]] 是由韓國工作室 NAT Games 開發、[[yostar]] 發行的手機遊戲，是一款具有角色扮演、校園等元素的遊戲。
+
+#
+information:

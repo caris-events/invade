@@ -1,0 +1,23 @@
+#
+code       : arknights
+parent_code: hypergryph
+
+#
+name       : 明日方舟
+name_alias : Arknights
+name_others: [明日]
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://ak.gryphline.com/
+description: |
+  [[arknights]] 是 [[hypergryph]] 旗下《蒙塔山工作室》製作的塔防策略手機遊戲，在台灣由 [[long-cheng]] 代理。
+
+#
+information:
+
+

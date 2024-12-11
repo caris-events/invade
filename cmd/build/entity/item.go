@@ -111,8 +111,9 @@ type CompiledItem struct {
 	Information   []*CompiledItemInfo
 	ModUnix       int64
 
-	Parents []*CompiledItem `json:"-"`
-	Relates []*CompiledItem `json:"-"`
+	Parents  []*CompiledItem `json:"-"`
+	Relates  []*CompiledItem `json:"-"`
+	Children []*CompiledItem `json:"-"`
 }
 
 type CompiledItemInfo struct {

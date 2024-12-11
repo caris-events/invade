@@ -1,0 +1,26 @@
+#
+code       : yostar
+parent_code:
+
+#
+name       : 悠星網路
+name_alias : Yostar
+name_others: [上海悠星網路科技有限公司]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.yostar.cn/
+description: |
+  [[yostar]] 是中國上海的一間遊戲發行商，主要代理日本、韓國遊戲，在多國均設有子公司。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[yostar]] 的大股東是中國商人姚蒙，與 [[hypergryph]] 互相持股。兩者的股東曾共同開發 [[girls-frontline]]。
+
+

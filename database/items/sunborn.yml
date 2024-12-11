@@ -1,0 +1,24 @@
+#
+code       : sunborn
+parent_code:
+
+#
+name       : 散爆網路
+name_alias : Sunborn Network Technology
+name_others: [上海散爆網路科技有限公司, 雲母組]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.sunborngame.com/
+description: |
+  [[sunborn]] 是中國上海的一家遊戲開發商，原先由《雲母組》同人社團起家。遊戲發行交由 [[darkwinter-software]] 負責。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[sunborn]] 的大股東是中國商人黃翀（羽中）。

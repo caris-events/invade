@@ -61,9 +61,32 @@ func ParseItemText(items []*entity.CompiledItem) func(v string) string {
 			if !ok {
 				return fmt.Sprintf(`《%s》`, groups[1])
 			}
-			return fmt.Sprintf(`《<a class="ts-text is-link is-undecorated" href="%s/%s/">%s</a>》`, config.BaseURL, item.Code, item.Name)
+			return fmt.Sprintf(`《<a class="ts-text is-link is-undecorated" href="%s/%s">%s</a>》`, config.BaseURL, item.Code, item.Name)
 		})
 		return v
+	}
+}
+
+func ParseItemChildren() func(v string, item *entity.CompiledItem) string {
+	return func(content string, item *entity.CompiledItem) string {
+		if len(item.Children) == 0 {
+			return content
+		}
+		output := "旗下有"
+		for k, child := range item.Children {
+			if k > 1 {
+				break
+			}
+			output += fmt.Sprintf(`《<a class="ts-text is-link is-undecorated" href="%s/%s">%s</a>》、`, config.BaseURL, child.Code, child.Name)
+		}
+		output = strings.TrimSuffix(string(output), "、")
+
+		if len(item.Children) > 2 {
+			output += "等"
+		}
+		content = strings.TrimSuffix(content, "。</p>\n")
+		content += "，" + output + "。</p>"
+		return content
 	}
 }
 

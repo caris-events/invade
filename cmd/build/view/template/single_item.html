@@ -123,7 +123,7 @@
                         <div class="ts-box has-top-spaced mobile:has-edged">
                             <div id="tab-default" class="ts-content tablet+:is-padded mobile:is-vertically-padded">
                                 <div class="ts-text is-secondary is-small">簡介</div>
-                                <div>{{ .Description | item_content }}</div>
+                                <div>{{ item_children (item_content .Description) .CompiledItem }}</div>
                                 <div class="ts-grid mobile:is-1-columns desktop+:is-relaxed desktop+:is-3-columns tablet:is-2-columns has-top-spaced-large">
                                     {{ if .NameOthers }}
                                     <div class="column">

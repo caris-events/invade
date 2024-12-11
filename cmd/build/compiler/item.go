@@ -70,6 +70,11 @@ func CompileItems() ([]*entity.CompiledItem, error) {
 				item.Relates = append(item.Relates, compiles[relate.Code])
 			}
 		}
+		if children, ok := children[item.Code]; ok {
+			for _, child := range children {
+				item.Children = append(item.Children, compiles[child.Code])
+			}
+		}
 	}
 	sort.SliceStable(compilesSlice, func(i, j int) bool {
 		return compilesSlice[i].ModUnix > compilesSlice[j].ModUnix
