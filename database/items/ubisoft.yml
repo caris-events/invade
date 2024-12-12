@@ -1,0 +1,29 @@
+#
+code       : ubisoft
+parent_code: guillemot-brothers
+
+#
+name       : 育碧娛樂
+name_alias : Ubisoft Entertainment SA
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.guillemot.com/
+description: |
+  [[ubisoft]] 是一家於法國的開發、發行與經銷互動式娛樂遊戲廠商。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[ubisoft]] 的大股東是中國公司 [[tencent]]。
+
+  - year       : 2022
+    invasion   : SUPPORTED
+    description: |
+      [[ubisoft]] 旗下《舞力全開》遊戲，將台灣玩家的國旗改以中國五星旗呈現。

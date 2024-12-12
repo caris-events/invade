@@ -1,0 +1,23 @@
+#
+code       : guillemot-brothers
+parent_code:
+
+#
+name       : Guillemot 家族
+name_alias : Guillemot Brothers
+name_others: []
+
+#
+category: GROUP
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.guillemot.com/
+description: |
+  [[guillemot-brothers]] 是起源於中世紀法國諾曼第的家族，其五兄弟成立了 [[ubisoft]]。
+
+#
+information:
+  - description: |
+      [[guillemot-brothers]] 的首席執行官是 Yves Guillemot。

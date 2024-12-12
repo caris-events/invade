@@ -1,0 +1,23 @@
+#
+code       : techtronic-industries
+parent_code:
+
+#
+name       : 創科實業
+name_alias : Techtronic Industries
+name_others: [TTI Group]
+
+#
+category: MANUFACTURE
+type    : COMPANY
+owner   : HONGKONGESE
+
+#
+website    : https://www.ttigroup.com/
+description: |
+  [[techtronic-industries]] 是位於香港企業，從事電動工具、配件、手動工具、戶外園藝工具的生產和銷售。
+
+#
+information:
+  - description: |
+      [[techtronic-industries]] 的大股東是 [[capital-group]]。

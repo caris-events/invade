@@ -1,0 +1,25 @@
+#
+code       : milwaukee-tool
+parent_code: techtronic-industries
+
+#
+name       : 美沃奇
+name_alias : Milwaukee Tool
+name_others: [米沃奇]
+
+#
+category: APPLIANCE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.milwaukeetool.com.tw/
+description: |
+  [[milwaukee-tool]] 是美國一家專注於專業電動工具、手工具的品牌，主要服務工業和建築市場。​
+
+#
+information:
+  - invasion   : SUPPORTED
+    source     : https://web.archive.org/web/20241212151233/https://ibb.co/Y7LPzmt
+    description: |
+      [[milwaukee-tool]] 電子郵件訂閱的國家欄位標示為「中國台灣省」。

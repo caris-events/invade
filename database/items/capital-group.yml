@@ -1,0 +1,23 @@
+#
+code       : capital-group
+parent_code:
+
+#
+name       : 資本集團
+name_alias : Capital Group
+name_others: []
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.capitalgroup.com/
+description: |
+  [[capital-group]] 是成立於美國洛杉磯的金融公司，是全球最大和歷史最悠久的投資管理機構之一。
+
+#
+information:
+  - description: |
+      [[capital-group]] 是私營公司，股東細節未詳細公開。
