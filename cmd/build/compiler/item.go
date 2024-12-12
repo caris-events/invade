@@ -93,7 +93,7 @@ func resolveSummary(items map[string]*entity.Item, item *entity.Item, invasion e
 		case entity.ItemInvasionCollaborated:
 			summary += "因為利益而與侵台對象合作的"
 		case entity.ItemInvasionFunded:
-			summary += "背後有中國資金介入的"
+			summary += "有中國資金背景的"
 		case entity.ItemInvasionSupported:
 			summary += "支持中國侵略、統一的"
 		}
@@ -275,7 +275,7 @@ func resolveInvasionNote(invasion entity.ItemInvasion, typ entity.ItemType, info
 		note += "因為利益而與侵台對象合作。"
 	case entity.ItemInvasionFunded:
 		if infoOwner == entity.ItemOwnerChinese {
-			note += "成立於中國境內，並由中國商人投資。"
+			note += "成立於中國境內，且背後資金主要來自中國。"
 		} else {
 			note += "背後有中國資金介入。"
 		}
