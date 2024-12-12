@@ -207,7 +207,7 @@ var (
 		ItemInvasionUnknown:      "未知",
 		ItemInvasionManipulated:  "輿論手法",
 		ItemInvasionCollaborated: "與侵台對象合作",
-		ItemInvasionFunded:       "中國資金介入",
+		ItemInvasionFunded:       "中國資金背景",
 		ItemInvasionSupported:    "支持中國侵略",
 	}
 	ItemInvasions = []ItemInvasion{

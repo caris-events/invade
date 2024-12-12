@@ -270,12 +270,12 @@ func resolveInvasionNote(invasion entity.ItemInvasion, typ entity.ItemType, info
 	}
 	switch invasion {
 	case entity.ItemInvasionManipulated:
-		note += "曾有過輿論手法或言論審查。"
+		note += "曾有過輿論手法、言論審查。"
 	case entity.ItemInvasionCollaborated:
 		note += "因為利益而與侵台對象合作。"
 	case entity.ItemInvasionFunded:
 		if infoOwner == entity.ItemOwnerChinese {
-			note += "成立於中國境內，遵循中共政策支持侵略台灣。"
+			note += "成立於中國境內，並由中國商人投資。"
 		} else {
 			note += "背後有中國資金介入。"
 		}
@@ -287,8 +287,8 @@ func resolveInvasionNote(invasion entity.ItemInvasion, typ entity.ItemType, info
 
 func resolveInvasion(parents []*entity.Item, item *entity.Item) entity.ItemInvasion {
 	var (
-		invasion       = entity.ItemInvasionUnknown
-		isChineseOwner = item.Owner == entity.ItemOwnerChinese
+		invasion = entity.ItemInvasionUnknown
+		//isChineseOwner = item.Owner == entity.ItemOwnerChinese
 	)
 	for _, info := range item.Information {
 		if entity.ItemInvasionLevel[info.Invasion] > entity.ItemInvasionLevel[invasion] {
@@ -301,13 +301,13 @@ func resolveInvasion(parents []*entity.Item, item *entity.Item) entity.ItemInvas
 				invasion = info.Invasion
 			}
 		}
-		if parent.Owner == entity.ItemOwnerChinese {
-			isChineseOwner = true
-		}
+		//if parent.Owner == entity.ItemOwnerChinese {
+		//	isChineseOwner = true
+		//}
 	}
-	if isChineseOwner && invasion == entity.ItemInvasionFunded {
-		invasion = entity.ItemInvasionSupported
-	}
+	//if isChineseOwner && invasion == entity.ItemInvasionFunded {
+	//	invasion = entity.ItemInvasionSupported
+	//}
 	return invasion
 }
 

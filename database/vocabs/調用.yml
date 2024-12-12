@@ -14,7 +14,7 @@ description: |
 examples:
   - words      : [呼叫]
     description: |
-      呼叫某段程式碼，與英文的 Calling 同義。
+      與英文的 Calling 同義。
     correct    : |
       在程式裡可以{{呼叫}}一個函式來計算效能。
     incorrect  : |
@@ -22,7 +22,7 @@ examples:
 
   - words      : [執行]
     description: |
-      執行某段程式碼，與英文的 Execute 同義。
+      與英文的 Execute 同義。
     correct    : |
       {{執行}}這段程式碼，並且將結果儲存到變數裡面。
     incorrect  : |
@@ -30,7 +30,7 @@ examples:
 
   - words      : [觸發]
     description: |
-      某些程式碼不需要主動呼叫，但仍有可能在某些條件下被觸發、執行，此時可以使用英文的 Invoke 與 Trigger。
+      與英文的 Invoke 與 Trigger 同義。
     correct    : |
       只要時間一到，這段程式碼就會被{{觸發}}。
     incorrect  : |
