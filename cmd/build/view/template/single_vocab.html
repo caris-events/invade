@@ -124,14 +124,14 @@
                             <div class="tablet+:ts-content is-rounded is-secondary has-top-spaced">
                                 <div class="ts-grid mobile:is-compact">
                                     <div class="column">
-                                        <span class="單字-對應國家">台灣</span>
+                                        <span class="單字-對應國家 mobile:has-13px">台灣</span>
                                     </div>
                                     <div class="column is-fluid">{{ .Correct | vocab_content }}</div>
                                 </div>
                                 {{ if .Incorrect }}
                                 <div class="ts-grid mobile:is-compact has-top-spaced">
                                     <div class="column">
-                                        <span class="單字-對應國家">中國</span>
+                                        <span class="單字-對應國家 mobile:has-13px">中國</span>
                                     </div>
                                     <div class="column is-fluid">{{ .Incorrect | vocab_content }}</div>
                                 </div>

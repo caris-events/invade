@@ -16,6 +16,9 @@
 .has-inline-block {
     display: inline-block;
 }
+.has-13px {
+    font-size: 13px !important;
+}
 .has-14px {
     font-size: 14px !important;
 }
