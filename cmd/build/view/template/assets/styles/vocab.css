@@ -114,6 +114,7 @@
     padding: 0 0.7rem;
     display: inline-block;
     border: 1px solid var(--ts-gray-300);
+    color: var(--ts-gray-500);
     white-space: nowrap;
     line-height: 1.7;
     font-size: var(--ts-font-size-14px);

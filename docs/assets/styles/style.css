@@ -16,6 +16,9 @@
 .has-inline-block {
     display: inline-block;
 }
+.has-leading-normal {
+    line-height: 1.6 !important;
+}
 .has-13px {
     font-size: 13px !important;
 }

@@ -270,7 +270,7 @@ func resolveInvasionNote(invasion entity.ItemInvasion, typ entity.ItemType, info
 	}
 	switch invasion {
 	case entity.ItemInvasionManipulated:
-		note += "曾有過輿論手法（如：帶風向）或言論審查。"
+		note += "曾有過輿論手法或言論審查。"
 	case entity.ItemInvasionCollaborated:
 		note += "因為利益而與侵台對象合作。"
 	case entity.ItemInvasionFunded:
