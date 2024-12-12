@@ -237,7 +237,6 @@ func PrepareTemplate(name string, fn template.FuncMap) (*template.Template, erro
 		ParseFiles(
 			config.PathTpl+"/the_navbar.html",
 			config.PathTpl+"/the_searchbar.html",
-			config.PathTpl+"/the_disclaimer.html",
 			config.PathTpl+"/random_items.html",
 			config.PathTpl+"/random_vocabs.html",
 			config.PathTpl+"/the_footer.html",

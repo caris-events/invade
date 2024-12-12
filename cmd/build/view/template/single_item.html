@@ -57,7 +57,7 @@
 
             <div id="項目-標題列">
                 <div class="ts-container">
-                    <div class="ts-grid is-middle-aligned tablet+:is-relaxed">
+                    <div class="ts-grid tablet+:is-middle-aligned tablet+:is-relaxed">
                         <div class="column">
                             <div class="商標圖示 商標圖示-單個項目 ts-image">
                                 <img src="{{ .BaseURL }}/assets/item_logos/{{ .Code }}.jpg" />
@@ -69,8 +69,13 @@
                                 <span>（{{ .NameAlias }}）</span>
                                 {{ end }}
                             </div>
+                            {{ if .NameAlias }}
+                            <div class="ts-text is-heavy mobile:is-large tablet+:is-huge">
+                                <span>{{ .NameAlias }}</span>
+                            </div>
+                            {{ end }}
 
-                            <div id="項目-中繼資料" class="ts-meta is-secondary">
+                            <div class="ts-meta is-secondary tablet+:has-16px">
                                 <a href="{{ .BaseURL }}/items?i={{ .Invasion }}" class="item has-hover-target mobile:has-hidden">
                                     <div id="項目-星級" class="ts-wrap is-compact is-middle-aligned">
                                         <div class="ts-rating is-red">
@@ -157,14 +162,14 @@
                             {{ range .Information }}
                             <div class="ts-content tablet+:is-padded mobile:is-vertically-padded">
                                 <div class="ts-grid tablet-:is-stacked tablet-:is-compact desktop+:is-relaxed">
-                                    <div class="項目-資訊-年份 column">
+                                    <div class="項目-資訊-年份 column {{ if not .Year }}tablet-:has-hidden{{ end }}">
                                         <div class="ts-text is-secondary desktop+:is-end-aligned">{{ if .Year }} {{ .Year }} 年 {{ else }} — {{ end }}</div>
                                     </div>
                                     <div class="column is-fluid">
-                                        <div class="項目-資訊-說明">{{ .Description | item_content }}</div>
+                                        <div class="desktop+:has-leading-large">{{ .Description | item_content }}</div>
                                         {{ if .Note }}
                                         <div class="ts-content is-rounded is-secondary has-top-spaced">
-                                            <div class="項目-資訊-檢核表 ts-checklist">
+                                            <div class="項目-資訊-檢核表 ts-checklist mobile:has-14px">
                                                 <div class="item is-warning">{{ .Note }}</div>
                                             </div>
                                         </div>
@@ -261,29 +266,26 @@
                 </div>
             </div>
         </div>
-        <div x-data="util_store">
+        <a href="{{ .GitHubURL }}/blob/master/database/items/{{ .Code }}.yml" target="_blank" class="has-hover-target" x-data="util_store">
             <div class="ts-divider"></div>
             <div class="ts-container has-vertically-padded-small">
                 <div class="ts-grid">
                     <div class="column desktop+:is-12-wide tablet:is-11-wide mobile:is-16-wide">
                         <div class="ts-grid is-middle-aligned">
                             <div class="column">
-                                <span class="ts-icon is-clock-rotate-left-icon is-large is-secondary"></span>
+                                <span class="ts-icon is-start-spaced is-clock-rotate-left-icon is-large is-secondary"></span>
                             </div>
-                            <div class="column is-fluid">
+                            <div class="column is-fluid has-target-underline">
                                 <span class="ts-text is-description" x-text="`這個條目最後更新於${relativeTime({{ .ModUnix }})}。`"></span>
                             </div>
                             <div class="column">
-                                <a href="{{ .GitHubURL }}/blob/master/database/items/{{ .Code }}.yml" target="_blank" class="ts-text is-small is-link is-icon-link is-undecorated">
-                                    檢視更新紀錄
-                                    <span class="ts-icon is-chevron-right-icon"></span>
-                                </a>
+                                <span class="ts-icon is-end-spaced is-secondary is-chevron-right-icon"></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
         <div class="ts-divider"></div>
         {{ template "footer" . }}
     </body>

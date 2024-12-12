@@ -135,7 +135,10 @@ body.裝置-行動 #搜尋列-分頁 {
 .商標圖示-單個項目 {
     --size: 90px;
     margin-right: 0.5rem;
-    margin-left: 1rem;
+    margin-left: 0.4rem;
+}
+.裝置-行動 .商標圖示-單個項目 {
+    --size: 80px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -159,7 +162,6 @@ body.裝置-行動 #搜尋列-分頁 {
 
 #頁腳-文字 {
     color: var(--ts-gray-600);
-    line-height: 2;
 }
 .頁腳-CC圖示 {
     height: 22px !important;
