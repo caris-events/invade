@@ -1,0 +1,33 @@
+#
+code       : rayark
+parent_code:
+
+#
+name       : 雷亞遊戲
+name_alias : Rayark Inc.
+name_others: [雷亞遊戲股份有限公司]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://rayark.com/
+description: |
+  [[rayark]] 是台灣著名的音樂遊戲開發商，後期因政治問題、使用 AI 繪圖而導致品質與聲譽下降。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[rayark]] 的創辦人是鐘志遠，股東有中國公司 [[g-bits]]。
+
+  - invasion   : COLLABORATED
+    description: |
+      [[rayark]] 原計劃與 [[tencent]] 合作發行旗下《Cytus II》遊戲，但最終由 [[dragonest]] 發行。
+
+  - year       : 2020
+    invasion   : MANIPULATED
+    description: |
+      [[rayark]] 音樂總監 ICE 以個人名義創作支持香港抗爭運動的歌曲，[[rayark]] 旗下《Cytus II》於社群平台表示公司會對該負面行為要求賠償。

@@ -3,6 +3,8 @@ package draw
 import (
 	"fmt"
 	"image"
+	"log"
+	"os"
 	"strings"
 	"sync"
 
@@ -15,11 +17,17 @@ import (
 func DrawItemCovers(items []*entity.CompiledItem) error {
 	var wg sync.WaitGroup
 
+	if err := os.MkdirAll(config.PathDocsItemCovers, 0755); err != nil {
+		return fmt.Errorf("make item covers dir: %w", err)
+	}
+
 	for _, item := range items {
 		wg.Add(1)
 		go func(item *entity.CompiledItem) {
 			defer wg.Done()
-			DrawItemCover(item)
+			if err := DrawItemCover(item); err != nil {
+				log.Fatalf("draw item cover: %v", err)
+			}
 		}(item)
 	}
 	wg.Wait()
