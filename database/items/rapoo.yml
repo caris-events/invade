@@ -1,0 +1,28 @@
+#
+code       : rapoo
+parent_code:
+
+#
+name       : 雷柏科技
+name_alias : RAPOO
+name_others: [深圳雷柏科技股份有限公司, "Shenzhen Rapoo Technology Co.,Ltd."]
+
+#
+category: ELECTRONIC
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.rapoo.com/
+description: |
+  [[rapoo]] 是深圳科技公司，以無線化為主，從事滑鼠、鍵盤、等外部設備的生產。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[rapoo]] 的主要股東有中國商人梁建慧、杜小芬，大股東是《熱鍵電子》。
+
+  - invasion   : SUPPORTED
+    description: |
+      [[rapoo]] 網站的語言選項標示「中國台灣」。

@@ -275,7 +275,7 @@ func resolveInvasionNote(invasion entity.ItemInvasion, typ entity.ItemType, info
 		note += "因為利益而與侵台對象合作。"
 	case entity.ItemInvasionFunded:
 		if infoOwner == entity.ItemOwnerChinese {
-			note += "成立於中國境內，且背後資金主要來自中國。"
+			note += "成立於中國境內，且背後資金來自中國。"
 		} else {
 			note += "背後有中國資金介入。"
 		}
