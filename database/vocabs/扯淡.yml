@@ -12,7 +12,7 @@ description: |
 
 #
 examples:
-  - words      : [胡扯, 瞎扯]
+  - words      : [胡扯, 瞎扯, 亂說]
     correct    : |
       他說的話都是{{胡扯}}，不要聽他的。
     incorrect  : |

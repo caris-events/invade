@@ -1,0 +1,19 @@
+#
+word    : 省流
+bopomofo: ㄕㄥˇ ㄌㄧㄡˊ
+
+#
+category: INTERNET
+explicit:
+
+#
+description: |
+  替大家節省網路流量，表示不用點進連結觀看，隨後會附上彙總過的資訊。
+
+#
+examples:
+  - words      : [懶人包]
+    correct    : |
+      {{懶人包}}：這篇新聞都在講廢話。
+    incorrect  : |
+      {{省流}}，這篇新聞都在[[扯淡]]。

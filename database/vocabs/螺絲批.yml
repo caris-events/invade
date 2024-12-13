@@ -1,0 +1,19 @@
+#
+word    : 螺絲批
+bopomofo: ㄌㄨㄛˊ ㄙ ㄆㄧ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  一種用來鎖緊或鬆開螺絲的工具，通常是一個長柄上有十字形或一字的頭部。
+
+#
+examples:
+  - words      : [螺絲起子]
+    correct    : |
+      這個東西必須用{{螺絲起子}}才能拆開。
+    incorrect  : |
+      這個東西必須用{{螺絲批}}才能拆開。

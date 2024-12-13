@@ -1,0 +1,20 @@
+#
+word    : 電機
+bopomofo: ㄉㄧㄢˋ ㄐㄧ
+notice  : 這個條目指的不是電力機械的泛稱。
+
+#
+category: HARDWARE
+explicit:
+
+#
+description: |
+  將電力轉換成動力的一種硬體設備，指：馬達。
+
+#
+examples:
+  - words      : [馬達]
+    correct    : |
+      這台電動機車的{{馬達}}非常強勁。
+    incorrect  : |
+      這台電動[[摩的]]的電機非常強勁。

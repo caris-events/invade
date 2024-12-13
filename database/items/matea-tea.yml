@@ -1,0 +1,25 @@
+#
+code       : matea-tea
+parent_code:
+
+#
+name       : 麻六茶
+name_alias : MATEA
+name_others: [麻六茶坊]
+
+#
+category: DRINK
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    :
+description: |
+  [[matea-tea]] 是台灣雲林斗六的一間手搖飲店。
+
+#
+information:
+  - year       : 2024
+    invasion   : SUPPORTED
+    description: |
+      [[matea-tea]] 的飲料封膜上，使用統戰標語「我和我的祖國一刻也不能分割」。

@@ -1,0 +1,19 @@
+#
+word    : 摩的
+bopomofo: ㄇㄛˊ ㄉㄧ
+
+#
+category: VEHICLE
+explicit:
+
+#
+description: |
+  指一般的速可達、摩托車。
+
+#
+examples:
+  - words      : [機車, 摩托車]
+    correct    : |
+      這是我新買的{{機車}}，非常好騎。
+    incorrect  : |
+      這是我新買的{{摩的}}，非常好騎。

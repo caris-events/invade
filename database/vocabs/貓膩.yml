@@ -18,7 +18,7 @@ examples:
     incorrect  : |
       這個東西竟然不用錢，肯定有{{貓膩}}。
 
-  - words      : [隱情]
+  - words      : [隱情, 蹊蹺]
     correct    : |
       他謙和有禮卻做出這樣的事情，一定有什麼{{隱情}}。
     incorrect  : |

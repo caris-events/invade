@@ -1,0 +1,19 @@
+#
+word    : 充能
+bopomofo: ㄔㄨㄥ ㄋㄥˊ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  指將電池或能量充滿，使其能夠正常運作。
+
+#
+examples:
+  - words      : [蓄能]
+    correct    : |
+      為了應對高峰用電需求，電池系統必須先{{蓄能}}。
+    incorrect  : |
+      為了應對高峰用電需求，電池系統必須先{{充能}}。

@@ -1,0 +1,19 @@
+#
+word    : 勾巴
+bopomofo: ㄍㄡ ㄅㄚ
+
+#
+category: NOUN
+explicit: SEXUAL
+
+#
+description: |
+  是男性生殖器（陰莖）的俚語，因為寫法「✓巴」相似中國拼音的「JB」（雞巴）而得名。
+
+#
+examples:
+  - words      : [雞巴]
+    correct    : |
+      這到底是什麼{{雞巴}}玩意兒？
+    incorrect  : |
+      這到底是什麼{{勾巴}}玩意兒？

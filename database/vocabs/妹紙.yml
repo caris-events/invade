@@ -1,0 +1,25 @@
+#
+word    : 妹紙
+bopomofo: ㄇㄟˋ ㄓˇ
+
+#
+category: PRONOUN
+explicit:
+
+#
+description: |
+  是「妹子」的諧音，指可愛的女性，有時用來形容女裝的男生。
+
+#
+examples:
+  - words      : [女生]
+    correct    : |
+      這個{{女生}}真漂亮。
+    incorrect  : |
+      這個{{妹紙}}真漂亮。
+
+  - words      : [正妹]
+    correct    : |
+      這個{{正妹}}走在路上，十分引人矚目。
+    incorrect  : |
+      這個{{妹紙}}走在路上，十分{{吸引眼球}}。
