@@ -1,0 +1,25 @@
+#
+word    : 電子陽痿
+bopomofo: ㄉㄧㄢˋ ㄗˇ ㄧㄤˊ ㄨㄟˇ
+
+#
+category: INTERNET
+explicit:
+
+#
+description: |
+  表示對電子遊戲逐漸失去熱情，不再對遊戲產生興趣的現象。
+
+#
+examples:
+  - words      : [失去興趣]
+    correct    : |
+      忙於工作，導致我對遊戲{{失去興趣}}。
+    incorrect  : |
+      忙於工作，讓我得了{{電子陽痿}}。
+
+  - words      : [提不起勁, 沒有熱情]
+    correct    : |
+      這幾年的遊戲都太無聊了，讓我{{提不起勁}}去購買。
+    incorrect  : |
+      這幾年的遊戲都太無聊了，讓我得了{{電子陽痿}}。

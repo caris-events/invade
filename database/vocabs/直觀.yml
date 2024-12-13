@@ -1,0 +1,19 @@
+#
+word    : 直觀
+bopomofo: ㄓˊ ㄍㄨㄢ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  指一件事情看起來非常明顯，不需要思考就能理解。該詞彙常被誤用於感受上。
+
+#
+examples:
+  - words      : [直覺]
+    correct    : |
+      這款遊戲的設計很{{直覺}}，玩家能夠快速上手。
+    incorrect  : |
+      這款遊戲的設計很{{直觀}}，玩家能夠快速上手。

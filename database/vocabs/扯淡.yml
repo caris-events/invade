@@ -1,0 +1,19 @@
+#
+word    : 扯淡
+bopomofo: ㄔㄜˇ ㄉㄢˋ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  是低俗詞彙「扯蛋」（男性睪丸）的諧音，指言論不正經、空口說白話。
+
+#
+examples:
+  - words      : [胡扯, 瞎扯]
+    correct    : |
+      他說的話都是{{胡扯}}，不要聽他的。
+    incorrect  : |
+      他說的話都是{{扯淡}}，不要聽他的。

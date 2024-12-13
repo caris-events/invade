@@ -1,0 +1,31 @@
+#
+word    : 不科學
+bopomofo: ㄅㄨˋ ㄎㄜ ㄒㄩㄝˊ
+
+#
+category: INTERNET
+explicit:
+
+#
+description: |
+  形容某種現象不符合科學原理，通常是吐槽某件事情不合理。
+
+#
+examples:
+  - words      : [不合理]
+    correct    : |
+      他成績這麼好卻沒考上台大，太{{不合理}}了。
+    incorrect  : |
+      他成績這麼好卻沒考上台大，太{{不科學}}了。
+
+  - words      : [違反原理]
+    correct    : |
+      這件事情太{{違反原理}}了。
+    incorrect  : |
+      這件事情太{{不科學}}了。
+
+  - words      : [不直覺]
+    correct    : |
+      這種設計真{{不直覺}}。
+    incorrect  : |
+      這種設計真{{不科學}}。

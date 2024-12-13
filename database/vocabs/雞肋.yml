@@ -1,0 +1,25 @@
+#
+word    : 雞肋
+bopomofo: ㄐㄧ ㄌㄜˋ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  表示某樣設計就像雞的肋骨食之無味，讓人覺得沒有意義。
+
+#
+examples:
+  - words      : [多餘, 無用]
+    correct    : |
+      太陽能手電筒很{{多餘}}，有太陽的地方還用得著它嗎？
+    incorrect  : |
+      太陽能手電筒很{{雞肋}}，有太陽的地方還用得著它嗎？
+
+  - words      : [毫無意義]
+    correct    : |
+      這個功能對我來說{{毫無意義}}。
+    incorrect  : |
+      這個功能對我來說十分{{雞肋}}。

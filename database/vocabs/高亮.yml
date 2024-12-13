@@ -1,0 +1,25 @@
+#
+word    : 高亮
+bopomofo: ㄍㄠ ㄌㄧㄤˋ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  讓某個東西或文字變得特別引人注目，英文是 Highlight。
+
+#
+examples:
+  - words      : [醒目提示]
+    correct    : |
+      需要拾取的遊戲道具會被{{醒目提示}}。
+    incorrect  : |
+      需要拾取的遊戲道具會被{{高亮}}。
+
+  - words      : [螢光註記]
+    correct    : |
+      錯誤的程式碼會被{{螢光註記}}。
+    incorrect  : |
+      錯誤的程式碼會被{{高亮}}。

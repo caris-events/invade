@@ -1,0 +1,19 @@
+#
+word    : 公交車
+bopomofo: ㄍㄨㄥ ㄐㄧㄠ ㄔㄜ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  指公共汽車，是一種供大眾乘坐的交通工具。
+
+#
+examples:
+  - words      : [公車]
+    correct    : |
+      我每天都搭{{公車}}上班。
+    incorrect  : |
+      我每天都搭{{公交車}}上班。
