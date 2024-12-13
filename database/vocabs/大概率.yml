@@ -1,0 +1,24 @@
+#
+word    : 大概率
+bopomofo: ㄉㄚˋ ㄍㄞˋ ㄌㄩˋ
+
+#
+category: ADVERB
+explicit:
+
+#
+description:
+
+#
+examples:
+  - words      : [大概, 可能]
+    correct    : |
+      我想，那{{大概}}是真的。
+    incorrect  : |
+      我想，那{{大概率}}是真的。
+
+  - words      : [有機率, 有機會]
+    correct    : |
+      這件事{{有機率}}會發生。
+    incorrect  : |
+      這件事{{大概率}}會發生。

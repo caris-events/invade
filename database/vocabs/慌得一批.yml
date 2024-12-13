@@ -1,0 +1,19 @@
+#
+word    : 慌得一批
+bopomofo: ㄏㄨㄤ ㄉㄜ˙ ㄧ ㄆㄧ
+
+#
+category: SLANG
+explicit:
+
+#
+description: |
+  形容非常慌張，是中國四川話。
+
+#
+examples:
+  - words      : [十分慌張]
+    correct    : |
+      謊言被揭穿，讓他{{十分慌張}}。
+    incorrect  : |
+      謊言被揭穿，讓他{{慌得一批}}。

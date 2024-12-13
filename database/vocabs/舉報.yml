@@ -12,7 +12,7 @@ description: |
 
 #
 examples:
-  - words      : [檢舉]
+  - words      : [檢舉, 告發]
     correct    : |
       你竟然翻牆出來，我要{{檢舉}}你！
     incorrect  : |

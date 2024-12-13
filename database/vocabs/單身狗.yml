@@ -1,0 +1,19 @@
+#
+word    : 單身狗
+bopomofo: ㄉㄢ ㄕㄣ ㄍㄡˇ
+
+#
+category: PRONOUN
+explicit:
+
+#
+description: |
+  形容一個人長期單身，沒有交往對象。
+
+#
+examples:
+  - words      : [單身漢]
+    correct    : |
+      他總是足不出戶，是個{{單身漢}}。
+    incorrect  : |
+      他總是足不出戶，是條{{單身狗}}。

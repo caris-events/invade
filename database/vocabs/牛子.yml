@@ -1,0 +1,19 @@
+#
+word    : 牛子
+bopomofo: ㄋㄧㄡˊ ㄗˇ
+
+#
+category: NOUN
+explicit: SEXUAL
+
+#
+description: |
+  指男性生殖器（陰莖），是中國東北方言。
+
+#
+examples:
+  - words      : [陰莖]
+    correct    : |
+      他的{{陰莖}}長度超過平均值。
+    incorrect  : |
+      他的{{牛子}}長度超過平均值。

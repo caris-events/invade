@@ -1,0 +1,19 @@
+#
+word    : 打印機
+bopomofo: ㄉㄚˇ ㄧㄣˋ ㄐㄧ
+
+#
+category: HARDWARE
+explicit:
+
+#
+description: |
+  指列印文件或 3D 模型的機器，由於「打印」聽起來比較鏗鏘有力所以常被誤用。
+
+#
+examples:
+  - words      : [列印機]
+    correct    : |
+      請使用旁邊的{{列印機}}印出這份文件。
+    incorrect  : |
+      請使用旁邊的{{打印機}}印出這份文件。

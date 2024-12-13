@@ -1,0 +1,19 @@
+#
+word    : 抖色
+bopomofo: ㄉㄡˇ ㄙㄜˋ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  在圖片裡添加雜訊，讓顏色看起來更均勻流暢，英文是 Color Dithering。
+
+#
+examples:
+  - words      : [遞色]
+    correct    : |
+      這張圖片使用{{遞色}}技術，讓色彩在低解析度下仍有漸層效果。
+    incorrect  : |
+      這張圖片使用{{抖色}}技術，讓色彩在低[[分辨率]]下仍有漸層效果。

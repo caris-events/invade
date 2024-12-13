@@ -1,0 +1,19 @@
+#
+word    : 圖標
+bopomofo: ㄊㄨˊ ㄅㄧㄠ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  用來代表某個應用程式、網站或功能的小型圖片。
+
+#
+examples:
+  - words      : [圖示]
+    correct    : |
+      點擊這個{{圖示}}就能執行應用程式。
+    incorrect  : |
+      點擊這個{{圖標}}就能[[運行]]應用程式。

@@ -1,0 +1,25 @@
+#
+word    : 屌絲
+bopomofo: ㄉㄧㄠˇ ㄙ
+
+#
+category: PRONOUN
+explicit: SEXUAL
+
+#
+description: |
+  暗喻像男性的陰毛一樣可有可無，形容一名男性單身許久、人生輸家。
+
+#
+examples:
+  - words      : [單身漢]
+    correct    : |
+      他到現在都還是個{{單身漢}}。
+    incorrect  : |
+      他到現在都還是個{{屌絲}}。
+
+  - words      : [人生輸家, 魯蛇]
+    correct    : |
+      他愛抱怨又不做事，是個徹底的{{人生輸家}}。
+    incorrect  : |
+      他愛抱怨又不做事，是個徹底的{{屌絲}}。
