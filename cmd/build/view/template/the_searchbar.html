@@ -86,7 +86,7 @@
                 <div class="ts-grid tablet+:is-relaxed">
                     <div class="column is-fluid">
                         <div class="ts-input is-solid tablet+:is-large">
-                            <input type="search" placeholder="搜尋組織、產品…" @input="search" x-model="search_keyword" />
+                            <input type="search" placeholder="{{ if eq .Page "search_vocabs" }}搜尋詞彙…{{ else }}搜尋組織、產品…{{ end }}" @input="search" x-model="search_keyword" />
                         </div>
                     </div>
                     <div class="column">
