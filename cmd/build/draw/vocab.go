@@ -2,6 +2,8 @@ package draw
 
 import (
 	"fmt"
+	"log"
+	"os"
 	"strings"
 	"sync"
 
@@ -14,11 +16,17 @@ import (
 func DrawVocabCovers(vocabs []*entity.CompiledVocab) error {
 	var wg sync.WaitGroup
 
+	if err := os.MkdirAll(config.PathDocsVocabCovers, 0755); err != nil {
+		return fmt.Errorf("make vocab covers dir: %w", err)
+	}
+
 	for _, vocab := range vocabs {
 		wg.Add(1)
 		go func(vocab *entity.CompiledVocab) {
 			defer wg.Done()
-			DrawVocabCover(vocab)
+			if err := DrawVocabCover(vocab); err != nil {
+				log.Fatalf("draw vocab cover: %v", err)
+			}
 		}(vocab)
 	}
 	wg.Wait()
