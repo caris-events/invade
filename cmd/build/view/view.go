@@ -34,6 +34,9 @@ func Prepare(items []*entity.CompiledItem) error {
 	if err := os.CopyFS(config.PathDocsItemLogos, os.DirFS(config.PathLogos)); err != nil {
 		return fmt.Errorf("copy path logos: %w", err)
 	}
+	if err := util.Copy(config.PathAssets+"/favicons/favicon.ico", config.PathDocs+"/favicon.ico"); err != nil {
+		return fmt.Errorf("copy favicon: %w", err)
+	}
 
 	fn := template.FuncMap{
 		"item_content":  ParseItemText(items),
