@@ -1,0 +1,19 @@
+#
+word    : 勞逸結合
+bopomofo: ㄌㄠˊ ㄧˋ ㄐㄧㄝˊ ㄏㄜˊ
+
+#
+category: SLANG
+explicit:
+
+#
+description: |
+  指的是工作和休息之間相互均衡取捨。
+
+#
+examples:
+  - words      : [適時休息]
+    correct    : |
+      工作時要{{適時休息}}，才能發揮最大效率。
+    incorrect  : |
+      工作時要{{勞逸結合}}，才能發揮最大效率。
