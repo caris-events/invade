@@ -170,6 +170,9 @@ func resolveRelates(items map[string]*entity.Item, parents, children map[string]
 		relates[item.Code] = lo.Uniq(lo.Filter(relates[item.Code], func(v *entity.Item, _ int) bool {
 			return v.Code != item.Code
 		}))
+		sort.SliceStable(relates[item.Code], func(i, j int) bool {
+			return relates[item.Code][i].Code < relates[item.Code][j].Code
+		})
 	}
 	return relates
 }
@@ -206,6 +209,9 @@ func resolveChildren(items map[string]*entity.Item) map[string][]*entity.Item {
 		for _, item := range items {
 			children[parent] = append(children[parent], children[item.Code]...)
 		}
+		sort.SliceStable(children[parent], func(i, j int) bool {
+			return children[parent][i].Code < children[parent][j].Code
+		})
 	}
 
 	return children
