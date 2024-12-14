@@ -1,0 +1,19 @@
+#
+word    : 長知識
+bopomofo: ㄓㄤˇ ㄓ ㄕˋ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  表示學習到了新知。
+
+#
+examples:
+  - words      : [學到了]
+    correct    : |
+      原來如此！我{{學到了}}。
+    incorrect  : |
+      原來如此！{{長知識}}了。
