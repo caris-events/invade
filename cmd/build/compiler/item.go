@@ -167,6 +167,7 @@ func resolveRelates(items map[string]*entity.Item, parents, children map[string]
 			relates[item.Code] = append(relates[item.Code], parents[scope.Code]...)
 			relates[item.Code] = append(relates[item.Code], children[scope.Code]...)
 		}
+
 		relates[item.Code] = lo.Uniq(lo.Filter(relates[item.Code], func(v *entity.Item, _ int) bool {
 			return v.Code != item.Code
 		}))
@@ -199,22 +200,28 @@ func resolveChildren(items map[string]*entity.Item) map[string][]*entity.Item {
 		if children[item.Code] == nil {
 			children[item.Code] = []*entity.Item{}
 		}
-
 		if item.ParentCode != "" {
 			children[item.ParentCode] = append(children[item.ParentCode], item)
 		}
 	}
+	allChildren := make(map[string][]*entity.Item)
+	for code := range children {
+		allChildren[code] = getAllDescendants(code, children)
 
-	for parent, items := range children {
-		for _, item := range items {
-			children[parent] = append(children[parent], children[item.Code]...)
-		}
-		sort.SliceStable(children[parent], func(i, j int) bool {
-			return children[parent][i].Code < children[parent][j].Code
+		sort.SliceStable(allChildren[code], func(i, j int) bool {
+			return allChildren[code][i].Code < allChildren[code][j].Code
 		})
 	}
+	return allChildren
+}
 
-	return children
+func getAllDescendants(code string, children map[string][]*entity.Item) []*entity.Item {
+	var descendants []*entity.Item
+	for _, child := range children[code] {
+		descendants = append(descendants, child)
+		descendants = append(descendants, getAllDescendants(child.Code, children)...)
+	}
+	return descendants
 }
 
 func resolveInfo(items map[string]*entity.Item, item *entity.Item) (compiles []*entity.CompiledItemInfo) {
