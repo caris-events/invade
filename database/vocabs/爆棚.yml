@@ -1,0 +1,25 @@
+#
+word    : 爆棚
+bopomofo: ㄅㄠˋ ㄆㄥˊ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  形容某個東西滿到爆出來。
+
+#
+examples:
+  - words      : [十足, 滿分]
+    correct    : |
+      勝利在望，令人信心{{十足}}。
+    incorrect  : |
+      勝利在望，令人信心{{爆棚}}。
+
+  - words      : [破表, 爆表]
+    correct    : |
+      這個公仔真是可愛度{{破表}}！
+    incorrect  : |
+      這個[[手辦]]真是可愛{{爆棚}}。

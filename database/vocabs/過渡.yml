@@ -1,0 +1,20 @@
+#
+word    : 過渡
+bopomofo: ㄍㄨㄛˋ ㄉㄨˋ
+notice  : 這個條目指的不是過渡期。
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  從某個狀態變更到另一個狀態之間的過程。
+
+#
+examples:
+  - words      : [轉場]
+    correct    : |
+      使用{{轉場}}特效可以使場景切換更加順暢。
+    incorrect  : |
+      使用{{過渡}}特效可以使場景切換更加[[絲滑]]。

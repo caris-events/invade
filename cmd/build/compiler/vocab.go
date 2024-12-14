@@ -2,6 +2,7 @@ package compiler
 
 import (
 	"fmt"
+	"log"
 	"sort"
 	"strings"
 	"unicode"
@@ -58,6 +59,9 @@ func breakdown(word string, bopomofo string) (breakdowns []*entity.VocabBreakdow
 				Character: foreign.String(),
 			})
 			foreign.Reset()
+		}
+		if bopomofoIndex >= len(bopomofoSet) {
+			log.Fatalf("bopomofo index out of range: %s", word)
 		}
 		breakdown := &entity.VocabBreakdown{
 			Character: string(char),

@@ -1,0 +1,19 @@
+#
+word    : 踩屎感拖鞋
+bopomofo: ㄘㄞˇ ㄕˇ ㄍㄢˇ ㄊㄨㄛ ㄒㄧㄝˊ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  指台灣常見的發泡拖鞋，形容穿起來就像踩在屎上。
+
+#
+examples:
+  - words      : [發泡拖鞋]
+    correct    : |
+      這雙{{發泡拖鞋}}穿起來很舒服。
+    incorrect  : |
+      這雙{{踩屎感拖鞋}}穿起來很舒服。

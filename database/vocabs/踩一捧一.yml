@@ -1,0 +1,19 @@
+#
+word    : 踩一捧一
+bopomofo: ㄘㄞˇ ㄧ ㄆㄥˇ ㄧ
+
+#
+category: SLANG
+explicit:
+
+#
+description: |
+  為了彰顯某個事物的優點，而貶低其他事物。有時是為了展現優越感。
+
+#
+examples:
+  - words      : [自抬身價]
+    correct    : |
+      即使再怎麼厲害，也沒必要貶低他人來{{自抬身價}}。
+    incorrect  : |
+      即使再怎麼厲害，也沒必要{{踩一捧一}}。

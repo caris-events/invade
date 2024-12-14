@@ -1,0 +1,25 @@
+#
+word    : 本地化
+bopomofo: ㄅㄣˇ ㄉㄧˋ ㄏㄨㄚˋ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  可以做動詞或形容詞，指將產品或服務的內容被翻譯的非常貼切。
+
+#
+examples:
+  - words      : [在地化]
+    correct    : |
+      這款遊戲的{{在地化}}做得非常好。
+    incorrect  : |
+      這款遊戲的{{本地化}}做得非常好。
+
+  - words      : [道地]
+    correct    : |
+      這本書的翻譯非常{{道地}}。
+    incorrect  : |
+      這本書的翻譯非常{{本地化}}。

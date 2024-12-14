@@ -1,0 +1,19 @@
+#
+word    : 端口
+bopomofo: ㄉㄨㄢ ㄎㄡˇ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  電腦軟體相互通訊的一個端點。
+
+#
+examples:
+  - words      : [通訊埠, 連接埠]
+    correct    : |
+      這台電腦有多個{{通訊埠}}，可以連接不同的設備。
+    incorrect  : |
+      這台電腦有多個{{端口}}，可以連接不同的設備。

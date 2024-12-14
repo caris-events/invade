@@ -1,0 +1,25 @@
+#
+word    : 拉滿
+bopomofo: ㄌㄚ ㄇㄢˇ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  形容滿到快爆表，類似遊戲裡的能量被「拉滿」的狀態。
+
+#
+examples:
+  - words      : [十足]
+    correct    : |
+      他的演技{{十足}}，讓人看了很過癮。
+    incorrect  : |
+      他的演技{{拉滿}}，讓人看了很過癮。
+
+  - words      : [爆表]
+    correct    : |
+      他到處引人怨，仇恨值快{{爆表}}了。
+    incorrect  : |
+      他到處引人怨，仇恨值{{拉滿}}。

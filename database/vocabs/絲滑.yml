@@ -1,0 +1,30 @@
+#
+word    : 絲滑
+bopomofo: ㄙ ㄏㄨㄚˊ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+
+#
+examples:
+  - words      : [順滑]
+    correct    : |
+      這個洗髮精非常{{順滑}}。
+    incorrect  : |
+      這個洗髮精非常{{絲滑}}。
+
+  - words      : [流暢]
+    correct    : |
+      他的口才非常{{流暢}}。
+    incorrect  : |
+      他的口才非常{{絲滑}}。
+
+  - words      : [順口]
+    correct    : |
+      這杯奶茶喝起來很{{順口}}。
+    incorrect  : |
+      這杯奶茶喝起來很{{絲滑}}。

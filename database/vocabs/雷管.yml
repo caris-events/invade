@@ -1,0 +1,19 @@
+#
+word    : 雷管
+bopomofo: ㄌㄟˊ ㄍㄨㄢˇ
+
+#
+category: WEAPON
+explicit:
+
+#
+description: |
+  使用圓柱管作爲外殼的炸彈之一，使用時需連接引線。
+
+#
+examples:
+  - words      : [管狀炸彈]
+    correct    : |
+      工人小心翼翼地安裝{{管狀炸彈}}，以確保爆破作業的安全。
+    incorrect  : |
+      工人小心翼翼地安裝{{雷管}}，以確保爆破作業的安全。
