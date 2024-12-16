@@ -1,0 +1,19 @@
+#
+word    : 拉黑
+bopomofo: ㄌㄚ ㄏㄟ
+
+#
+category: INTERNET
+explicit:
+
+#
+description: |
+  把某個人加入到黑名單。
+
+#
+examples:
+  - words      : [封鎖]
+    correct    : |
+      這位買家總是拖延付款，我只好{{封鎖}}他。
+    incorrect  : |
+      這位買家總是拖延付款，我只好{{拉黑}}他。

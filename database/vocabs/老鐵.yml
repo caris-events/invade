@@ -1,0 +1,19 @@
+#
+word    : 老鐵
+bopomofo: ㄌㄠˇ ㄊㄧㄝˇ
+
+#
+category: PRONOUN
+explicit:
+
+#
+description: |
+  源自中國東北的「鐵哥們」，是對好朋友的稱呼。
+
+#
+examples:
+  - words      : [哥們, 兄弟]
+    correct    : |
+      {{哥們}}，你這麼厲害呀？
+    incorrect  : |
+      {{老鐵}}，你這麼厲害呀？

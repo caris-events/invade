@@ -1,0 +1,25 @@
+#
+word    : 媽生
+bopomofo: ㄇㄚ ㄕㄥ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  形容肌膚光鮮亮麗，就像媽媽剛生下來的一樣。有時候可以說是「與生俱來」或「天生的」。
+
+#
+examples:
+  - words      : [好膚質]
+    correct    : |
+      他天生{{好膚質}}，不用保養也很漂亮。
+    incorrect  : |
+      他有{{媽生感}}皮膚，不用保養也很漂亮。
+
+  - words      : [好看]
+    correct    : |
+      他有{{好看}}的鼻樑，十分堅挺。
+    incorrect  : |
+      他有{{媽生}}鼻，十分堅挺。

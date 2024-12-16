@@ -1,0 +1,19 @@
+#
+word    : 萌萌噠
+bopomofo: ㄇㄥˊ ㄇㄥˊ ㄉㄚ
+
+#
+category: INTERNET
+explicit:
+
+#
+description: |
+  以裝可愛的語氣說出「萌萌的」，形容可愛的樣子。
+
+#
+examples:
+  - words      : [很可愛]
+    correct    : |
+      那個東西看起來{{很可愛}}。
+    incorrect  : |
+      那個東西看起來{{萌萌噠}}。

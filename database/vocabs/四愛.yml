@@ -1,0 +1,19 @@
+#
+word    : 四愛
+bopomofo: ㄙˋ ㄞˋ
+
+#
+category: INTERNET
+explicit:
+
+#
+description: |
+  是中國審查下的隱含詞彙，指第四類愛情。形容在一段異性戀中，由女性主導而男性呈現弱勢狀態，也作「4i」或「iiii」。
+
+#
+examples:
+  - words      : [女攻男受]
+    correct    : |
+      這部作品裡的角色關係是{{女攻男受}}。
+    incorrect  : |
+      這部作品裡的角色關係是{{四愛}}。
