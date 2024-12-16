@@ -1,0 +1,31 @@
+#
+word    : 含金量
+bopomofo: ㄏㄢˊ ㄐㄧㄣ ㄌㄧㄤˋ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  比喻事情或物品的價值。
+
+#
+examples:
+  - words      : [知識含量]
+    correct    : |
+      這本書的{{知識含量}}十分豐富，值得一讀。
+    incorrect  : |
+      這本書的{{含金量}}十分高，值得一讀。
+
+  - words      : [潛在價值]
+    correct    : |
+      這個計畫的{{潛在價值}}非常大，值得投資。
+    incorrect  : |
+      這個計畫的{{含金量}}非常大，值得投資。
+
+  - words      : [內涵]
+    correct    : |
+      這是我與家人的照片，又有誰能理解其中的{{內涵}}呢？
+    incorrect  : |
+      這是我與家人的照片，又有誰能理解其中的{{含金量}}呢？

@@ -1,0 +1,19 @@
+#
+word    : 靠譜
+bopomofo: ㄎㄠˋ ㄆㄨˇ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  形容事物或人的行為合理、可靠、可信賴。
+
+#
+examples:
+  - words      : [可靠]
+    correct    : |
+      你比他還要{{可靠}}。
+    incorrect  : |
+      你比他還要{{靠譜}}。

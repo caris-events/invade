@@ -1,0 +1,25 @@
+#
+word    : 白嫖
+bopomofo: ㄅㄞˊ ㄆㄧㄠˊ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  免費得到原本需要付費才能獲得的東西。
+
+#
+examples:
+  - words      : [免費拿, 免費取得]
+    correct    : |
+      原先要付費才能下載的遊戲，現在限時{{免費取得}}。
+    incorrect  : |
+      原先要付費才能下載的遊戲，現在可以{{白嫖}}。
+
+  - words      : [白吃白喝, 霸王餐]
+    correct    : |
+      他去了陌生人的婚禮，{{白吃白喝}}了一頓。
+    incorrect  : |
+      他去了陌生人的婚禮，{{白嫖}}了一頓。

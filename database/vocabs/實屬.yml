@@ -1,0 +1,19 @@
+#
+word    : 實屬
+bopomofo: ㄕˊ ㄕㄨˇ
+
+#
+category: ADVERB
+explicit:
+
+#
+description: |
+  是誤用「屬實」詞彙的一種，通常想表達的是：確實、罪證確鑿。
+
+#
+examples:
+  - words      : [確實]
+    correct    : |
+      這份工作{{確實}}不容易。
+    incorrect  : |
+      這份工作{{實屬}}不易。

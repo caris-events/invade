@@ -12,7 +12,7 @@ description: |
 
 #
 examples:
-  - words      : [學到了]
+  - words      : [學到了, 受教了]
     correct    : |
       原來如此！我{{學到了}}。
     incorrect  : |

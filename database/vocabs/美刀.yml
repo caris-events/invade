@@ -1,0 +1,19 @@
+#
+word    : 美刀
+bopomofo: ㄇㄟˇ ㄉㄠ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  指美金，是美國的貨幣單位。「刀」一詞是英文 Dollar 的開頭發音。
+
+#
+examples:
+  - words      : [美金]
+    correct    : |
+      這個商品的價格是 100 {{美金}}。
+    incorrect  : |
+      這個商品的價格是 100 {{美刀}}。

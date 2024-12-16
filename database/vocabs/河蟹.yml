@@ -1,0 +1,19 @@
+#
+word    : 河蟹
+bopomofo: ㄏㄜˊ ㄒㄧㄝˋ
+
+#
+category: INTERNET
+explicit:
+
+#
+description: |
+  指 2000 年初，中國開始「和諧（清查）」網路內容的諧音，因為該詞當時被視為敏感詞彙。
+
+#
+examples:
+  - words      : [審查, 和諧, 清查]
+    correct    : |
+      這個網站因為牽扯到政治而被{{審查}}。
+    incorrect  : |
+      這個網站因為牽扯到政治而被{{河蟹}}。

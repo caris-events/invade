@@ -1,0 +1,25 @@
+#
+word    : 糾心
+bopomofo: ㄐㄧㄡ ㄒㄧㄣ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  形容心情或事情纏繞，讓人無法放下。
+
+#
+examples:
+  - words      : [心疼]
+    correct    : |
+      我家的寵物受傷了，真令人感到{{心疼}}。
+    incorrect  : |
+      我家的寵物受傷了，真令人感到{{糾心}}。
+
+  - words      : [心寒]
+    correct    : |
+      他的冷漠態度讓我感到{{心寒}}。
+    incorrect  : |
+      他的冷漠態度讓我感到{{糾心}}。

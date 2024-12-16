@@ -1,0 +1,25 @@
+#
+word    : 腦洞大開
+bopomofo: ㄋㄠˇ ㄉㄨㄥˋ ㄉㄚˋ ㄎㄞ
+
+#
+category: SLANG
+explicit:
+
+#
+description: |
+  表示想法或創意非常大膽、奇特。
+
+#
+examples:
+  - words      : [異想天開]
+    correct    : |
+      能夠設計出這樣的產品，真是{{異想天開}}。
+    incorrect  : |
+      能夠設計出這樣的產品，真是{{腦洞大開}}。
+
+  - words      : [出其不意]
+    correct    : |
+      他的提案{{出其不意}}，讓所有人都大開眼界。
+    incorrect  : |
+      他的提案{{腦洞大開}}，讓所有人都大開眼界。

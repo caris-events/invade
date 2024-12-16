@@ -1,0 +1,19 @@
+#
+word    : 白給
+bopomofo: ㄅㄞˊ ㄍㄟˇ
+
+#
+category: GAME
+explicit:
+
+#
+description: |
+  用於遊戲裡，表示對團隊沒有貢獻，甚至自己親手把分數送給敵人。
+
+#
+examples:
+  - words      : [送頭, 送死]
+    correct    : |
+      別再衝入敵陣{{送頭}}了！
+    incorrect  : |
+      別再衝入敵陣{{白給}}了！
