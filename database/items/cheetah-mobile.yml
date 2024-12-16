@@ -1,5 +1,5 @@
 #
-code       : cheetah_mobile
+code       : cheetah-mobile
 parent_code: kingsoft
 
 #
@@ -15,10 +15,10 @@ owner   : CHINESE
 #
 website    : https://www.cmcm.com/
 description: |
-  [[cheetah_mobile]] 是中國的手機應用程式開發商，由《金山安全》和《可牛影像》兩間公司合併而成，原為《金山網路》。
+  [[cheetah-mobile]] 是中國的手機應用程式開發商，由《金山安全》和《可牛影像》兩間公司合併而成，原為《金山網路》。
 
 #
 information:
   - invasion     : FUNDED
     description: |
-      [[cheetah_mobile]] 的大股東是中國商人傅盛，曾來台演講並認為「台灣不夠開放」。
+      [[cheetah-mobile]] 的大股東是中國商人傅盛，曾來台演講並認為「台灣不夠開放」。
