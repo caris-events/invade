@@ -1,0 +1,19 @@
+#
+word    : 網吧
+bopomofo: ㄨㄤˇ ㄅㄚ
+
+#
+category: PLACE
+explicit:
+
+#
+description: |
+  指網路咖啡廳，是一種提供上網服務的場所，通常提供電腦、網路連線、飲料等服務。
+
+#
+examples:
+  - words      : [網咖]
+    correct    : |
+      我們下課之後去{{網咖}}玩遊戲吧？
+    incorrect  : |
+      我們下課之後去{{網吧}}玩遊戲吧？

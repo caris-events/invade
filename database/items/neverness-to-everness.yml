@@ -1,0 +1,21 @@
+#
+code       : neverness-to-everness
+parent_code: iwplay-world
+
+#
+name       : 異環
+name_alias : Neverness to Everness
+name_others: [NTE]
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://nte.iwplay.com.tw/
+description: |
+  [[neverness-to-everness]] 是 [[perfect-world]] 旗下 Hotta Studio 開發的超自然都市開放世界遊戲，在台灣由 [[iwplay-world]] 代理。
+
+#
+information:

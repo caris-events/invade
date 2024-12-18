@@ -1,0 +1,26 @@
+#
+code       : hana-healthy
+parent_code:
+
+#
+name       : 花守海露希
+name_alias : 花守へるし
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : PERSON
+owner   : TAIWANESE
+
+#
+website    : https://www.youtube.com/@hana_healthy
+description: |
+  [[hana-healthy]] 是台灣的一位女性虛擬實況主，以遊戲實況與 ASMR 為主。在 2023 年退出 [[bilibili]] 經營而轉向《YouTube》。
+
+#
+information:
+  - year       : 2022
+    invasion   : MANIPULATED
+    source     : hana-healthy_01.png
+    description: |
+      [[hana-healthy]] 在社群上表示，為了討好所有人，不會特別承認自己是台灣 VTuber。
