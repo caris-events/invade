@@ -1,0 +1,22 @@
+#
+code       : stargazer-games
+parent_code: yostar
+
+#
+name       : Stargazer Games
+name_alias :
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://stellasora.stargazer-games.com/
+description: |
+  [[stargazer-games]] 是 [[yostar]] 旗下的遊戲開發工作室。
+
+#
+information:
+

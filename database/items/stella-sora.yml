@@ -1,0 +1,23 @@
+#
+code       : stella-sora
+parent_code: stargazer-games
+
+#
+name       : 星塔旅人
+name_alias : Stella Sora
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://stellasora.stargazer-games.com/
+description: |
+  [[stella-sora]] 是一款俯視角輕．動作冒險遊戲，在台灣由 [[magic-house-interactive-entertainment]] 代理。
+
+#
+information:
+
+
