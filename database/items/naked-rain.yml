@@ -1,0 +1,21 @@
+#
+code       : naked-rain
+parent_code: netease
+
+#
+name       : Naked Rain
+name_alias :
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : GROUP
+owner   : CHINESE
+
+#
+website    : https://leihuo.163.com/
+description: |
+  [[naked-rain]] 是 [[netease]] 雷火事業群在中國杭州的遊戲工作室。
+
+#
+information:

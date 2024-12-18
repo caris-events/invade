@@ -1,0 +1,21 @@
+#
+code       : ananta
+parent_code: naked-rain
+
+#
+name       : 代號：無限大
+name_alias : ANANTA
+name_others: [Project Mugen]
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://ananta.163.com
+description: |
+    [[ananta]] 是一款都市題材開放世界 RPG 遊戲。
+
+#
+information:
