@@ -1,0 +1,21 @@
+#
+code       : gryphline
+parent_code: hypergryph
+
+#
+name       : 獅鷲邊境
+name_alias : GRYPHLINE
+name_others: [獅鷲邊境私人有限公司, Gryph Frontier]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.gryphline.com/
+description: |
+    [[gryphline]] 是 [[hypergryph]] 在新加坡成立的海外發行子公司。
+
+#
+information:

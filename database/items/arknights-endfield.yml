@@ -1,0 +1,21 @@
+#
+code       : arknights-endfield
+parent_code: hypergryph
+
+#
+name       : 明日方舟：終末地
+name_alias : "Arknights: Endfield"
+name_others: [終末地]
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://endfield.gryphline.com/zh-tw
+description: |
+    [[arknights-endfield]] 是 [[hypergryph]] 旗下峘形山工作室開發的即時策略遊戲，是繼 [[arknights]] 的同系列作品。在海外由 [[gryphline]] 發行。
+
+#
+information:
