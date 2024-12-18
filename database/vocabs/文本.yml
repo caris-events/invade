@@ -1,0 +1,31 @@
+#
+word    : 文本
+bopomofo: ㄨㄣˊ ㄅㄣˇ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  一段文字或是一篇文章的內容。
+
+#
+examples:
+  - words      : [文字]
+    correct    : |
+      這款遊戲的{{文字}}量非常龐大。
+    incorrect  : |
+      這款遊戲的{{文本}}量非常龐大。
+
+  - words      : [劇本、劇情]
+    correct    : |
+      他撰寫的故事{{劇本}}很細膩。
+    incorrect  : |
+      他撰寫的故事{{文本}}很細膩。
+
+  - words      : [文案]
+    correct    : |
+      車站廣告的{{文案}}設計很引人矚目。
+    incorrect  : |
+      車站廣告的{{文本}}很[[吸引眼球]]。

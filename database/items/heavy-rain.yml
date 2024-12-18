@@ -1,0 +1,21 @@
+#
+code       : heavy-rain
+parent_code: quantic-dream
+
+#
+name       : 暴雨殺機
+name_alias : Heavy Rain
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://www.quanticdream.com/en/heavy-rain
+description: |
+  [[heavy-rain]] 是一款驚悚冒險、互動式電影遊戲。
+
+#
+information:

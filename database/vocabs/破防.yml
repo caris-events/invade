@@ -12,7 +12,7 @@ description: |
 
 #
 examples:
-  - words      : [深受打擊, 受不了]
+  - words      : [深受打擊, 受不了, 崩潰]
     correct    : |
       他的冷言冷語讓我{{深受打擊}}。
     incorrect  : |
@@ -23,3 +23,9 @@ examples:
       你這樣罵他，人家都{{玻璃心碎滿地}}了。
     incorrect  : |
       你這樣罵他，人家都{{破防}}了。
+
+  - words      : [被說中了]
+    correct    : |
+      看你反應這麼大，{{被說中了}}嗎？
+    incorrect  : |
+      看你反應這麼大，{{破防}}了？

@@ -1,0 +1,21 @@
+#
+code       : detroit-become-human
+parent_code: quantic-dream
+
+#
+name       : 底特律：化身為人
+name_alias : "Detroit: Become Human"
+name_others: [底特律：變人]
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://www.quanticdream.com/en/detroit-become-human
+description: |
+  [[detroit-become-human]] 是一款互動劇情遊戲。遊戲設定在未來的底特律，探討了人工智慧和人類的關係。
+
+#
+information:

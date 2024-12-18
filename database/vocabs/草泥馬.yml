@@ -1,0 +1,19 @@
+#
+word    : 草泥馬
+bopomofo: ㄘㄠˇ ㄋㄧˊ ㄇㄚˇ
+
+#
+category: ANIMAL
+explicit:
+
+#
+description: |
+  取名源自中國「操你媽」的髒話諧音。實際上是一種毛茸茸的動物，臉看起來像 (・´ｪ`・)
+
+#
+examples:
+  - words      : [羊駝]
+    correct    : |
+      這隻{{羊駝}}的毛色很漂亮。
+    incorrect  : |
+      這隻{{草泥馬}}的毛色很漂亮。

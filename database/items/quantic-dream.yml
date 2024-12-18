@@ -1,0 +1,21 @@
+#
+code       : quantic-dream
+parent_code: tencent
+
+#
+name       : Quantic Dream
+name_alias :
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.quanticdream.com/
+description: |
+  [[quantic-dream]] 是法國巴黎的一家遊戲開發商，公司在 2022 年被 [[tencent]] 收購。
+
+#
+information:

@@ -1,0 +1,25 @@
+#
+word    : 管飽
+bopomofo: ㄍㄨㄢˇ ㄅㄠˇ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  形容某個東西十分充裕、份量大，常見的用法是「量大管飽」。
+
+#
+examples:
+  - words      : [份量大]
+    correct    : |
+      這間餐廳的便當{{份量很大}}。
+    incorrect  : |
+      這間餐廳的便當{{量大管飽}}。
+
+  - words      : [充裕、十足]
+    correct    : |
+      這款遊戲的內容{{充裕}}，可以玩很久。
+    incorrect  : |
+      這款遊戲的內容{{管飽}}，可以玩很久。
