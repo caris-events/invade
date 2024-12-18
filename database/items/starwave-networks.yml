@@ -1,0 +1,22 @@
+#
+code       : starwave-networks
+parent_code:
+
+#
+name       : STARWAVE NET
+name_alias :
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.starwavenet.com/
+description: |
+  是中國背景不明的遊戲開發商，主要透過 AI 繪圖開發免洗手遊。在台灣由 [[magic-house-interactive-entertainment]] 代理。
+
+#
+information:
+

@@ -15,9 +15,11 @@ owner   : TAIWANESE
 #
 website    :
 description: |
-  [[magic-house-interactive-entertainment]] 是在台灣註冊的空殼公司，已有許多倒閉代理作品。
+  [[magic-house-interactive-entertainment]] 是在台灣註冊的空殼公司，經常代理中國背景不明的炒短線遊戲。
 
 #
 information:
-
+  - invasion   : COLLABORATED
+    description: |
+      [[magic-house-interactive-entertainment]] 只代理中國遊戲（如：[[stella-sora]]、[[pixel-overlord]]），且多數開發商背景不明。
 

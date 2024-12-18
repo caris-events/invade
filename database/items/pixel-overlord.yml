@@ -1,0 +1,22 @@
+#
+code       : pixel-overlord
+parent_code: starwave-networks
+
+#
+name       : 魔王我不累
+name_alias : "Pixel Overlord"
+name_others: [4096 Draws]
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://www.overlord4096.com/
+description: |
+  [[pixel-overlord]] 是使用 AI 繪圖開發的炒短線遊戲，在台灣由 [[magic-house-interactive-entertainment]] 代理。
+
+#
+information:
+
