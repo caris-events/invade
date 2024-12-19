@@ -1,0 +1,25 @@
+#
+word    : 渠道
+bopomofo: ㄑㄩˊ ㄉㄠˋ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  一種特定的方法或途徑。
+
+#
+examples:
+  - words      : [管道]
+    correct    : |
+      我們公司提供多種聯絡{{管道}}。
+    incorrect  : |
+      我們公司提供多種聯絡{{渠道}}。
+
+  - words      : [通路, 途徑]
+    correct    : |
+      商品會透過多種銷售{{通路}}販售。
+    incorrect  : |
+      商品會透過多種銷售{{渠道}}販售。

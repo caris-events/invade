@@ -1,0 +1,19 @@
+#
+word    : 打車
+bopomofo: ㄉㄚˇ ㄔㄜ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  呼叫、乘坐計程車。
+
+#
+examples:
+  - words      : [叫車, 坐計程車]
+    correct    : |
+      從這到機場，{{叫車}}至少要三百元。
+    incorrect  : |
+      從這到機場，{{打車}}至少要三百元。
