@@ -1,0 +1,19 @@
+#
+word    : 全局
+bopomofo: ㄑㄩㄢˊ ㄐㄩˊ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  指整個系統、環境或範圍。
+
+#
+examples:
+  - words      : [全域]
+    correct    : |
+      變更軟體的{{全域}}設定就會套用到所有功能。
+    incorrect  : |
+      變更[[軟件]]的{{全局}}設置就會套用到所有功能。

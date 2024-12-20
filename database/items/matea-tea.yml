@@ -8,7 +8,7 @@ name_alias : MATEA
 name_others: [麻六茶坊]
 
 #
-category: DRINK
+category: FOOD
 type    : COMPANY
 owner   : TAIWANESE
 
@@ -22,4 +22,4 @@ information:
   - year       : 2024
     invasion   : SUPPORTED
     description: |
-      [[matea-tea]] 的飲料封膜上，使用統戰標語「我和我的祖國一刻也不能分割」。
+      [[matea-tea]] 的飲料封膜出現統戰標語「我和我的祖國一刻也不能分割」。

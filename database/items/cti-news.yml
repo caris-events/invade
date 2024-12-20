@@ -1,0 +1,21 @@
+#
+code       : cti-news
+parent_code: want-want-china-times-group
+
+#
+name       : 中天新聞
+name_alias : CTI News Channel
+name_others:
+
+#
+category: MEDIA
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.ctitv.com.tw/
+description: |
+    [[cti-news]] 是台灣的一間親共新聞媒體，其立場偏多為宣傳、讚揚中共政府，政黨傾向為 [[kuomintang]]。
+
+#
+information:

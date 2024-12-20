@@ -1,0 +1,19 @@
+#
+word    : 平替
+bopomofo: ㄆㄧㄥˊ ㄊㄧˋ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  某個東西的替代品，但不一定是仿冒品。有時比原先的更廉價、實惠，英文可作 Alternative。
+
+#
+examples:
+  - words      : [替代]
+    correct    : |
+      他買不起原廠精品包，而改買了次級{{替代}}品。
+    incorrect  : |
+      他買不起原廠精品包，而改買了{{平替}}款。

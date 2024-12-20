@@ -1,0 +1,33 @@
+#
+code       : htc
+parent_code:
+
+#
+name       : 宏達電
+name_alias : HTC Corporation
+name_others: [宏達國際電子股份有限公司, High Tech Computer Corporation]
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.htc.com
+description: |
+    [[htc]] 是台灣的一間手機製造商，曾為市場領導者，後期手機部門販售給《Google》並後轉為虛擬實境（VR）製造商。
+
+#
+information:
+  - description: |
+      [[htc]] 創辦人王雪紅是《威盛電子》與《TVBS》董事長陳文琦的妻子。
+
+  - year       : 2010
+    description: |
+      [[htc]] 創辦人王雪紅聲明「HTC 是中國人所創立的品牌」。
+
+  - year       : 2012
+    invasion   : SUPPORTED
+    description: |
+      [[htc]] 創辦人王雪紅力挺 [[kuomintang]] 總統候選人馬英九，並支持九二共識。
+

@@ -1,0 +1,25 @@
+#
+code       : want-want
+parent_code:
+
+#
+name       : 旺旺集團
+name_alias : Want Want
+name_others: [旺旺食品股份有限公司]
+
+#
+category: FOOD
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.want-want.com/
+description: |
+    [[want-want]] 是台灣的食品公司，在中國成立總部，且超過 40 家的分公司與工廠都在中國。知名食品為旺旺仙貝，政治傾向為 [[kuomintang]]。
+
+#
+information:
+  - year       : 2024
+    invasion   : SUPPORTED
+    description: |
+      [[want-want]] 董事長蔡衍明表示自己以中國人為榮，並認為遲早會統一而支持九二共識。

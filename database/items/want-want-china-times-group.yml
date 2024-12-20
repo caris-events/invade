@@ -1,0 +1,21 @@
+#
+code       : want-want-china-times-group
+parent_code: want-want
+
+#
+name       : 旺旺中時媒體集團
+name_alias : Want Want China Times Group
+name_others: [旺中集團]
+
+#
+category: MEDIA
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.chinatimes.com/
+description: |
+    [[want-want-china-times-group]] 是台灣的親共媒體集團，其董事長蔡衍明在 [[htc]] 董事長王雪紅、[[far-eastern-group]] 董事長徐旭東、[[united-daily-news]] 總經理王文杉的支持下，取得中時集團經營權。
+
+#
+information:

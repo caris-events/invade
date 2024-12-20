@@ -1,0 +1,21 @@
+#
+code       : china-times
+parent_code: want-want-china-times-group
+
+#
+name       : 中時新聞網
+name_alias : China Times
+name_others: [中國時報]
+
+#
+category: MEDIA
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.chinatimes.com/
+description: |
+    [[china-times]] 是台灣的親共新聞媒體平台。
+
+#
+information:

@@ -1,0 +1,25 @@
+#
+code       : far-eastern-group
+parent_code:
+
+#
+name       : 遠東集團
+name_alias : Far Eastern Group
+name_others: []
+
+#
+category: MIXED
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.feg.com.tw/
+description: |
+    [[far-eastern-group]] 是台灣一間橫跨工業能源、百貨零售與金融還有網路通訊的大集團。
+
+#
+information:
+  - year       : 2021
+    invasion   : SUPPORTED
+    description: |
+      [[far-eastern-group]] 董事長徐旭東表態支持九二共識、一中原則並反對台獨。

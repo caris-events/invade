@@ -1,0 +1,30 @@
+#
+code       : set-news
+parent_code:
+
+#
+name       : 三立新聞
+name_alias : SET News
+name_others:
+
+#
+category: MEDIA
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.setn.com/
+description: |
+    [[set-news]] 是台灣的一間新聞媒體。
+
+#
+information:
+  - year       : 2023
+    invasion   : MANIPULATED
+    description: |
+      [[set-news]] 在與親共媒體《TVBS》同時發表「驚傳美國大廠倒閉」新聞，但對象只是新創概念公司《Hyperloop One》。
+
+  - year       : 2024
+    invasion   : COLLABORATED
+    description: |
+      [[set-news]] 記者魏汶萱協助其男友謝克洋（[[kuomintang]] 候選人）違規攜帶工具進入立法院，阻攔《民進黨》行動。該名記者曾於 [[cti-news]] 工作。
