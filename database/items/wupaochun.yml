@@ -1,0 +1,25 @@
+#
+code       : wupaochun
+parent_code:
+
+#
+name       : 吳寶春麥方店
+name_alias :
+name_others: []
+
+#
+category: FOOD
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.wupaochun.com/
+description: |
+  [[wupaochun]] 是台灣的連鎖麵包店。
+
+#
+information:
+  - year       : 2018
+    invasion   : SUPPORTED
+    description: |
+      [[wupaochun]] 創辦人吳寶春表示自己生於「中國台灣」，支持九二共識並堅持兩岸一家親。

@@ -1,0 +1,25 @@
+#
+code       : 85-cafe
+parent_code:
+
+#
+name       : 85度C
+name_alias : 85C Daily Cafe
+name_others: [85°C, "Gourmet Master Co., Ltd."]
+
+#
+category: FOOD
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.85cafe.com/
+description: |
+  [[85-cafe]] 是台灣的一間跨國連鎖餐飲店，銷售咖啡、蛋糕。
+
+#
+information:
+  - year       : 2018
+    invasion   : SUPPORTED
+    description: |
+      [[85-cafe]] 發表聲明支持九二共識，並秉持「兩岸一家親」信念。
