@@ -1,0 +1,30 @@
+#
+code       : greenpeace
+parent_code:
+
+#
+name       : 綠色和平
+name_alias : Greenpeace
+name_others: []
+
+#
+category: ENERGY
+type    : GROUP
+owner   : FOREIGN
+
+#
+website    : https://www.greenpeace.org/taiwan/
+description: |
+  [[greenpeace]] 綠色和平是一個全球性的環保組織。
+
+#
+information:
+  - year       : 2017
+    invasion   : SUPPORTED
+    description: |
+      [[greenpeace]] 公佈的報告中，台灣被納入中國地圖，且使用了中共政府片面宣稱的南海九段線。
+
+  - year       : 2023
+    invasion   : MANIPULATED
+    description: |
+      [[greenpeace]] 官網的語言選項大多都以國家稱呼，但台灣被稱為「東亞洲 | 正體」。
