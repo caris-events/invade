@@ -1,0 +1,21 @@
+#
+code       : miside
+parent_code:
+
+#
+name       : MiSide
+name_alias :
+name_others: [Mita, 米塔]
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://aihasto.itch.io/miside
+description: |
+  [[miside]] 是一款由 AIHASTO 開發，中國 [[indieark]] 發行的恐怖遊戲。玩家在遊戲中與虛擬女友米塔互動，體驗從溫馨到驚悚的劇情發展。
+
+#
+information:

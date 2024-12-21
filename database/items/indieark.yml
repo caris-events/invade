@@ -1,0 +1,24 @@
+#
+code       : indieark
+parent_code:
+
+#
+name       : 獨立方舟
+name_alias : IndieArk
+name_others: [曜祚遊戲, 深圳市曜祚科技有限公司, YaoZuo Games Limited]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.indieark.com
+description: |
+  [[indieark]] 是中國深圳的一間遊戲發行商，大多協助海外獨立遊戲發行。
+
+#
+information:
+  - invasion     : FUNDED
+    description: |
+      [[indieark]] 的大股東是中國商人丁丁飛、葉山青。
