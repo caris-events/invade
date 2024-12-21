@@ -1,0 +1,25 @@
+#
+code       : electronic-arts
+parent_code:
+
+#
+name       : 美商藝電
+name_alias : Electronic Arts
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.ea.com/zh-tw
+description: |
+  [[electronic-arts]] 是美國的一間遊戲開發、發行商，後期因政治正確、遊戲半成品強迫上市而收入受創。
+
+#
+information:
+  - year       : 2023
+    invasion   : MANIPULATED
+    description: |
+      [[electronic-arts]] 官網的國家語言設定裡，只有台灣被稱為「繁體中文」且沒有國旗。

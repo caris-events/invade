@@ -1,0 +1,21 @@
+#
+code       : kartrider-drift
+parent_code: nexon
+
+#
+name       : 跑跑卡丁車：飄移
+name_alias : "KartRider: Drift"
+name_others:
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://tw.nexon.com/kartdrift/zh/main
+description: |
+  [[kartrider-drift]] 是 [[nexon]] 旗下韓國 Nitro Studio 工作室出品的一款休閒類賽車競速遊戲。由於經營不善，於 2024 年將重點從全球轉為韓國與台灣市場。
+
+#
+information:

@@ -1,0 +1,21 @@
+#
+code       : ea-dice
+parent_code: electronic-arts
+
+#
+name       : EA DICE
+name_alias :
+name_others: [藝電戴斯, 美商藝電數位幻象創意娛樂]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.dice.se/
+description: |
+  [[ea-dice]] 是瑞典的一間遊戲開發工作室，部份員工後期跳槽至 [[embark-studios]]。
+
+#
+information:

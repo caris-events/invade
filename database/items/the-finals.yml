@@ -1,0 +1,21 @@
+#
+code       : the-finals
+parent_code: embark-studios
+
+#
+name       : 最終決戰
+name_alias : THE FINALS
+name_others:
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://www.reachthefinals.com/
+description: |
+  [[the-finals]] 是強調場景可破壞的免費第一人稱射擊遊戲，開發成員來自前 [[ea-dice]] 團隊。
+
+#
+information:

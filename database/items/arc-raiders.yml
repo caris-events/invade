@@ -1,0 +1,21 @@
+#
+code       : arc-raiders
+parent_code: embark-studios
+
+#
+name       : ARC Raiders
+name_alias :
+name_others:
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://arcraiders.com/
+description: |
+  [[arc-raiders]] 是一款免費遊玩的第三人稱 PvPvE 撤離型射擊遊戲。
+
+#
+information:

@@ -1,0 +1,25 @@
+#
+code       : embark-studios
+parent_code: nexon
+
+#
+name       : Embark Studios
+name_alias :
+name_others:
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.embark-studios.com/
+description: |
+  [[embark-studios]] 是瑞典的一家遊戲開發公司，由前 [[electronic-arts]] 高級副總裁 Patrick Söderlund 成立。
+
+#
+information:
+  - year       : 2023
+    invasion   : MANIPULATED
+    description: |
+      [[embark-studios]] 旗下 [[the-finals]] 受大量中國外掛玩家破壞。外國玩家要求分區，但 [[embark-studios]] 表示：「不是中文帳號就是中國人，這是對中國的歧視」隨後便將自己的名稱加上中文。

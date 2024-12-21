@@ -1,0 +1,21 @@
+#
+code       : marathon-game
+parent_code: bungie
+
+#
+name       : 馬拉松
+name_alias : Marathon
+name_others:
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://www.marathonthegame.com/
+description: |
+  [[marathon-game]] 是一款 PvP 逃脫型射擊遊戲。
+
+#
+information:

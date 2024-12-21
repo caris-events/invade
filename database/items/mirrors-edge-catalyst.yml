@@ -1,0 +1,21 @@
+#
+code       : mirrors-edge-catalyst
+parent_code: ea-dice
+
+#
+name       : 靚影特務：關鍵催化
+name_alias : "Mirror's Edge Catalyst"
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://www.ea.com/games/mirrors-edge/mirrors-edge-catalyst
+description: |
+  [[mirrors-edge-catalyst]] 是開放世界第一人稱動作冒險、跑酷遊戲。
+
+#
+information:
