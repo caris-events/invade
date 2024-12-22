@@ -1,0 +1,21 @@
+#
+code       : volkswagen
+parent_code:
+
+#
+name       : 福斯汽車
+name_alias : Volkswagen
+name_others: [VW, 大眾汽車]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.volkswagen.com.tw
+description: |
+  [[volkswagen]] 是一家德國汽車製造商。
+
+#
+information:

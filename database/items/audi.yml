@@ -1,0 +1,21 @@
+#
+code       : audi
+parent_code: volkswagen
+
+#
+name       : 奧迪
+name_alias : Audi
+name_others: []
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.audi.com.tw
+description: |
+  [[audi]] 是一家總部位於德國英戈爾施塔特的汽車製造商，主要生產超級跑車、大型重型機車。
+
+#
+information:

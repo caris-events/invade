@@ -1,0 +1,30 @@
+#
+code       : garmin
+parent_code:
+
+#
+name       : 台灣國際航電
+name_alias : Garmin
+name_others: [佳明, GRMN]
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.garmin.com.tw/
+description: |
+  [[garmin]] 是台灣人高民環在美國成立的航空電子、導航設備開發公司，主要製造地在台灣。
+
+#
+information:
+  - year       : 2008
+    invasion   : MANIPULATED
+    description: |
+      [[garmin]] 官網的國家列表有中國（China），但沒有中華民國、台灣。
+
+  - year       : 2018
+    invasion   : SUPPORTED
+    description: |
+      [[garmin]] 被中國網友發現官網稱台灣為國家，隨後 [[garmin]] 發表聲明支持中國主權與領土的完整，並將台灣從網頁中移除，同時向中國使用者致歉。

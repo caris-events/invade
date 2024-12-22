@@ -1,0 +1,25 @@
+#
+code       : lamborghini
+parent_code: volkswagen
+
+#
+name       : 藍寶堅尼
+name_alias : Lamborghini
+name_others: []
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.lamborghini.com
+description: |
+  [[lamborghini]] 是一家位於義大利的超級跑車製造商，專注於高性能跑車的設計、工程、製造和銷售。
+
+#
+information:
+  - year       : 2024
+    invasion   : SUPPORTED
+    description: |
+      [[lamborghini]] 官網的經銷商列表，將台灣標示為「中國台灣」。

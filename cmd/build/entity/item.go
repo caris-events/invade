@@ -52,6 +52,7 @@ const (
 	ItemCategoryFood          ItemCategory = "FOOD"
 	ItemCategoryEnergy        ItemCategory = "ENERGY"
 	ItemCategorySports        ItemCategory = "SPORTS"
+	ItemCategoryVehicle       ItemCategory = "VEHICLE"
 )
 
 type ItemInvasion string
@@ -153,6 +154,7 @@ var (
 		ItemCategoryFood:          "食品業",
 		ItemCategoryEnergy:        "能源/環保",
 		ItemCategorySports:        "運動",
+		ItemCategoryVehicle:       "交通工具",
 	}
 	ItemCategories = []ItemCategory{
 		ItemCategoryUnknown,
@@ -177,6 +179,7 @@ var (
 		ItemCategoryFood,
 		ItemCategoryEnergy,
 		ItemCategorySports,
+		ItemCategoryVehicle,
 	}
 	ItemOwnerStr = map[ItemOwner]string{
 		ItemOwnerUnknown:     "未知",

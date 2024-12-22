@@ -1,0 +1,25 @@
+#
+code       : porsche
+parent_code: volkswagen
+
+#
+name       : 保時捷
+name_alias : Porsche
+name_others: []
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.porsche.com
+description: |
+  [[porsche]] 是一家德國汽車製造商，總部位於斯圖加特，主要生產高級跑車。
+
+#
+information:
+  - year       : 2024
+    invasion   : MANIPULATED
+    description: |
+      [[porsche]] 官網的語言列表只有台灣沒有國旗。
