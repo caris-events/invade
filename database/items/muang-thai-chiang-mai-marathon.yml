@@ -1,0 +1,25 @@
+#
+code       : muang-thai-chiang-mai-marathon
+parent_code:
+
+#
+name       : 清邁馬拉松
+name_alias : Chiang Mai Marathon
+name_others:
+
+#
+category: SPORTS
+type    : GROUP
+owner   : FOREIGN
+
+#
+website    : https://www.chiangmaimarathon.com/
+description: |
+  [[muang-thai-chiang-mai-marathon]] 是由泰國清邁政府主辦的一項馬拉松運動，最大冠名贊助商是 [[muang-thai-life-assurance]]。
+
+#
+information:
+  - year       : 2024
+    invasion   : MANIPULATED
+    description: |
+      [[muang-thai-chiang-mai-marathon]] 的宣傳看板原先有中華民國國旗（Taiwan），之後被主辦單位以白色膠布遮住。

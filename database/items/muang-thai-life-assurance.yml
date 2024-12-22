@@ -1,0 +1,21 @@
+#
+code       : muang-thai-life-assurance
+parent_code:
+
+#
+name       : 泰國人壽保險公司
+name_alias : Muang Thai Life Assurance
+name_others: [泰華財產保險公司]
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.muangthai.co.th/en
+description: |
+  [[muang-thai-life-assurance]] 是泰國一家壽險公司。
+
+#
+information:

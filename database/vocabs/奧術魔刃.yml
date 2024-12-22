@@ -1,0 +1,19 @@
+#
+word    : 奧術魔刃
+bopomofo: ㄠˋ ㄕㄨˋ ㄇㄛˊ ㄖㄣˋ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  是 ASMR 強迫念成中國拼音的方式，為了規避中國審查。ASMR 是一種能令人感到愉悅、放鬆的聲音。
+
+#
+examples:
+  - words      : [ASMR]
+    correct    : |
+      睡覺時聆聽 {{ASMR}} 可以幫助放鬆心情。
+    incorrect  : |
+      睡覺時聆聽{{奧術魔刃}}可以幫助放鬆心情。
