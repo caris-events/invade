@@ -22,3 +22,8 @@ information:
   - invasion   : FUNDED
     description: |
       [[peroperogames]] 的大股東是中國商人李號旗。
+
+  - year       : 2020
+    invasion   : SUPPORTED
+    description: |
+      [[peroperogames]] 與發行商 [[xd-network]] 達成協議，宣佈禁止 [[hololive]] 實況旗下發行的 [[muse-dash]]，起因是 [[hololive]] 曾將台灣視為國家。

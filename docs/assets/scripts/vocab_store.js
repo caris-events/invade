@@ -103,7 +103,7 @@ var vocab_store = {
                 return v.explicit !== "LANGUAGE"
             })
         }
-        if (this.search_show_sexual !== "") {
+        if (!this.search_show_sexual) {
             filtered_results = filtered_results.filter(v => {
                 return v.explicit !== "SEXUAL"
             })
