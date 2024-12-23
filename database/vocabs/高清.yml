@@ -14,12 +14,12 @@ description: |
 examples:
   - words      : [高畫質]
     correct    : |
-      在 YouTube 上，可以看到許多{{高畫質}}的影片。
+      在 YouTube 可以觀賞許多{{高畫質}}影片。
     incorrect  : |
-      在 YouTube 上，可以看到許多{{高清}}影片。
+      在 YouTube 可以觀賞許多{{高清}}影片。
 
   - words      : [高音質]
     correct    : |
-      這個網站提供{{高音質}}的音樂，聽起來很清晰。
+      這個網站提供{{高音質}}的音樂。
     incorrect  : |
-      這個網站提供{{高清}}音樂，聽起來很清晰。
+      這個網站提供{{高清}}音樂。
