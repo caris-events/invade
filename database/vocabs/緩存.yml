@@ -1,0 +1,19 @@
+#
+word    : 緩存
+bopomofo: ㄏㄨㄢˇ ㄘㄨㄣˊ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  在電腦系統中，將資料暫時存放在某個地方供稍後使用。
+
+#
+examples:
+  - words      : [快取]
+    correct    : |
+      瀏覽器會將網頁內容{{快取}}到本機，供下次快速顯示。
+    incorrect  : |
+      瀏覽器會將網頁內容{{緩存}}到本機，供下次快速顯示。

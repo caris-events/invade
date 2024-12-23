@@ -1,0 +1,24 @@
+#
+code       : peroperogames
+parent_code:
+
+#
+name       : 呸嘍呸嘍
+name_alias : PeroPeroGames
+name_others: [廣州呸嘍呸嘍科技有限公司, 呸囉呸囉]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://cdn.peroperogames.com
+description: |
+  [[peroperogames]] 是一家位於中國廣州的遊戲開發公司，代表作品是音樂節奏遊戲。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[peroperogames]] 的大股東是中國商人李號旗。

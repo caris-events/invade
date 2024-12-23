@@ -1,0 +1,19 @@
+#
+word    : 硬盤
+bopomofo: ㄧㄥˋ ㄆㄢˊ
+
+#
+category: HARDWARE
+explicit:
+
+#
+description: |
+  電腦的一種儲存裝置，用來儲存資料，通常是永久性的。
+
+#
+examples:
+  - words      : [硬碟]
+    correct    : |
+      {{硬碟}}是電腦的重要儲存裝置之一。
+    incorrect  : |
+      {{硬盤}}是電腦的重要儲存裝置之一。

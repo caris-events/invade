@@ -1,0 +1,22 @@
+#
+code       : muse-dash
+parent_code: peroperogames
+
+#
+name       : 喵斯快跑
+name_alias : Muse Dash
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://musedash.peropero.net
+description: |
+  [[muse-dash]] 是一款跑酷元素和節奏的音樂遊戲，由 [[peroperogames]] 開發，並交給 [[xd-network]] 發行。
+
+#
+information:
+

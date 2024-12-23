@@ -22,3 +22,8 @@ information:
   - invasion   : FUNDED
     description: |
       [[xd-network]] 的大股東是中國商人黃一孟。
+
+  - year       : 2020
+    invasion   : SUPPORTED
+    description: |
+      [[xd-network]] 表示維護祖國統一與領土完整，宣佈禁止 [[hololive]] 實況旗下發行的 [[muse-dash]]，起因是 [[hololive]] 曾將台灣視為國家。
