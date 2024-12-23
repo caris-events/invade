@@ -1,0 +1,25 @@
+#
+word    : 高大上
+bopomofo: ㄍㄠ ㄉㄚˋ ㄕㄤˋ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  形容某個事物或人物有高貴、高雅的感覺。
+
+#
+examples:
+  - words      : [高貴, 高雅]
+    correct    : |
+      這個名牌包看起來很{{高貴}}。
+    incorrect  : |
+      這個名牌包看起來很{{高大上}}。
+
+  - words      : [有氣質]
+    correct    : |
+      他的穿著舉止顯得格外{{氣質}}。
+    incorrect  : |
+      他的穿著舉止很{{高大上}}。

@@ -1,0 +1,37 @@
+#
+word    : 憋屈
+bopomofo: ㄅㄧㄝ ㄑㄩ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  心中有不滿卻無法表達出來，只能壓抑在心中的感覺。
+
+#
+examples:
+  - words      : [敢怒不敢言]
+    correct    : |
+      他害怕破壞大家的友誼，只能{{敢怒不敢言}}。
+    incorrect  : |
+      他害怕破壞大家的友誼，只能在一旁{{憋屈}}。
+
+  - words      : [委屈]
+    correct    : |
+      怎麼做都會被罵，令人感到{{委屈}}。
+    incorrect  : |
+      怎麼做都會被罵，令人感到{{憋屈}}。
+
+  - words      : [有苦難言]
+    correct    : |
+      沒人能理解他的辛酸，真是{{有苦難言}}。
+    incorrect  : |
+      沒人能理解他的辛酸，真是{{憋屈}}。
+
+  - words      : [彆扭]
+    correct    : |
+      兄弟兩又鬧{{彆扭}}了。
+    incorrect  : |
+      兄弟兩又{{憋屈}}了。

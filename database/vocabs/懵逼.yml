@@ -1,0 +1,25 @@
+#
+word    : 懵逼
+bopomofo: ㄇㄥˊ ㄅㄧ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  對某個情況完全不清楚而感到困惑、迷茫。
+
+#
+examples:
+  - words      : [不明所以]
+    correct    : |
+      這件事發生的太突然，令他感到{{不明所以}}。
+    incorrect  : |
+      這件事發生的太突然，令他感到一臉{{懵逼}}。
+
+  - words      : [困惑]
+    correct    : |
+      他突如其來的舉動讓大家感到{{困惑}}。
+    incorrect  : |
+      他突如其來的舉動讓大家{{懵逼}}。
