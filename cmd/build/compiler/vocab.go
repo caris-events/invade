@@ -33,6 +33,7 @@ func CompileVocabs() ([]*entity.CompiledVocab, error) {
 				return example.Words[0]
 			}), "、"),
 			Description: v.Description,
+			Deprecation: v.Deprecation,
 			Examples:    v.Examples,
 			ModUnix:     v.ModTime.Unix(),
 		})

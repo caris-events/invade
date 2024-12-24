@@ -49,6 +49,7 @@ type Vocab struct {
 	Category    VocabCategory   `yaml:"category"`
 	Explicit    VocabExplicit   `yaml:"explicit"`
 	Description string          `yaml:"description"`
+	Deprecation string          `yaml:"deprecation"`
 	Notice      string          `yaml:"notice"`
 	Examples    []*VocabExample `yaml:"examples"`
 	ModTime     time.Time
@@ -80,6 +81,7 @@ type CompiledVocab struct {
 	Category    VocabCategory
 	CorrectStr  string
 	Description string
+	Deprecation string
 	Examples    []*VocabExample
 	ModUnix     int64
 }

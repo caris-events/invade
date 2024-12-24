@@ -184,11 +184,15 @@ class Vocab {
         this.correct_word = vocab[2]
         this.time = vocab[3]
         this.explicit_index = vocab[4]
+        this.is_deprecated_int = vocab[5]
     }
     get category() {
         return db_store["vocab_categories"][this.category_index]
     }
     get explicit() {
         return db_store["vocab_explicits"][this.explicit_index]
+    }
+    get is_deprecated() {
+        return this.is_deprecated_int === 1
     }
 }

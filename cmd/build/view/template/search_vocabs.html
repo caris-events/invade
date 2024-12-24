@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="is-secondary">
+<html class="is-secondary is-sharp">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -181,7 +181,11 @@
                                     <div class="column">
                                         <a class="ts-box" :href="`{{ .BaseURL }}/v/${result.word}`">
                                             <div class="ts-content tablet+:is-horizontally-padded">
-                                                <div class="ts-text is-bold is-1-lines tablet+:has-16px mobile:has-15px" x-text="result.word"></div>
+                                                <div
+                                                    class="ts-text is-bold is-1-lines tablet+:has-16px mobile:has-15px"
+                                                    x-text="result.word"
+                                                    :class="result.is_deprecated ? 'is-deleted' : ''"
+                                                ></div>
                                                 <div class="ts-text is-secondary is-1-lines" x-text="result.correct_word"></div>
                                             </div>
                                         </a>

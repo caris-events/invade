@@ -1,3 +1,22 @@
+#單字-棄用通知 {
+    --indicator-width: 10px;
+}
+
+#單字-棄用通知 .ts-grid {
+    --gap: 1.5rem;
+}
+.裝置-行動 #單字-棄用通知 .ts-grid {
+    --gap: 1rem;
+}
+
+#單字-棄用通知 .ts-icon {
+    font-size: 3rem;
+    line-height: 1.3;
+}
+.裝置-行動 #單字-棄用通知 .ts-icon {
+    font-size: 1.5rem;
+}
+
 #單字-板岩 {
     position: relative;
     padding-bottom: 2rem;
@@ -36,7 +55,7 @@
     border: 3px solid var(--ts-gray-300);
     padding: 0.8em;
     line-height: 1;
-    border-radius: 1rem;
+    border-radius: var(--ts-border-radius-element);
     z-index: 1;
     background: var(--ts-gray-50);
 }
@@ -48,6 +67,9 @@
     gap: 0.25rem;
 }
 
+.單字-板岩-每個分解-被棄用 .單字-板岩-每個分解-漢字 {
+    text-decoration: line-through;
+}
 .單字-板岩-每個分解-漢字 {
     flex: 1;
     font-size: 45px;

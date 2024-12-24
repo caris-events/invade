@@ -14,12 +14,17 @@ import (
 func SerializeVocabs(vocabs []*entity.CompiledVocab) error {
 	var serializes []*vocab
 	for i, v := range vocabs {
+		var isDeprecated int
+		if v.Deprecation != "" {
+			isDeprecated = 1
+		}
 		serializes = append(serializes, &vocab{
 			Word:          v.Word,
 			CategoryIndex: lo.IndexOf(entity.VocabCategories, v.Category),
 			CorrectStr:    v.CorrectStr,
 			Time:          i + 1,
 			Explicit:      lo.IndexOf(entity.VocabExplicits, v.Explicit),
+			IsDeprecated:  isDeprecated,
 		})
 	}
 	b, err := json.Marshal(serializes)

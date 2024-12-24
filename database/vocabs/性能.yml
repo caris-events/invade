@@ -1,17 +1,19 @@
 #
 word    : 性能
 bopomofo: ㄒㄧㄥˋ ㄋㄥˊ
-notice  : 這個條目指的不是汽、機車在動力上的速度與效率。
+notice  : 這個詞彙被記載是因為中國以「性能」統稱效能與性能，與台灣不同。
 
 #
 category: TECHNOLOGY
 explicit:
 
 #
+description: |
+  通常用在電腦科技領域，形容某個硬體的速度與效率。在台灣「性能」用於形容汽、機車在動力上的速度與效率。
+
+#
 examples:
   - words      : [效能]
-    description: |
-      電腦硬體速度通常以「效能（Performance）」來形容。
     correct    : |
       新款的 CPU 晶片{{效能}}提昇 50%。
     incorrect  : |

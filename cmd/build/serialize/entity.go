@@ -49,10 +49,11 @@ type vocab struct {
 	CorrectStr    string
 	Time          int
 	Explicit      int
+	IsDeprecated  int
 }
 
 func (v *vocab) MarshalJSON() ([]byte, error) {
-	return json.Marshal([]any{v.Word, v.CategoryIndex, v.CorrectStr, v.Time, v.Explicit})
+	return json.Marshal([]any{v.Word, v.CategoryIndex, v.CorrectStr, v.Time, v.Explicit, v.IsDeprecated})
 }
 
 type randomVocab struct {

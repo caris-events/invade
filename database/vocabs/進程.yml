@@ -1,0 +1,19 @@
+#
+word    : 進程
+bopomofo: ㄐㄧㄣˋ ㄔㄥˊ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  程式啟動之後會產生的工作、程序，英文也作 Process。一個程式可以同時擁有多個程序。
+
+#
+examples:
+  - words      : [程序]
+    correct    : |
+      這個程式會同時啟動多個{{程序}}來提昇效能。
+    incorrect  : |
+      這個[[程序]]會同時啟動多個{{進程}}來提昇[[性能]]。

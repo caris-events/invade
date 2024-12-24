@@ -1,6 +1,7 @@
 #
 word    : 奇葩
 bopomofo: ㄑㄧˊ ㄆㄚ
+notice  : 這個詞彙因為經常被中國誤用而記載。
 
 #
 category: ADJECTIVE
@@ -8,7 +9,7 @@ explicit:
 
 #
 description: |
-  指某個人是異類。
+  原指珍貴稀少的花卉或傑出的人物。後被中國誤用為貶義詞，形容某人是個奇怪的異類。
 
 #
 examples:
