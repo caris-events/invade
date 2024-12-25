@@ -54,6 +54,22 @@
         {{ template "navbar" . }}
 
         <div class="ts-container tablet-:has-vertically-padded-large desktop+:has-vertically-padded-big mobile:is-fitted">
+            {{ if .Deprecation }}
+            <div id="單字-棄用通知" class="ts-box is-negative is-start-indicated tablet+:has-bottom-spaced-big mobile:has-bottom-spaced-large mobile:has-edged">
+                <div class="ts-content tablet+:is-horizontally-padded mobile:is-vertically-padded">
+                    <div class="ts-grid">
+                        <div class="column">
+                            <div class="ts-icon is-negative is-triangle-exclamation-icon"></div>
+                        </div>
+                        <div class="column is-fluid">
+                            <div class="ts-header is-negative">這個詞彙已經從資料庫中移除。</div>
+                            <p>{{ .Deprecation }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+
             <div id="單字-板岩">
                 <div class="ts-grid">
                     <div class="column is-fluid">
@@ -109,23 +125,6 @@
 
             <div class="ts-grid tablet+:is-relaxed tablet+:has-top-spaced-big mobile:has-top-spaced-large mobile:is-stacked">
                 <div class="column tablet:is-11-wide desktop+:is-12-wide">
-                    {{ if .Deprecation }}
-                    <div id="單字-棄用通知" class="ts-box is-negative is-start-indicated tablet+:has-bottom-spaced-big mobile:has-bottom-spaced-large mobile:has-edged">
-                        <div class="ts-content tablet+:is-horizontally-padded mobile:is-vertically-padded">
-                            <div class="ts-grid">
-                                <div class="column">
-                                    <div class="ts-icon is-negative is-triangle-exclamation-icon"></div>
-                                </div>
-                                <div class="column is-fluid">
-                                    <div class="ts-header is-negative">這個詞彙已經從資料庫中移除。</div>
-                                    <p>{{ .Deprecation }}</p>
-                                    <a target="_blank" rel="noopener noreferrer" href="{{ .BaseURL }}/contribute" class="ts-button is-outlined">提供建議</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {{ end }}
-
                     <div class="ts-header mobile:has-horizontally-padded">用法與例句</div>
 
                     <div class="ts-box has-top-spaced mobile:has-edged">
@@ -164,8 +163,9 @@
                 <div class="column tablet:is-5-wide desktop+:is-4-wide mobile:has-horizontally-padded">
                     <div class="ts-header mobile:has-top-spaced">侵略性詞彙是什麼？</div>
                     <div class="ts-text is-secondary has-top-spaced">
-                        <p>經過中國的言論審查、中共思想而產生的詞彙，例如：中國常以「領導」代稱台灣總統；或以「台灣地區」來暗喻台灣不是國家。</p>
+                        <p>經過中國的言論審查、中共思想而使用的詞彙，例如：中國常以「領導」代稱台灣總統；或以「台灣地區」來暗喻台灣不是國家。</p>
                         <p>語言代表一個國家的文化與思想，若長時間誤用這些詞彙，可能會在無形之中影響自己的思考方式。</p>
+                        <a href="{{ .BaseURL }}/n/侵略性詞彙的定義" class="ts-button is-circular is-outlined">了解更多</a>
                     </div>
                     <div class="ts-divider has-vertically-spaced-large"></div>
                     <div class="ts-header">透過匿名方式提供內容</div>

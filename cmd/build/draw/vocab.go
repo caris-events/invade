@@ -63,7 +63,7 @@ func DrawVocabCover(vocab *entity.CompiledVocab) error {
 	if vocab.Description != "" {
 		desc = fmt.Sprintf("%s的意思是：%s誤用這個詞彙可能會傳達不正確的訊息。", vocab.Word, strings.TrimSuffix(vocab.Description, "\n"))
 	} else {
-		desc = fmt.Sprintf("誤用《%s》詞彙可能會傳達不正確的訊息。長期使用經過中國言論審查、中共思想而產生的侵略性詞彙，可能會在無形之中影響自己的思考方式。", vocab.Word)
+		desc = fmt.Sprintf("誤用《%s》詞彙可能會傳達不正確的訊息。長期使用經過中國言論審查、中共思想而使用的侵略性詞彙，可能會在無形之中影響自己的思考方式。", vocab.Word)
 	}
 
 	canvas.DrawStringWrapped(OmitText(desc, 90), 90, 220, 0, 0, 700, 1.4, gg.AlignLeft)

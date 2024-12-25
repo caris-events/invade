@@ -43,7 +43,7 @@ func SerializeVocabs(vocabs []*entity.CompiledVocab) error {
 // SerializeRandomVocabs serializes the random vocabs.
 func SerializeRandomVocabs(vocabs []*entity.CompiledVocab) error {
 	randoms := lo.Map(lo.Samples(lo.Filter(vocabs, func(v *entity.CompiledVocab, _ int) bool {
-		return v.Explicit == entity.VocabExplicitUnknown
+		return v.Explicit == entity.VocabExplicitUnknown && v.Deprecation == ""
 	}), 100), func(v *entity.CompiledVocab, _ int) *randomVocab {
 		return &randomVocab{
 			Word:       v.Word,

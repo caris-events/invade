@@ -5,6 +5,10 @@
 #單字-棄用通知 .ts-grid {
     --gap: 1.5rem;
 }
+.裝置-行動 #單字-棄用通知 {
+    margin-top: -1.5rem;
+    border-top: 0;
+}
 .裝置-行動 #單字-棄用通知 .ts-grid {
     --gap: 1rem;
 }
