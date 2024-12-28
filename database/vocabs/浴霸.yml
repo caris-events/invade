@@ -1,0 +1,19 @@
+#
+word       : 浴霸
+bopomofo   : ㄩˋ ㄅㄚˋ
+
+#
+category: HARDWARE
+explicit:
+
+#
+description: |
+  用於浴室的暖風機，通常安裝在浴室天花板上，用來取暖或乾燥浴室空氣。
+
+#
+examples:
+  - words      : [浴室暖風機]
+    correct    : |
+      冬天到了，我請人來安裝{{浴室暖風機}}。
+    incorrect  : |
+      冬天到了，我請人來安裝{{浴霸}}。

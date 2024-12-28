@@ -1,0 +1,19 @@
+#
+word       : 跳閘
+bopomofo   : ㄊㄧㄠˋ ㄓㄚˊ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  在電力供應中，因為過載或短路而使電路中斷。
+
+#
+examples:
+  - words      : [跳電]
+    correct    : |
+      同時使用太多電器可能會導致家裡{{跳電}}。
+    incorrect  : |
+      同時使用太多電器可能會導致家裡{{跳閘}}。
