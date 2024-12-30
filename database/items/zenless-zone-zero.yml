@@ -1,0 +1,21 @@
+#
+code       : zenless-zone-zero
+parent_code: mihoyo
+
+#
+name       : 絕區零
+name_alias : Zenless Zone Zero
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://zenless.hoyoverse.com
+description: |
+  [[zenless-zone-zero]] 是一款動作角色扮演遊戲，融合了 Roguelike 元素。
+
+#
+information:

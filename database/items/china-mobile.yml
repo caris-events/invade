@@ -1,0 +1,29 @@
+#
+code       : china-mobile
+parent_code:
+
+#
+name       : 中國移動
+name_alias : China Mobile
+name_others: []
+
+#
+category: TELECOM
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.chinamobileltd.com
+description: |
+  [[china-mobile]] 是中國最大的通訊服務供應商之一。
+
+#
+information:
+  - invasion   : SUPPORTED
+    source     : https://www.10086.cn/roaming/country/indexc.html?countey_id=2
+    description: |
+      [[china-mobile]] 在其國際業務頁面中，將台灣列為「中國台灣」，視為中國的一部分。
+
+  - invasion   : FUNDED
+    description: |
+      [[china-mobile]] 的大股東是《中國移動通信集團有限公司》。

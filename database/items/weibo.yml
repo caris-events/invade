@@ -1,0 +1,24 @@
+#
+code       : weibo
+parent_code: sina
+
+#
+name       : 微博
+name_alias : Weibo
+name_others: [新浪微博]
+
+#
+category: INTERNET
+type    : PLATFORM
+owner   : CHINESE
+
+#
+website    : https://weibo.com
+description: |
+  [[weibo]] 是中國的社交媒體平台，類似於《推特》，供使用者發表和分享短貼文。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[weibo]] 的大股東之一是 [[alibaba]]。

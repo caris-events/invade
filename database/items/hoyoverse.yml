@@ -1,0 +1,21 @@
+#
+code       : hoyoverse
+parent_code: mihoyo
+
+#
+name       : HoYoverse
+name_alias :
+name_others: []
+
+#
+category: INTERNET
+type    : PLATFORM
+owner   : CHINESE
+
+#
+website    : https://www.hoyoverse.com
+description: |
+  [[hoyoverse]] 是 [[mihoyo]] 為了整合旗下遊戲的帳號登入平台。
+
+#
+information:

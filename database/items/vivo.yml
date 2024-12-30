@@ -1,0 +1,24 @@
+#
+code       : vivo
+parent_code:
+
+#
+name       : vivo
+name_alias : 維沃
+name_others: [維沃移動通信有限公司]
+
+#
+category: ELECTRONIC
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.oppo.com/cn
+description: |
+  [[vivo]] 是中國的科技公司，主要生產智慧型手機和無線耳機等消費電子產品，該公司原先隸屬 [[bbk]]。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[vivo]] 的創辦人是中國商人沈煒，曾接手過《小霸王》，

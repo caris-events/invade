@@ -1,0 +1,27 @@
+#
+code       : hewlett-packard
+parent_code:
+
+#
+name       : HP
+name_alias : 惠普
+name_others: [Hewlett-Packard, 惠普股份有限公司]
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    :  https://www.hp.com
+description: |
+  [[hewlett-packard]] 是一家全球科技公司，主要生產個人電腦、印表機及相關配件。
+
+#
+information:
+  - invasion   : MANIPULATED
+    description: |
+      [[hewlett-packard]] 官網的國家選單中，只有台灣被特別稱為「台灣地區」。
+
+  - description: |
+      [[hewlett-packard]] 的大股東是《先鋒領航集團》。

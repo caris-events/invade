@@ -1,0 +1,30 @@
+#
+code       : openatom-foundation
+parent_code:
+
+#
+name       : 開放原子開源基金會
+name_alias : OpenAtom Foundation
+name_others: [OpenAtom]
+
+#
+category: TECHNOLOGY
+type    : GROUP
+owner   : CHINESE
+
+#
+website    : https://www.openatom.org
+description: |
+  [[openatom-foundation]] 是中國首個專注於開放原始碼領域的非營利組織。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[openatom-foundation]] 由 [[huawei]]、[[alibaba]]、[[tencent]]、[[baidu]] 等中國企業共同成立。
+
+  - year       : 2024
+    invasion   : COLLABORATED
+    source     : https://www.epochtimes.com/gb/24/5/31/n14261410.htm
+    description: |
+      [[openatom-foundation]] 被美國《詹姆斯敦基金會》指出與中共關係密切，且正在協調用於中國軍事的軟體。

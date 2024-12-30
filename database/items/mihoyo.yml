@@ -1,0 +1,28 @@
+#
+code       : mihoyo
+parent_code:
+
+#
+name       : 米哈遊
+name_alias : miHoYo
+name_others: [上海米哈遊網絡科技股份有限公司]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.mihoyo.com
+description: |
+  [[mihoyo]] 是中國電子遊戲公司之一。
+
+#
+information:
+  - invasion   : MANIPULATED
+    description: |
+      [[mihoyo]] 旗下 [[genshin-impact]] 和 [[zenless-zone-zero]] 遊戲的個人簡介不能提及「台灣」但可以提及「中國」。
+
+  - invasion   : FUNDED
+    description: |
+      [[mihoyo]] 的創辦人是中國商人蔡浩宇、劉偉。

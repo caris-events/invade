@@ -1,0 +1,21 @@
+#
+code       : openharmony
+parent_code: openatom-foundation
+
+#
+name       : OpenHarmony
+name_alias :
+name_others: []
+
+#
+category: TECHNOLOGY
+type    : GROUP
+owner   : CHINESE
+
+#
+website    : https://www.openharmony.cn/
+description: |
+  [[openharmony]] 是 [[harmonyos]] 作業系統的開放原始碼專案，部份程式碼會被併入到非開源的 [[harmonyos]]。
+
+#
+information:

@@ -1,0 +1,26 @@
+#
+code       : honor
+parent_code: chinese-communist-party
+
+#
+name       : 榮耀
+name_alias : Honor
+name_others: [榮耀終端有限公司, 華為榮耀, Honor Device Co., Ltd.]
+
+#
+category: ELECTRONIC
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.honor.com/
+description: |
+  [[honor]] 原先是 [[huawei]] 旗下的手機品牌，為了規避美國禁售令而被出售。
+
+#
+information:
+  - year       : 2020
+    invasion   : FUNDED
+    source     : https://china.hket.com/article/2804764
+    description: |
+      [[honor]] 被《深圳市智信新資訊科技有限公司》收購，但實際控制人是《深圳市國資委》而成為國有品牌。

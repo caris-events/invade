@@ -1,0 +1,21 @@
+#
+code       : 21vianet-bluecloud
+parent_code: vnet
+
+#
+name       : 世紀互聯藍雲
+name_alias : 21Vianet BlueCloud
+name_others: [上海藍雲網絡科技有限公司]
+
+#
+category: INTERNET
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.21vbluecloud.com
+description: |
+  [[21vianet-bluecloud]] 是中國雲端運算服務提供商之一，是 [[microsoft]] 在中國的《Office 365》雲端服務合作商，同時也為 [[alibaba]] 服務。
+
+#
+information:

@@ -1,0 +1,18 @@
+#
+word    : 幾個意思
+bopomofo: ㄐㄧˇ ㄍㄜ˙ ㄧˋ ㄙ
+
+#
+category: SLANG
+explicit:
+
+#
+description:
+
+#
+examples:
+  - words      : [什麼意思]
+    correct    : |
+      你這麼做是{{什麼意思}}？
+    incorrect  : |
+      你這麼做是{{幾個意思}}？

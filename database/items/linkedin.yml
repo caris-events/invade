@@ -1,0 +1,23 @@
+#
+code       : linkedin
+parent_code: microsoft
+
+#
+name       : LinkedIn
+name_alias : 領英
+name_others: []
+
+#
+category: INTERNET
+type    : PLATFORM
+owner   : FOREIGN
+
+#
+website    : https://www.linkedin.com
+description: |
+  [[linkedin]] 是全球最大的職場社交平台之一，提供專業人士交流與求職服務。
+
+#
+information:
+
+

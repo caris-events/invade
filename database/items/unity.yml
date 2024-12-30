@@ -1,0 +1,35 @@
+#
+code       : unity
+parent_code:
+
+#
+name       : Unity
+name_alias :
+name_others: [Unity Technologies]
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://unity.com
+description: |
+  [[unity]] 是美國的跨平台遊戲引擎開發公司，是所有遊戲最常用的遊戲引擎之一。
+
+#
+information:
+  - year       : 2022
+    invasion   : SUPPORTED
+    description: |
+      [[unity]] 的國家欄位標註「中國台灣」，隨後台灣《經濟部工業局》發文要求更正，但 [[unity]] 拒絕受理；直到美國政府發公文後，[[unity]] 才將其改回「台灣」，但同時也把國家改稱為地區（Region）。
+
+  - year       : 2023
+    invasion   : MANIPULATED
+    description: |
+      [[unity]] 為防止盜版而要求中國地區的授權必須每週更新一次，台灣使用者也被迫遵守這個規定。
+
+  - year       : 2023
+    invasion   : COLLABORATED
+    description: |
+      [[unity]] 在中國與 [[alibaba]]、[[g-bits]]、[[tiktok]]、[[oppo]]、[[mihoyo]]、[[china-mobile]]、[[pci-technology]] 聯手成立《Unity 中國》與 [[tuanjie-engine]]。

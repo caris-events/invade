@@ -1,0 +1,25 @@
+#
+code       : tuanjie-engine
+parent_code: unity
+
+#
+name       : 團結引擎
+name_alias : Tuanjie Engine
+name_others: [tuanjieyinqing]
+
+#
+category: SOFTWARE
+type    : SOFTWARE
+owner   : CHINESE
+
+#
+website    : https://unity.cn/tuanjie/tuanjieyinqing
+description: |
+  [[tuanjie-engine]] 是遊戲引擎開發公司 [[unity]] 特地為中國客製化的遊戲引擎。
+
+#
+information:
+  - invasion   : COLLABORATED
+    source     : https://iter01.com/948382.html
+    description: |
+      [[tuanjie-engine]] 與 [[21vianet-bluecloud]] 合作提供雲端服務解決方案。

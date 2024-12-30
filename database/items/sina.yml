@@ -1,0 +1,25 @@
+#
+code       : sina
+parent_code:
+
+#
+name       : 新浪
+name_alias : Sina
+name_others: []
+
+#
+category: INTERNET
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.sina.com.cn
+description: |
+  [[sina]] 是中國的入口網站公司，為華人社群提供中文網路內容服務。
+
+#
+information:
+  - invasion   : FUNDED
+    source     : https://www.sohu.com/a/392528669_430392
+    description: |
+      [[sina]] 的大股東是中國商人曹國偉。

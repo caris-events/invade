@@ -1,0 +1,21 @@
+#
+code       : cognosphere
+parent_code: mihoyo
+
+#
+name       : Cognosphere
+name_alias : 識隙之城
+name_others: [Cognosphere Pte. Ltd.]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.hoyoverse.com
+description: |
+  [[cognosphere]] 是中國遊戲公司 [[mihoyo]] 在新加坡註冊的子公司，負責其海外業務的運營和發行。
+
+#
+information:

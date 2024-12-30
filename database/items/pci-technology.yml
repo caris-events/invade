@@ -1,0 +1,25 @@
+#
+code       : pci-technology
+parent_code:
+
+#
+name       : 佳都科技
+name_alias : PCI Technology
+name_others: []
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.pcitech.com
+description: |
+  [[pci-technology]] 是中國的人工智慧技術產品與服務企業。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[pci-technology]] 的大股東是中國商人劉偉。
+

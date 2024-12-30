@@ -1,0 +1,24 @@
+#
+code       : bbk
+parent_code:
+
+#
+name       : 步步高
+name_alias : BBK
+name_others: [廣東步步高電子工業有限公司]
+
+#
+category: ELECTRONIC
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.eebbk.com/
+description: |
+  [[bbk]] 是中國電子產品製造商，專注於通訊產品和教育電子產品的研發、生產和銷售。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[bbk]] 的創辦人是中國商人段永平。

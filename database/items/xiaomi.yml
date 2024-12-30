@@ -1,0 +1,29 @@
+#
+code       : xiaomi
+parent_code:
+
+#
+name       : 小米
+name_alias : Xiaomi
+name_others: [小米集團, 小米科技]
+
+#
+category: ELECTRONIC
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.mi.com
+description: |
+  [[xiaomi]] 是中國家電與手機製造商，原先以開發第三方 Android 系統起家。
+
+#
+information:
+  - year       : 2023
+    source     : https://tw.news.yahoo.com/%E3%80%90%E9%87%8D%E8%A6%81%E3%80%91%E5%B0%8F%E7%B1%B3%E5%BB%A0%E7%89%8C-%E8%83%BD%E6%BA%90%E6%95%88%E7%8E%87%E5%88%86%E7%B4%9A%E6%A8%99%E7%A4%BA%E5%95%86%E5%93%81%EF%BC%8C%E5%88%8A%E7%99%BB%E5%8F%8A%E8%B2%A9%E5%94%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85-083131682.html
+    description: |
+      [[xiaomi]] 在台灣販售的空氣清淨機、除濕機沒有標示「中華民國能源效率標示」而被強制下架。為了避嫌，該類產品改由 [[synnex]] 代理販售。
+
+  - invasion   : FUNDED
+    description: |
+      [[xiaomi]] 的創辦人是中國商人雷軍。

@@ -1,0 +1,26 @@
+#
+code       : john-cena
+parent_code:
+
+#
+name       : John Cena
+name_alias : 約翰·希南
+name_others: ["You Can't See Me"]
+
+#
+category: PERSON
+type    : PERSON
+owner   : FOREIGN
+
+#
+website    : https://www.johncena.com
+description: |
+  [[john-cena]] 是美國職業摔角選手、演員和電視主持人，曾多次獲得 WWE 冠軍。
+
+#
+information:
+  - year       : 2021
+    invasion   : MANIPULATED
+    source     : https://www.cna.com.tw/news/amov/202105250074.aspx
+    description: |
+      [[john-cena]] 在宣傳《玩命關頭 9》曾稱「台灣是首映國家」而引發中國網友不滿，之後便在 [[weibo]] 道歉並表示「我愛更尊重中國跟中國人」。

@@ -1,0 +1,25 @@
+#
+code       : vnet
+parent_code:
+
+#
+name       : 世紀互聯
+name_alias : VNET
+name_others: ["VNET Group, Inc.", 21Vianet]
+
+#
+category: INTERNET
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.vnet.com
+description: |
+  [[vnet]] 是中國網際網路資料中心服務提供商之一，專注於資料中心客製化方案。
+
+#
+information:
+  - invasion   : FUNDED
+    source     : https://ppfocus.com/0/fi0dbb0bb.html
+    description: |
+      [[vnet]] 的大股東是 [[kingsoft]] 和 [[xiaomi]]。

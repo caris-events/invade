@@ -15,11 +15,11 @@ owner   : TAIWANESE
 #
 website    : https://www.facebook.com/profile.php?id=100084534447294
 description: |
-    [[thebox-vtuber]] 是自《雲際線工作室》分家出來的台灣虛擬實況主工作室。
+  [[thebox-vtuber]] 是自《雲際線工作室》分家出來的台灣虛擬實況主工作室。
 
 #
 information:
-    - year       : 2022
-      invasion   : COLLABORATED
-      description: |
-          [[thebox-vtuber]] 與 [[tower-of-fantasy]] 合作，且所有藝人都會參與。
+  - year       : 2022
+    invasion   : COLLABORATED
+    description: |
+      [[thebox-vtuber]] 與 [[tower-of-fantasy]] 合作，且所有藝人都會參與。

@@ -1,0 +1,21 @@
+#
+code       : harmonyos
+parent_code: huawei
+
+#
+name       : 鴻蒙
+name_alias : HarmonyOS
+name_others: [華為鴻蒙, 鴻蒙作業系統]
+
+#
+category: SOFTWARE
+type    : SOFTWARE
+owner   : CHINESE
+
+#
+website    : https://www.harmonyos.com
+description: |
+  [[harmonyos]] 是一套開發的分散式作業系統，可用於物聯網或電腦、智慧型手機。
+
+#
+information:

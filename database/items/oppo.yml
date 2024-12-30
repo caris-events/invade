@@ -1,0 +1,25 @@
+#
+code       : oppo
+parent_code:
+
+#
+name       : OPPO
+name_alias : 歐珀
+name_others: [廣東歐珀移動通信有限公司]
+
+#
+category: ELECTRONIC
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.oppo.com/cn
+description: |
+  [[oppo]] 是中國智慧型手機製造商，專注於研發、製造和銷售智慧型手機及相關電子產品，該公司原先隸屬 [[bbk]]。
+
+#
+information:
+  - invasion   : FUNDED
+    source     : https://www.toutiao.com/article/7453340736403915299/?upstream_biz=doubao&source=m_redirect
+    description: |
+      [[oppo]] 的創辦人是中國商人金樂親，大股東是自己的工會委員會。

@@ -1,0 +1,23 @@
+#
+code       : bing
+parent_code: microsoft
+
+#
+name       : Bing
+name_alias : 必應
+name_others: []
+
+#
+category: INTERNET
+type    : PLATFORM
+owner   : FOREIGN
+
+#
+website    : https://www.bing.com
+description: |
+  [[bing]] 是 [[microsoft]] 推出的網路搜尋引擎，提供全球用戶網路資訊檢索服務。
+
+#
+information:
+
+

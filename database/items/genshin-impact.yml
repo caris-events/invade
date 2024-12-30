@@ -1,0 +1,21 @@
+#
+code       : genshin-impact
+parent_code: mihoyo
+
+#
+name       : 原神
+name_alias : Genshin Impact
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://genshin.hoyoverse.com
+description: |
+  [[genshin-impact]] 是一款開放世界動作角色扮演遊戲，其玩法抄襲《薩爾達傳說：曠野之息》。
+
+#
+information:
