@@ -1,0 +1,34 @@
+#
+code       : the-walt-disney-company
+parent_code:
+
+#
+name       : 華特迪士尼
+name_alias : The Walt Disney Company
+name_others: [迪士尼, 華特迪士尼公司, Walt Disney]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.disney.com
+description: |
+  [[the-walt-disney-company]] 是美國一家多元化跨國媒體集團，總部位於加利福尼亞州伯班克。公司業務涵蓋影視娛樂、主題樂園、消費產品等多個領域。
+
+#
+information:
+  - year       : 2022
+    invasion   : SUPPORTED
+    source     : https://www.facebook.com/ShowbizLeak/posts/pfbid027r8saygeeZrf6pLXNJ8wK2ZwehbyWCnLrEAVdrPdphNSayNor5uQ39nQfMLxfh3Xl
+    description: |
+      [[the-walt-disney-company]] 旗下 [[disney-plus]] 將「Taiwan」翻譯成「中國台灣」且多數翻譯都使用中國用語。
+
+  - year       : 2024
+    invasion   : COLLABORATED
+    source     : https://marvelrivals.163.com/news/official/20240325/40182_1145260.html
+    description: |
+      [[the-walt-disney-company]] 旗下 [[marvel-games]] 與 [[netease]] 合作開發 [[marvel-rivals]] 遊戲。
+
+

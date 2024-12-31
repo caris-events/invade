@@ -1,0 +1,23 @@
+#
+code       : disney-interactive
+parent_code: the-walt-disney-company
+
+#
+name       : 迪士尼互動
+name_alias : Disney Interactive
+name_others: [迪士尼互動媒體集團]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.disneyinteractive.com
+description: |
+  [[disney-interactive]] 是 [[the-walt-disney-company]] 旗下的互動娛樂部門，專注於開發和發行電子遊戲、數位媒體和線上服務。
+
+#
+information:
+
+

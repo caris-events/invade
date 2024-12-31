@@ -1,0 +1,21 @@
+#
+code       : marvel-rivals
+parent_code: netease
+
+#
+name       : 漫威爭鋒
+name_alias : Marvel Rivals
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://marvelrivals.163.com/
+description: |
+  [[marvel-rivals]] 是一款第三人稱英雄射擊遊戲，玩家可操控漫威宇宙中的超級英雄進行 6v6 對戰，類似第三人稱的《鬥陣特工》。
+
+#
+information:

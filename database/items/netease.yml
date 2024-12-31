@@ -19,6 +19,12 @@ description: |
 
 #
 information:
+  - year       : 2024
+    invasion   : MANIPULATED
+    source     : https://www.youtube.com/watch?v=POdKw2BIEKQ
+    description: |
+      [[netease]] 旗下 [[marvel-rivals]] 遊戲聊天不能提及「Free HongKong」、「Taiwan No.1」和天安門事件的年份「1989」。
+
   - invasion   : FUNDED
     description: |
       [[netease]] 的大股東是中國商人丁磊。

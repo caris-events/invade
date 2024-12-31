@@ -1,0 +1,22 @@
+#
+code       : disney-plus
+parent_code: the-walt-disney-company
+
+#
+name       : Disney+
+name_alias : 迪士尼+
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : PLATFORM
+owner   : FOREIGN
+
+#
+website    : https://www.disneyplus.com
+description: |
+  [[disney-plus]] 是一個影音串流服務平台，提供迪士尼、皮克斯、漫威、星際大戰、國家地理等內容。
+
+#
+information:
+

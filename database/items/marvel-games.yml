@@ -1,0 +1,24 @@
+#
+code       : marvel-games
+parent_code: disney-interactive
+
+#
+name       : 漫威遊戲
+name_alias : Marvel Games
+name_others: [Marvel Entertainment]
+
+#
+category: GAME
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.marvel.com/games
+description: |
+  [[marvel-games]] 是負責開發和發行基於漫威漫畫角色的電子遊戲的公司。
+
+#
+information:
+
+
+
