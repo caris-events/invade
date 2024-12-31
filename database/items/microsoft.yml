@@ -23,24 +23,24 @@ information:
     invasion   : COLLABORATED
     source     : https://ec.ltn.com.tw/article/breakingnews/3255759
     description: |
-      [[microsoft]] 與中國公司 [[vnet]] 合作，推出有審查的 Azure 雲端運算服務。
+      [[microsoft]] 與中國公司 [[vnet]] 合作，推出有內容審查的 Azure 雲端運算服務。
 
   - year       : 2019
     invasion   : MANIPULATED
     source     : https://www.rfi.fr/tw/%E4%B8%AD%E5%9C%8B/20190105-%E7%96%91%E5%9B%A0%E4%B8%AD%E5%9C%8B%E4%B8%8D%E9%AB%98%E8%88%88%E7%BE%8E%E5%9C%8B%E9%A0%98%E8%8B%B1%E7%B6%B2%E7%AB%99%E4%B8%80%E5%BA%A6%E5%B0%81%E9%8E%96%E5%91%A8%E9%8B%92%E9%8E%96%E5%A4%A7%E9%99%B8%E7%B6%B2%E9%A0%81
     description: |
-      [[microsoft]] 旗下 [[linkedin]] 封鎖中國民運領袖周鋒鎖的個人檔案並發信表示「必須遵循中國條約」。
+      [[microsoft]] 旗下 [[linkedin]] 封鎖中國民運領袖周鋒鎖的帳號，並發信表示「必須遵循中國條約」。
 
   - year       : 2021
     invasion   : MANIPULATED
     source     : https://www.theguardian.com/technology/2021/jun/04/microsoft-bing-tiananmen-tank-man-results
     description: |
-      [[microsoft]] 旗下 [[bing]] 在天安門三十二週年紀念日時，無法搜尋與天安門有關的資料。
+      [[microsoft]] 旗下 [[bing]] 在天安門週年紀念日時，無法搜尋與天安門有關的資料。
 
   - year       : 2023
     invasion   : MANIPULATED
     source     : https://news.ltn.com.tw/news/world/breakingnews/4284298
     description: |
-      [[microsoft]] 旗下 [[bing]] 被《加拿大多倫多大學》的報告提及，表示是最遵循中國審查的搜尋引擎。
+      [[microsoft]] 旗下 [[bing]] 在《加拿大多倫多大學》的報告中，被證明是最遵守中國審查的搜尋引擎之一。
 
 
