@@ -1,0 +1,19 @@
+#
+word    : 字節
+bopomofo: ㄗˋ ㄐㄧㄝˊ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  資訊科學中的一個基本單位，英文是 Bytes。通常是 8 個位元（Bit）為一個單位。
+
+#
+examples:
+  - words      : [位元組]
+    correct    : |
+      圖片檔案越大，佔用的{{位元組}}數量就越多。
+    incorrect  : |
+      圖片檔案越大，佔用的{{字節}}數量就越多。

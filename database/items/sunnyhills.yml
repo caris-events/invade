@@ -1,0 +1,35 @@
+#
+code       : sunnyhills
+parent_code:
+
+#
+name       : 微熱山丘
+name_alias : SunnyHills
+name_others: [寶田股份有限公司]
+
+#
+category: FOOD
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.sunnyhills.com.tw
+description: |
+  [[sunnyhills]] 起源於台灣南投，是知名的鳳梨酥品牌並在全球多地設有門市。
+
+#
+information:
+  - year       : 2015
+    invasion   : COLLABORATED
+    source     : https://www.cw.com.tw/article/5067680
+    description: |
+      [[sunnyhills]] 與中國商城《天貓》合作，免費提供 20 萬顆鳳梨酥給消費者試吃，藉此進軍中國市場。
+
+  - year       : 2025
+    invasion   : SUPPORTED
+    source     : https://news.tvbs.com.tw/life/2738265
+    description: |
+      [[sunnyhills]] 的產品包裝上將生產地標註為「中國台灣」。
+
+  - description: |
+      [[sunnyhills]] 由台灣商人許銘仁創立。

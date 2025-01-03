@@ -1,0 +1,19 @@
+#
+word    : 字符
+bopomofo: ㄗˋ ㄈㄨˊ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  一個獨立的文字或符號，英文是 Character。
+
+#
+examples:
+  - words      : [字元]
+    correct    : |
+      一個字體檔案裡有許多{{字元}}。
+    incorrect  : |
+      一個字體檔案裡有許多{{字符}}。
