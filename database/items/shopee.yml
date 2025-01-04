@@ -1,0 +1,27 @@
+#
+code       : shopee
+parent_code: sea
+
+#
+name       : 蝦皮購物
+name_alias : Shopee
+name_others: [蝦皮]
+
+#
+category: SHOPPING
+type    : PLATFORM
+owner   : FOREIGN
+
+#
+website    : https://shopee.tw
+description: |
+  [[shopee]] 是東南亞與台灣的電商平台，設計介面與《淘寶》相似，販售的商品多為中國淘寶貨。
+
+#
+information:
+  - year       : 2019
+    invasion   : COLLABORATED
+    source     : https://www.cifnews.com/article/48901
+    description: |
+      [[shopee]] 與中國政府合作，在杭州、廈門設立孵化中心，推動「一帶一路」拓展東南亞、台灣市場。
+

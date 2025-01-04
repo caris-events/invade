@@ -19,6 +19,11 @@ description: |
 
 #
 information:
+  - invasion   : SUPPORTED
+    source     : https://accessories.volvocars.com/region
+    description: |
+      [[volvo]] 官網地區選項將台灣標示為「Taiwan, China」。
+
   - year       : 2010
     invasion   : FUNDED
     source     : https://zh.wikipedia.org/wiki/%E5%AF%8C%E8%B1%AA%E6%B1%BD%E8%BB%8A

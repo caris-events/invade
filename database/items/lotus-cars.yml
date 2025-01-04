@@ -19,8 +19,13 @@ description: |
 
 #
 information:
+  - invasion   : SUPPORTED
+    source     : https://www.lotuscars.com.cn/login
+    description: |
+      [[lotus-cars]] 官網地區選項將台灣標示為「中國台灣」。
+
   - year       : 2017
     invasion   : FUNDED
     source     : https://tw.news.yahoo.com/-093027299.html
     description: |
-      [[geely]] 收購了蓮花汽車的多數股份，取得控股權。
+      [[lotus-cars]] 被 [[geely]] 收購多數股份，取得控股權。
