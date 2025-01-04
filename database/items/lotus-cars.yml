@@ -1,0 +1,26 @@
+#
+code       : lotus-cars
+parent_code: geely
+
+#
+name       : 蓮花汽車
+name_alias : Lotus Cars
+name_others: [路特斯, 蓮花跑車]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.lotuscars.com
+description: |
+  [[lotus-cars]] 是源自英國的跑車與賽車製造商，以輕量化設計和卓越操控性能著稱。
+
+#
+information:
+  - year       : 2017
+    invasion   : FUNDED
+    source     : https://tw.news.yahoo.com/-093027299.html
+    description: |
+      [[geely]] 收購了蓮花汽車的多數股份，取得控股權。

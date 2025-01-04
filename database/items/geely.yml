@@ -1,0 +1,39 @@
+#
+code       : geely
+parent_code:
+
+#
+name       : 吉利汽車
+name_alias : Geely Automobile
+name_others: [浙江吉利控股集團, 吉利控股]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.geely.com
+description: |
+  [[geely]] 是中國最大的民營汽車製造商之一，該公司以多品牌戰略聞名。
+
+#
+information:
+  - invasion   : SUPPORTED
+    source     : https://galaxy.geely.com/
+    description: |
+      [[geely]] 的官網預約賞車將台灣視為中國的一個省份。
+
+  - invasion   : SUPPORTED
+    source     : https://www.lotuscars.com.cn/login
+    description: |
+      [[geely]] 旗下 [[lotus-cars]] 官網地區選項將台灣標示為「中國台灣」。
+
+  - invasion   : SUPPORTED
+    source     : https://accessories.volvocars.com/region
+    description: |
+      [[geely]] 旗下 [[volvo]] 官網地區選項將台灣標示為「Taiwan, China」。
+
+  - invasion   : FUNDED
+    description: |
+      [[geely]] 的創辦人是中國商人李書福，並持有多個國際汽車品牌的股份。

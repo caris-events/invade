@@ -1,0 +1,26 @@
+#
+code       : volvo
+parent_code: geely
+
+#
+name       : Volvo
+name_alias : 富豪汽車
+name_others: [沃爾沃汽車, Volvo Cars]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.volvocars.com
+description: |
+  [[volvo]] 是瑞典的汽車製造商，以安全技術著稱。
+
+#
+information:
+  - year       : 2010
+    invasion   : FUNDED
+    source     : https://zh.wikipedia.org/wiki/%E5%AF%8C%E8%B1%AA%E6%B1%BD%E8%BB%8A
+    description: |
+      [[volvo]] 被中國 [[geely]] 收購，成為其全資子公司。
