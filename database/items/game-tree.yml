@@ -1,0 +1,26 @@
+#
+code       : game-tree
+parent_code: zlon-game
+
+#
+name       : 亦樹遊戲
+name_alias : Game Tree
+name_others: [亦樹遊戲有限公司, TAIWAN GAME TREE LIMITED COMPANY]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : http://www.game-trees.com
+description: |
+  [[game-tree]] 是專門代理中國遊戲的台灣公司。
+
+#
+information:
+  - year       : 2022
+    source     : https://forum.gamer.com.tw/C.php?bsn=38462&snA=8358
+    description: |
+      [[game-tree]] 承接 [[game-beans]] 的所有客服業務且關係十分密切，被懷疑是隸屬 [[zlon-game]] 的空殼公司。
+

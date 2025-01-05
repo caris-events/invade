@@ -10,16 +10,32 @@ name_others: []
 #
 category: ENTERTAINMENT
 type    : COMPANY
-owner   : TAIWANESE
+owner   : HONGKONGESE
 
 #
 website    : https://www.game-beans.com/
 description: |
-  [[game-beans]] 是一間中國手機遊戲代理廠商。
+  [[game-beans]] 是一間空殼香港商，專門代理中國遊戲。
 
 #
 information:
   - year       : 2019
-    invasion   : SUPPORTED
+    invasion   : FUNDED
     description: |
       [[game-beans]] 強制凍結香港玩家「Remez」與其遊戲公會，因該玩家被中國網友惡意檢舉為「港獨」。
+
+  - year       : 2019
+    source     : https://forum.gamer.com.tw/C.php?bsn=36812&snA=272&tnum=28
+    invasion   : COLLABORATED
+    description: |
+      [[game-beans]] 使用 [[alibaba]] 的《阿里雲》服務儲存資料。
+
+  - year       : 2022
+    source     : https://forum.gamer.com.tw/C.php?bsn=38462&snA=8358
+    description: |
+      [[game-beans]] 將業務轉交給在台公司 [[game-tree]]。
+
+  - source     : https://forum.gamer.com.tw/C.php?bsn=36812&snA=272&tnum=28
+    invasion   : FUNDED
+    description: |
+      [[game-beans]] 的董事是中國商人蔡藝儂，同時為 [[zlon-game]] 創辦人王一的妻子。

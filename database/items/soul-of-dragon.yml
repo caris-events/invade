@@ -1,0 +1,22 @@
+#
+code       : soul-of-dragon
+parent_code: zlon-game
+
+#
+name       : 龍魂旅人
+name_alias : Soul of Dragon
+name_others: [sod]
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://sod.game-beans.com
+description: |
+  [[soul-of-dragon]] 是一款日系 RPG 遊戲，玩家扮演傳說之龍在奇幻世界中展開冒險旅程。在台灣由 [[game-beans]] 與 [[game-tree]] 合作代理。
+
+#
+information:
+

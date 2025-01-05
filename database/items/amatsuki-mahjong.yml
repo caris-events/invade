@@ -1,0 +1,25 @@
+#
+code       : amatsuki-mahjong
+parent_code:
+
+#
+name       : 天月麻雀
+name_alias : Amatsuki Mahjong
+name_others: [天月麻將, 數碼愛麗絲有限公司, Cyber Alice Limited]
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://www.amatsukimahjong.com
+description: |
+  [[amatsuki-mahjong]] 是一款二次元風格線上麻將遊戲，集合日本麻將、四川麻將、台灣麻將、香港麻將四種玩法。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[amatsuki-mahjong]] 由香港商 CyberAlice（全名為數碼愛麗絲有限公司）開發，但公司僅成立半年且無任何資訊，網站原始碼中亦有簡體註釋，因此被認定是中國慣用的空殼公司手法。
+
