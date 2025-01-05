@@ -1,0 +1,24 @@
+#
+code       : ingco-tools
+parent_code:
+
+#
+name       : 盈合工具
+name_alias : INGCO Tools
+name_others: [盈合機械, 蘇州盈合機械有限公司]
+
+#
+category: MANUFACTURE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.ingcotools.com
+description: |
+  [[ingco-tools]] 是中國蘇州一家專注於電動工具等產品研發、設計與全球銷售的公司。
+
+#
+information:
+  - invasion     : SUPPORTED
+    description: |
+      [[ingco-tools]] 的官網聯絡表單中，將台灣標示為「China (Taiwan)」。

@@ -1,0 +1,24 @@
+#
+code       : total-tools
+parent_code: ingco-tools
+
+#
+name       : TOTAL 工具
+name_alias : TOTAL Tools
+name_others: [拓韬工具, 道達爾工具]
+
+#
+category: MANUFACTURE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.totalbusiness.com
+description: |
+  [[total-tools]] 是中國蘇州一家提供電動工具產品的公司，有時會被包裝成法國公司。在台灣由《東北五金》代理。
+
+#
+information:
+  - invasion     : SUPPORTED
+    description: |
+      [[total-tools]] 的官網聯絡表單中，將台灣標示為「中國台灣」。
