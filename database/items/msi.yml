@@ -1,0 +1,32 @@
+#
+code       : msi
+parent_code:
+
+#
+name       : 微星科技
+name_alias : MSI
+name_others: [微星科技股份有限公司, "Micro-Star International Co., Ltd."]
+
+#
+category: ELECTRONIC
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.msi.com/
+description: |
+  [[msi]] 是台灣的跨國消費電子產品製造商，主要產品包括電競筆記型電腦、顯示卡、主機板和伺服器等。
+
+#
+information:
+  - year       : 2019
+    invasion   : COLLABORATED
+    source     : https://www.sohu.com/a/301774262_719380
+    description: |
+      [[msi]] 宣布與中國 [[jd]] 展開合作，授權其為微星 GAMING 系列銷售總代理。
+
+  - year       : 2023
+    invasion   : SUPPORTED
+    source     : https://newtalk.tw/news/view/2023-04-19/867307
+    description: |
+      [[msi]] 在 [[weibo]] 發表聲明，表示自己是中國公司並堅持一個中國原則。
