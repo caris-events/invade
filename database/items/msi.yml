@@ -23,10 +23,16 @@ information:
     invasion   : COLLABORATED
     source     : https://www.sohu.com/a/301774262_719380
     description: |
-      [[msi]] 宣布與中國 [[jd]] 展開合作，授權其為微星 GAMING 系列銷售總代理。
+      [[msi]] 與中國 [[jd]] 展開合作，授權其為微星 GAMING 系列銷售總代理。
 
   - year       : 2023
     invasion   : SUPPORTED
     source     : https://newtalk.tw/news/view/2023-04-19/867307
     description: |
-      [[msi]] 在 [[weibo]] 發表聲明，表示自己是中國公司並堅持一個中國原則。
+      [[msi]] 販售至中國的滑鼠被發現標示「R.O.C（中華民國）」，隨後便在 [[weibo]] 發表道歉聲明，表示自己是中國公司並堅持一個中國原則。
+
+  - year       : 2025
+    invasion   : COLLABORATED
+    source     : https://tw.msi.com/Promotion/genshin
+    description: |
+      [[msi]] 與 [[genshin-impact]] 合作，購買主機板就贈送遊戲角色布偶。
