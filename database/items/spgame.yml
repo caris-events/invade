@@ -5,7 +5,7 @@ parent_code: skymoons
 #
 name       : 成都露珠
 name_alias : Spring Game
-name_others: [SPGame]
+name_others: [SPGame, 夯特創意行銷有限公司, "HANG TE CREATIVE MARKETING LTD."]
 
 #
 category: ENTERTAINMENT
@@ -15,7 +15,7 @@ owner   : CHINESE
 #
 website    : https://www.sp-games.com/
 description: |
-  [[spgame]] 是中國成都的一家遊戲開發商。
+  [[spgame]] 是中國成都的一家遊戲開發商，常發行 AI 繪圖的免洗遊戲。在台灣以《夯特創意行銷有限公司》的名義代理與發行遊戲。
 
 #
 information:

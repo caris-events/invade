@@ -1,0 +1,25 @@
+#
+code       : meoof
+parent_code:
+
+#
+name       : 覓凹
+name_alias : meoof
+name_others: []
+
+#
+category: APPLIANCE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.i-go.tw/pages/meoof
+description: |
+  [[meoof]] 是成立於中國廣州的寵物用品公司，公司名稱發音趨近於「喵」。
+
+#
+information:
+  - invasion   : FUNDED
+    source     : https://www.sohu.com/a/694541366_121123735
+    description: |
+      [[meoof]] 創始人是中國商人褚鵬程，畢業於廣州美術學院工業設計學院。

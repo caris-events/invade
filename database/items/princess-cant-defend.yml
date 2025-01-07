@@ -1,0 +1,26 @@
+#
+code       : princess-cant-defend
+parent_code:
+
+#
+name       : 公主守不了
+name_alias : Princess Can't Defend
+name_others: [Celestial Studio, 香港星辰工作室, 新世代動漫遊戲有限公司]
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://register.princesscantdefend.com
+description: |
+  [[princess-cant-defend]] 是一款像素風塔防手機遊戲，玩家需扮演指揮官並升級公主角色，抵禦魔物攻擊。
+
+#
+information:
+  - invasion   : FUNDED
+    source     : https://princesscantdefend.com
+    description: |
+      [[princess-cant-defend]] 由香港星辰工作室開發，但使用條約記載的是香港商《新世代動漫遊戲有限公司》。公司無任何資訊與網站，且登入介面是簡體字，因此被認定是中國慣用的空殼公司手法。
+

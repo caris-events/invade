@@ -1,0 +1,21 @@
+#
+code       : legend-of-phantom-beast-m
+parent_code: spgame
+
+#
+name       : 幻獸傳說 M
+name_alias : Legend of Phantom Beast M
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://spg.talesofventi.com/site
+description: |
+  [[legend-of-phantom-beast-m]] 是一款異世界捉獸冒險 RPG 手遊，在台灣由空殼公司《夯特創意行銷有限公司》代理。
+
+#
+information:
