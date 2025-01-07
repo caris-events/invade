@@ -1,0 +1,29 @@
+#
+code       : huobi
+parent_code: about-captial-management
+
+#
+name       : 火幣
+name_alias : Huobi
+name_others: [火幣全球站, Huobi Global]
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.huobi.com
+description: |
+  [[huobi]] 是一家加密貨幣交易所，最初在中國運營，後因監管政策變化，逐步退出中國市場，並將總部遷至新加坡。
+
+#
+information:
+  - invasion   : SUPPORTED
+    description: |
+      [[huobi]] 在進行 KYC（客戶實名認證）時，台灣使用者的國籍只能選擇「Taiwan（China）」。
+
+  - year       : 2022
+    source     : https://www.blocktempo.com/huobi-global-founder-leon-li-completes-share-sale/
+    description: |
+      [[huobi]] 創辦人中國商人李林，出售了其持有的公司股份給 [[about-captial-management]] 並退出公司管理層。

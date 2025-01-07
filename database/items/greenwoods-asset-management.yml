@@ -1,0 +1,24 @@
+#
+code       : greenwoods-asset-management
+parent_code:
+
+#
+name       : 景林資產
+name_alias : Greenwoods Asset Management Limited
+name_others: [上海景林資產管理公司, 景林資產管理有限公司]
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.greenwoodsasset.com
+description: |
+  [[greenwoods-asset-management]] 是一家位於上海浦東新區的風險投資和私募基金公司，投資案例包括《滴滴》、《美團》、[[ctrip]] 等知名企業。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[greenwoods-asset-management]] 的創辦人為中國商人蔣錦志，合夥香港人陳亦驊額外創辦了 [[about-captial-management]]。

@@ -1,0 +1,23 @@
+#
+code       : about-captial-management
+parent_code:
+
+#
+name       : 百域資本
+name_alias : About Capital Management
+name_others: [百域資本（香港）有限公司]
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : HONGKONGESE
+
+#
+website    : https://www.aboutcap.com
+description: |
+  [[about-captial-management]] 是一家位於香港的投資管理公司，專注於私募股權投資。
+
+#
+information:
+  - description: |
+      [[about-captial-management]] 的創辦人是香港人陳亦驊，同時是 [[greenwoods-asset-management]] 的合夥人。
