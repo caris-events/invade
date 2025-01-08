@@ -1,0 +1,26 @@
+code       : inkism-international
+parent_code:
+
+name       : 墨力國際
+name_alias : Inkism
+name_others: [墨力控股, 墨力國際股份有限公司]
+
+category: FOOD
+type    : COMPANY
+owner   : TAIWANESE
+
+website    : http://www.inkism.com.tw
+description: |
+  [[inkism-international]] 是台灣的餐飲集團，旗下擁有多個餐飲品牌。在中國以《上海墨印餐飲管理有限公司》經營。
+
+#
+information:
+  - year       : 2019
+    invasion   : SUPPORTED
+    source     : https://news.ltn.com.tw/news/politics/breakingnews/2973658
+    description: |
+      [[inkism-international]] 旗下 [[yifang-taiwan-fruit-tea]] 在 [[weibo]] 發表聲明，表示「堅決維護一國兩制、反對香港分裂國家」，引發台灣與香港消費者強烈反彈，損失逾八千萬新台幣。
+
+  - invasion   : FUNDED
+    description: |
+      [[inkism-international]] 的創辦人是台灣人柯梓凱。

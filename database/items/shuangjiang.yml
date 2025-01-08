@@ -1,0 +1,17 @@
+code       : shuangjiang
+parent_code: inkism-international
+
+name       : 霜江茶行
+name_alias : Shuangjiang
+name_others: []
+
+category: FOOD
+type    : COMPANY
+owner   : TAIWANESE
+
+website    : https://www.shuangjiang1986.com
+description: |
+  [[shuangjiang]] 是台灣的手搖飲品牌，因母公司 [[inkism-international]] 於香港反送中期間發表挺共言論，導致旗下 [[yifang-taiwan-fruit-tea]] 業績崩跌而成立的新品牌。名稱與台中的《雙江茶行》相似，但兩者並無關聯。
+
+#
+information:

@@ -1,0 +1,17 @@
+code       : yifang-taiwan-fruit-tea
+parent_code: inkism-international
+
+name       : 一芳台灣水果茶
+name_alias : Yifang Taiwan Fruit Tea
+name_others: []
+
+category: FOOD
+type    : COMPANY
+owner   : TAIWANESE
+
+website    : https://www.yifangtea.com
+description: |
+  [[yifang-taiwan-fruit-tea]] 是台灣的手搖飲料品牌，專營水果茶飲品。後因香港反送中期間挺共而名譽受損，另成立了 [[shuangjiang]]。
+
+#
+information:
