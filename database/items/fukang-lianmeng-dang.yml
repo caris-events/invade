@@ -1,0 +1,28 @@
+code       : fukang-lianmeng-dang
+parent_code:
+
+name       : 復康聯盟黨
+name_alias :
+name_others: [中華民國復康聯盟黨]
+
+category: POLITICAL
+type    : GROUP
+owner   : TAIWANESE
+
+website    :
+description: |
+  [[fukang-lianmeng-dang]] 成立於 2023 年，由退役軍人組成。黨主席為屈宏義，主事務所位於苗栗縣竹南鎮。
+
+#
+information:
+  - year       : 2023
+    source     : https://news.586.com.tw/2023/10/507295/
+    description: |
+      [[fukang-lianmeng-dang]] 黨主席屈宏義在宣誓大會表示下架《民進黨》是共同心願。
+
+  - year       : 2025
+    invasion   : SUPPORTED
+    source     : https://www.cna.com.tw/news/asoc/202501080143.aspx
+    description: |
+      [[fukang-lianmeng-dang]] 黨主席屈宏義被指示拍攝美國在台協會（AIT）及多處軍事基地外觀，繪製地圖及座標，並透過微信交付給中國方面，地下匯兌交付人民幣。
+
