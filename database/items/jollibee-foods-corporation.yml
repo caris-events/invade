@@ -1,0 +1,18 @@
+code       : jollibee-foods-corporation
+parent_code:
+
+name       : 快樂蜂
+name_alias : Jollibee Foods Corporation
+name_others: [Jollibee, JFC]
+
+category: FOOD
+type    : COMPANY
+owner   : FOREIGN
+
+website    : https://www.jollibee.com.ph
+description: |
+  [[jollibee-foods-corporation]] 是菲律賓最大的餐飲連鎖集團之一，透過併購擴大其全球影響力。
+
+
+#
+information:

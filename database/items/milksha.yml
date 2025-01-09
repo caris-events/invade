@@ -1,0 +1,27 @@
+code       : milksha
+parent_code: jollibee-foods-corporation
+
+name       : 迷客夏
+name_alias : Milksha
+name_others: []
+
+category: FOOD
+type    : COMPANY
+owner   : TAIWANESE
+
+website    : https://www.milkshoptea.com
+description: |
+  [[milksha]] 是台灣的手搖飲料品牌，以新鮮乳品和高品質茶飲聞名。於 2021 年被 [[jollibee-foods-corporation]] 收購。
+
+#
+information:
+  - year       : 2019
+    invasion   : SUPPORTED
+    source     : https://tw.news.yahoo.com/%E8%87%AA%E7%A8%B1%E4%BE%86%E8%87%AA-%E4%B8%AD%E5%9C%8B%E5%8F%B0%E7%81%A3-%E8%BF%B7%E5%AE%A2%E5%A4%8F%E5%9B%9E%E6%87%89%E4%BA%86-052519752.html
+    description: |
+      [[milksha]] 在《微信》自稱「來自中國台灣台南」，公司解釋此舉是因應微信要求而加上「中國」字樣。
+
+  - year       : 2024
+    source     : https://news.ltn.com.tw/news/life/breakingnews/4741038
+    description: |
+      [[milksha]] 在《小紅書》發文，稱「Milksha 從中國台灣來北京啦」，台灣總部則表示 2019 年後已與中國迷客夏無任何經營往來，互不隸屬。
