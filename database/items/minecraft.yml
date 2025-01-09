@@ -1,0 +1,22 @@
+#
+code       : minecraft
+parent_code: mojang-studio
+
+#
+name       : 當個創世神
+name_alias : Minecraft
+name_others: [我的世界]
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://minecraft.net
+description: |
+  [[minecraft]] 是一款由瑞典公司 [[mojang-studio]] 開發的沙盒遊戲，玩家可以在隨機產生的 3D 世界中自由建造和探索。在中國由 [[netease]] 代理。
+
+#
+information:
+

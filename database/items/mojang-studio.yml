@@ -1,0 +1,31 @@
+#
+code       : mojang-studio
+parent_code: microsoft
+
+#
+name       : Mojang Studios
+name_alias :
+name_others: [Mojang AB]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://mojang.com
+description: |
+  [[mojang-studio]] 是位於瑞典的遊戲開發商，因開發沙盒遊戲 [[minecraft]] 而聞名。於 2014 年被 [[microsoft]] 以 25 億美元收購。
+
+#
+information:
+  - year       : 2016
+    invasion   : COLLABORATED
+    description: |
+      [[mojang-studio]] 與 [[netease]] 合作，打造內建言論審查的《Minecraft 中國版》。
+
+  - year       : 2024
+    invasion   : SUPPORTED
+    description: |
+      [[mojang-studio]] 旗下 [[minecraft]] 購買頁面將台灣標註為「中國台灣省」。
+
