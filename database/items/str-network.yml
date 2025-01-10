@@ -1,0 +1,29 @@
+#
+code       : str-network
+parent_code:
+
+#
+name       : 薩泰爾娛樂
+name_alias : STR Network
+name_others: [薩泰爾娛樂股份有限公司, 博恩夜夜秀]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.strnetwork.cc
+description: |
+  [[str-network]] 是台灣的娛樂公司，以製作政治脫口秀節目《博恩夜夜秀》聞名，專注於批判型娛樂內容。主要受眾戶多為 [[taiwan-peoples-party]] 支持者。
+
+#
+information:
+  - year       : 2024
+    invasion   : COLLABORATED
+    source     : https://news.ltn.com.tw/news/politics/breakingnews/4562056
+    description: |
+      [[str-network]] 邀請前《中國央視》記者王志安參與節目，由於發表歧視身障者的言論，導致多家贊助商宣布終止合作。
+
+  - description: |
+      [[str-network]] 的創辦人是台灣人曾博恩、謝政豪，兩人同為《臺灣吧》創辦人。
