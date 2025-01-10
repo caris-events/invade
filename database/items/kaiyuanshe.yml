@@ -1,0 +1,28 @@
+#
+code       : kaiyuanshe
+parent_code:
+
+#
+name       : 開源社
+name_alias : Kaiyuanshe
+name_others: []
+
+#
+category: INTERNET
+type    : GROUP
+owner   : CHINESE
+
+#
+website    : https://kaiyuanshe.cn
+description: |
+  [[kaiyuanshe]] 是中國的開源社群聯合體，專注於開源治理、社群發展和開源項目孵化。
+
+#
+information:
+  - invasion   : SUPPORTED
+    description: |
+      [[kaiyuanshe]] 官網統計地圖將台灣列為中國的一部分，並以台灣省稱呼。
+
+  - invasion   : FUNDED
+    description: |
+      [[kaiyuanshe]] 的創辦人是中國人劉天棟，曾獲 [[tencent-cloud]] 技術專家認證；和台灣人林旅強，曾於 [[huawei]] 工作近八年。

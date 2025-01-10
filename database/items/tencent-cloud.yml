@@ -1,0 +1,21 @@
+#
+code       : tencent-cloud
+parent_code: tencent
+
+#
+name       : 騰訊雲
+name_alias : Tencent Cloud
+name_others:
+
+#
+category: INTERNET
+type    : PLATFORM
+owner   : CHINESE
+
+#
+website    : https://cloud.tencent.com
+description: |
+  [[tencent-cloud]] 是中國科技公司 [[tencent]] 提供的雲端運算服務。
+
+#
+information:

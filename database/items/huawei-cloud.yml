@@ -1,0 +1,21 @@
+#
+code       : huawei-cloud
+parent_code: huawei
+
+#
+name       : 華為雲
+name_alias : Huawei Cloud
+name_others: []
+
+#
+category: INTERNET
+type    : PLATFORM
+owner   : CHINESE
+
+#
+website    : https://www.huaweicloud.com
+description: |
+  [[huawei-cloud]] 是中國科技公司 [[huawei]] 提供的雲端服務平台。
+
+#
+information:
