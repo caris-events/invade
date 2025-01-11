@@ -1,0 +1,19 @@
+#
+word    : 視頻電話
+bopomofo: ㄕˋ ㄆㄧㄣˊ ㄉㄧㄢˋ ㄏㄨㄚˋ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  可以透過網路看見彼此並進行通話的一種通訊方式。
+
+#
+examples:
+  - words      : [視訊電話]
+    correct    : |
+      我們透過{{視訊電話}}聯絡，感覺彼此就在身邊。
+    incorrect  : |
+      我們透過{{視頻電話}}聯絡，感覺彼此就在身邊。

@@ -1,0 +1,26 @@
+#
+code       : mozilla-servo
+parent_code: igalia
+
+#
+name       : Servo
+name_alias :
+name_others: [Mozilla Servo]
+
+#
+category: SOFTWARE
+type    : SOFTWARE
+owner   : FOREIGN
+
+#
+website    : https://servo.org
+description: |
+  [[mozilla-servo]] 是由 [[mozilla]] 開發的瀏覽器引擎，使用 Rust 語言編寫。
+
+#
+information:
+  - year       : 2023
+    source     : https://www.oschina.net/news/278103
+    description: |
+      [[mozilla-servo]] 在 [[mozilla]] 經歷財務困難後，被轉移至《Linux 基金會》，並由 [[igalia]] 五位工程師全職維護。
+

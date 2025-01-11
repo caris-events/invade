@@ -1,0 +1,28 @@
+#
+code       : igalia
+parent_code:
+
+#
+name       : Igalia
+name_alias :
+name_others: []
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.igalia.com
+description: |
+  [[igalia]] 是一家位於西班牙的軟體諮詢公司，專注於開源軟體的開發。
+
+#
+information:
+  - year       : 2023
+    source     : https://fosstodon.org/@fabrice/113787927822167629
+    description: |
+      [[igalia]] 接手 [[mozilla-servo]] 專案後，表示收到了額外的開發資金（但未表明來源）並有五位全職工程師負責；隨後該專案新增了 [[openharmony]] 的支援，且貢獻者也開始有 [[huawei]] 工程師的參與。
+
+  - description: |
+      [[igalia]] 的股份由自家員工分別持股。

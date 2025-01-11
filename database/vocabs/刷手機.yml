@@ -1,0 +1,19 @@
+#
+word    : 刷手機
+bopomofo: ㄕㄨㄚ ㄕㄡ ㄐㄧ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  透過手機瀏覽網頁、使用應用程式等行為。
+
+#
+examples:
+  - words      : [滑手機]
+    correct    : |
+      他每天都會躺在床上{{滑手機}}、看影片。
+    incorrect  : |
+      他每天都會躺在床上{{刷手機}}、看[[視頻]]。

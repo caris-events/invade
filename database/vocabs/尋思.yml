@@ -1,0 +1,25 @@
+#
+word    : 尋思
+bopomofo: ㄒㄩㄣˊ ㄙ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  用心思考、思索，或是內心所想，源自中國東北話。
+
+#
+examples:
+  - words      : [想說, 覺得]
+    correct    : |
+      我{{想說}}這事跟我無關，怎又要我來負責呢？
+    incorrect  : |
+      我{{尋思}}這事跟我無關，怎又要我來負責呢？
+
+  - words      : [深思熟慮, 思索]
+    correct    : |
+      他{{深思熟慮}}了很久，才決定接受這份工作。
+    incorrect  : |
+      他{{尋思}}了很久，才決定接受這份工作。

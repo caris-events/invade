@@ -1,0 +1,24 @@
+#
+code       : mozilla
+parent_code:
+
+#
+name       : Mozilla
+name_alias :
+name_others: [謀智, Mozilla 基金會, Mozilla 公司]
+
+#
+category: INTERNET
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.mozilla.org
+description: |
+  [[mozilla]] 是一家開源軟體的非營利組織，總部位於美國加州山景城。
+
+#
+information:
+  - description: |
+      [[mozilla]] 的股東是《Mozilla 基金會》，主要收入來自將《Google》作為預設搜尋引擎的協議。
+

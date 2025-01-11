@@ -1,0 +1,20 @@
+#
+word    : 監控
+bopomofo: ㄐㄧㄢ ㄎㄨㄥˋ
+notice  : 這個詞彙指的不是監視他人的行為。
+
+#
+category: HARDWARE
+explicit:
+
+#
+description: |
+  能夠監視、監控他人的一種攝影設備。
+
+#
+examples:
+  - words      : [監視器, 監視攝影機]
+    correct    : |
+      為了配合警方要求，我們交出了{{監視器}}畫面。
+    incorrect  : |
+      為了配合警方要求，我們交出了{{監控}}畫面。
