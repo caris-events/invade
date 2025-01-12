@@ -1,0 +1,19 @@
+#
+word    : 吧唧
+bopomofo: ㄅㄚ ㄐㄧ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  動漫、遊戲的衍生週邊胸章、徽章，通常為圓形，可別於衣服或背包上。
+
+#
+examples:
+  - words      : [胸章, 徽章]
+    correct    : |
+      這個角色的{{胸章}}很好看，我想買一個掛在包包上。
+    incorrect  : |
+      這個角色的{{吧唧}}很好看，我想買一個掛在包包上。

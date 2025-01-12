@@ -1,0 +1,33 @@
+#
+code       : paypal
+parent_code:
+
+#
+name       : PayPal
+name_alias :
+name_others: [貝寶]
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.paypal.com/
+description: |
+  [[paypal]] 是一家美國的全球數位支付平台，提供線上支付服務。
+
+#
+information:
+  - year       : 2019
+    invasion   : COLLABORATED
+    source     : https://ppfocus.com/0/fi798c145.html
+    description: |
+      [[paypal]] 通過旗下《美銀寶信息技術有限公司》收購《國付寶》，成為首家獲准在中國市場提供線上支付服務的外資機構。
+
+  - invasion   : SUPPORTED
+    description: |
+      [[paypal]] 的語言選項中，台灣被標示為中國台灣，且是唯一沒有國旗的國家。
+
+  - description: |
+      [[paypal]] 的主要創辦人有 Elon Musk，大股東是《先鋒領航集團》。
