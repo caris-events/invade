@@ -1,0 +1,24 @@
+#
+code       : nespresso
+parent_code: nestle
+
+#
+name       : Nespresso
+name_alias :
+name_others: [奈斯派索, 雀巢奈斯派索股份有限公司]
+
+#
+category: FOOD
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.nespresso.com
+description: |
+  [[nespresso]] 是專門生產咖啡膠囊和咖啡機的瑞士公司。
+
+#
+information:
+  - invasion   : MANIPULATED
+    description: |
+      [[nespresso]] 國際網站的語言選項原始碼裡，唯獨台灣國旗被換成預設的 Nespresso 商標且被稱為「大中華地區, 台灣」。

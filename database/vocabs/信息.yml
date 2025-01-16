@@ -1,0 +1,25 @@
+#
+word    : 信息
+bopomofo: ㄒㄧㄣˋ ㄒㄧˊ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  帶有特定內容的訊息或資訊。
+
+#
+examples:
+  - words      : [訊息]
+    correct    : |
+      下班後，我都會傳{{訊息}}給家人報平安。
+    incorrect  : |
+      下班後，我都會傳{{信息}}給家人報平安。
+
+  - words      : [資訊]
+    correct    : |
+      這是公司的最新{{資訊}}，請您過目。
+    incorrect  : |
+      這是公司的最新{{信息}}，請您過目。

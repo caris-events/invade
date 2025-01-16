@@ -1,0 +1,34 @@
+#
+code       : nestle
+parent_code:
+
+#
+name       : 雀巢
+name_alias : Nestlé
+name_others: [雀巢公司, 雀巢集團]
+
+#
+category: FOOD
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.nestle.com
+description: |
+  [[nestle]] 是一家位於瑞士的跨國食品和飲料公司，產品涵蓋嬰兒食品、咖啡、乳製品、糖果等多個領域。
+
+#
+information:
+  - year       : 2020
+    invasion   : COLLABORATED
+    source     : https://www.suiis.com/news/article/1474
+    description: |
+      [[nestle]] 在中國天津投資超過一億瑞士法郎，建造其在亞洲的首座植物性產品生產線。
+
+  - year       : 2024
+    source     : https://hk.finance.yahoo.com/news/%E9%9B%80%E5%B7%A2-nsrgy-us-%E5%B0%87-%E5%A6%82%E6%97%A2%E5%BE%80%E5%9C%A8%E4%B8%AD%E5%9C%8B%E9%80%B2%E8%A1%8C%E6%8A%95%E8%B3%87-040951073.html
+    description: |
+      [[nestle]] 執行副總裁張西強表示，中國是公司全球第二大市場，將繼續在中國進行投資，強調對中國市場的長期承諾。
+
+  - description: |
+      [[nestle]] 的創辦人是 Henri Nestlé，大股東有《貝萊德》。
