@@ -1,0 +1,24 @@
+#
+code       : lava-music
+parent_code:
+
+#
+name       : 拿火音樂
+name_alias : LAVA MUSIC
+name_others: []
+
+#
+category: ART
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://lavamusic.com
+description: |
+  [[lava-music]] 是一家中國音樂科技品牌，專注於新設計與智慧樂器研發，是首個進入美國最大樂器零售商《Guitar Center》的中國吉他品牌。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[lava-music]] 的創辦人是中國商人陸子天，並獲得《金沙江聯合資本》的投資。

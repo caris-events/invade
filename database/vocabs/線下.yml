@@ -1,0 +1,25 @@
+#
+word    : 線下
+bopomofo: ㄒㄧㄢˋ ㄒㄧㄚ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  指在網際網路、線上之外的地方，例如聚會、演唱會。
+
+#
+examples:
+  - words      : [現場]
+    correct    : |
+      這次{{現場}}聚會舉辦的很成功。
+    incorrect  : |
+      這次{{線下}}聚會舉辦的很成功。
+
+  - words      : [實體]
+    correct    : |
+      這家公司有{{實體}}店面，也有線上商店。
+    incorrect  : |
+      這家公司有{{線下}}店面，也有線上商店。

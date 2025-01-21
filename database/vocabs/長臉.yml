@@ -1,0 +1,25 @@
+#
+word    : 長臉
+bopomofo: ㄓㄤˇ ㄌㄧㄢˇ
+
+#
+category: SLANG
+explicit:
+
+#
+description: |
+  用來形容面子。
+
+#
+examples:
+  - words      : [給面子]
+    correct    : |
+      大家正開心的時候，他卻潑了冷水，完全不{{給面子}}。
+    incorrect  : |
+      大家正開心的時候，他卻潑了冷水，完全不{{長臉}}。
+
+  - words      : [出風頭]
+    correct    : |
+      他比賽得了第一名，一下子就{{出風頭}}了。
+    incorrect  : |
+      他比賽得了第一名，一下子就{{長臉}}了。

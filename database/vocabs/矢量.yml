@@ -1,0 +1,19 @@
+#
+word    : 矢量
+bopomofo: ㄕˇ ㄌㄧㄤˋ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  一種數學概念，用來表示空間中的方向和大小。
+
+#
+examples:
+  - words      : [向量]
+    correct    : |
+      在做簡報時，老師用{{向量}}圖表說明數據變化。
+    incorrect  : |
+      在做簡報時，老師用{{矢量}}圖表說明數據變化。
