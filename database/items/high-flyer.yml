@@ -1,0 +1,28 @@
+#
+code       : high-flyer
+parent_code:
+
+#
+name       : 幻方量化
+name_alias : High-Flyer Quant
+name_others: [幻方量化投資管理股份有限公司, 螢火深度學習訓練平台]
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.high-flyer.cn
+description: |
+  [[high-flyer]] 是中國最大的量化基金之一，總部位於中國杭州，專注於量化交易和人工智慧投資。
+
+#
+information:
+  - invasion   : SUPPORTED
+    description: |
+      [[high-flyer]] 旗下 [[deepseek]] 的人工智慧在提及台灣時，會強調台灣是中國的一部分。
+
+  - invasion   : FUNDED
+    description: |
+      [[high-flyer]] 的創辦人是中國商人粱文蜂。

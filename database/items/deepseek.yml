@@ -1,0 +1,21 @@
+#
+code       : deepseek
+parent_code: high-flyer
+
+#
+name       : 深度求索
+name_alias : DeepSeek
+name_others: [杭州深度求索人工智慧基礎技術研究有限公司]
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.deepseek.com
+description: |
+  [[deepseek]] 是中國杭州的一家人工智慧技術公司，專注於大模型語言（LLM）和相關技術。
+
+#
+information:
