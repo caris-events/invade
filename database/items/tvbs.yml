@@ -1,0 +1,58 @@
+#
+code       : tvbs
+parent_code:
+
+#
+name       : TVBS
+name_alias :
+name_others: [聯利媒體股份有限公司, TVBS Media Inc.]
+
+#
+category: MEDIA
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.tvbs.com.tw
+description: |
+  [[tvbs]] 是經常以輿論手法帶風向的傳播媒體，政治立場傾向 [[kuomintang]]。
+
+#
+information:
+  - year       : 2005
+    source     : https://crossing.cw.com.tw/article/11525
+    description: |
+      [[tvbs]] 過往的大股東是香港商《百慕達商電視廣播投資有限公司》，曾被質疑有中資背景。
+    #[[tvbs]] 過往的大股東是香港商《百慕達商電視廣播投資有限公司》，另一個為台灣《東方彩視投資股分有限公司》，但此公司的股東組成皆為《百慕達商電視廣播投資有限公司》的法定代表人，因此被質疑有逃避中資背景的手法。
+
+  # - year       : 2022
+  #   invasion   : MANIPULATED
+  #   description: |
+  #     [[tvbs]] 曾發文「台灣連假太多，網友寧願少放也不要補假」，隔年卻又稱「連假沒了，上班族哭哭」。
+
+  - year       : 2024
+    invasion   : MANIPULATED
+    description: |
+      [[tvbs]] 在同樣是四天颱風假，針對《民進黨》高雄市，報導「放颱風假網友全不挺」；但對 [[kuomintang]] 台中市，則以「盧秀燕臉書被刷一排總統好」為題。
+
+  # - year       : 2024
+  #   description: |
+  #     [[tvbs]] 在粉絲專頁大肆稱讚 [[kuomintang]] 立委陳玉珍出拳擊倒《民進黨》立委黃捷的行為。
+
+  - year       : 2025
+    invasion   : COLLABORATED
+    source     : https://udn.com/news/story/7323/8462318
+    description: |
+      [[tvbs]] 在主辦台北市跨年晚會時，播放中國官媒央視的節目。《台灣資訊環境研究中心》亦指出 [[tvbs]] 是經常引用央視新聞的媒體。
+
+  # - year       : 2025
+  #   invasion   : MANIPULATED
+  #   source     : https://www.threads.net/@chnyu._12/post/DFENr_fzkJ2
+  #   description: |
+  #     [[tvbs]] 發布嘉義地震新聞時，使用新北市三重區住戶因建商施工而倒塌的照片誤導讀者。
+
+  - year       : 2024
+    source     : https://www.ctee.com.tw/news/20230119700544-430503
+    description: |
+      [[tvbs]] 的大股東是 [[htc]] 創辦人王雪紅。
+

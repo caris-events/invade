@@ -21,7 +21,7 @@ description: |
 information:
   - invasion   : SUPPORTED
     description: |
-      [[high-flyer]] 旗下 [[deepseek]] 的人工智慧在提及台灣時，會強調台灣是中國的一部分。
+      [[high-flyer]] 旗下 [[deepseek]] 的人工智慧在提及台灣時，強調台灣是中國的一部分。
 
   - invasion   : FUNDED
     description: |
