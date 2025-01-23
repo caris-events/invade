@@ -15,12 +15,12 @@ owner   : TAIWANESE
 #
 website    : http://www.game-trees.com
 description: |
-  [[game-tree]] 是專門代理中國遊戲的台灣公司。
+  [[game-tree]] 是專門代理中國遊戲的台灣公司，前身是空殼香港商 [[game-beans]] 且辦公地點亦相同。
 
 #
 information:
-  - year       : 2022
-    source     : https://forum.gamer.com.tw/C.php?bsn=38462&snA=8358
-    description: |
-      [[game-tree]] 承接 [[game-beans]] 的客服業務，由於關係十分密切，被懷疑是隸屬 [[zlon-game]] 的空殼公司。
+  # - year       : 2022
+  #   source     : https://forum.gamer.com.tw/C.php?bsn=38462&snA=8358
+  #   description: |
+  #     [[game-tree]] 承接 [[game-beans]] 的所有業務並沿用相同辦公地點；是 [[zlon-game]] 的在台公司。
 

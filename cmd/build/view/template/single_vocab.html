@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>《{{ .Word }}》支語的意思、解釋及例句</title>
+        <title>《{{ .Word }}》的意思、解釋及例句｜中國侵略性詞彙、支語字典</title>
         <!-- Tocas UI -->
         <link rel="stylesheet" href="{{ .BaseURL }}/assets/tocas/tocas.min.css" />
         <script src="{{ .BaseURL }}/assets/tocas/tocas.min.js"></script>
@@ -25,11 +25,11 @@
         <!-- Meta -->
         <meta name="description" content="{{ if .Description }}{{ .Word }}的意思是：{{ .Description }}{{ else }}誤用「{{ .Word }}」詞彙可能會傳達不正確的訊息。{{ end }}" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="《{{ .Word }}》單字解釋 - 中國侵略性詞彙" />
+        <meta name="twitter:title" content="《{{ .Word }}》的意思、解釋及例句｜中國侵略性詞彙、支語字典" />
         <meta name="twitter:description" content="{{ if .Description }}{{ .Word }}的意思是：{{ .Description }}{{ else }}誤用「{{ .Word }}」詞彙可能會傳達不正確的訊息。{{ end }}" />
         <meta name="twitter:image" content="{{ .BaseURL }}/assets/vocab_covers/{{ .Word | safe64 }}.png" />
         <meta property="og:site_name" content="中國侵略資料庫" />
-        <meta property="og:title" content="《{{ .Word }}》單字解釋 - 中國侵略性詞彙" />
+        <meta property="og:title" content="《{{ .Word }}》的意思、解釋及例句｜中國侵略性詞彙、支語字典" />
         <meta property="og:type" content="article" />
         <meta property="og:image" content="{{ .BaseURL }}/assets/vocab_covers/{{ .Word | safe64 }}.png" />
         <meta property="og:url" content="{{ .BaseURL }}/v/{{ .Word }}" />
