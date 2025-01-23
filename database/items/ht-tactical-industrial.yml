@@ -1,0 +1,25 @@
+#
+code       : ht-tactical-industrial
+parent_code:
+
+#
+name       : 浤泰戰術工業
+name_alias : HT Tactical Industrial Co.
+name_others: [浤泰戰術工業有限公司, HTTI]
+
+#
+category: MANUFACTURE
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.htti-extreme-armor.com
+description: |
+  [[ht-tactical-industrial]] 是位於桃園龍潭的一家防彈裝備開發與代工商。
+
+#
+information:
+  - year       : 2025
+    source     : https://rwnews.tw/article.php?news=19108
+    description: |
+      [[ht-tactical-industrial]] 技術長張勝豪與台中館負責人陳敬淮皆涉入《高安國共諜案》。
