@@ -1,0 +1,23 @@
+#
+code       : acer
+parent_code:
+
+#
+name       : Acer
+name_alias : 宏碁
+name_others: [宏碁股份有限公司]
+
+#
+category: ELECTRONIC
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.acer.com
+description: |
+  [[acer]] 是擁有廣泛市佔率的台灣電子、電腦公司，主要產品包含筆記型電腦、桌上型電腦、顯示器。
+
+#
+information:
+  - description: |
+      [[acer]] 的創辦人是施振榮，大股東有宏榮投資股份有限公司。

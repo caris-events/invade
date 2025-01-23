@@ -25,6 +25,7 @@ func build(c *cli.Context) error {
 	if err != nil {
 		return fmt.Errorf("compile vocabs: %w", err)
 	}
+
 	news, err := compiler.CompileNews()
 	if err != nil {
 		return fmt.Errorf("compile news: %w", err)

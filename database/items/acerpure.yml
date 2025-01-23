@@ -1,0 +1,25 @@
+#
+code       : acerpure
+parent_code: acer
+
+#
+name       : Acerpure
+name_alias : 宏碁智新
+name_others: [Acerpure Inc., 宏碁智新股份有限公司]
+
+#
+category: APPLIANCE
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.acerpure.com
+description: |
+  [[acerpure]] 是 [[acer]] 的生活家電品牌，大多是引進中國產品並改為自己 Logo 的貼牌商品。
+
+#
+information:
+  - year       : 2024
+    invasion   : COLLABORATED
+    description: |
+      [[acerpure]] 的「Acerpure Cool 二合一空氣循環清淨機」為中國《艾美特》貼牌產品，而「Acerpure Aqua 黑曜石冰溫瞬熱 RO 濾淨飲水機」則是中國《宜普盾》貼牌產品，且引入台灣時，機身上的「熱水」字樣仍使用簡體字。
