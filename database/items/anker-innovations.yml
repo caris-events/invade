@@ -1,0 +1,33 @@
+#
+code       : anker-innovations
+parent_code:
+
+#
+name       : Anker
+name_alias : 安克創新科技
+name_others: [Anker Innovations, 安克創新科技股份有限公司, 湖南海翼電子商務有限公司]
+
+#
+category: ELECTRONIC
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.anker.tw
+description: |
+  [[anker-innovations]] 是一家中國湖南省的電子公司，產品有充電器、行動電源、耳機、藍牙喇叭。在台灣由《良興》代理。
+
+#
+information:
+  - year       : 2023
+    source     : https://www.amzmm.com/43548.html
+    description: |
+      [[anker-innovations]] 旗下 [[eufy]] 監視器爆出隱私疑慮，使用者就算關閉雲端功能，影像仍會上傳到雲端伺服器且不須身份認證就能存取。
+
+  - invasion   : SUPPORTED
+    description: |
+      [[anker-innovations]] 旗下 [[soundcore]] 將台灣標示為「Taiwan, China」。
+
+  - invasion   : FUNDED
+    description: |
+      [[anker-innovations]] 的創辦人是中國商人陽萌，曾任職於《Google》。

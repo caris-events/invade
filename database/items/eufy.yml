@@ -1,0 +1,21 @@
+#
+code       : eufy
+parent_code: anker-innovations
+
+#
+name       : eufy
+name_alias : 悠飛
+name_others: []
+
+#
+category: APPLIANCE
+type    : BRAND
+owner   : CHINESE
+
+#
+website    : https://www.eufy.com
+description: |
+  [[eufy]] 是 [[anker-innovations]] 旗下的智慧家庭品牌，產品有掃地機器人、吸塵器和智慧保全設備等。品牌名稱取自希臘語，意為「智簡生活」。
+
+#
+information:

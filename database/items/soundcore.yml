@@ -1,0 +1,21 @@
+#
+code       : soundcore
+parent_code: anker-innovations
+
+#
+name       : Soundcore
+name_alias : 聲闊
+name_others: []
+
+#
+category: ELECTRONIC
+type    : BRAND
+owner   : CHINESE
+
+#
+website    : https://www.soundcore.com
+description: |
+  [[soundcore]] 是 [[anker-innovations]] 旗下專注於音訊產品的子品牌，產品涵蓋耳機、音響等。
+
+#
+information:
