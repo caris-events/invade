@@ -15,16 +15,22 @@ owner   : FOREIGN
 #
 website    : https://www.nexon.co.jp/
 description: |
-  [[nexon]] 是韓國知名電腦遊戲公司，後將總部遷至東京。公司以開發休閒類網絡遊戲著稱，在全球遊戲市場佔有重要地位。
+  [[nexon]] 是韓國知名電腦遊戲公司，後將總部遷至東京，公司以開發休閒類網絡遊戲著稱。
 
 #
 information:
   - year       : 2024
     invasion   : MANIPULATED
     description: |
-      [[nexon]] 旗下 [[blue-archive]] 在直播中將台灣列為國家，遭中國玩家反應後，[[nexon]] 隨即移除了該直播。
+      [[nexon]] 旗下 [[blue-archive]] 在直播中將台灣列為國家，事後 [[nexon]] 移除了該直播。
 
   - year       : 2024
     invasion   : SUPPORTED
     description: |
       [[nexon]] 旗下 [[blue-archive]] 在多個社群平台發表聲明，表示台灣和香港皆屬於中國，並尊重「一中原則」。
+
+  - year       : 2025
+    invasion   : SUPPORTED
+    source     : https://m.weibo.cn/detail/5126404259447503
+    description: |
+      [[nexon]] 旗下 [[blue-archive]] 官方商店《基沃托斯百貨》稱台北是「國外」而無法寄送，事後道歉並稱「台灣是中共領土的一部分」。

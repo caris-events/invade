@@ -22,3 +22,7 @@ information:
   - invasion     : SUPPORTED
     description: |
       [[ingco-tools]] 的官網聯絡表單中，將台灣標示為「China (Taiwan)」。
+
+  - invasion     : FUNDED
+    description: |
+      [[ingco-tools]] 的創辦人是中國商人劉強，大股東是《蘇州大可機械有限公司》。
