@@ -1,0 +1,19 @@
+#
+word    : 嘎了
+bopomofo: ㄍㄚ ㄌㄜ˙
+
+#
+category: SLANG
+explicit:
+
+#
+description: |
+  源自中國東北話，有時也會說某個東西被「嘎掉」，類似戛然而止。
+
+#
+examples:
+  - words      : [死了]
+    correct    : |
+      他玩遊戲總是一股腦兒地衝，然後就{{死了}}。
+    incorrect  : |
+      他玩遊戲總是一股腦兒地衝，然後就{{嘎了}}。

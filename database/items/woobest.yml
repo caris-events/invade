@@ -1,0 +1,24 @@
+#
+code       : woobest
+parent_code:
+
+#
+name       : 極致遊戲
+name_alias : Woobest
+name_others: [Jzyx, 廈門極致互動網絡技術股份有限公司]
+
+#
+category: GAME
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.jzyx.com
+description: |
+  [[woobest]] 是中國廈門的一家網路遊戲的研發與運營商。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[woobest]] 的創辦人是中國商人蘇華舟，同時也是 [[g-bits]] 的創辦人之一。

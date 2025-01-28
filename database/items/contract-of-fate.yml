@@ -1,0 +1,21 @@
+#
+code       : contract-of-fate
+parent_code: woobest
+
+#
+name       : 命運聖契
+name_alias : Contract of Fate
+name_others: [fategirls, 命運聖契：少女的羈絆]
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://my.jzyx.com
+description: |
+  [[contract-of-fate]] 是一款 3D 美少女卡牌養成遊戲，內容多由 AI 繪圖製成，在台灣由 [[mover-games]] 代理。
+
+#
+information:
