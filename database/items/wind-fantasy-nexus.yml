@@ -1,0 +1,23 @@
+#
+code       : wind-fantasy-nexus
+parent_code:
+
+#
+name       : 風色幻想：NeXus
+name_alias : "Wind Fantasy: NeXus"
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : TAIWANESE
+
+#
+website    : https://www.facebook.com/wfnx.gameflier
+description: |
+  [[wind-fantasy-nexus]] 是與台灣 VTuber 連動的角色扮演類戰棋遊戲，其內容與素材多沿用已倒閉的中國前作 [[wind-fantasy-destiny]]，為台灣《弘煜科技》旗下 IP《風色幻想》系列續作，在台灣由《遊戲新幹線》代理。
+
+#
+information:
+  - description: |
+      [[wind-fantasy-nexus]] 的遊戲內容有台灣多位 VTuber 參與，如：[[meridian-project]] 與 [[thebox-vtuber]]。
