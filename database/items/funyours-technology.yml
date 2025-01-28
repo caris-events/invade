@@ -1,0 +1,29 @@
+#
+code       : funyours-technology
+parent_code:
+
+#
+name       : 弘煜科技
+name_alias : FUNYOURS TECHNOLOGY
+name_others: [弘煜科技事業股份有限公司, FY]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.fy.com.tw
+description: |
+  [[funyours-technology]] 是一間起源於台中的遊戲開發與發行商，後期多為 IP 授權給中國合作。
+
+#
+information:
+  - year       : 2013
+    invasion   : COLLABORATED
+    source     : https://tw.stock.yahoo.com/news/弘煜洪而立-三箭齊發-每年4個新產品ip上市-揮軍中國-105008221.html
+    description: |
+      [[funyours-technology]] 宣布將積極與中國大型遊戲公司如 [[bilibili]]、[[gwebtop]] 等合作，進軍中國市場。
+
+  - description: |
+      [[funyours-technology]] 的大股東有《智冠科技》和《宇峻奧汀》。
