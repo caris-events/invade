@@ -1,0 +1,21 @@
+#
+code       : mk-power
+parent_code: yingsin-win
+
+#
+name       : MK-POWER
+name_alias :
+name_others: []
+
+#
+category: MANUFACTURE
+type    : BRAND
+owner   : TAIWANESE
+
+#
+website    : https://yingsin.com.tw/mk
+description: |
+  [[mk-power]] 是中國貼牌電動工具，電池與《牧田》通用。
+
+#
+information:

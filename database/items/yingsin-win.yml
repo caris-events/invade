@@ -1,0 +1,27 @@
+#
+code       : yingsin-win
+parent_code:
+
+#
+name       : 盈新五金
+name_alias :
+name_others: [盈新五金開發有限公司]
+
+#
+category: MANUFACTURE
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://yingsin.com.tw
+description: |
+  [[yingsin-win]] 是台灣的五金工具公司，代理手動及電動吊車、搬運工具、安全吊具等產品。
+
+#
+information:
+  - invasion   : COLLABORATED
+    description: |
+      [[yingsin-win]] 旗下 [[mk-power]] 是專門代理中國貼牌電動工具的品牌。
+
+  - description: |
+      [[yingsin-win]] 的公司代表人是台灣人曾陳美珠。
