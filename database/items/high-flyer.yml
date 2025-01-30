@@ -22,11 +22,16 @@ information:
   - year       : 2025
     invasion   : SUPPORTED
     description: |
-      [[high-flyer]] 旗下 [[deepseek]] 的人工智慧在提及台灣時，強調台灣是中國的一部分。
+      [[high-flyer]] 旗下 [[deepseek]] 在提及台灣時，強調台灣是中國的一部分。
+
+  - year       : 2025
+    invasion   : MANIPULATED
+    description: |
+      [[high-flyer]] 旗下 [[deepseek]] 在談及「如何學習包子製作」時，「習包子」會被視為暗喻習近平而導致談話被中斷。
 
   - year       : 2025
     description: |
-      [[high-flyer]] 旗下 [[deepseek]] R1 深度思考模型在回答違反規定的問題時，會表示「根据 OpenAI 的使用政策，生成此内容是不允许的。」
+      [[high-flyer]] 旗下 [[deepseek]] R1 深度思考模型在回答違反規定的問題時，會表示「根据 OpenAI 的使用政策，生成此内容是不允许的。」而被發現背後使用 OpenAI 資料。
 
   - invasion   : FUNDED
     description: |
