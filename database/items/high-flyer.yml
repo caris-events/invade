@@ -19,9 +19,14 @@ description: |
 
 #
 information:
-  - invasion   : SUPPORTED
+  - year       : 2025
+    invasion   : SUPPORTED
     description: |
       [[high-flyer]] 旗下 [[deepseek]] 的人工智慧在提及台灣時，強調台灣是中國的一部分。
+
+  - year       : 2025
+    description: |
+      [[high-flyer]] 旗下 [[deepseek]] R1 深度思考模型在回答違反規定的問題時，會表示「根据 OpenAI 的使用政策，生成此内容是不允许的。」
 
   - invasion   : FUNDED
     description: |
