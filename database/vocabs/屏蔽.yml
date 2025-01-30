@@ -1,0 +1,31 @@
+#
+word    : 屏蔽
+bopomofo: ㄆㄧㄥˊ ㄅㄧˋ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  某個事物被遮蔽，使其不可見或不可接觸。用於網路時，多指封鎖特定內容或人物。
+
+#
+examples:
+  - words      : [隱藏]
+    correct    : |
+      那篇留言被我{{隱藏}}了。
+    incorrect  : |
+      那篇留言被我{{屏蔽}}了。
+
+  - words      : [封鎖]
+    correct    : |
+      他總是使人不堪其擾，所以大家都{{封鎖}}他。
+    incorrect  : |
+      他總是使人不堪其擾，所以大家都{{屏蔽}}他。
+
+  - words      : [遮蔽, 阻擋]
+    correct    : |
+      他的視線被{{遮蔽}}了。
+    incorrect  : |
+      他的視線被{{屏蔽}}了。
