@@ -1,0 +1,21 @@
+#
+code       : path-of-exile-2
+parent_code: grinding-gear-games
+
+#
+name       : 流亡黯道 2
+name_alias : Path of Exile 2
+name_others: [PoE 2]
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://www.pathofexile.com/poe2
+description: |
+  [[path-of-exile-2]] 是動作角色扮演遊戲，為 [[path-of-exile]] 的續作，原計劃作為大型擴展包推出，後來獨立為新作。
+
+#
+information:

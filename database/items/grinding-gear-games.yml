@@ -1,0 +1,31 @@
+#
+code       : grinding-gear-games
+parent_code: tencent
+
+#
+name       : Grinding Gear Games
+name_alias :
+name_others: [GGG]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : http://www.grindinggear.com
+description: |
+  [[grinding-gear-games]] 是位於紐西蘭的遊戲開發公司，以開發動作角色扮演遊戲聞名。
+
+#
+information:
+  - year         : 2018
+    invasion     : FUNDED
+    description: |
+      [[grinding-gear-games]] 被 [[tencent]] 收購 80% 的股份，剩餘由三位聯合創辦人 Chris Wilson、Jonathan Rogers 和 Erik Olofsson 分別持有。
+
+  - year         : 2024
+    invasion     : FUNDED
+    source       : https://app.companiesoffice.govt.nz/companies/app/ui/pages/companies/1887410/36271747/entityFilingRequirement?backurl=%2Fcompanies%2Fapp%2Fui%2Fpages%2Fcompanies%2F1887410%2Fdocuments
+    description: |
+      [[grinding-gear-games]] 剩餘的 20% 股份被 [[tencent]] 全數收購，成為全資大股東。

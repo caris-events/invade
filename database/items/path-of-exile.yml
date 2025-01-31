@@ -1,0 +1,21 @@
+#
+code       : path-of-exile
+parent_code: grinding-gear-games
+
+#
+name       : 流亡黯道
+name_alias : Path of Exile
+name_others: [PoE]
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://www.pathofexile.com
+description: |
+  [[path-of-exile]] 是免費線上動作角色扮演遊戲，以黑暗奇幻風格與深度角色自訂系統著稱。
+
+#
+information:
