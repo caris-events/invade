@@ -1,0 +1,36 @@
+#
+code       : united-nations
+parent_code:
+
+#
+name       : 聯合國
+name_alias : United Nations
+name_others: [UN]
+
+#
+category: POLITICAL
+type    : GROUP
+owner   : FOREIGN
+
+#
+website    : https://www.un.org
+description: |
+  [[united-nations]] 是一個國際組織，旨在促進國際和平與安全，並協助全球合作解決經濟、社會及人道問題。
+
+#
+information:
+  - year       : 1971
+    invasion   : SUPPORTED
+    description: |
+      [[united-nations]] 第 26 屆大會通過第 2758 號決議，承認中華人民共和國為唯一合法代表，並將台灣（中華民國）驅逐出聯合國。
+
+  - year       : 2023
+    invasion   : SUPPORTED
+    source     : https://www.cna.com.tw/news/aopl/202303310357.aspx
+    description: |
+      [[united-nations]] 禁止持有台灣護照者進入聯合國機構，並拒絕台灣記者採訪聯合國活動。
+
+  - invasion   : FUNDED
+    source     : https://m.163.com/dy/article/JMC5SDVQ054399EZ.html
+    description: |
+      [[united-nations]] 主要資金來源之一是中國，其財政貢獻至少七億美金。

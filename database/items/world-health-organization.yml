@@ -1,0 +1,31 @@
+#
+code       : world-health-organization
+parent_code: united-nations
+
+#
+name       : 世界衛生組織
+name_alias : World Health Organization
+name_others: [WHO, 世界衛生大會]
+
+#
+category: POLITICAL
+type    : GROUP
+owner   : FOREIGN
+
+#
+website    : https://www.who.int
+description: |
+  [[world-health-organization]] 是全球公共衛生的專門機構，其組織每年 5 月會召開一次世界衛生大會（WHA）。
+
+#
+information:
+  - year       : 2017
+    invasion   : SUPPORTED
+    description: |
+      [[world-health-organization]] 拒絕台灣以觀察員身份參與世界衛生大會（WHA），連「中華台北」的身份也被拒絕。
+
+  - year       : 2020
+    invasion   : MANIPULATED
+    source     : https://www.cna.com.tw/news/firstnews/202004095002.aspx
+    description: |
+      [[world-health-organization]] 總幹事譚德塞於武漢肺炎期間力挺中國，並指台灣惡意人身攻擊而被外交部反駁。
