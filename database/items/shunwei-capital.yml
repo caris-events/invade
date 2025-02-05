@@ -1,0 +1,20 @@
+code       : shunwei-capital
+parent_code:
+
+name       : 順為資本
+name_alias : Shunwei Capital
+name_others: [順為基金, 順為投資]
+
+category: FINANCE
+type    : COMPANY
+owner   : CHINESE
+
+website    : https://shunwei.com
+description: |
+  [[shunwei-capital]] 是中國本土市場的風險投資基金，曾投資過 [[xiaomi]]、[[iqiyi]] 與《蔚來汽車》。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[shunwei-capital]] 的創辦人是中國商人雷軍，其同時是 [[xiaomi]] 創辦人。

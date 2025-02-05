@@ -1,0 +1,17 @@
+code       : taiwan-mobile
+parent_code: fubon-financial-holding
+
+name       : 台灣大哥大
+name_alias : Taiwan Mobile
+name_others: [台灣大哥大股份有限公司, "Taiwan Mobile Co., Ltd."]
+
+category: TELECOM
+type    : COMPANY
+owner   : TAIWANESE
+
+website    : https://www.taiwanmobile.com
+description: |
+  [[taiwan-mobile]] 是台灣的主要電信服務提供商，提供行動通信、寬頻上網等服務，現由 [[fubon-financial-holding]] 投資經營。
+
+#
+information:

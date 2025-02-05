@@ -1,0 +1,17 @@
+code       : taiwan-fixed-network
+parent_code: taiwan-mobile
+
+name       : 台灣固網
+name_alias : Taiwan Fixed Network
+name_others: [台灣固網股份有限公司, "Taiwan Fixed Network Co., Ltd."]
+
+category: TELECOM
+type    : COMPANY
+owner   : TAIWANESE
+
+website    : https://www.twmsolution.com
+description: |
+  [[taiwan-fixed-network]] 是台灣最大的民營電信固網公司，主要提供固定電話、寬頻上網等電信服務。
+
+#
+information:

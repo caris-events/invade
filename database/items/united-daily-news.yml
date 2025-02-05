@@ -1,6 +1,6 @@
 #
 code       : united-daily-news
-parent_code:
+parent_code: united-daily-news-group
 
 #
 name       : 聯合報
@@ -13,9 +13,9 @@ type    : COMPANY
 owner   : TAIWANESE
 
 #
-website    : https://udn.com
+website    : https://vip.udn.com
 description: |
-    [[united-daily-news]] 是台灣的一間新聞媒體，政黨傾向為 [[kuomintang]]。
+  [[united-daily-news]] 是台灣的一間報章媒體，政黨傾向為 [[kuomintang]]。
 
 #
 information:

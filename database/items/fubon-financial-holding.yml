@@ -1,0 +1,30 @@
+code       : fubon-financial-holding
+parent_code:
+
+name       : 富邦金控
+name_alias : Fubon Financial Holding
+name_others: [富邦金融控股股份有限公司, "Fubon Financial Holding Co."]
+
+category: FINANCE
+type    : COMPANY
+owner   : TAIWANESE
+
+website    : https://www.fubon.com/financialholdings
+description: |
+  [[fubon-financial-holding]] 是台灣主要的金融控股公司之一，也是台灣對中國投資規模排名第三的銀行，其對中國的投資已超過九百億台幣。
+
+#
+information:
+  - year       : 2018
+    invasion   : COLLABORATED
+    source     : https://www.thepaper.cn/newsDetail_forward_2697469
+    description: |
+      [[fubon-financial-holding]] 以直接股東身份入股《廈門銀行》，成為該行第二大股東，這是台灣金融機構首次直接入股中國銀行的案例。
+
+  - description: |
+      [[fubon-financial-holding]] 的董事長是台灣商人蔡明忠，其亦為 [[taiwan-mobile]] 董事長。
+
+  # - year       : 2021
+  #   source     : https://ec.ltn.com.tw/article/breakingnews/3483379
+  #   description: |
+  #     [[fubon-financial-holding]] 合併台灣銀行《日盛金控》而遭《經濟民主連合》提醒，因其在中國有過多投資，容易被中共政府管控。

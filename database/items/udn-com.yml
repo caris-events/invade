@@ -1,0 +1,17 @@
+code       : udn-com
+parent_code: united-daily-news
+
+name       : 聯合新聞網
+name_alias : udn.com
+name_others: [聯合線上股份有限公司, 聯合重工, "udn.com Co., Ltd."]
+
+category: MEDIA
+type    : COMPANY
+owner   : TAIWANESE
+
+website    : https://udn.com
+description: |
+  [[udn-com]] 是台灣主要的網路新聞媒體之一，政黨傾向為 [[kuomintang]]。
+
+#
+information:

@@ -1,0 +1,17 @@
+code       : momo
+parent_code: fubon-financial-holding
+
+name       : MOMO
+name_alias : 富邦媒體科技股份有限公司
+name_others: [momo購物網, momo電視購物, momo型錄]
+
+category: SHOPPING
+type    : COMPANY
+owner   : TAIWANESE
+
+website    : https://www.momoshop.com.tw
+description: |
+  [[momo]] 是台灣的線上零售業龍頭之一，提供網路購物、電視購物及型錄等多元購物服務。
+
+#
+information:

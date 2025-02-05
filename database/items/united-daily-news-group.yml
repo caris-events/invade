@@ -1,0 +1,26 @@
+code       : united-daily-news-group
+parent_code:
+
+name       : 聯合報系
+name_alias : United Daily News Group
+name_others: [聯合報股份有限公司, United Daily News Co., Ltd.]
+
+category: MEDIA
+type    : COMPANY
+owner   : TAIWANESE
+
+website    : https://udn.com
+description: |
+  [[united-daily-news-group]] 是台灣的主要媒體集團之一，擁有多家報紙與媒體平台，政黨傾向為 [[kuomintang]]。
+
+#
+information:
+  - year       : 2018
+    invasion   : MANIPULATED
+    source     : https://news.ltn.com.tw/news/politics/breakingnews/2641068
+    description: |
+      [[united-daily-news-group]] 旗下 [[world-journal]] 被美國智庫《胡佛研究所》指出近年來報導趨於親中。
+
+  - description: |
+      [[united-daily-news-group]] 創辦人王惕吾曾在 [[kuomintang]] 擔任中常委。
+

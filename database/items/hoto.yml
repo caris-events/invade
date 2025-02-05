@@ -1,0 +1,20 @@
+code       : hoto
+parent_code:
+
+name       : 小猴科技
+name_alias : HOTO
+name_others: [上海器外文化科技有限公司]
+
+category: MANUFACTURE
+type    : COMPANY
+owner   : CHINESE
+
+website    : https://hototools.com
+description: |
+  [[hoto]] 是中國上海的一家消費級工具公司，後成為小米生態鏈企業。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[hoto]] 的創辦人是中國商人錢晟旻，公司獲得了 [[xiaomi]] 與 [[shunwei-capital]] 的投資。

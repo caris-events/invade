@@ -1,0 +1,17 @@
+code       : world-journal
+parent_code: united-daily-news-group
+
+name       : 世界日報
+name_alias : World Journal
+name_others: []
+
+category: MEDIA
+type    : COMPANY
+owner   : TAIWANESE
+
+website    : https://www.worldjournal.com
+description: |
+  [[world-journal]] 是台灣的報紙媒體，主要服務於美國的台灣移民社群。
+
+#
+information:
