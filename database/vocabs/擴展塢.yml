@@ -1,0 +1,19 @@
+#
+word    : 擴展塢
+bopomofo: ㄎㄨㄛˋ ㄓㄢˇ ㄨˋ
+
+#
+category: HARDWARE
+explicit:
+
+#
+description: |
+  用以擴充電腦插孔（如：USB）的硬體設備。
+
+#
+examples:
+  - words      : [擴充埠, 擴充集線器]
+    correct    : |
+      這個{{擴充埠}}可以讓你同時連接多個 USB 設備。
+    incorrect  : |
+      這個{{擴展塢}}可以讓你同時連接多個 USB 設備。

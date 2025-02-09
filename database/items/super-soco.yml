@@ -1,0 +1,24 @@
+#
+code       : super-soco
+parent_code:
+
+#
+name       : Super Soco
+name_alias : 速珂
+name_others: [速珂智能科技（上海）有限公司, Super Soco Intelligent Technology]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://shop.vmotosoco.com
+description: |
+  [[super-soco]] 是中國上海的一家電動機車製造商，亦製造中共警用電動機車。後續與 [[vmoto]] 合作，在台灣由《瑞鴻國際》代理。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[super-soco]] 的創辦人是中國商人謝玉賢，曾任職於《本田》上海研究所。

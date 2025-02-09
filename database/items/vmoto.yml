@@ -1,0 +1,29 @@
+#
+code       : vmoto
+parent_code:
+
+#
+name       : Vmoto
+name_alias :
+name_others: [Vmoto Ltd., Vmoto Australia]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.vmoto.com
+description: |
+  [[vmoto]] 是一家澳洲電動機車製造商，並在中國南京設有製造工廠，後續主要與 [[super-soco]] 合作，在台灣由《瑞鴻國際》代理。
+
+#
+information:
+  - invasion   : COLLABORATED
+    year       : 2020
+    source     : https://en.wikipedia.org/wiki/Super_Soco
+    description: |
+      [[vmoto]] 與中國 [[super-soco]] 成立合資企業《Vmoto Soco》並共用在中國南京的工廠。
+
+  - description: |
+      [[super-soco]] 的創辦人是 Patrick Davin。

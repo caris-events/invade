@@ -1,0 +1,23 @@
+#
+code       : aihuanhuan
+parent_code: dachangjiang-group
+
+#
+name       : 換換
+name_alias :
+name_others: [愛換換能源有限公司]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://aihuanhuan.cn
+description: |
+  [[aihuanhuan]] 是在中國市場推出的電池交換系統品牌，由 [[gogoro]] 和 [[yadea]] 與 [[dachangjiang-group]] 合作，系統基於 [[gogoro-network]]。
+
+#
+information:
+  - description: |
+      [[aihuanhuan]] 由 [[yadea]] 和 [[dachangjiang-group]] 分別持股，[[dachangjiang-group]] 持股超過半數。

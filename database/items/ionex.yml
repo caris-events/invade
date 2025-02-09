@@ -1,0 +1,21 @@
+#
+code       : ionex
+parent_code: kymco
+
+#
+name       : Ionex
+name_alias :
+name_others: [光陽電動車]
+
+#
+category: VEHICLE
+type    : BRAND
+owner   : TAIWANESE
+
+#
+website    : https://www.ionex.com.tw
+description: |
+  [[ionex]] 是 [[kymco]] 推出的電動車品牌與電池交換系統，其假想對手是 [[gogoro]]。
+
+#
+information:

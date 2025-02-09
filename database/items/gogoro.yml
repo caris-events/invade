@@ -1,0 +1,29 @@
+#
+code       : gogoro
+parent_code:
+
+#
+name       : Gogoro
+name_alias :
+name_others: [睿能創意股份有限公司, Gogoro Inc.]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.gogoro.com
+description: |
+  [[gogoro]] 是台灣的第一大電動機車與電池交換系統開發商。
+
+#
+information:
+  - invasion   : COLLABORATED
+    year       : 2021
+    source     : https://auto.ltn.com.tw/news/18742
+    description: |
+      [[gogoro]] 與 [[yadea]] 和 [[dachangjiang-group]] 合作，在中國市場推出 [[aihuanhuan]] 電池交換系統。
+
+  - description: |
+      [[gogoro]] 的創辦人是香港商人陸學森，公司曾受 [[htc]] 董事長王雪紅、《潤泰集團》總裁尹衍樑投資。

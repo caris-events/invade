@@ -1,0 +1,24 @@
+#
+code       : yadea
+parent_code:
+
+#
+name       : 雅迪
+name_alias : Yadea
+name_others: [雅迪科技集團有限公司, "Yadea Technology Group Co., Ltd."]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.yadea.com
+description: |
+  [[yadea]] 是專注於電動自行車、機車研發的中國電動車製造商，也是中國首家上市的電動車企業。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[yadea]] 的創辦人是中國商人董經貴，曾是《中國人民解放軍》的汽車維修兵。

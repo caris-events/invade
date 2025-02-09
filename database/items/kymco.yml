@@ -1,0 +1,29 @@
+#
+code       : kymco
+parent_code:
+
+#
+name       : KYMCO
+name_alias : 光陽機車
+name_others: [光陽工業股份有限公司, Kwang Yang Motor Co., Ltd.]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.kymco.com.tw
+description: |
+  [[kymco]] 是台灣銷售前三大的機車製造商。
+
+#
+information:
+  - invasion   : COLLABORATED
+    year       : 2021
+    source     : https://en.wikipedia.org/wiki/Super_Soco
+    description: |
+      [[kymco]] 與中國 [[super-soco]] 簽署戰略合作協議，共同開發使用 [[ionex]] 電池交換系統的機車。
+
+  - description: |
+      [[kymco]] 的董事長是台灣商人柯勝峯，《本田》曾是合作夥伴與股東之一。

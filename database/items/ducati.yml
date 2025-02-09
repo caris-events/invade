@@ -1,0 +1,31 @@
+#
+code       : ducati
+parent_code: audi
+
+#
+name       : Ducati
+name_alias : 杜卡迪
+name_others: [Ducati Motor Holding S.p.A.]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://ducatitaiwan.com.tw
+description: |
+  [[ducati]] 是一家義大利摩托車製造商，以生產高性能摩托車聞名全球。
+
+#
+information:
+  - year       : 2018
+    invasion   : COLLABORATED
+    source     : https://en.wikipedia.org/wiki/Ducati_Motor_Holding_S.p.A.
+    description: |
+      [[ducati]] 與中國 [[super-soco]] 合作，推出杜卡迪風格的特別版電動速克達，進軍中國市場。
+
+  - year       : 2024
+    invasion   : MANIPULATED
+    description: |
+      [[ducati]] 雖然設有台灣官方網站，但國家語系列表只有中國而沒有台灣。

@@ -1,0 +1,21 @@
+#
+code       : gogoro-network
+parent_code: gogoro
+
+#
+name       : Gogoro Network
+name_alias :
+name_others: [Gogoro 電池交換系統]
+
+#
+category: VEHICLE
+type    : BRAND
+owner   : TAIWANESE
+
+#
+website    : https://network.gogoro.com/tw
+description: |
+  [[gogoro-network]] 是由 [[gogoro]] 建立的智慧電池交換平台，合作廠商有：《宏佳騰智慧電車》、《eMOVING》、《PGO》與《YAMAHA》。
+
+#
+information:

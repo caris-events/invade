@@ -1,0 +1,24 @@
+#
+code       : haojue
+parent_code:
+
+#
+name       : 豪爵
+name_alias : Haojue
+name_others: [豪爵控股有限公司, 豪爵鈴木, Haojue Holding Co., Ltd]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.haojue.com
+description: |
+  [[haojue]] 是中國摩托車投資、控股公司，擁有有許多全資子公司。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[haojue]] 的創辦人是中國商人王大威，早期技術合作對象有《鈴木》。

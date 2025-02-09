@@ -1,0 +1,21 @@
+#
+code       : dachangjiang-group
+parent_code: haojue
+
+#
+name       : 大長江集團
+name_alias :
+name_others: [Jiangmen Dachangjiang Group Co., Ltd.]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.jmdcj.moto188.com
+description: |
+  [[dachangjiang-group]] 是中國最大的摩托車製造企業。
+
+#
+information:
