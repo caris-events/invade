@@ -1,0 +1,35 @@
+#
+code       : bushiroad
+parent_code:
+
+#
+name       : 武士道
+name_alias : Bushiroad
+name_others: [株式会社ブシロード, Bushiroad Inc.]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://bushiroad.com
+description: |
+  [[bushiroad]] 是日本的娛樂公司，專注於集換式卡牌遊戲、電子遊戲開發。
+
+#
+information:
+  - year       : 2024
+    invasion   : COLLABORATED
+    source     : https://www.sohu.com/a/849967322_400919
+    description: |
+      [[bushiroad]] 旗下 [[bang-dream-mygo]] 與 [[houkai-gakuen-2]] 合作推出角色連動，並同時授權 [[bilibili]] 販售相關周邊。
+
+  - year       : 2025
+    invasion   : MANIPULATED
+    source     : https://news.ltn.com.tw/news/world/breakingnews/4946282
+    description: |
+      [[bushiroad]] 旗下 [[bang-dream-mygo]] 聲優立石凜因活動來台，在社群貼文中使用了中華民國國旗表情，隨後該貼文迅速被刪除。
+
+  - description: |
+      [[bushiroad]] 的創辦人是木谷高明，大股東有《住友三井銀行》。

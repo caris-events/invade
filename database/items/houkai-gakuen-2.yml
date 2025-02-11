@@ -1,0 +1,21 @@
+#
+code       : houkai-gakuen-2
+parent_code: mihoyo
+
+#
+name       : 崩壞學園 2
+name_alias : Houkai Gakuen 2
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://www.benghuai.com
+description: |
+  [[houkai-gakuen-2]] 是一款二次元風格橫向捲軸射擊遊戲。
+
+#
+information:
