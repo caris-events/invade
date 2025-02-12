@@ -1,0 +1,28 @@
+#
+code       : akamai
+parent_code:
+
+#
+name       : Akamai
+name_alias :
+name_others: [阿卡邁科技, Akamai Technologies]
+
+#
+category: INTERNET
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    :  https://www.akamai.com
+description: |
+  [[akamai]] 是一家美國雲端運算和網路安全公司，提供內容分發網路（CDN）服務。
+
+#
+information:
+  - invasion   : SUPPORTED
+    source     : https://www.akamai.com/zh/company/locations
+    description: |
+      [[akamai]] 官網的辦公地點將台北記載成「中國台北市」。
+
+  - description: |
+      [[akamai]] 的大股東有《先鋒領航集團》，聯合創辦人 Daniel Lewin 於 911 事件不幸罹難。

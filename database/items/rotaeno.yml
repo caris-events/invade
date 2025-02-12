@@ -1,0 +1,29 @@
+#
+code       : rotaeno
+parent_code:
+
+#
+name       : 旋轉音律
+name_alias : Rotaeno
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    :  https://rotaeno.com
+description: |
+  [[rotaeno]] 是一款透過手機陀螺儀功能遊玩的體感音樂遊戲。
+
+#
+information:
+  - year       : 2022
+    invasion   : COLLABORATED
+    source     : https://gnn.gamer.com.tw/detail.php?sn=232537
+    description: |
+      [[rotaeno]] 遊戲由 [[xd-network]] 發行，且購買虛擬寶物時會導向至心動支付頁面。
+
+  - description: |
+      [[rotaeno]] 由香港團隊 Dream Engine Games Limited 開發，曾於台灣尋找 [[unity]] 工程師。
