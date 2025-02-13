@@ -1,0 +1,19 @@
+#
+word    : 插眼
+bopomofo: ㄔㄚ ㄧㄢˇ
+
+#
+category: INTERNET
+explicit:
+
+#
+description: |
+  源自即時戰略遊戲，玩家可以在地圖上插眼來獲得更多資訊。在網路上表示「先作記號，等一下再來看」。
+
+#
+examples:
+  - words      : [之後再看, 等一下再看]
+    correct    : |
+      這篇文章真有意思，我決定{{之後再看}}。
+    incorrect  : |
+      這篇文章真有意思，我先{{插眼}}。
