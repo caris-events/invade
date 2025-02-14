@@ -5,7 +5,7 @@ parent_code: chinese-communist-party
 #
 name       : 海信集團
 name_alias : Hisense
-name_others: [Hisense Group Co., Ltd.]
+name_others: ["Hisense Group Co., Ltd."]
 
 #
 category: APPLIANCE

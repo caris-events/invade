@@ -1,0 +1,24 @@
+#
+code       : rivere-tech
+parent_code:
+
+#
+name       : 江融信科技
+name_alias : Rivere Tech
+name_others: [Jiangrongxin Technology]
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.riveretech.com
+description: |
+  [[rivere-tech]] 是中國北京的一家金融科技公司，專注於信用卡、零售信貸系統，擁有 600 多名員工，服務全球多家金融機構。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+     [[rivere-tech]] 的大股東有《深圳國中創投基金》，該基金由中國財政部實際控制。
