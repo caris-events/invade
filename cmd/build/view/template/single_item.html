@@ -41,16 +41,6 @@
         <meta property="og:updated_time" content="{{ .ModUnix | iso8601 }}" />
         <meta property="article:modified_time" content="{{ .ModUnix | iso8601 }}" />
 
-        <!-- JSON-LD -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                "name": "中國侵略資料庫",
-                "url": "{{ .BaseURL }}"
-            }
-        </script>
-
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="{{ .BaseURL }}/assets/favicons/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="{{ .BaseURL }}/assets/favicons/favicon-32x32.png" />
