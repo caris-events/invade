@@ -5,7 +5,7 @@ parent_code: rivere-tech
 #
 name       : 認和科技
 name_alias : AnyTech
-name_others: [新加坡商認和科技有限公司, ANY TECHNOLOGY PRIVATE LIMITED]
+name_others: [新加坡商認和科技有限公司, Any Technology Private Limited]
 
 #
 category: TECHNOLOGY
@@ -34,4 +34,4 @@ information:
   - invasion   : COLLABORATED
     source     : https://www.microzest.com/CaseShow.asp?-105.html
     description: |
-      [[anytxn]] 官網列出的合作夥伴與 [[rivere-tech]] 客戶相同，且 [[rivere-tech]] 表示於 2020 年成立新加坡公司，也與 [[anytxn]] 成立時間恰好吻合。
+      [[anytxn]] 官網列出的合作夥伴與 [[rivere-tech]] 客戶完全相同，且 [[rivere-tech]] 表示於 2020 年成立新加坡公司，也與 [[anytxn]] 成立時間恰好吻合。
