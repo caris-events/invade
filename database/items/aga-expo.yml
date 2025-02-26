@@ -5,7 +5,7 @@ parent_code:
 #
 name       : AGA 成人動漫展
 name_alias :
-name_others: [AGA 台北國際成人動漫&電玩展]
+name_others: [AGA 台北國際成人動漫&電玩展, 里歐漫玩工作室]
 
 #
 category: ENTERTAINMENT
@@ -24,6 +24,12 @@ information:
     source     : https://www.moea.gov.tw/MNS/populace/news/News.aspx?kind=1&menu_id=40&news_id=118458
     description: |
        [[aga-expo]] 創辦人江佳儒表示活動因經濟部要求而停辦，但網友要求出示公文時，江佳儒則表示無法公開。隔日，經濟部澄清並未發出相關公文。
+
+  - year       : 2025
+    invasion   : MANIPULATED
+    source     : https://www.facebook.com/JapariWeatherBureau/posts/pfbid0qN2q2KPwP4zN7ZjUty2JnTc7t7rmGNiLgAePoQ3RTQLTXy5NsjjQkhSezSfmSxQZl
+    description: |
+       [[aga-expo]] 以新名義《里歐漫玩工作室》舉辦活動，隨後聲稱因民眾投訴而不被政府批准，事後被發現是申請名目與實際內容不符才遭到拒絕。
 
   - description: |
       [[aga-expo]] 的主辦人是江佳儒，也稱米砂（Misa）。

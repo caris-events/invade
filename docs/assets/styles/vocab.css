@@ -118,12 +118,16 @@
 }
 
 .單字-螢光標記-重點 {
-    text-decoration: underline wavy var(--ts-gray-500);
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--ts-gray-500);
     text-underline-offset: 2px;
 }
 
 .單字-螢光標記-其他單字 {
-    text-decoration: underline dotted var(--ts-gray-500);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: var(--ts-gray-500);
     text-underline-offset: 2px;
 }
 
