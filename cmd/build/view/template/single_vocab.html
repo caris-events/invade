@@ -83,9 +83,9 @@
                         <div class="ts-wrap is-compact has-bottom-spaced tablet+:has-hidden">
                             <a href="{{ .BaseURL }}/vocabs?c={{ .Category }}" class="ts-badge is-secondary">{{ .CategoryStr }}</a>
                             {{ if eq .Explicit "LANGUAGE" }}
-                            <a href="{{ .BaseURL }}/vocabs?ss=true" class="ts-badge is-negative">粗俗語言</a>
+                            <a href="{{ .BaseURL }}/vocabs?se=true" class="ts-badge is-negative">粗俗語言</a>
                             {{ end }} {{ if eq .Explicit "SEXUAL" }}
-                            <a href="{{ .BaseURL }}/vocabs?se=true" class="ts-badge is-negative">性暗示</a>
+                            <a href="{{ .BaseURL }}/vocabs?ss=true" class="ts-badge is-negative">性暗示</a>
                             {{ end }}
                         </div>
 
@@ -113,9 +113,9 @@
                             <span class="ts-text is-secondary">分類：</span>
                             <a href="{{ .BaseURL }}/vocabs?c={{ .Category }}" class="ts-badge is-secondary">{{ .CategoryStr }}</a>
                             {{ if eq .Explicit "LANGUAGE" }}
-                            <a href="{{ .BaseURL }}/vocabs?ss=true" class="ts-badge is-negative">粗俗語言</a>
+                            <a href="{{ .BaseURL }}/vocabs?se=true" class="ts-badge is-negative">粗俗語言</a>
                             {{ end }} {{ if eq .Explicit "SEXUAL" }}
-                            <a href="{{ .BaseURL }}/vocabs?se=true" class="ts-badge is-negative">性暗示</a>
+                            <a href="{{ .BaseURL }}/vocabs?ss=true" class="ts-badge is-negative">性暗示</a>
                             {{ end }}
                         </div>
                     </div>

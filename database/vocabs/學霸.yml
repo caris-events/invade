@@ -1,0 +1,19 @@
+#
+word    : 學霸
+bopomofo: ㄒㄩㄝˊ ㄅㄚˋ
+
+#
+category: PRONOUN
+explicit:
+
+#
+description: |
+  學習成績優異的人。
+
+#
+examples:
+  - words      : [資優生, 優等生]
+    correct    : |
+      他是個{{資優生}}，每次段考總能名列前茅。
+    incorrect  : |
+      他是個{{學霸}}，每次段考總能名列前茅。

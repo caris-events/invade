@@ -1,0 +1,19 @@
+#
+word    : 狼性
+bopomofo: ㄌㄤˊ ㄒㄧㄥˋ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  形容人或事物具有強烈的競爭性、侵略性或野心，通常用於職場環境。
+
+#
+examples:
+  - words      : [野心]
+    correct    : |
+      他有強烈的{{野心}}，總是尋求新的機會。
+    incorrect  : |
+      他有強烈的{{狼性}}，總是尋求新的機會。

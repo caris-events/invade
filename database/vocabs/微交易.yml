@@ -1,0 +1,19 @@
+#
+word    : 微交易
+bopomofo: ㄨㄟˊ ㄐㄧㄠ ㄧˋ
+
+#
+category: FINANCE
+explicit:
+
+#
+description: |
+  在線上遊戲或網路平台，以小額現金購買虛擬物品或服務的行為，有時又做「課金」。
+
+#
+examples:
+  - words      : [小額付費]
+    correct    : |
+      他透過{{小額付費}}解鎖了遊戲的額外內容。
+    incorrect  : |
+      他透過{{微交易}}解鎖了遊戲的額外內容。

@@ -1,0 +1,19 @@
+#
+word    : 繃不住
+bopomofo: ㄅㄥ ㄅㄨˊ ㄓㄨˋ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  情緒快要無法抑制，通常表示：忍不住而快笑出來。
+
+#
+examples:
+  - words      : [忍不住]
+    correct    : |
+      他講的笑話讓我{{忍不住}}。
+    incorrect  : |
+      他講的笑話讓我{{繃不住}}。

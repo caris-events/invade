@@ -1,0 +1,19 @@
+#
+word    : 抑鬱症
+bopomofo: ㄧˋ ㄩˋ ㄓㄥˋ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  一種情緒障礙，特徵為持續悲傷、失去興趣或快樂感。
+
+#
+examples:
+  - words      : [憂鬱症]
+    correct    : |
+      {{憂鬱症}}使她一度迷失，但她找到方法重新掌控生活。
+    incorrect  : |
+      {{抑鬱症}}使她一度迷失，但她找到方法重新掌控生活。

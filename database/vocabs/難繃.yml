@@ -1,0 +1,19 @@
+#
+word    : 難繃
+bopomofo: ㄋㄢˊ ㄅㄥ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  表示某件事情讓人感到困難、無法忍受。
+
+#
+examples:
+  - words      : [難受]
+    correct    : |
+      看他走路的樣子，讓我覺得有點{{難受}}。
+    incorrect  : |
+      看他走路的樣子，讓我覺得有點{{難繃}}。

@@ -1,0 +1,25 @@
+#
+word    : 學渣
+bopomofo: ㄒㄩㄝˊ ㄓㄚ
+
+#
+category: PRONOUN
+explicit:
+
+#
+description: |
+  學習成績不佳的人。
+
+#
+examples:
+  - words      : [吊車尾]
+    correct    : |
+      他每次考試都{{吊車尾}}，成績從來沒有及格過。
+    incorrect  : |
+      他是個{{學渣}}，成績從來沒有及格過。
+
+  - words      : [後段班]
+    correct    : |
+      我的成績在校內算是{{後段班}}。
+    incorrect  : |
+      我的成績在校內算是{{學渣}}等級。
