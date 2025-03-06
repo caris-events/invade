@@ -1,0 +1,19 @@
+#
+word    : 啞光
+bopomofo: ㄧㄚˇ ㄍㄨㄤ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  表面無光澤、沒有光亮。
+
+#
+examples:
+  - words      : [霧面]
+    correct    : |
+      這台螢幕是{{霧面}}的，閱讀時不會反光。
+    incorrect  : |
+      這台[[屏幕]]是{{啞光}}的，閱讀時不會反光。

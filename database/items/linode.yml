@@ -1,0 +1,21 @@
+#
+code       : linode
+parent_code: akamai
+
+#
+name       : Linode
+name_alias :
+name_others: []
+
+#
+category: INTERNET
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    :  https://www.linode.com
+description: |
+   [[linode]] 是美國的雲端伺服器供應商，提供 VPS 及雲端運算服務，於 2022 年被 [[akamai]] 以 9 億美元收購。
+
+#
+information:

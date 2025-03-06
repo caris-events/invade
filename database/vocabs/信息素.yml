@@ -1,0 +1,19 @@
+#
+word    : 信息素
+bopomofo: ㄒㄧㄣˋ ㄒㄧˊ ㄙㄨˋ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  由動物或植物分泌的一種化學物質，用於傳遞或引起特定行為的信號。
+
+#
+examples:
+  - words      : [費洛蒙]
+    correct    : |
+      許多昆蟲會釋放{{費洛蒙}}來吸引異性進行交配。
+    incorrect  : |
+      許多昆蟲會釋放{{信息素}}來吸引異性進行交配。
