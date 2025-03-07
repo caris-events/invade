@@ -1,0 +1,24 @@
+#
+code       : lighthouse-capital
+parent_code:
+
+#
+name       : 光源資本
+name_alias : Lighthouse Capital
+name_others: []
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    :  https://www.lighthousecap.cn
+description: |
+  [[lighthouse-capital]] 是中國上海的一間私募股權投資基金管理和財務顧問業務公司。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[lighthouse-capital]] 的創辦人是中國商人鄭烜樂。

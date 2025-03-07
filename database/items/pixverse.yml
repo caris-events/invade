@@ -1,0 +1,21 @@
+#
+code       : pixverse
+parent_code: aisphere
+
+#
+name       : PixVerse
+name_alias :
+name_others: []
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    :  https://app.pixverse.ai/
+description: |
+  [[pixverse]] 是中國針對海外設計的 AI 影片產生平台，允許使用者輸入文字和圖片產生影片，廣泛應用於影音、廣告和動漫等領域。
+
+#
+information:

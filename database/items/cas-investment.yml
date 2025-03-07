@@ -1,0 +1,24 @@
+#
+code       : cas-investment
+parent_code: chinese-communist-party
+
+#
+name       : 國科投資
+name_alias :
+name_others: [中國科技產業投資管理有限公司, "CAS Investment Management Co., Ltd."]
+
+#
+category: FINANCE
+type    : GROUP
+owner   : CHINESE
+
+#
+website    :  https://www.casim.cn
+description: |
+  [[cas-investment]] 成立於 1987 年，前身是《中國科學院科技促進經濟發展基金會》，主要從事私募股權投資基金管理和財務顧問業務。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[cas-investment]] 是中共國有企業，大股東是《中國科學院》並設有黨支部。

@@ -1,0 +1,24 @@
+#
+code       : aisphere
+parent_code:
+
+#
+name       : 愛詩科技
+name_alias :
+name_others: []
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    :  https://aishiai.com
+description: |
+  [[aisphere]] 是中國的一家 AI 影片產生公司，主要研究 AI 影片產生模型及網際網路應用。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[aisphere]] 的創辦人是中國商人王長虎，曾任職於 [[microsoft]] 與 [[bytedance]]。大股東是 [[cas-investment]] 及 [[lighthouse-capital]]，並獲得至少 3 億人民幣的投資。
