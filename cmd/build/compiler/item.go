@@ -31,8 +31,8 @@ func CompileItems() ([]*entity.CompiledItem, error) {
 	)
 	for _, item := range items {
 		var (
-			invasion    = resolveInvasion(parents[item.Code], item)
-			information = resolveInfo(itemMap, item)
+			invasion, isSelfInvasion = resolveInvasion(parents[item.Code], item)
+			information              = resolveInfo(itemMap, item)
 		)
 		compiledItem := &entity.CompiledItem{
 			Code:          item.Code,
@@ -50,7 +50,7 @@ func CompileItems() ([]*entity.CompiledItem, error) {
 			InvasionStr:   entity.ItemInvasionStr[invasion],
 			Invasion:      invasion,
 			InvasionLevel: entity.ItemInvasionLevel[invasion],
-			Summary:       resolveSummary(itemMap, item, invasion),
+			Summary:       resolveSummary(itemMap, item, invasion, isSelfInvasion),
 			PlainText:     "",
 			Information:   information,
 			ModUnix:       item.ModTime.Unix(),
@@ -82,7 +82,7 @@ func CompileItems() ([]*entity.CompiledItem, error) {
 	return compilesSlice, nil
 }
 
-func resolveSummary(items map[string]*entity.Item, item *entity.Item, invasion entity.ItemInvasion) (summary string) {
+func resolveSummary(items map[string]*entity.Item, item *entity.Item, invasion entity.ItemInvasion, isSelf bool) (summary string) {
 	if invasion != entity.ItemInvasionUnknown {
 
 		summary += strings.TrimSpace(fmt.Sprintf("%s是", KeepSpace(item.Name)))
@@ -95,7 +95,11 @@ func resolveSummary(items map[string]*entity.Item, item *entity.Item, invasion e
 		case entity.ItemInvasionFunded:
 			summary += "有中國資金背景的"
 		case entity.ItemInvasionSupported:
-			summary += "支持中國侵略、統一的"
+			if isSelf {
+				summary += "支持中國侵略、統一的"
+			} else {
+				summary += "與中國侵略、統一有關的" // 如果侵略來自母公司而非自己，那就斟酌用詞
+			}
 		}
 		summary += fmt.Sprintf("%s；", entity.ItemTypeStr[item.Type])
 	}
@@ -298,11 +302,12 @@ func resolveInvasionNote(invasion entity.ItemInvasion, typ entity.ItemType, info
 	return
 }
 
-func resolveInvasion(parents []*entity.Item, item *entity.Item) entity.ItemInvasion {
-	var (
-		invasion = entity.ItemInvasionUnknown
-		//isChineseOwner = item.Owner == entity.ItemOwnerChinese
-	)
+func resolveInvasion(parents []*entity.Item, item *entity.Item) (invasion entity.ItemInvasion, isSelf bool) {
+	invasion = entity.ItemInvasionUnknown
+	isSelf = true
+	// var (
+	// 	isChineseOwner = item.Owner == entity.ItemOwnerChinese
+	// )
 	for _, info := range item.Information {
 		if entity.ItemInvasionLevel[info.Invasion] > entity.ItemInvasionLevel[invasion] {
 			invasion = info.Invasion
@@ -312,6 +317,7 @@ func resolveInvasion(parents []*entity.Item, item *entity.Item) entity.ItemInvas
 		for _, info := range parent.Information {
 			if entity.ItemInvasionLevel[info.Invasion] > entity.ItemInvasionLevel[invasion] {
 				invasion = info.Invasion
+				isSelf = false // indicates that the invasion wans't set by the item itself
 			}
 		}
 		//if parent.Owner == entity.ItemOwnerChinese {
@@ -321,7 +327,7 @@ func resolveInvasion(parents []*entity.Item, item *entity.Item) entity.ItemInvas
 	//if isChineseOwner && invasion == entity.ItemInvasionFunded {
 	//	invasion = entity.ItemInvasionSupported
 	//}
-	return invasion
+	return invasion, isSelf
 }
 
 func isValid(items []*entity.Item, item *entity.Item) error {
