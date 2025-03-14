@@ -1,0 +1,24 @@
+#
+code       : yoozoo
+parent_code:
+
+#
+name       : 游族網路
+name_alias : YOOZOO Interactive
+name_others: [Youzu, 游族網絡股份有限公司]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.youzu.com
+description: |
+  [[yoozoo]] 是一家中國電子遊戲公司，總部位於上海，專注於遊戲開發與發行。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[yoozoo]] 由中國商人林奇創立，大股東為《上海加游企業管理合伙企業》。

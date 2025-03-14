@@ -1,0 +1,21 @@
+#
+code       : fragpunk
+parent_code: netease
+
+#
+name       : 界外狂潮
+name_alias : FragPunk
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://jwkc.163.com
+description: |
+  [[fragpunk]] 是一款 5v5 英雄射擊遊戲，融合卡牌策略元素。由 [[netease]] 旗下《Bad Guitar Studio》開發，所屬網易雷火事業群。在台灣由 [[ican-entertainment]] 代理。
+
+#
+information:

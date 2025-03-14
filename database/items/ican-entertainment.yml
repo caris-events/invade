@@ -1,0 +1,29 @@
+#
+code       : ican-entertainment
+parent_code:
+
+#
+name       : 艾肯娛樂
+name_alias : ICAN Entertainment
+name_others: [艾肯娛樂集團, ICAN Entertainment Group]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.ican.com.tw
+description: |
+  [[ican-entertainment]] 是專門代理 [[netease]] 與 [[yoozoo]] 中國遊戲的台灣公司。
+
+#
+information:
+  - year       : 2013
+    invasion   : COLLABORATED
+    source     : https://medium.com/@cyohung/%E8%89%BE%E8%82%AF%E5%A8%9B%E6%A8%82%E9%80%B2%E8%BB%8D%E7%9B%B4%E6%92%AD-adec1c77cf60
+    description: |
+      [[ican-entertainment]] 成立之初就代理市值百億 [[yoozoo]] 公司的遊戲（如：女神聯盟、倩女幽魂 II），而被懷疑是 [[yoozoo]] 的在台公司。
+
+  - description: |
+      [[ican-entertainment]] 董事長是熊玉平，曾任職於《數碼戲胞》。
