@@ -15,9 +15,15 @@ owner   : FOREIGN
 #
 website    : https://www.sony.com.tw/zh
 description: |
-    [[sony]] 是日本的跨國綜合企業，是世界上最知名的電子產品生產公司之一。
+  [[sony]] 是日本的跨國綜合企業，是世界上最知名的電子產品生產公司之一。
 
 #
 information:
+  - year       : 2020
+    invasion   : COLLABORATED
+    source     : https://www.lanjinger.com/d/134283
+    description: |
+      [[sony]] 在中國成立 [[aniplex]] 分公司後，對 [[bilibili]] 投資 4 億美元並展開動畫、遊戲合作。
+
   - description: |
       [[sony]] 的大股東是《日本 Master Trust 信託》、《花旗銀行》。

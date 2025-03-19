@@ -1,0 +1,26 @@
+#
+code       : aniplex
+parent_code: sony
+
+#
+name       : Aniplex
+name_alias :
+name_others: [安尼普]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.aniplex.co.jp/
+description: |
+  [[aniplex]] 是日本的動畫公司，專注於動畫、音樂作品的製作與發行，以及遊戲和周邊商品的開發。
+
+#
+information:
+  - year       : 2019
+    invasion   : COLLABORATED
+    source     : https://psnine.com/gene/38066
+    description: |
+      [[aniplex]] 在中國成立《安尼普上海文化藝術有限公司》並時常與 [[bilibili]] 合作舉辦活動。

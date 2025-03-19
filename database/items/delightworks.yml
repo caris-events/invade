@@ -1,0 +1,23 @@
+#
+code       : delightworks
+parent_code:
+
+#
+name       : Delightworks
+name_alias :
+name_others: [ディライトワークス株式会社]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.delightworks.co.jp/
+description: |
+  [[delightworks]] 是日本的遊戲開發公司，知名作品有 [[fate-grand-order]]。遊戲開發部門在 2022 年被 [[aniplex]] 收購並成立了 [[lasengle]]。
+
+#
+information:
+  - description: |
+      [[delightworks]] 的創辦人是莊司顯仁。

@@ -1,0 +1,21 @@
+#
+code       : lasengle
+parent_code: aniplex
+
+#
+name       : LASENGLE
+name_alias :
+name_others: [株式会社ラセングル, 螺旋社]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.lasengle.co.jp/
+description: |
+  [[lasengle]] 是日本的遊戲開發公司，前身為 [[delightworks]] 的遊戲事業部門，後被 [[aniplex]] 全資收購。
+
+#
+information:

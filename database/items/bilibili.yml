@@ -19,12 +19,11 @@ description: |
 
 #
 information:
-  - invasion     : FUNDED
-    description: |
-      [[bilibili]] 的大股東包括中國商人陳睿、徐逸。
-
   - date       : 2020
     invasion   : SUPPORTED
     description: |
       [[bilibili]] 封鎖 [[hololive]] 藝人「桐生ココ」的頻道，因為該藝人於《YouTube》直播時將台灣視為國家。
 
+  - invasion     : FUNDED
+    description: |
+      [[bilibili]] 的大股東包括中國商人陳睿、徐逸。

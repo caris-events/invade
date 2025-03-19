@@ -1,0 +1,26 @@
+#
+code       : cygames
+parent_code: cyberagent
+
+#
+name       : Cygames
+name_alias :
+name_others: [賽傑思股份有限公司, Cygames Inc.]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.cygames.co.jp
+description: |
+  [[cygames]] 是日本東京的遊戲開發公司，主要業務有手機遊戲與動畫製作。
+
+#
+information:
+  - year       : 2022
+    invasion   : MANIPULATED
+    source     : https://games.yahoo.com.tw/news/pretty-derby-top-gun-024457167.html
+    description: |
+      [[cygames]] 旗下 [[uma-musume-pretty-derby]] 遊戲移除了角色服裝上的台灣（中華民國）國旗。

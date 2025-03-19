@@ -1,0 +1,21 @@
+#
+code       : uma-musume-pretty-derby
+parent_code: cygames
+
+#
+name       : 賽馬娘 Pretty Derby
+name_alias : Uma Musume
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://umamusume.jp/
+description: |
+  [[uma-musume-pretty-derby]] 是日本推出的跨媒體企劃，包括手機遊戲、動畫等，將日本賽馬擬人化為「賽馬娘」以培育她們參加比賽為主題，在台灣由 [[komoe-game]] 代理。
+
+#
+information:

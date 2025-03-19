@@ -19,3 +19,8 @@ description: |
 
 #
 information:
+  - year       : 2022
+    invasion   : SUPPORTED
+    source     : https://zh.wikipedia.org/wiki/%E8%B3%BD%E9%A6%AC%E5%A8%98_Pretty_Derby
+    description: |
+      [[komoe-game]] 代理 [[uma-musume-pretty-derby]] 遊戲時，其條約將台灣視為中華人民共和國管轄區。

@@ -1,0 +1,29 @@
+#
+code       : cyberagent
+parent_code:
+
+#
+name       : CyberAgent
+name_alias :
+name_others: [日本賽博艾堅特投資諮詢有限公司, "CyberAgent, Inc."]
+
+#
+category: INTERNET
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.cyberagent.co.jp/
+description: |
+  [[cyberagent]] 是日本東京的綜合性網路服務公司，主要業務涵蓋電子廣告、遊戲開發並在多國設有辦公地點，旗下擁有超過 4,500 名員工。
+
+#
+information:
+  - year       : 2018
+    invasion   : COLLABORATED
+    source     : https://www.huawei.com/cn/news/2018/5/IDN-Capable-Cloud-Data-Center-Network
+    description: |
+      [[cyberagent]] 宣佈與 [[huawei]] 合作，採用 CloudFabric 技術建構其資料中心。
+
+  - description: |
+      [[cyberagent]] 的創辦人是藤田晉，大股東是《日本 Master Trust 信託》。

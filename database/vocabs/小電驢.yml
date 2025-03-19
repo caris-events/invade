@@ -1,0 +1,19 @@
+#
+word       : 小電驢
+bopomofo   : ㄒㄧㄠˇ ㄉㄧㄢˋ ㄌㄩˊ
+
+#
+category: VEHICLE
+explicit:
+
+#
+description: |
+  指不須考照的電動自行車，通常動力弱於一般機車。
+
+#
+examples:
+  - words      : [電動自行車]
+    correct    : |
+      他剛讀上高中，爸媽就買了一台{{電動自行車}}給他通學。
+    incorrect  : |
+      他剛讀上高中，爸媽就買了一台{{小電驢}}給他通學。

@@ -1,0 +1,26 @@
+#
+code       : fate-grand-order
+parent_code: lasengle
+
+#
+name       : Fate/Grand Order
+name_alias : FGO
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://www.fate-go.jp/
+description: |
+  [[fate-grand-order]] 是一款基於 [[type-moon]] 的《Fate》系列所衍生的角色扮演卡牌遊戲，在台灣由 [[komoe-game]] 代理，《智冠科技》負責活動行銷。
+
+#
+information:
+  - year       : 2021
+    invasion   : MANIPULATED
+    source     : https://www.kocpc.com.tw/archives/403468
+    description: |
+      [[fate-grand-order]] 在中國的營收超過 4 億美元；並配合中共政府要求而將角色名稱改為編號，例如：「呂布奉先」被改為「狂戰士 049」。

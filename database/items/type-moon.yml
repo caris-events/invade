@@ -1,0 +1,28 @@
+#
+code       : type-moon
+parent_code:
+
+#
+name       : TYPE-MOON
+name_alias :
+name_others: [Notes 有限公司, 型月]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://typemoon.com/
+description: |
+  [[type-moon]] 是日本的同人社團，後轉為商業公司。知名作品包括《月姬》和《Fate/stay night》。
+
+#
+information:
+  - year       : 2016
+    invasion   : COLLABORATED
+    description: |
+      [[type-moon]] 與 [[bilibili]] 合作發行 [[fate-grand-order]] 手機遊戲。
+
+  - description: |
+      [[type-moon]] 的創辦人是武內崇和奈須蘑菇。
