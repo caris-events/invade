@@ -1,0 +1,29 @@
+#
+code       : china-railway-group-limited
+parent_code: chinese-communist-party
+
+#
+name       : 中國中鐵
+name_alias : China Railway Group Limited
+name_others: [中國中鐵股份有限公司, 中鐵十局]
+
+#
+category: CONSTRUCTION
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.crecg.com
+description: |
+  [[china-railway-group-limited]] 是中共大型國有上市公司，主要從事基礎設施建設、勘察設計、房地產開發等業務。
+
+#
+information:
+  - year       : 2025
+    source     : https://tw.news.yahoo.com/%E5%8E%BB%E5%B9%B4%E5%B0%81%E9%A0%82-%E6%B3%B0%E5%9C%8B%E5%AF%A9%E8%A8%88%E7%BD%B2-21%E5%84%84-%E6%96%B0%E5%A4%A7%E6%A8%93%E8%A2%AB%E9%9C%87%E5%9E%AE-%E4%B8%AD%E5%9C%8B%E4%B8%AD%E9%90%B5-103700963.html
+    description: |
+      [[china-railway-group-limited]] 子公司《中鐵十局》承建的泰國審計署新辦公大樓，因地震而倒塌。
+
+  - invasion   : FUNDED
+    description: |
+      [[china-railway-group-limited]] 的大股東是《中國鐵路工程集團有限公司》，屬於中共國有。
