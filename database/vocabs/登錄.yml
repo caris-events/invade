@@ -1,0 +1,20 @@
+#
+word    : 登錄
+bopomofo: ㄉㄥ ㄌㄨˋ
+notice  : 這個詞彙指的不是把資料鍵入系統。
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  透過事先註冊的個人資料，進入某個系統或平台。
+
+#
+examples:
+  - words      : [登入]
+    correct    : |
+      必須先{{登入}}帳號，才能使用這項功能。
+    incorrect  : |
+      必須先{{登錄}}帳號，才能使用這項功能。

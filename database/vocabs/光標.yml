@@ -1,0 +1,19 @@
+#
+word    : 光標
+bopomofo: ㄍㄨㄤ ㄅㄧㄠ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  在電腦螢幕上顯示的指標，通常用來指示目前的輸入位置。
+
+#
+examples:
+  - words      : [游標]
+    correct    : |
+      在編輯器中，{{游標}}會顯示在目前的輸入位置。
+    incorrect  : |
+      在編輯器中，{{光標}}會顯示在目前的輸入位置。

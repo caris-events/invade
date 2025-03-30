@@ -1,0 +1,19 @@
+#
+word    : 激光
+bopomofo: ㄐㄧ ㄍㄨㄤ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  一種特殊光波，通常用於切割、雕刻、打標等工藝，也能用於掃描或傳輸資料。
+
+#
+examples:
+  - words      : [雷射]
+    correct    : |
+      這家醫院使用{{雷射}}進行眼科手術。
+    incorrect  : |
+      這家醫院使用{{激光}}進行眼科手術。

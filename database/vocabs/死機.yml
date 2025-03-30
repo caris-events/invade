@@ -1,0 +1,19 @@
+#
+word    : 死機
+bopomofo: ㄙˇ ㄐㄧ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  指電腦或電子設備無法正常運作，通常需要重新啟動或關機來解決問題。
+
+#
+examples:
+  - words      : [當機]
+    correct    : |
+      我的手機突然{{當機}}了，無法使用。
+    incorrect  : |
+      我的手機突然{{死機}}了，無法使用。

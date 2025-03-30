@@ -1,0 +1,19 @@
+#
+word    : 協議
+bopomofo: ㄒㄧㄝˊ ㄧˋ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  在電腦科學中，指一組規則或標準，用於定義系統之間的通訊方式。
+
+#
+examples:
+  - words      : [協定]
+    correct    : |
+      網路{{協定}}定義了資料的傳輸方式。
+    incorrect  : |
+      網路{{協議}}定義了資料的傳輸方式。

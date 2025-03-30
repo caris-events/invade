@@ -1,0 +1,19 @@
+#
+word    : 常量
+bopomofo: ㄔㄤˊ ㄌㄧㄤˋ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  在程式設計中，指的是一個不會改變的值，通常用於表示固定的數值或參數。
+
+#
+examples:
+  - words      : [常數]
+    correct    : |
+      在這個程式中，{{常數}}的值不會改變。
+    incorrect  : |
+      在這個程式中，{{常量}}的值不會改變。

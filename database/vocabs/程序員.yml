@@ -1,0 +1,18 @@
+#
+word    : 程序員
+bopomofo: ㄔㄥˊ ㄒㄩˋ ㄩㄢˊ
+
+#
+category: PRONOUN
+explicit:
+
+#
+description: |
+  指從事程式設計、開發和維護的專業人員，通常負責撰寫、測試程式碼。
+#
+examples:
+  - words      : [程式設計師, 軟體工程師]
+    correct    : |
+      他是一名{{程式設計師}}，專門開發手機應用程式。
+    incorrect  : |
+      他是一名{{程序員}}，專門開發手機應用程式。

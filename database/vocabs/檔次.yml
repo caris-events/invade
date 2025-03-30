@@ -1,0 +1,25 @@
+#
+word    : 檔次
+bopomofo: ㄉㄤˇ ㄘˋ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  形容事物的等級或品質，通常用於評價或比較，英文指 Level。
+
+#
+examples:
+  - words      : [級, 等級]
+    correct    : |
+      這家餐廳的菜色真不錯，完全是五星{{級}}的享受。
+    incorrect  : |
+      這家餐廳的菜色真不錯，完全是五星{{檔次}}的享受。
+
+  - words      : [級別]
+    correct    : |
+      他的品味高人一等，跟我不在同個{{級別}}。
+    incorrect  : |
+      他的品味高人一等，跟我不在同個{{檔次}}。

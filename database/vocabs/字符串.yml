@@ -1,0 +1,19 @@
+#
+word    : 字符串
+bopomofo: ㄗˋ ㄈㄨˊ ㄔㄨㄢˋ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  在程式設計中，指一連串的字元組成的資料類型，用來表示文字或其他資料。
+
+#
+examples:
+  - words      : [字串]
+    correct    : |
+      在程式中，可以透過{{字串}}儲存使用者輸入的文字。
+    incorrect  : |
+      在程式中，可以透過{{字符串}}儲存使用者輸入的文字。

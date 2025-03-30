@@ -1,0 +1,34 @@
+#
+word    : 估計
+bopomofo: ㄍㄨ ㄐㄧˋ
+notice  : 這個詞彙被記載是因為多數人誤用於非「量詞」的情境。
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  原指對數量、程度進行估算，經常被誤用作推測某件事情。
+
+#
+examples:
+  - words      : [可能, 應該]
+    correct    : |
+      這個專案{{可能}}會被中止。
+    incorrect  : |
+      這個[[項目]]{{估計}}會被中止。
+
+  - words      : [大概]
+    correct    : |
+      我的手機越用越慢，{{大概}}只能買新的了。
+    incorrect  : |
+      我的手機越用越慢，{{估計}}只能買新的了。
+
+  - words      : [預估]
+    description: |
+      普遍用於較正式的場合，或是與數字有關的情境。
+    correct    : |
+      這場比賽的觀眾人數{{預估}}會超過一萬人。
+    incorrect  : |
+      這場比賽的觀眾人數{{估計}}會超過一萬人。

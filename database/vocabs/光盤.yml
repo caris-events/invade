@@ -1,0 +1,19 @@
+#
+word    : 光盤
+bopomofo: ㄍㄨㄤ ㄆㄢˊ
+
+#
+category: MEDIA
+explicit:
+
+#
+description: |
+  一種圓形的光學儲存媒介，稱為 CD，通常用於儲存音樂、影片或電腦資料。
+
+#
+examples:
+  - words      : [光碟]
+    correct    : |
+      這張{{光碟}}裡面有我最喜歡的音樂。
+    incorrect  : |
+      這張{{光盤}}裡面有我最喜歡的音樂。

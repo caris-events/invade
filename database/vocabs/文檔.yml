@@ -1,0 +1,25 @@
+#
+word    : 文檔
+bopomofo: ㄨㄣˊ ㄉㄤˇ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  通常指的是一份說明或指導的文件，包含了某個產品或系統的使用方法。
+
+#
+examples:
+  - words      : [文件]
+    correct    : |
+      他我花了很多時間撰寫這份{{文件}}。
+    incorrect  : |
+      他我花了很多時間撰寫這份{{文檔}}。
+
+  - words      : [說明書, 說明手冊, 教學手冊]
+    correct    : |
+      這台電視的{{說明書}}有詳細的安裝步驟。
+    incorrect  : |
+      這台電視的{{文檔}}有詳細的安裝步驟。

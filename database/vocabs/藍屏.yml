@@ -1,0 +1,27 @@
+#
+word    : 藍屏
+bopomofo: ㄌㄢˊ ㄆㄧㄥˊ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  指 Windows 系統發生嚴重錯誤時，螢幕上顯示的錯誤畫面，通常是藍底白字。
+
+#
+examples:
+  - words      : [藍色畫面錯誤, BSOD 錯誤]
+    description: |
+      這個詞彙源自微軟台灣正體的官方翻譯。
+    correct    : |
+      電腦因為記憶體錯誤而出現{{藍色畫面錯誤}}。
+    incorrect  : |
+      電腦因為[[內存]]錯誤而出現{{藍屏}}。
+
+  - words      : [當機]
+    correct    : |
+      遊戲玩到一半，電腦突然{{當機}}了。
+    incorrect  : |
+      遊戲玩到一半，電腦突然{{藍屏}}了。
