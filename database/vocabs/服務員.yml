@@ -1,0 +1,25 @@
+#
+word    : 服務員
+bopomofo: ㄈㄨˊ ㄨˋ ㄩㄢˊ
+
+#
+category: PRONOUN
+explicit:
+
+#
+description: |
+  指在餐廳、酒店等場所提供服務的工作人員，負責接待客人、點餐、上菜等工作。
+
+#
+examples:
+  - words      : [服務生]
+    correct    : |
+      他是一名{{服務生}}，負責接待客人和點餐。
+    incorrect  : |
+      他是一名{{服務員}}，負責接待客人和點餐。
+
+  - words      : [店員]
+    correct    : |
+      這家店的{{店員}}都很熱情，服務態度很好。
+    incorrect  : |
+      這家店的{{服務員}}都很熱情，服務態度很好。

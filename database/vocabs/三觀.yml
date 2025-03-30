@@ -1,0 +1,19 @@
+#
+word    : 三觀
+bopomofo: ㄙㄢ ㄍㄨㄢ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  由中共時任總書記胡錦濤提出的概念，後指「世界觀、人生觀、價值觀」。
+
+#
+examples:
+  - words      : [價值觀]
+    correct    : |
+      那場經歷顛覆了他的{{價值觀}}。
+    incorrect  : |
+      那場經歷顛覆了他的{{三觀}}。

@@ -1,0 +1,19 @@
+#
+word    : 反安裝
+bopomofo: ㄈㄢˇ ㄢ ㄓㄨㄤ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  指從電腦系統中移除、刪除某個應用程式或檔案。
+
+#
+examples:
+  - words      : [移除, 解除安裝]
+    correct    : |
+      我決定{{移除}}沒用到的程式。
+    incorrect  : |
+      我決定{{反安裝}}沒用到的[[程序]]。

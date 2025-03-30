@@ -1,0 +1,20 @@
+#
+word    : 大面積
+bopomofo: ㄉㄚˋ ㄇㄧㄢˋ ㄐㄧ
+notice  : 這個詞彙被記載是因為多數人誤用於非「空間」的形容。
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  原指空間或體積大小，經常被誤用於形容抽象的數量、範圍。
+
+#
+examples:
+  - words      : [大範圍]
+    correct    : |
+      這次因為群聚，而發生了{{大範圍}}的疫情感染。
+    incorrect  : |
+      這次因為群聚，而發生了{{大面積}}的疫情感染。

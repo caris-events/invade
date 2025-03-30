@@ -1,0 +1,19 @@
+#
+word    : 卸載
+bopomofo: ㄒㄧㄝˋ ㄗㄞˇ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  指從電腦系統中移除、刪除某個應用程式或檔案。
+
+#
+examples:
+  - words      : [移除, 解除安裝]
+    correct    : |
+      這款遊戲太佔儲存空間，我決定{{移除}}它。
+    incorrect  : |
+      這款遊戲太佔儲存空間，我決定{{卸載}}它。

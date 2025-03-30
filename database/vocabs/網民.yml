@@ -1,0 +1,19 @@
+#
+word    : 網民
+bopomofo: ㄨㄤˇ ㄇㄧㄣˊ
+
+#
+category: INTERNET
+explicit:
+
+#
+description: |
+  指在網路上的一般使用者。
+
+#
+examples:
+  - words      : [網友]
+    correct    : |
+      他在網路論壇上認識了很多{{網友}}。
+    incorrect  : |
+      他在網路論壇上認識了很多{{網民}}。

@@ -1,0 +1,20 @@
+#
+word    : 通過
+bopomofo: ㄊㄨㄥ ㄍㄨㄛˋ
+notice  : 這個詞彙指的是電腦術語，而非「穿過」某項事物。
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  表示數位資料傳遞時會經過的路線，英文稱作 through 或 by。
+
+#
+examples:
+  - words      : [透過]
+    correct    : |
+      這項功能讓音訊可以直接{{透過}} HDMI 輸出到電視。
+    incorrect  : |
+      這項功能讓[[音頻]]可以直接{{通過}} HDMI 輸出到電視。

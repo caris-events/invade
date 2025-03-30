@@ -1,0 +1,19 @@
+#
+word    : 合同
+bopomofo: ㄏㄜˊ ㄊㄨㄥˊ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  在法律上，指雙方當事人之間的約定或協議，具有法律效力的文件。
+
+#
+examples:
+  - words      : [合約, 契約]
+    correct    : |
+      雙方簽署的{{合約}}具有法律效力。
+    incorrect  : |
+      雙方簽署的{{合同}}具有法律效力。
