@@ -1,0 +1,26 @@
+#
+word    : 搞事
+bopomofo: ㄍㄠˇ ㄕˋ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  指的是故意製造麻煩或挑起爭端，通常帶有負面含義。
+
+#
+examples:
+  - words      : [惹事生非, 製造麻煩]
+    correct    : |
+      他總是喜歡{{惹事生非}}，讓周圍的人感到困擾。
+    incorrect  : |
+      他總是喜歡{{搞事}}，讓周圍的人感到困擾。
+
+  - words      : [鬧事]
+    correct    : |
+      他在派對上{{鬧事}}，讓大家都不開心。
+    incorrect  : |
+      他在派對上{{搞事}}，讓大家都不開心。
+

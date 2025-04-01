@@ -1,0 +1,25 @@
+#
+word    : 抽風
+bopomofo: ㄔㄡ ㄈㄥ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  通常電子設備的故障或異常，也可以用來形容人的行為不理智或不正常。
+
+#
+examples:
+  - words      : [故障]
+    correct    : |
+      這台電視今天又{{故障}}了，真是讓人頭痛。
+    incorrect  : |
+      這台電視今天又{{抽風}}了，真是讓人頭痛。
+
+  - words      : [發神經]
+    correct    : |
+      他最近有點{{發神經}}，常常做些奇怪的事情。
+    incorrect  : |
+      他最近有點{{抽風}}，常常做些奇怪的事情。

@@ -1,0 +1,19 @@
+#
+word    : 山寨
+bopomofo: ㄕㄢ ㄓㄞˋ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  源自中國廣東話，指的是模仿或仿製的產品，通常未經授權或不合法。
+
+#
+examples:
+  - words      : [仿冒]
+    correct    : |
+      他因為收入不高，所以只能買{{仿冒}}品。
+    incorrect  : |
+      他因為收入不高，所以只能買{{山寨}}品。

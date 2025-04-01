@@ -1,0 +1,26 @@
+#
+word    : 吃瓜
+bopomofo: ㄔ ㄍㄨㄚ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  指的是旁觀或關注他人的八卦或醜聞，通常不參與其中。
+
+#
+examples:
+  - words      : [看八卦, 聊八卦]
+    correct    : |
+      我喜歡在網路上{{看八卦}}，了解明星的私生活。
+    incorrect  : |
+      我喜歡在網路上{{吃瓜}}，了解明星的私生活。
+
+  - words      : [看戲, 看熱鬧]
+    correct    : |
+      當大家議論紛紛時，他選擇在一旁{{看戲}}。
+    incorrect  : |
+      當大家議論紛紛時，他選擇在一旁{{吃瓜}}。
+

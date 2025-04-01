@@ -1,0 +1,24 @@
+#
+code       : 2p-games
+parent_code:
+
+#
+name       : 2P Games
+name_alias : 利游
+name_others: [利游（北京）遊戲科技有限公司]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://2pgames.net
+description: |
+  [[2p-games]] 是中國北京的遊戲發行公司，專注於獨立遊戲的代理與發行。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[2p-games]] 的大股東是中國商人范高翔和莫瑞琪。

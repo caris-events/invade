@@ -1,0 +1,29 @@
+#
+code       : cathay-united-bank
+parent_code:
+
+#
+name       : 國泰世華
+name_alias : Cathay United Bank
+name_others: [國泰世華商業銀行]
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.cathaybk.com.tw
+description: |
+  [[cathay-united-bank]] 是台灣大型商業銀行之一，其業務涵蓋企業金融、零售金融、投資銀行等領域，在中國上海亦有資本額 20 億人民幣的分行。
+
+#
+information:
+  - year       : 2025
+    invasion   : COLLABORATED
+    source     : https://pourquoi.tw/china-influenced-banks-security-disputes/
+    description: |
+      [[cathay-united-bank]] 的信用卡系統曾由具有中共政府背景的 [[anytxn]] 承接，並與其母公司 [[rivere-tech]] 有合作關係。
+
+  - description: |
+      [[cathay-united-bank]] 的創辦人是蔡萬霖，曾任台北市議員。公司的大股東是《國泰金控》。

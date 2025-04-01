@@ -1,0 +1,26 @@
+#
+word    : 志願者
+bopomofo: ㄓˋ ㄩㄢˋ ㄓㄜˇ
+
+#
+category: PRONOUN
+explicit:
+
+#
+description: |
+  指的是自願參加某項活動或工作的人，通常是為了幫助他人或社會，而不求報酬。
+
+#
+examples:
+  - words      : [志工]
+    correct    : |
+      他是一名熱心的{{志工}}，經常參加社區服務。
+    incorrect  : |
+      他是一名熱心的{{志願者}}，經常參加社區服務。
+
+  - words      : [義工]
+    correct    : |
+      我在寺廟裡擔任{{義工}}，幫助清理環境。
+    incorrect  : |
+      我在寺廟裡擔任{{志願者}}，幫助清理環境。
+

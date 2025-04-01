@@ -1,0 +1,25 @@
+#
+word    : 博取眼球
+bopomofo: ㄅㄛˊ ㄑㄩˇ ㄧㄢˇ ㄑㄧㄡˊ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  指的是用某種方式吸引別人的注意力。
+
+#
+examples:
+  - words      : [引人注目]
+    correct    : |
+      他為了{{引人注目}}而穿著奇裝異服。
+    incorrect  : |
+      他為了{{博取眼球}}而穿著奇裝異服。
+
+  - words      : [吸睛]
+    correct    : |
+      這件衣服的設計非常{{吸睛}}。
+    incorrect  : |
+      這件衣服的設計非常{{博取眼球}}。

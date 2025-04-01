@@ -1,0 +1,26 @@
+#
+word    : 一次性
+bopomofo: ㄧˊ ㄘˋ ㄒㄧㄥˋ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  只能使用單次的物品，無法重複使用或回收。
+
+#
+examples:
+  - words      : [免洗]
+    correct    : |
+      {{免洗}}餐具非常方便，適合野餐使用。
+    incorrect  : |
+      {{一次性}}餐具非常方便，適合野餐使用。
+
+  - words      : [拋棄式]
+    correct    : |
+      他在網路上買了幾條{{拋棄式}}毛巾。
+    incorrect  : |
+      他在網路上買了幾條{{一次性}}毛巾。
+
