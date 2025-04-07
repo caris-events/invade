@@ -1,0 +1,34 @@
+#
+code       : burger-king-taiwan
+parent_code:
+
+#
+name       : 漢堡王台灣
+name_alias : Burger King Taiwan
+name_others: [台鋼漢堡王股份有限公司]
+
+#
+category: FOOD
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.burgerking.com.tw
+description: |
+  [[burger-king-taiwan]] 是全球連鎖速食品牌《漢堡王》在台灣的分公司，主要經營速食產品。
+
+#
+information:
+  - year       : 2020
+    invasion   : MANIPULATED
+    source     : https://buzzorange.com/citiorange/2020/03/31/the-burger-king-case/
+    description: |
+      [[burger-king-taiwan]] 在 Facebook 發文使用「武漢肺炎」一詞而引發中國不滿。在《漢堡王中國》要求下，時任台灣代理商 [[nexus-point]] 刪除了相關貼文。
+
+  - year       : 2024
+    source     : https://www.nexuspoint.com/wp-content/uploads/2024/03/C-Voluntary-Joint-PR-Final-Clean_TRAD-CH.pdf
+    description: |
+      [[burger-king-taiwan]] 原由 [[nexus-point]] 經營，後來其持有的股份全數出售給《台鋼集團》並退出經營。
+
+  - description: |
+      [[burger-king-taiwan]] 由《台鋼集團》代理。

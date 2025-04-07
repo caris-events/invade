@@ -1,0 +1,21 @@
+#
+code       : galemed
+parent_code: nexus-point
+
+#
+name       : 崇仁科技
+name_alias : GaleMed
+name_others: [崇仁科技事業股份有限公司, GaleMed Corporation]
+
+#
+category: MANUFACTURE
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.galemed.com
+description: |
+  [[galemed]] 是台灣的醫療器材製造商，專注於呼吸治療、呼吸訓練及睡眠管理等醫療器材的研發。
+
+#
+information:

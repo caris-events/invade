@@ -1,0 +1,29 @@
+#
+code       : nexus-point
+parent_code:
+
+#
+name       : 今翊資本
+name_alias : Nexus Point Capital
+name_others: []
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : HONGKONGESE
+
+#
+website    : https://www.nexuspoint.com/zh-hant
+description: |
+  [[nexus-point]] 是專注於亞洲地區的私募股權基金，主要投資於消費、醫療健康、工業製造。
+
+#
+information:
+  - year       : 2019
+    invasion   : COLLABORATED
+    source     : https://zh.wikipedia.org/zh-tw/%E5%B4%87%E4%BB%81%E7%A7%91%E6%8A%80%E4%BA%8B%E6%A5%AD%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
+    description: |
+      [[nexus-point]] 旗下 [[galemed]] 在武漢肺炎期間，儘管台灣醫療物資緊缺，仍向中國捐贈了大量醫療用品。
+
+  - description: |
+      [[nexus-point]] 由龔國權創立，也是 [[mbk-partners]] 的共同創辦人；後者曾是引發台灣反紅媒運動的主因。

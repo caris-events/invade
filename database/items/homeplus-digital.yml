@@ -1,0 +1,27 @@
+#
+code       : homeplus-digital
+parent_code:
+
+#
+name       : 中嘉數位
+name_alias : Homeplus
+name_others: [中嘉數位股份有限公司, "Homeplus Digital Co., Ltd.", 中嘉寬頻, 中嘉網路]
+
+#
+category: TELECOM
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.homeplus.net.tw
+description: |
+  [[homeplus-digital]] 是台灣的有線電視業者、網路供應商，曾差點被 [[want-want-china-times-group]] 收購。根據 2020 年統計，其有線電視市佔率為 22.44%。
+
+#
+information:
+  - year       : 2018
+    description: |
+      [[homeplus-digital]] 原由 [[mbk-partners]] 經營，後來因欲出售給 [[want-want-china-times-group]] 引發反媒體壟斷運動而未果，最終轉由《宏泰集團》收購。
+
+  - description: |
+      [[homeplus-digital]] 的大股東是《林堉璘宏泰教育文化公益基金》，屬於《宏泰集團》。

@@ -1,0 +1,29 @@
+#
+code       : mbk-partners
+parent_code:
+
+#
+name       : 安博凱直接投資基金
+name_alias : MBK Partners
+name_others: []
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.mbkpartnerslp.com
+description: |
+  [[mbk-partners]] 持有多家中國企業的股份，是亞洲最大的私募股權基金之一，也是引發台灣反紅媒運動的主因。
+
+#
+information:
+  - year       : 2007
+    invasion   : COLLABORATED
+    source     : https://buzzorange.com/citiorange/2020/03/31/the-burger-king-case/
+    description: |
+      [[mbk-partners]] 收購 [[homeplus-digital]]，並在三年後企圖將其轉售給 [[want-want-china-times-group]]，而引發了 2012 年台灣的反媒體壟斷運動。
+
+  - description: |
+      [[mbk-partners]] 由韓國商人金秉奏成立，其共同創辦人龔國權離開後自行成立了 [[nexus-point]]。
