@@ -1,0 +1,21 @@
+#
+code       : kakao-games
+parent_code: kakao
+
+#
+name       : Kakao Games
+name_alias :
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://kakaogames.com
+description: |
+  [[kakao-games]] 是韓國的國際跨平台遊戲公司，提供的遊戲服務涵蓋主機、PC 和行動裝置。
+
+#
+information:

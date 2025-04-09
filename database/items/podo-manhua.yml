@@ -1,0 +1,21 @@
+#
+code       : podo-manhua
+parent_code: tencent
+
+#
+name       : PODO 漫畫
+name_alias :
+name_others: [PODO Manhua, 葡萄騰科技, 中國成都葡萄騰科技有限公司, HongKong TXKP Limited]
+
+#
+category: MEDIA
+type    : PLATFORM
+owner   : CHINESE
+
+#
+website    : https://www.podoteng.com
+description: |
+  [[podo-manhua]] 是由 [[kakao-page]] 與 [[tencent]] 聯合推出的中國數位漫畫平台，[[tencent]] 持有過半股份。
+
+#
+information:

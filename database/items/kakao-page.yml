@@ -1,0 +1,21 @@
+#
+code       : kakao-page
+parent_code: kakao
+
+#
+name       : Kakao Page
+name_alias :
+name_others: [카카오페이지, Kakao Webtoon]
+
+#
+category: MEDIA
+type    : PLATFORM
+owner   : FOREIGN
+
+#
+website    : https://page.kakao.com
+description: |
+  [[kakao-page]] 是韓國的數位內容平台，專注於網絡漫畫、小說及其他多媒體內容的分發與銷售。
+
+#
+information:

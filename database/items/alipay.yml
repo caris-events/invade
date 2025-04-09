@@ -1,0 +1,21 @@
+#
+code       : alipay
+parent_code: ant-group
+
+#
+name       : 支付寶
+name_alias : Alipay
+name_others: [支付寶（中國）網絡技術有限公司]
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.alipay.com
+description: |
+  [[alipay]] 是中國的第三方支付服務平台。最初為 [[alibaba]] 旗下《淘寶》的部門，後獨立運營。
+
+#
+information:

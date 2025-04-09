@@ -1,0 +1,42 @@
+#
+code       : kakao
+parent_code:
+
+#
+name       : Kakao
+name_alias :
+name_others: [Kakao Corporation, 카카오]
+
+#
+category: INTERNET
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.kakaocorp.com
+description: |
+  [[kakao]] 是一家韓國的網際網路公司，提供即時通訊、行動支付與網路銀行，多家子公司背後都有中國資金。
+
+#
+information:
+  - year       : 2018
+    invasion   : FUNDED
+    source     : https://www.koreaherald.com/view.php?ud=20180214000622
+    description: |
+      [[kakao]] 旗下 [[kakao-games]] 獲得 [[tencent]] 投資 2 億人民幣，並成為股東之一。
+
+  - year       : 2021
+    invasion   : MANIPULATED
+    source     : https://www.inside.com.tw/article/25093-kakao-entertainment-webtoon-china-self-censorship
+    description: |
+      [[kakao]] 旗下 [[kakao-page]] 向內容製作夥伴發函，要求遵守《中國不當言論自查和規避指引》。此舉被認為是與 [[tencent]] 合作成立 [[podo-manhua]] 進軍中國市場有關。
+
+  - year       : 2024
+    invasion   : COLLABORATED
+    source     : https://www.theregister.com/2024/08/15/kakao_pay_data_leak/
+    description: |
+      [[kakao]] 旗下 [[kakao-pay]] 獲得 [[alipay]] 的 2 億美元投資，並在未經用戶同意下將逾 4,000 萬名用戶資料交予 [[alipay]]。
+
+  - invasion   : FUNDED
+    description: |
+      [[kakao]] 由韓國商人金範洙成立，大股東有 [[tencent]]。

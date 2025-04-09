@@ -1,0 +1,21 @@
+#
+code       : kakao-pay
+parent_code: kakao
+
+#
+name       : Kakao Pay
+name_alias :
+name_others: []
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.kakaopay.com
+description: |
+  [[kakao-pay]] 是韓國的行動支付與數位金融服務平台，使用者數量超過 4,000 萬人。
+
+#
+information:

@@ -1,0 +1,24 @@
+#
+code       : ant-group
+parent_code:
+
+#
+name       : 螞蟻集團
+name_alias : Ant Group
+name_others: [螞蟻金服, 螞蟻科技集團股份有限公司]
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.antgroup.com
+description: |
+  [[ant-group]] 是被中共政府嚴格監管的網路金融公司，拆分自 [[alibaba]] 旗下《淘寶》的支付平台 [[alipay]]。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[ant-group]] 的大股東是 [[alibaba]]。
