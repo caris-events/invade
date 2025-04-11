@@ -1,0 +1,21 @@
+#
+code       : heliga-goodlife
+parent_code: heliga
+
+#
+name       : 美好人生
+name_alias : Dr. Rice
+name_others: [Heliga Goodlife]
+
+#
+category: FOOD
+type    : BRAND
+owner   : TAIWANESE
+
+#
+website    : https://www.heliga-goodlife.com
+description: |
+  [[heliga-goodlife]] 是主打無添加、無麩質的米餅品牌。
+
+#
+information:

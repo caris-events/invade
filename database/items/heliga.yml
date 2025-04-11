@@ -1,0 +1,30 @@
+#
+code       : heliga
+parent_code:
+
+#
+name       : 海力捷
+name_alias : Heliga
+name_others: [海力捷國際開發股份有限公司]
+
+#
+category: FOOD
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.heliga.com.tw
+description: |
+  [[heliga]] 是專注於自然農法產品開發、銷售的健康食品公司。
+
+#
+information:
+  - year       : 2021
+    invasion   : COLLABORATED
+    source     : https://www.consumers.org.tw/product-detail-3700109.html
+    description: |
+      [[heliga]] 旗下 [[golden-rice-cookies]] 委由 [[want-want]] 生產製造。《消費者文教基金會》指出，若該產品作為嬰幼兒食品檢驗，存在重金屬含量超標的疑慮。
+
+  - description: |
+      [[heliga]] 的大股東是詹益清。
+

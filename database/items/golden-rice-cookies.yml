@@ -1,0 +1,21 @@
+#
+code       : golden-rice-cookies
+parent_code: heliga-goodlife
+
+#
+name       : 稻鴨米餅
+name_alias : Golden Rice Cookies
+name_others: []
+
+#
+category: FOOD
+type    : BRAND
+owner   : TAIWANESE
+
+#
+website    : https://www.heliga-goodlife.com
+description: |
+  [[golden-rice-cookies]] 是以自然農法栽培的「稻鴨米」為特色而其製成的米餅。此產品由 [[want-want]] 旗下《宜蘭食品工業股份有限公司》製造。
+
+#
+information:

@@ -5,7 +5,7 @@ parent_code:
 #
 name       : 旺旺集團
 name_alias : Want Want
-name_others: [旺旺食品股份有限公司]
+name_others: [旺旺食品股份有限公司, 宜蘭食品工業股份有限公司]
 
 #
 category: FOOD
@@ -15,7 +15,7 @@ owner   : TAIWANESE
 #
 website    : https://www.want-want.com/
 description: |
-    [[want-want]] 是台灣的食品公司，在中國成立總部，且超過 40 家的分公司與工廠都在中國。知名食品為旺旺仙貝，政治傾向為 [[kuomintang]]。
+  [[want-want]] 是台灣的食品公司，在中國成立總部，且超過 40 家的分公司與工廠都在中國。知名食品為旺旺仙貝，政治傾向為 [[kuomintang]]。
 
 #
 information:
