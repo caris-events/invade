@@ -1,0 +1,26 @@
+#
+code       : glohow
+parent_code: kakao-games
+
+#
+name       : Glohow
+name_alias :
+name_others: [克爾豪股份有限公司, "Glohow Holdings Pte. Ltd."]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://glohow.com
+description: |
+  [[glohow]] 是新加坡的遊戲發行公司，2020 年成為韓國 [[kakao-games]] 旗下子公司，主要負責全球遊戲發行、行銷。
+
+#
+information:
+  - year       : 2025
+    invasion   : COLLABORATED
+    source     : https://www.gamespress.com/Embark-on-an-Epic-Subculture-Action-RPG-Adventure-with-Black-Beacon
+    description: |
+      [[glohow]] 與中國 [[mingzhou-network-technology]] 合作發行 [[black-beacon]]，且該開發商受 [[tencent]] 投資。

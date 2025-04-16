@@ -1,0 +1,21 @@
+#
+code       : black-beacon
+parent_code: mingzhou-network-technology
+
+#
+name       : 黑色信標
+name_alias : Black Beacon
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : CHINESE
+
+#
+website    : https://blackbeacon.astaplay.com/zh-tw
+description: |
+  [[black-beacon]] 是中國製作的科幻元素 ARPG 動作角色扮演遊戲，在台灣由 [[glohow]] 負責發行。
+
+#
+information:

@@ -1,0 +1,21 @@
+#
+code       : asta-play
+parent_code: glohow
+
+#
+name       : ASTA Play
+name_alias :
+name_others: [astaplay]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://astaplay.com
+description: |
+  [[asta-play]] 是 [[glohow]] 旗下的遊戲發行品牌商。
+
+#
+information:

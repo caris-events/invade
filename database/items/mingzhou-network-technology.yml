@@ -1,0 +1,31 @@
+#
+code       : mingzhou-network-technology
+parent_code:
+
+#
+name       : 明晝科技
+name_alias : Mingzhou Network Technology
+name_others: [明晝網路科技, 明昼]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.mingzhougame.com
+description: |
+  [[mingzhou-network-technology]] 是中國廣州的遊戲開發公司，團隊成員來自 [[kuro-games]] 與 [[lingxi-games]]。
+
+#
+information:
+  # - year       : 2021
+  #   invasion   : FUNDED
+  #   source     : http://www.youxixinzhi.com/?p=15505
+  #   description: |
+  #     [[mingzhou-network-technology]] 得到 [[tencent]] 的投資，且 [[tencent]] 成為股東之一。
+
+  - year       : 2021
+    invasion   : FUNDED
+    description: |
+      [[mingzhou-network-technology]] 的代表人是中國商人劉璽，大股東有 [[tencent]]。

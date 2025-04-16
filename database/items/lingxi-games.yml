@@ -1,0 +1,21 @@
+#
+code       : lingxi-games
+parent_code: alibaba
+
+#
+name       : 靈犀互娛
+name_alias : Lingxi Games
+name_others: [廣州靈犀互動娛樂有限公司, Lingxi Interactive Entertainment]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.lingxigames.com
+description: |
+  [[lingxi-games]] 是中國廣州的遊戲開發公司，屬於 [[alibaba]] 團隊，主要負責遊戲開發與發行。
+
+#
+information:
