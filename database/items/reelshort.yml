@@ -1,0 +1,21 @@
+#
+code       : reelshort
+parent_code: crazy-maple-studio
+
+#
+name       : ReelShort
+name_alias :
+name_others: []
+
+#
+category: MEDIA
+type    : PLATFORM
+owner   : CHINESE
+
+#
+website    : https://www.reelshort.com/
+description: |
+  [[reelshort]] 是中國所開發的短劇串流平台，主打每集約 1 分鐘的劇情（單部戲劇超過 50 集）。該平台以低成本製作、快速更新的模式吸引觀眾。
+
+#
+information:

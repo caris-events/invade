@@ -1,0 +1,21 @@
+#
+code       : crazy-maple-studio
+parent_code: col-group
+
+#
+name       : 楓葉互動
+name_alias : Crazy Maple Studio
+name_others: []
+
+#
+category: MEDIA
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://crazymaplestudios.com
+description: |
+  [[crazy-maple-studio]] 是 [[col-group]] 在美國矽谷設立的空殼公司，主要用以代理在中國開發的應用程式。
+
+#
+information:

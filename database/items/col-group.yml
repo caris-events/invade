@@ -1,0 +1,30 @@
+#
+code       : col-group
+parent_code:
+
+#
+name       : 中文在線
+name_alias : COL Group
+name_others: [中文在線集團]
+
+#
+category: MEDIA
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.col.com
+description: |
+  [[col-group]] 是中國的數位出版與內容平台公司，專注於數位閱讀、版權運營、互動小說、短劇。
+
+#
+information:
+  - year       : 2019
+    invasion   : FUNDED
+    source     : https://q.stock.sohu.com/cn%2Cgg%2C300364%2C4541256370.shtml
+    description: |
+      [[col-group]] 的間接股東有《雄安集團基金管理有限公司》，該公司由中共《河北省人民政府》持有。
+
+  - invasion   : FUNDED
+    description: |
+      [[col-group]] 的創辦人是中國商人童之磊，間接股東包含中共政府。
