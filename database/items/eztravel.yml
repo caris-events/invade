@@ -1,21 +1,21 @@
 #
-code       : ctrip
+code       : eztravel
 parent_code:
 
 #
-name       : 攜程旅行
-name_alias : Ctrip
-name_others:
+name       : ezTravel
+name_alias : 易遊網
+name_others: [易遊網旅行社股份有限公司, 易遊網旅行社, "ezTravel Co., Ltd."]
 
 #
-catergory: TRAVEL
-type     : COMPANY
-owner    : CHINESE
+category: TRAVEL
+type    : COMPANY
+owner   : TAIWANESE
 
 #
-website    : https://www.ctrip.com/
+website    : https://www.eztravel.com.tw
 description: |
-  [[ctrip]] 是中國一間大型旅行公司，其提供旅遊網站與資訊相關服務。
+  [[eztravel]] 是一家台灣的旅遊電商平台，提供國內外旅遊服務，包括團體旅遊、自由行、機票、訂房、票券當地遊等。
 
 #
 information:
@@ -23,13 +23,8 @@ information:
     invasion   : COLLABORATED
     source     : https://www.facebook.com/watchout.tw/posts/%E4%B8%8D%E6%83%B3%E6%8E%9B%E4%B8%AD%E5%9C%8B%E5%9C%8B%E6%97%97%E4%B9%9F%E4%B8%8D%E8%A1%8C%E5%97%8Eeztravel%E6%98%93%E9%81%8A%E7%B6%B2%E4%B8%AD%E8%B3%87%E6%97%85%E8%A1%8C%E7%A4%BE%E4%B8%8B%E6%9E%B6%E9%95%B7%E6%A6%AE%E6%A1%82%E5%86%A0%E9%85%92%E5%BA%97%E5%89%8D%E9%99%A3%E5%AD%90%E6%9C%89%E4%BD%8D%E4%B8%AD%E5%9C%8B%E7%B6%B2%E7%B4%85%E5%9C%A8%E6%B3%95%E5%9C%8B%E5%B7%B4%E9%BB%8E%E7%9A%84-%E9%95%B7%E6%A6%AE%E6%A1%82%E5%86%A0%E9%85%92%E5%BA%97%E5%8F%AA%E5%9B%A0%E9%A3%AF%E5%BA%97%E5%A4%A7%E5%BB%B3%E5%85%A7%E6%B2%92%E6%9C%89%E6%87%B8%E6%8E%9B-%E4%B8%AD%E5%9C%8B%E5%9C%8B%E6%97%97%E5%BE%8C%E6%8A%B1%E6%80%A8%E6%9C%AA%E6%9E%9C%E6%86%A4%E8%80%8C/814711784159800/
     description: |
-      [[ctrip]] 將位於法國巴黎的《長榮桂冠酒店》從列表中移除，原因是飯店大廳內未懸掛中國國旗。
-
-  - year       : 2024
-    invasion   : SUPPORTED
-    description: |
-      [[ctrip]] 官方網站的頁面將台灣列為「中國台灣」。
+      [[eztravel]] 將位於法國巴黎的《長榮桂冠酒店》從列表中移除，原因是飯店大廳內未懸掛中國國旗。
 
   - invasion   : FUNDED
     description: |
-      [[ctrip]] 的大股東是中國商人梁建章與 [[baidu]]。
+      [[eztravel]] 的聯合創辦人是陳明明，公司大股東有 [[ctrip]]；陳明明後期自行成立了 [[kkday]]。

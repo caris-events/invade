@@ -1,0 +1,36 @@
+#
+code       : kkday
+parent_code:
+
+#
+name       : KKday
+name_alias :
+name_others: [酷遊天股份有限公司]
+
+#
+category: TRAVEL
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.kkday.com
+description: |
+  [[kkday]] 是一家台灣的旅遊電商平台，提供全球各地的在地旅遊體驗服務。
+
+#
+information:
+  - year       : 2018
+    invasion   : FUNDED
+    source     : https://meet.bnext.com.tw/articles/view/43042?
+    description: |
+      [[kkday]] 在 B+ 輪融資中，獲得 [[alibaba]] 的投資。
+
+  - year       : 2024
+    invasion   : SUPPORTED
+    source     : https://tw.news.yahoo.com/%E7%8D%A8%E5%AE%B6%E6%8A%95%E8%A8%B4-kkday%E6%8B%BF%E5%9C%8B%E7%99%BC%E5%9F%BA%E9%87%91%E5%AE%A3%E5%82%B3-%E5%A4%A7%E9%99%B8%E5%9C%8B%E6%85%B6-%E5%AE%A2%E6%9C%8D%E4%B9%9F%E7%A8%B1-%E4%B8%AD%E5%9C%8B%E5%8F%B0%E7%81%A3-090100441.html
+    description: |
+      [[kkday]] 在頁面介紹中，稱台灣遊客為「中國台灣地區」；且客服曾以簡體中文回應「你的套餐（商品）屬中國台灣」。
+
+  - invasion   : FUNDED
+    description: |
+      [[kkday]] 的創辦人是陳明明，同時也是有中資背景 [[eztravel]] 的聯合創辦人。
