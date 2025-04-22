@@ -1,0 +1,19 @@
+#
+word    : 自動檔
+bopomofo: ㄗˋ ㄉㄨㄥˋ ㄉㄤˇ
+
+#
+category: VEHICLE
+explicit:
+
+#
+description: |
+  指自動變速器的車輛，與手動變速相對。
+
+#
+examples:
+  - words      : [自排]
+    correct    : |
+      他開{{自排}}車，上坡十分輕鬆。
+    incorrect  : |
+      他開{{自動檔}}車，上坡十分輕鬆。

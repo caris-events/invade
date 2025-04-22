@@ -1,0 +1,19 @@
+#
+word    : 亞像素
+bopomofo: ㄧㄚˇ ㄒㄧㄤˋ ㄙㄨˋ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  指電腦螢幕單個像素裡的子像素，通常是紅、綠、藍三個顏色的子像素組成一個完整的像素。
+
+#
+examples:
+  - words      : [子像素]
+    correct    : |
+      三星透過 PenTile 技術，降低{{子像素}}數量來節省成本。
+    incorrect  : |
+      三星透過 PenTile 技術，降低{{亞像素}}數量來節省成本。

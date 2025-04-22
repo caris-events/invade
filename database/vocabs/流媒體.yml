@@ -1,0 +1,20 @@
+#
+word    : 流媒體
+bopomofo: ㄌㄧㄡˊ ㄇㄟˊ ㄊㄧˇ
+
+#
+category: MEDIA
+explicit:
+
+#
+description: |
+  指透過網路串流播放的媒體內容，可以邊下載邊播放。
+
+#
+examples:
+  - words      : [串流媒體]
+    correct    : |
+      這部電影下個月會在{{串流媒體}}平台上映。
+    incorrect  : |
+      這部電影下個月會在{{流媒體}}平台上映。
+

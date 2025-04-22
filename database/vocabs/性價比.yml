@@ -1,0 +1,19 @@
+#
+word    : 性價比
+bopomofo: ㄒㄧㄥˋ ㄐㄧㄚˋ ㄅㄧˇ
+
+#
+category: FINANCE
+explicit:
+
+#
+description: |
+  指商品的價格與其品質的比值，越高表示越划算。
+
+#
+examples:
+  - words      : [CP值]
+    correct    : |
+      這個東西的{{CP值}}很高，用起來很值得。
+    incorrect  : |
+      這個東西的{{性價比}}很高，用起來很值得。

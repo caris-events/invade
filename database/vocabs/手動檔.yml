@@ -1,0 +1,19 @@
+#
+word    : 手動檔
+bopomofo: ㄕㄡˇ ㄉㄨㄥˋ ㄉㄤˇ
+
+#
+category: VEHICLE
+explicit:
+
+#
+description: |
+  指手動變速器的車輛，與自動變速相對。
+
+#
+examples:
+  - words      : [手排]
+    correct    : |
+      他喜歡駕駛的樂趣，所以選擇了{{手排}}車。
+    incorrect  : |
+      他喜歡駕駛的樂趣，所以選擇了{{手動檔}}車。

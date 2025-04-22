@@ -1,0 +1,19 @@
+#
+word    : 面料
+bopomofo: ㄇㄧㄢˋ ㄌㄧㄠˋ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  指衣物的表面材料，通常是布料或織物。
+
+#
+examples:
+  - words      : [布料] # 表布, 裡布
+    correct    : |
+      這件衣服的{{布料}}很柔軟，穿起來很舒服。
+    incorrect  : |
+      這件衣服的{{面料}}很柔軟，穿起來很舒服。

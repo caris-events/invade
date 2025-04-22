@@ -1,0 +1,19 @@
+#
+word    : 手刀
+bopomofo: ㄕㄡˇ ㄉㄠ
+
+#
+category: VERB
+explicit:
+
+#
+description: |
+  指不加思索就行動，原用於形容中國買家搶先下單後，才跟賣家討價還價的惡劣行為。
+
+#
+examples:
+  - words      : [立刻, 立即, 馬上]
+    correct    : |
+      產品才剛上市，他就{{立刻}}下單了。
+    incorrect  : |
+      產品才剛上市，他就{{手刀}}下單了。

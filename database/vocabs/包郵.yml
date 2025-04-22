@@ -1,0 +1,19 @@
+#
+word    : 包郵
+bopomofo: ㄅㄠ ㄧㄡˊ
+
+#
+category: FINANCE
+explicit:
+
+#
+description: |
+  指賣家承擔運費，買家不需要支付運費的交易方式。
+
+#
+examples:
+  - words      : [含運]
+    correct    : |
+      這件衣服{{含運}}，買家不需要負擔運費。
+    incorrect  : |
+      這件衣服{{包郵}}，買家不需要負擔運費。
