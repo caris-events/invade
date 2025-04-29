@@ -29,6 +29,7 @@ const (
 	VocabCategoryAdjective  VocabCategory = "ADJECTIVE"
 	VocabCategoryAdverb     VocabCategory = "ADVERB"
 	VocabCategoryVehicle    VocabCategory = "VEHICLE"
+	VocabCategoryClothing   VocabCategory = "CLOTHING"
 )
 
 type VocabExplicit string
@@ -117,6 +118,7 @@ var (
 		VocabCategoryAdjective:  "形容詞",
 		VocabCategoryAdverb:     "副詞",
 		VocabCategoryVehicle:    "交通工具",
+		VocabCategoryClothing:   "服飾",
 	}
 	VocabCategories = []VocabCategory{
 		VocabCategoryUnknown,
@@ -138,6 +140,7 @@ var (
 		VocabCategoryAdjective,
 		VocabCategoryAdverb,
 		VocabCategoryVehicle,
+		VocabCategoryClothing,
 	}
 	VocabExplicitStr = map[VocabExplicit]string{
 		VocabExplicitUnknown:  "未知",

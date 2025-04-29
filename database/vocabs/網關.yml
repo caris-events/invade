@@ -1,0 +1,19 @@
+#
+word    : 網關
+bopomofo: ㄨㄤˇ ㄍㄨㄢ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  英文指 Gateway，指將資料轉發到其他裝置或不同協定的網路設備。
+
+#
+examples:
+  - words      : [閘道器]
+    correct    : |
+      這台{{閘道器}}可以將 Zigbee 協定轉發到 Wi-Fi 網路。
+    incorrect  : |
+      這台{{閘道器}}可以將 Zigbee [[協議]]轉發到 Wi-Fi 網路。

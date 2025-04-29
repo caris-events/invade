@@ -1,0 +1,19 @@
+#
+word    : 圈錢
+bopomofo: ㄑㄩㄢ ㄑㄧㄢˊ
+
+#
+category: FINANCE
+explicit:
+
+#
+description: |
+  指透過合法但不道德的方式來取得金錢，有時也形容網紅為了錢而利用粉絲的情感。
+
+#
+examples:
+  - words      : [騙錢]
+    correct    : |
+      他總是向粉絲推銷很爛的行動電源，根本在{{騙錢}}。
+    incorrect  : |
+      他總是向粉絲推銷很爛的[[充電寶]]，根本在{{圈錢}}。

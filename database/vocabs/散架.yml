@@ -1,0 +1,25 @@
+#
+word    : 散架
+bopomofo: ㄙㄢˇ ㄐㄧㄚˋ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  表示某人身心疲憊，或是某項物品趨近於解體、崩壞狀態。
+
+#
+examples:
+  - words      : [解體]
+    correct    : |
+      這台車騎起來有夠吵，聽起來都快{{解體}}了。
+    incorrect  : |
+      這台車騎起來有夠吵，聽起來都快{{散架}}了。
+
+  - words      : [撐不住, 無法承受]
+    correct    : |
+      他整天熬夜工作，身體已經快{{撐不住}}了。
+    incorrect  : |
+      他整天熬夜工作，身體已經快{{散架}}了。

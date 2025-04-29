@@ -1,0 +1,19 @@
+#
+word    : 回放
+bopomofo: ㄏㄨㄟˊ ㄈㄤˋ
+
+#
+category: MEDIA
+explicit:
+
+#
+description: |
+  某段即時內容被錄製下來，事後可以重新回顧。例如：YouTube、Twitch 等平台的直播片段。
+
+#
+examples:
+  - words      : [重播]
+    correct    : |
+      我來不急看直播，只好晚點再看{{重播}}。
+    incorrect  : |
+      我來不急看直播，只好晚點再看{{回放}}。

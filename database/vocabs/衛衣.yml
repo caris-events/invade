@@ -1,0 +1,25 @@
+#
+word    : 衛衣
+bopomofo: ㄨㄟˋ ㄧ
+
+#
+category: CLOTHING
+explicit:
+
+#
+description: |
+  指厚的針織運動衣服，外觀類似長袖 T-Shirt 但再厚一點。
+
+#
+examples:
+  - words      : [大學T]
+    correct    : |
+      天氣有點涼，我穿上了之前買的那件{{大學T}}。
+    incorrect  : |
+      天氣有點涼，我穿上了之前買的那件{{衛衣}}。
+
+  - words      : [長袖棉T]
+    correct    : |
+      夏天到了，每間服飾店都在出清{{長袖棉T}}。
+    incorrect  : |
+      夏天到了，每間服飾店都在出清{{衛衣}}。

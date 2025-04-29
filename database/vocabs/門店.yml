@@ -1,0 +1,31 @@
+#
+word    : 門店
+bopomofo: ㄇㄣˊ ㄉㄧㄢˋ
+
+#
+category: PLACE
+explicit:
+
+#
+description: |
+  通常指有實體的商店或服務據點，但也泛指與商店有關的詞彙。
+
+#
+examples:
+  - words      : [門市, 店面]
+    correct    : |
+      這家公司在全台灣設有多間{{門市}}。
+    incorrect  : |
+      這家公司在全台灣設有多間{{門店}}。
+
+  - words      : [服務據點, 零售通路]
+    correct    : |
+      商品若需要送修，可以至{{服務據點}}尋求協助。
+    incorrect  : |
+      商品若需要送修，可以至{{門店}}尋求協助。
+
+  - words      : [商店]
+    correct    : |
+      他的公司購買了一套全新的{{商店}}管理系統。
+    incorrect  : |
+      他的公司購買了一套全新的{{門店}}管理系統。

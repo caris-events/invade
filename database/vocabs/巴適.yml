@@ -1,0 +1,31 @@
+#
+word    : 巴適
+bopomofo: ㄅㄚ ㄕˋ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  源自中國四川方言，泛指：很好、合適、舒服等意思。
+
+#
+examples:
+  - words      : [不錯, 很好]
+    correct    : |
+      這道菜餚味道{{不錯}}哦！
+    incorrect  : |
+      這道菜餚味道{{巴適}}哦！
+
+  - words      : [舒適, 舒暢]
+    correct    : |
+      今天的天氣很好，真{{舒適}}！
+    incorrect  : |
+      今天的天氣很好，{{巴適}}！
+
+  - words      : [爽到不行]
+    correct    : |
+      明天不用上班，{{爽到不行}}！
+    incorrect  : |
+      明天不用上班，{{巴適}}得板！
