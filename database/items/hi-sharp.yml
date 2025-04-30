@@ -1,0 +1,30 @@
+#
+code       : hi-sharp
+parent_code:
+
+#
+name       : 昇銳電子
+name_alias : Hi-Sharp
+name_others: [昇銳電子股份有限公司, "Hi Sharp Electronics Co., Ltd."]
+
+#
+category: ELECTRONIC
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.hisharp.com
+description: |
+  [[hi-sharp]] 是台灣監視設備製造商，專注於智慧監控產品的研發與銷售。
+
+#
+information:
+  - year       : 2025
+    invasion   : COLLABORATED
+    source     : https://www.cna.com.tw/news/asoc/202503200345.aspx
+    description: |
+      [[hi-sharp]] 從中國進口監視器主機並偽裝成「台灣製造」進行銷售，同時得標多項台灣政府採購案。期間亦被人發現監視器會連線至中國伺服器。
+
+  - description: |
+      [[hi-sharp]] 的董事長是江添貴，同時也是《車威視科技》董事長。
+
