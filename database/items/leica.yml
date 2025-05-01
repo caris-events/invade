@@ -1,0 +1,40 @@
+#
+code       : leica
+parent_code:
+
+#
+name       : Leica
+name_alias : 徠卡
+name_others: [Leica Camera AG, 徠卡相機]
+
+#
+category: ELECTRONIC
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://leica-camera.com
+description: |
+  [[leica]] 是德國的高階相機與光學設備製造商，後期多與中國公司合作開發手機攝影技術。
+
+#
+information:
+  - year       : 2016
+    invasion   : COLLABORATED
+    source     : https://www.wired.com/2016/04/huawei-p9-leica-dual-cameras
+    description: |
+      [[leica]] 與 [[huawei]]、[[xiaomi]] 建立長期合作關係，為其智慧型手機共同開發攝影技術。
+
+  - year       : 2019
+    invasion   : MANIPULATED
+    source     : https://www.bbc.com/zhongwen/trad/chinese-news-47990197
+    description: |
+      [[leica]] 公關聲明表示，網路上流傳由巴西創作者拍攝、使用徠卡相機製作的廣告影片，因內容涉及 1989 年天安門事件，公司將盡力避免宣傳或轉發相關內容。
+
+  - year       : 2024
+    invasion   : SUPPORTED
+    description: |
+      [[leica]] 官網的電子新聞註冊表單將台灣標示為「中國台灣」。
+
+  - description: |
+      [[leica]] 的大股東是奧地利投資公司《ACM Projektentwicklung GmbH》與美國《黑石集團》。

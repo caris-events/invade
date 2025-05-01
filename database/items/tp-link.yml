@@ -1,0 +1,28 @@
+#
+code       : tp-link
+parent_code:
+
+#
+name       : TP-Link
+name_alias :
+name_others: [普聯技術有限公司, 聯洲國際有限公司, TP-Link Systems]
+
+#
+category: ELECTRONIC
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.tp-link.com
+description: |
+  [[tp-link]] 是中國深圳的網路設備製造商，後期為了規避制裁而成立了美國公司《TP-Link Systems》。
+#
+information:
+  - year       : 2024
+    invasion   : SUPPORTED
+    description: |
+      [[tp-link]] 官網的辦公地點將台灣記載成「中國台灣省」。
+
+  - invasion   : FUNDED
+    description: |
+      [[tp-link]] 的創辦人是中國商人趙建軍，畢業於中國《上海交通大學》，該校曾被揭露與中共軍方合作進行網路攻擊行動。
