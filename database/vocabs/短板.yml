@@ -1,0 +1,25 @@
+#
+word    : 短板
+bopomofo: ㄉㄨㄢˇ ㄅㄢˇ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  形容一個人或事物的缺點或不足之處。
+
+#
+examples:
+  - words      : [缺點]
+    correct    : |
+      他的{{缺點}}是溝通能力不強。
+    incorrect  : |
+      他的{{短板}}是溝通能力不強。
+
+  - words      : [缺陷]
+    correct    : |
+      這個專案的{{缺陷}}就是資金不足。
+    incorrect  : |
+      這個[[項目]]的{{短板}}就是資金不足。

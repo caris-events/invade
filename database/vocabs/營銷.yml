@@ -1,0 +1,25 @@
+#
+word    : 營銷
+bopomofo: ㄧㄥˊ ㄒㄧㄠ
+
+#
+category: FINANCE
+explicit:
+
+#
+description: |
+  指販售某個產品或服務的行為，也可以指一個品牌的行銷策略或手法。
+
+#
+examples:
+  - words      : [行銷]
+    correct    : |
+      這個產品的{{行銷}}策略非常成功。
+    incorrect  : |
+      這個產品的{{營銷}}策略非常成功。
+
+  - words      : [推廣, 推銷]
+    correct    : |
+      這個品牌的{{推廣}}活動吸引了很多消費者。
+    incorrect  : |
+      這個品牌的{{營銷}}活動吸引了很多消費者。

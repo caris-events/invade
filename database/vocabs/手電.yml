@@ -1,0 +1,19 @@
+#
+word    : 手電
+bopomofo: ㄕㄡˇ ㄉㄧㄢˋ
+
+#
+category: HARDWARE
+explicit:
+
+#
+description: |
+  指小型的手持式手電筒，通常使用電池供電，並且有燈泡或 LED 燈作為光源。
+
+#
+examples:
+  - words      : [手電筒]
+    correct    : |
+      他在黑暗中用{{手電筒}}照明。
+    incorrect  : |
+      他在黑暗中用{{手電}}照明。
