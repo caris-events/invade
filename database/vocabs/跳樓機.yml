@@ -1,0 +1,27 @@
+#
+word    : 跳樓機
+bopomofo: ㄊㄧㄠˋ ㄌㄡˊ ㄐㄧ
+
+#
+category: HARDWARE
+explicit:
+
+#
+description: |
+  出現於遊樂園的自由落體設施，會先將乘客送到高空再突然釋放、落下。
+
+#
+examples:
+  - words      : [大怒神]
+    correct    : |
+      他剛體驗過{{大怒神}}的威力，現在還在發抖。
+    incorrect  : |
+      他剛體驗過{{跳樓機}}的威力，現在還在發抖。
+
+  - words      : [自由落體]
+    correct    : |
+      玩完{{自由落體}}，我的靈魂還卡在半空中沒回來。
+    incorrect  : |
+      玩完{{跳樓機}}，我的靈魂還卡在半空中沒回來。
+
+
