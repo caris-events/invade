@@ -1,0 +1,29 @@
+#
+code       : dji
+parent_code:
+
+#
+name       : 大疆創新
+name_alias : DJI
+name_others: [大疆創新科技有限公司]
+
+#
+category: ELECTRONIC
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.dji.com/tw
+description: |
+  [[dji]] 是中國深圳的無人機、攝影機公司，全球市占率高達七成，產品廣泛應用於消費、商業與政府領域，被列入美國貿易黑名單對象之一。
+
+#
+information:
+  - year       : 2025
+    invasion   : SUPPORTED
+    description: |
+      [[dji]] 的官方商店網站將台灣標記為「中國台灣」，且禁飛區域以「Taiwan, China」標示。
+
+  - invasion   : FUNDED
+    description: |
+      [[dji]] 的創辦人是中國商人汪滔，大股東有 [[sequoia-china]]。
