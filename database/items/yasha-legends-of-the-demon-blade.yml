@@ -1,0 +1,21 @@
+#
+code       : yasha-legends-of-the-demon-blade
+parent_code: 7quark
+
+#
+name       : 百劍討妖傳綺譚
+name_alias : "Yasha: Legends of the Demon Blade"
+name_others: []
+
+#
+category: GAME
+type    : GAME
+owner   : TAIWANESE
+
+#
+website    : https://7quark.com/games-zh
+description: |
+  [[yasha-legends-of-the-demon-blade]] 是 [[7quark]] 開發並由《GSE》發行的 Roguelite 和風動作 RPG 遊戲，曾獲得 2024 年台灣遊戲開發補助。
+
+#
+information:
