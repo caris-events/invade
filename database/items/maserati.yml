@@ -1,0 +1,25 @@
+#
+code       : maserati
+parent_code: stellantis
+
+#
+name       : 瑪莎拉蒂
+name_alias : Maserati
+name_others: []
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.maserati.com
+description: |
+  [[maserati]] 是義大利的豪華汽車品牌，曾傳出中共國有企業《奇瑞汽車》有收購其公司的可能。
+
+#
+information:
+  - year       : 2025
+    invasion   : SUPPORTED
+    description: |
+      [[maserati]] 官方網站將台灣標示為「China Taiwan」。

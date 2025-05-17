@@ -1,0 +1,24 @@
+#
+code       : leapmotor
+parent_code:
+
+#
+name       : 零跑汽車
+name_alias : Leapmotor
+name_others: [浙江零跑科技股份有限公司, "Zhejiang Leapmotor Technology Co., Ltd."]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.leapmotor.com
+description: |
+  [[leapmotor]] 是中國浙江的電動車製造商，從核心零組件到整車設計皆自主開發，後於香港交易所上市。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[leapmotor]] 的創辦人是中國商人朱江明，股東有 [[stellantis]]、《中金公司》、《上海電氣》與 [[sequoia-china]] 等。

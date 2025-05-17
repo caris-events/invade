@@ -1,0 +1,29 @@
+#
+code       : stellantis
+parent_code:
+
+#
+name       : 斯泰蘭蒂斯
+name_alias : Stellantis N.V.
+name_others: ["斯泰蘭蒂斯有限公司"]
+
+#
+category: VEHICLE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.stellantis.com
+description: |
+  [[stellantis]] 是荷蘭的跨國汽車集團，於 2021 年由法國《PSA 集團》與美國《Fiat Chrysler》合併而成。
+
+#
+information:
+  - year       : 2024
+    invasion   : COLLABORATED
+    source     : https://www.stellantis.com/en/news/press-releases/2024/may/leapmotor-international-begins-operations-to-expand-global-electric-vehicle-sales-starting-september-2024-in-nine-european-countries-followed-by-other-key-growth-regions
+    description: |
+      [[stellantis]] 與 [[leapmotor]] 成立合資公司《Leapmotor International》。[[stellantis]] 持股過半，負責在中國以外的地區銷售與製造 [[leapmotor]] 的電動車。
+
+  - description: |
+      [[maserati]] 的董事長是 John Elkann，大股東有義大利《Exor N.V.》。
