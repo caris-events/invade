@@ -1,0 +1,20 @@
+#
+word    : 陰陽怪氣
+bopomofo: ㄧㄣ ㄧㄤˊ ㄍㄨㄞˋ ㄑㄧˋ
+deprecation: 因為轉品是語文中常見的手法，且此詞彙在轉品為動詞後沒有失去原本的含義。
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  指一種語氣或態度，表面上看似中立或客觀，實際上卻帶有諷刺、挖苦的意味。原先作為形容詞使用，但經常被誤用為動詞。
+
+#
+examples:
+  - words      : [怪裡怪氣, 假鬼假怪]
+    correct    : |
+      他又在那邊{{怪裡怪氣}}了。
+    incorrect  : |
+      他又要{{陰陽怪氣}}人了。

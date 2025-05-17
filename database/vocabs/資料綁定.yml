@@ -1,0 +1,19 @@
+#
+word    : 資料綁定
+bopomofo: ㄗ ㄌㄧㄠˋ ㄅㄤˇ ㄉㄧㄥˋ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  指資料與介面元件相互連結，當資料異動時便會驅動介面更新。
+
+#
+examples:
+  - words      : [資料繫結]
+    correct    : |
+      這個程式框架支援{{資料繫結}}，當資料異動時，介面也會更新。
+    incorrect  : |
+      這個程式框架[[支持]]{{資料綁定}}，當資料異動時，介面也會更新。

@@ -1,0 +1,19 @@
+#
+word    : 巨好吃
+bopomofo: ㄐㄩˋ ㄏㄠˇ ㄔ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  指某個食物非常好吃，用於形容食物的美味程度；中國時常以大氣的方式形容，如「小米巨能寫中性筆」。
+
+#
+examples:
+  - words      : [超好吃]
+    correct    : |
+      這家餐廳的牛排{{超好吃}}，我每次都想點兩份。
+    incorrect  : |
+      這家餐廳的牛排{{巨好吃}}，我每次都想點兩份。

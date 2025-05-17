@@ -1,0 +1,31 @@
+#
+word    : 大實話
+bopomofo: ㄉㄚˋ ㄕˊ ㄏㄨㄚˋ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  指某件事情的真相，有時顯得格外刺耳。
+
+#
+examples:
+  - words      : [真心話]
+    correct    : |
+      他說出了{{真心話}}，讓大家心裡都坦蕩了。
+    incorrect  : |
+      他說出了{{大實話}}，讓大家心裡都坦蕩了。
+
+  - words      : [實話, 真話]
+    correct    : |
+      在會議上，他說出了別人都不敢講的{{實話}}。
+    incorrect  : |
+      在會議上，他說出了別人都不敢講的{{大實話}}。
+
+  - words      : [人話]
+    correct    : |
+      講那什麼{{人話}}？他才聽不進去。
+    incorrect  : |
+      講那什麼{{大實話}}？他才聽不進去。

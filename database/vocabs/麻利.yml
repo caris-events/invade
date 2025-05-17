@@ -1,0 +1,19 @@
+#
+word    : 麻利
+bopomofo: ㄇㄚˊ ㄌㄧˋ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  源自中國北方方言，指做事迅速、靈活，形容人動作敏捷、效率高。
+
+#
+examples:
+  - words      : [快, 趕快, 迅速]
+    correct    : |
+      火車快要趕不上了，動作{{快}}點！
+    incorrect  : |
+      火車快要趕不上了，動作{{麻利}}點！

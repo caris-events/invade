@@ -1,0 +1,19 @@
+#
+word    : 顯存
+bopomofo: ㄒㄧㄢˇ ㄘㄨㄣˊ
+
+#
+category: HARDWARE
+explicit:
+
+#
+description: |
+  指顯示卡上的記憶體，主要用來儲存顯示卡運算的資料。
+
+#
+examples:
+  - words      : [顯示記憶體]
+    correct    : |
+      這張顯示卡的{{顯示記憶體}}有 8 GB。
+    incorrect  : |
+      這張顯示卡的{{顯存}}有 8 GB。

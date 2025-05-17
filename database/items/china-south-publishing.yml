@@ -1,0 +1,21 @@
+#
+code       : china-south-publishing
+parent_code: chinese-communist-party
+
+#
+name       : 中南出版傳媒集團
+name_alias : China South Publishing & Media Group
+name_others: [中南傳媒, 中南出版傳媒集團股份有限公司]
+
+#
+category: MEDIA
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.zncmjt.com
+description: |
+  [[china-south-publishing]] 是中共國有的主要出版業之一，由中國湖南省政府持有。業務涵蓋圖書、報刊、數位媒體、印刷與發行等領域。
+
+#
+information:

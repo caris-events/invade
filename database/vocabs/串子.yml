@@ -1,0 +1,27 @@
+#
+word    : 串子
+bopomofo: ㄔㄨㄢˋ ㄗ˙
+
+#
+category: PRONOUN
+explicit:
+
+#
+description: |
+  通常指反串的鬧事者，有時也指刻意挑撥離間、製造事端的人。
+
+#
+examples:
+  - words      : [反串]
+    correct    : |
+      這篇文章的{{反串}}太多了，留言區顯得烏煙瘴氣。
+    incorrect  : |
+      這篇文章的{{串子}}太多了，留言區顯得烏煙瘴氣。
+
+  - words      : [釣魚]
+    correct    : |
+      他平常沒事，就喜歡在網路上{{釣魚}}。
+    incorrect  : |
+      他平常沒事，就喜歡在網路上當{{串子}}。
+
+

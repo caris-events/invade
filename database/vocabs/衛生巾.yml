@@ -1,0 +1,19 @@
+#
+word    : 衛生巾
+bopomofo: ㄨㄟˋ ㄕㄥ ㄐㄧㄣ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  一種女性生理期使用的衛生用品，通常由吸水材料製成，用來吸收經血。
+
+#
+examples:
+  - words      : [衛生棉]
+    correct    : |
+      她隨身攜帶一片{{衛生棉}}，以備不時之需。
+    incorrect  : |
+      她隨身攜帶一片{{衛生巾}}，以備不時之需。

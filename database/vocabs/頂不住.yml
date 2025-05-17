@@ -1,0 +1,25 @@
+#
+word    : 頂不住
+bopomofo: ㄉㄧㄥˇ ㄅㄨˊ ㄓㄨˋ
+
+#
+category: SLANG
+explicit:
+
+#
+description: |
+  指某人的耐受力不足，無法承受或應對某種情況。有時也有隱晦的情色含意，指承受不了某些過激內容。
+
+#
+examples:
+  - words      : [撐不住]
+    correct    : |
+      這份工作的壓力太大，我快{{撐不住}}了。
+    incorrect  : |
+      這份工作的壓力太大，我快{{頂不住}}了。
+
+  - words      : [受不了]
+    correct    : |
+      她穿著太清涼，我快{{受不了}}了。
+    incorrect  : |
+      她穿著太清涼，我快{{頂不住}}了。

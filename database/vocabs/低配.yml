@@ -1,0 +1,25 @@
+#
+word    : 低配
+bopomofo: ㄉㄧ ㄆㄟˋ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  原指硬體或軟體上，規格較低的版本，有時被引申為樸實、簡單的事物。
+
+#
+examples:
+  - words      : [低階, 低規]
+    correct    : |
+      他的預算不足，只好買一隻{{低階}}手機。
+    incorrect  : |
+      他的預算不足，只好買一隻{{低配}}手機。
+
+  - words      : [極簡, 樸實]
+    correct    : |
+      他看透了人生，決定過上{{極簡}}生活。
+    incorrect  : |
+      他看透了人生，決定過上{{低配}}生活。

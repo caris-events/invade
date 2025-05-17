@@ -1,0 +1,19 @@
+#
+word    : 洗髮水
+bopomofo: ㄒㄧˇ ㄈㄚˇ ㄕㄨㄟˇ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  一種用來清潔頭髮的液體，通常含有表面活性劑和香料。
+
+#
+examples:
+  - words      : [洗髮精]
+    correct    : |
+      他每天都用{{洗髮精}}洗頭，保持頭髮清爽。
+    incorrect  : |
+      他每天都用{{洗髮水}}洗頭，保持頭髮清爽。

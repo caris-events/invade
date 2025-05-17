@@ -1,0 +1,31 @@
+#
+word    : 虧賊
+bopomofo: ㄎㄨㄟ ㄗㄟˊ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  指某件事情太瘋狂，是英文 Crazy 的音譯。
+
+#
+examples:
+  - words      : [瘋狂, 瘋]
+    correct    : |
+      他為了偶像連追三場演唱會，真的超{{瘋狂}}。
+    incorrect  : |
+      他為了偶像連追三場演唱會，真的超{{虧賊}}。
+
+  - words      : [鬧]
+    correct    : |
+      他穿著恐龍裝出現在畢業典禮，太{{鬧}}了吧！
+    incorrect  : |
+      他穿著恐龍裝出現在畢業典禮，太{{虧賊}}了吧！
+
+  - words      : [狂]
+    correct    : |
+      哇，這也太{{狂}}了吧！
+    incorrect  : |
+      哇，這也太{{虧賊}}了吧！

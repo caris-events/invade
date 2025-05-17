@@ -1,0 +1,25 @@
+#
+word    : 利索
+bopomofo: ㄌㄧˋ ㄙㄨㄛˇ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  源自中國古漢語，形容動作乾脆、迅速、俐落，有時會與「麻利」交替使用。
+
+#
+examples:
+  - words      : [俐落]
+    correct    : |
+      他手腳{{俐落}}，很快就能完成一件事。
+    incorrect  : |
+      他手腳{{利索}}，很快就能完成一件事。
+
+  - words      : [乾脆, 直接]
+    correct    : |
+      他做事{{乾脆}}，從不拖延。
+    incorrect  : |
+      他做事{{利索}}，從不拖延。

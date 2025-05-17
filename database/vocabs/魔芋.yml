@@ -1,0 +1,19 @@
+#
+word    : 魔芋
+bopomofo: ㄇㄛˊ ㄩˋ
+
+#
+category: FOOD
+explicit:
+
+#
+description: |
+  也作蒟蒻，是低熱量高纖維的食品，常見於健康飲食和減肥料理中。
+
+#
+examples:
+  - words      : [蒟蒻]
+    correct    : |
+      這道菜的主要成分是{{蒟蒻}}，熱量很低。
+    incorrect  : |
+      這道菜的主要成分是{{魔芋}}，熱量很低。

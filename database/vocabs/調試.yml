@@ -1,0 +1,19 @@
+#
+word    : 調試
+bopomofo: ㄊㄧㄠˊ ㄕˋ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  指對程式碼進行檢查和修正的過程，通常用於找出和修復問題。
+
+#
+examples:
+  - words      : [除錯, 偵錯]
+    correct    : |
+      他的程式無法執行，因此需要{{除錯}}。
+    incorrect  : |
+      他的[[程序]]無法[[運行]]，因此需要{{調試}}。

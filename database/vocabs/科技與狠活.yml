@@ -1,0 +1,25 @@
+#
+word    : 科技與狠活
+bopomofo: ㄎㄜ ㄐㄧˋ ㄩˇ ㄏㄣˇ ㄏㄨㄛˊ
+
+#
+category: SLANG
+explicit:
+
+#
+description: |
+  用以諷刺中國的食品使用過多化學添加劑或不健康的原料，如：魔芋爽。
+
+#
+examples:
+  - words      : [加工食品]
+    correct    : |
+      他三餐都吃{{加工食品}}，真讓人擔心。
+    incorrect  : |
+      他三餐都吃{{科技與狠活}}，真讓人擔心。
+
+  - words      : [化學原料]
+    correct    : |
+      這飲料能放半年不壞，多半是用了{{化學原料}}。
+    incorrect  : |
+      這飲料能放半年不壞，多半是用了{{科技與狠活}}。

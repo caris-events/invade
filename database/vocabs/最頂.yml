@@ -1,0 +1,37 @@
+#
+word    : 最頂
+bopomofo: ㄗㄨㄟˋ ㄉㄧㄥˇ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  指最好、最高級、最棒的。
+
+#
+examples:
+  - words      : [最好, 最棒]
+    correct    : |
+      這間牛肉麵店，是我吃過{{最好}}吃的。
+    incorrect  : |
+      這間牛肉麵店，是我吃過{{最頂}}的。
+
+  - words      : [最帥]
+    correct    : |
+      他穿得超有型，是我見過{{最帥}}的一次！
+    incorrect  : |
+      他穿得超有型，是我見過{{最頂}}的一次！
+
+  - words      : [最厲害]
+    correct    : |
+      我們的商品是業界{{最厲害}}的。
+    incorrect  : |
+      我們的商品是業界{{最頂}}的。
+
+  - words      : [巔峰]
+    correct    : |
+      他剛出道，就是他最{{巔峰}}的時候。
+    incorrect  : |
+      他剛出道，就是他{{最頂}}的時候。

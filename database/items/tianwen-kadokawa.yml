@@ -1,0 +1,26 @@
+#
+code       : tianwen-kadokawa
+parent_code: kadokawa
+
+#
+name       : 天聞角川
+name_alias : Tianwen Kadokawa
+name_others: [廣州天聞角川動漫有限公司, 天角]
+
+#
+category: MEDIA
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : http://www.gztwkadokawa.com
+description: |
+  [[tianwen-kadokawa]] 是中國廣州的圖書發行公司，專注於漫畫與輕小說的代理與出版，由 [[kadokawa]] 與中共國有企業 [[china-south-publishing]] 合資成立。
+
+#
+information:
+  - year       : 2016
+    invasion   : FUNDED
+    source     : https://zh.wikipedia.org/zh-tw/%E5%A4%A9%E9%97%BB%E8%A7%92%E5%B7%9D
+    description: |
+      [[tianwen-kadokawa]] 原先由 [[china-south-publishing]] 持有的多數股份被 [[tencent]] 收購，[[tencent]] 因此成為第二大股東。

@@ -1,0 +1,25 @@
+#
+code       : philips-domestic-appliances
+parent_code: hillhouse-capital
+
+#
+name       : 皇家飛利浦（家電業務）
+name_alias : Philips Domestic Appliances
+name_others: []
+
+#
+category: APPLIANCE
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.versuni.com
+description: |
+  [[philips-domestic-appliances]] 主要產品包括咖啡機、吸塵器、空氣清淨機，原為 [[philips]] 公司旗下家電部門。
+
+#
+information:
+  - year       : 2021
+    invasion   : FUNDED
+    description: |
+      [[philips-domestic-appliances]] 被以 37 億歐元出售給 [[hillhouse-capital]]，且後者獲得 15 年的「Philips」品牌使用權。

@@ -1,0 +1,21 @@
+#
+code       : bandai-namco-china
+parent_code: bandai-namco
+
+#
+name       : 萬代南夢宮（中國）
+name_alias : Bandai Namco China
+name_others: [萬代南夢宮（中國）投資有限公司, "Bandai Namco Holdings China Co., Ltd."]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.bandainamcochina.cn
+description: |
+   [[bandai-namco-china]] 是 [[bandai-namco]] 在上海設立的全資子公司，負責統籌在中國的整體業務與品牌經營。
+
+#
+information:

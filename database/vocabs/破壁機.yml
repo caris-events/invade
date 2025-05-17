@@ -1,0 +1,19 @@
+#
+word       : 破壁機
+bopomofo   : ㄆㄛˋ ㄅㄧˋ ㄐㄧ
+
+#
+category: HARDWARE
+explicit:
+
+#
+description: |
+  一種多功能的廚房電器，能夠將食材打碎、攪拌、混合等，常用於製作果汁、濃湯等。
+
+#
+examples:
+  - words      : [果汁機, 攪拌機]
+    correct    : |
+      我用{{果汁機}}來製作早餐的果汁。
+    incorrect  : |
+      我用{{破壁機}}來製作早餐的果汁。

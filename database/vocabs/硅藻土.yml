@@ -1,0 +1,19 @@
+#
+word    : 硅藻土
+bopomofo: ㄍㄨㄟ ㄗㄠˇ ㄊㄨˇ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  一種生物化學沉積岩，具有優異的吸水、除臭與過濾能力。
+
+#
+examples:
+  - words      : [矽藻土]
+    correct    : |
+      他買了{{矽藻土}}止滑墊，吸水又防滑。
+    incorrect  : |
+      他買了{{硅藻土}}止滑墊，吸水又防滑。

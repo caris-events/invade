@@ -1,0 +1,26 @@
+#
+code       : bandai
+parent_code: bandai-namco
+
+#
+name       : 萬代
+name_alias : Bandai
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.bandai.co.jp
+description: |
+  [[bandai]] 是日本的玩具與娛樂產品公司，旗下產品包括鋼彈模型、動畫周邊，在中國上海設立有全資子公司。
+
+#
+information:
+  - year       : 2017
+    invasion   : COLLABORATED
+    source     : https://www.bandainamcochina.cn/
+    description: |
+      [[bandai]] 於中國上海成立全資子公司 [[bandai-namco-china]]，作為統籌與品牌經營中心，並推出中國原創 IP《暗界神使》。

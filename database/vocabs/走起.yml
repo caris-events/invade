@@ -1,0 +1,31 @@
+#
+word    : 走起
+bopomofo: ㄗㄡˇ ㄑㄧˇ
+
+#
+category: SLANG
+explicit:
+
+#
+description: |
+  指帶著期待、興奮的心情出發，類似英文「Let's Go!」的用法。中國有時也會稱「走你」。
+
+#
+examples:
+  - words      : [開始]
+    correct    : |
+      新的一年，減肥計畫{{開始}}！
+    incorrect  : |
+      新的一年，減肥計畫{{走起}}！
+
+  - words      : [出發, 出門]
+    correct    : |
+      行李都準備好了，我們{{出發}}！
+    incorrect  : |
+      行李都準備好了，我們{{走起}}！
+
+  - words      : [衝一波]
+    correct    : |
+      大家等這部電影等超久的，今晚首映{{衝一波}}！
+    incorrect  : |
+      大家等這部電影等超久的，今晚首映{{走起}}！

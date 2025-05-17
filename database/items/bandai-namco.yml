@@ -1,0 +1,29 @@
+#
+code       : bandai-namco
+parent_code:
+
+#
+name       : 萬代南夢宮
+name_alias : Bandai Namco
+name_others: [萬代南夢宮控股公司, Bandai Namco Holdings Inc.]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.bandainamco.co.jp
+description: |
+  [[bandai-namco]] 是日本的娛樂集團，涵蓋玩具、遊戲、動畫與 IP 授權等業務，是自 2005 年 Bandai 和 Namco 合併而成立。
+
+#
+information:
+  - year       : 2025
+    invasion   : SUPPORTED
+    source     : https://bandainamco-am.co.jp/zh-CHT/others/gashapon-bandai-officialshop/store/world_store/
+    description: |
+      [[bandai-namco]] 商店資訊的地圖將台灣顯示為中共的一部分，且滑鼠滑過時顯示「China」。
+
+  - description: |
+      [[bandai-namco]] 的創辦人是中村雅哉，大股東是《日本 Master Trust 信託》。

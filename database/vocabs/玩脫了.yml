@@ -1,0 +1,25 @@
+#
+word    : 玩脫了
+bopomofo: ㄨㄢˊ ㄊㄨㄛ ㄌㄜ˙
+
+#
+category: SLANG
+explicit:
+
+#
+description: |
+  指某件事情失控或發展到無法預測的地步，通常用來形容某人做事不小心，導致意外的後果。
+
+#
+examples:
+  - words      : [玩過頭]
+    correct    : |
+      他行銷想做得有創意，結果{{玩過頭}}而被罵爆。
+    incorrect  : |
+      他行銷想做得有創意，結果{{玩脫了}}而被罵爆。
+
+  - words      : [過火了]
+    correct    : |
+      他這個玩笑{{過火了}}，對方當場翻臉。
+    incorrect  : |
+      他這個玩笑{{玩脫了}}，對方當場翻臉。

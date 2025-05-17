@@ -1,0 +1,19 @@
+#
+word    : 相冊
+bopomofo: ㄒㄧㄤˋ ㄘㄜˋ
+
+#
+category: NOUN
+explicit:
+
+#
+description: |
+  指用來存放多張照片的簿子。
+
+#
+examples:
+  - words      : [相簿]
+    correct    : |
+      這本{{相簿}}裡面有我小時候的照片。
+    incorrect  : |
+      這本{{相冊}}裡面有我小時候的照片。

@@ -1,0 +1,19 @@
+#
+word    : 屏保
+bopomofo: ㄆㄧㄥˊ ㄅㄠˇ
+
+#
+category: TECHNOLOGY
+explicit:
+
+#
+description: |
+  指電腦或手機等裝置在一段時間不使用後，會自動進入的螢幕保護狀態。
+
+#
+examples:
+  - words      : [螢幕保護]
+    correct    : |
+      我想找一張風景照當{{螢幕保護}}桌布。
+    incorrect  : |
+      我想找一張風景照當{{屏保}}壁紙。

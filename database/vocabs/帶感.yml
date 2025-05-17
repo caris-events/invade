@@ -1,0 +1,25 @@
+#
+word    : 帶感
+bopomofo: ㄉㄞˋ ㄍㄢˇ
+
+#
+category: ADJECTIVE
+explicit:
+
+#
+description: |
+  指某種事物、行為能引起情感共鳴或激發情緒，通常形容某些事物很有魅力。
+
+#
+examples:
+  - words      : [有感觸, 有感覺]
+    correct    : |
+      這首歌很{{有感觸}}，讓我想起許多事。
+    incorrect  : |
+      這首歌很{{帶感}}，讓我想起許多事。
+
+  - words      : [有魅力]
+    correct    : |
+      她的舞蹈特別{{有魅力}}，讓我看得入迷。
+    incorrect  : |
+      她的舞蹈特別{{帶感}}，讓我看得入迷。

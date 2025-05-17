@@ -1,0 +1,30 @@
+#
+code       : kadokawa
+parent_code:
+
+#
+name       : 角川集團
+name_alias : KADOKAWA
+name_others: [角川書店, 角川控股, KADOKAWA Corporation]
+
+#
+category: MEDIA
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.kadokawa.co.jp
+description: |
+  [[kadokawa]] 是日本的綜合媒體集團，業務涵蓋出版、動畫、遊戲與影視製作。
+
+#
+information:
+  - year       : 2021
+    invasion   : FUNDED
+    source     : https://observervoice.com/tencent-boosts-stake-in-kadokawa-amid-industry-shifts-100484/
+    description: |
+      [[kadokawa]] 被 [[tencent]] 以 300 億日圓收購其 6.8% 股權，[[tencent]] 因此成為第三大股東。
+
+  - invasion   : FUNDED
+    description: |
+      [[kadokawa]] 的董事長是角川歷彥，公司大股東有 [[tencent]]、[[sony]]、[[kakao]] 與 [[cyberagent]] 和 [[bandai]]。

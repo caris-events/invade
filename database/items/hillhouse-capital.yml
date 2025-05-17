@@ -1,0 +1,24 @@
+#
+code       : hillhouse-capital
+parent_code:
+
+#
+name       : 高瓴資本
+name_alias : Hillhouse Capital Group
+name_others: [高瓴資本集團]
+
+#
+category: FINANCE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.hillhousecap.com
+description: |
+  [[hillhouse-capital]] 是中國北京的投資公司，現為亞洲最大的私募股權管理基金之一。專注於長期結構性價值投資，曾投資 [[tencent]]、[[jd]]、[[bilibili]]、[[iqiyi]] 等中國企業。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[hillhouse-capital]] 的創辦人是中國商人張磊。
