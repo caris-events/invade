@@ -16,7 +16,7 @@ examples:
     correct    : |
       在 YouTube 可以觀賞許多{{高畫質}}影片。
     incorrect  : |
-      在 YouTube 可以觀賞許多{{高清}}影片。
+      在 YouTube 可以觀賞許多{{高清}}[[視頻]]。
 
   - words      : [高音質]
     correct    : |

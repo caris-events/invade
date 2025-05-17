@@ -1,0 +1,18 @@
+#
+word    : 中國台灣
+bopomofo: ㄓㄨㄥ ㄍㄨㄛˊ ㄊㄞˊ ㄨㄢ
+
+#
+category: PLACE
+explicit:
+
+description: |
+  中國在政治主張台灣不是一個國家而經常使用的詞彙。
+
+#
+examples:
+  - words      : [台灣]
+    correct    : |
+      {{台灣}}是一個擁有美食、山海和熱情人民的多元小島。
+    incorrect  : |
+      {{中國台灣}}是一個擁有美食、山海和熱情人民的多元小島。
