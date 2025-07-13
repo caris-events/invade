@@ -51,7 +51,7 @@ func Checksum(src string) (string, error) {
 
 func ParseItemText(items []*entity.CompiledItem) func(v string) string {
 	return func(v string) string {
-		v = string(blackfriday.Run([]byte(v)))
+		v = string(blackfriday.Run([]byte(v), blackfriday.WithNoExtensions()))
 
 		// [[hololive]]
 		v = util.ReplaceAllStringSubmatchFunc(util.RegExpBrackets, v, func(groups []string) string {

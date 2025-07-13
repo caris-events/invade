@@ -1,0 +1,33 @@
+#
+code       : seven-i-holdings
+parent_code:
+
+#
+name       : 柒和伊控股
+name_alias : Seven & I Holdings
+name_others: ["7&I控股", "Seven & I Holdings Co., Ltd.", "柒和伊控股", "株式會社7&I控股"]
+
+#
+category: SHOPPING
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.7andi.com/
+description: |
+  [[seven-i-holdings]] 是日本大型零售控股公司整合便利商店、百貨等事業，前身為《伊藤洋華堂》。
+
+#
+information:
+  - year       : 2025
+    invasion   : SUPPORTED
+    source     : https://tw.nextapple.com/international/20250712/EE4A1416F3EE5D8FC5777C02C881A685
+    description: |
+      [[seven-i-holdings]] 在《Twitter》與《Instagram》展示各國便利商店的制服時，台灣制服被標示為「中國（台灣）」。
+
+  - description: |
+      [[seven-i-holdings]] 的創辦人是伊藤雅俊，大股東有《日本 Master Trust 信託》、《先鋒領航集團》。
+
+
+
+
