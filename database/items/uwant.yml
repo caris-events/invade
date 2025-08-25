@@ -1,0 +1,24 @@
+#
+code       : uwant
+parent_code:
+
+#
+name       : UWANT
+name_alias : 友望
+name_others: ["蘇州簡單有為科技有限公司", "蘇州美一天智能科技有限公司"]
+
+#
+category: APPLIANCE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://uwant.com.hk/
+description: |
+  [[uwant]] 是是中國蘇州的清潔電器製造商，產品涵蓋掃地機器人、吸塵器、除蟎機。
+
+#
+information:
+  - invasion   : FUNDED
+    description: |
+      [[uwant]] 的創辦人是中國商人揚永波，公司曾獲得 [[hillhouse-capital]] 的投資。

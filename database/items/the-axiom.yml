@@ -1,0 +1,23 @@
+#
+code       : the-axiom
+parent_code:
+
+#
+name       : 安德家品
+name_alias : The AXIOM
+name_others: [安德國際商貿股份有限公司]
+
+#
+category: APPLIANCE
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.theaxiomstore.com/
+description: |
+  [[the-axiom]] 是台灣一間家電品牌代理商，代理品牌有中國 [[jmgo]]、[[dreame-tech]]。
+
+#
+information:
+  - description: |
+      [[the-axiom]] 的董事長是謝元顥。

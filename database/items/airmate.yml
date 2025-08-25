@@ -1,0 +1,29 @@
+#
+code       : airmate
+parent_code:
+
+#
+name       : 艾美特
+name_alias : Airmate
+name_others: ["艾美特電器（深圳）有限公司", "威昂電器發展（深圳）有限公司"]
+
+#
+category: APPLIANCE
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.airmate-china.com/
+description: |
+  [[airmate]] 是中國深圳的家電開發與代工國際大廠。前身為台灣《東富電器》，後前往中國投資並在當地成立開發與製造總部。
+
+#
+information:
+  - year       : 2023
+    invasion   : SUPPORTED
+    source     : https://www.airmate-china.com/gsjj/index_30.aspx
+    description: |
+      [[airmate]] 的公司簡介表示品牌成立於「中國台灣」。
+
+  - description: |
+      [[airmate]] 的創辦人是台灣人蔡正富，於 1997 年前往中國發展。
