@@ -1,0 +1,21 @@
+#
+code       : gog
+parent_code: cd-projekt
+
+#
+name       : GOG.com
+name_alias : Good Old Games
+name_others: [GOG]
+
+#
+category: ENTERTAINMENT
+type    : PLATFORM
+owner   : FOREIGN
+
+#
+website    : https://gog.com/
+description: |
+  [[gog]] 是由波蘭 [[cd-projekt]] 成立的數位遊戲與電影發行平台，以提供 DRM‑free（無數位權限管理）版本讓玩家保有對已購遊戲的安裝與備份自由。
+
+#
+information:

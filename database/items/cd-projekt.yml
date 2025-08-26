@@ -1,0 +1,28 @@
+#
+code       : cd-projekt
+parent_code:
+
+#
+name       : CD Projekt
+name_alias :
+name_others: ["CD Projekt S.A."]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : FOREIGN
+
+#
+website    : https://www.cdprojekt.com/
+description: |
+  [[cd-projekt]] 是波蘭華沙的一間 3A 遊戲製作公司。
+
+#
+information:
+  - year       : 2020
+    invasion   : MANIPULATED
+    description: |
+      [[cd-projekt]] 旗下 [[gog]] 原宣布發行 [[red-candle-games]] 的遊戲《還願》，但因內容提及「習近平小熊維尼」而被撤銷合作計劃。
+
+  - description: |
+      [[cd-projekt]] 的創辦人是 Marcin Iwiński，大股東有《Goldman Sachs Group》。

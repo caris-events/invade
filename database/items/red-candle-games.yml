@@ -1,0 +1,28 @@
+#
+code       : red-candle-games
+parent_code:
+
+#
+name       : 赤燭
+name_alias : Red Candle Games
+name_others: []
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://redcandlegames.com/
+description: |
+  [[red-candle-games]] 是台灣一間獨立遊戲開發團隊，作品多採恐怖或動作平台風格，融合台灣歷史與文化元素。
+
+#
+information:
+  - year       : 2019
+    invasion   : MANIPULATED
+    description: | #（上海橘喵）
+      [[red-candle-games]] 與中國代理商《Indievent》合作發行遊戲《還願》，但因內容涉及「習近平小熊維尼」而被指辱華，合作因此中止，遊戲內容也遭到更正。
+
+  - description: |
+      [[red-candle-games]] 的創辦人是王光昊、王瀚宇。
