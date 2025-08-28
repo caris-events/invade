@@ -1,0 +1,30 @@
+#
+code       : unitree-robotics
+parent_code:
+
+#
+name       : 宇樹科技
+name_alias : Unitree Robotics
+name_others: [杭州宇樹科技有限公司]
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.unitree.com/
+description: |
+  [[unitree-robotics]] 是中國杭州的機器人科技公司，被列為「杭州六小龍」並由中共補助。產品被中共公安部門用於監控，亦曾參與央視春晚表演，以及在中柬聯合軍演中搭配突擊步槍亮相。
+
+#
+information:
+  - year       : 2025
+    invasion   : COLLABORATED
+    source     : https://www.epochtimes.com/b5/25/5/6/n14500960.htm
+    description: |
+      [[unitree-robotics]] 產品被發現帶有「CloudSail」後門，可從中共境內控制、檢視影像。且根據 [[unitree-robotics]] 的隱私政策，所有資料都將遵循中共情報、網路安全法。
+
+  - invasion   : FUNDED
+    description: |
+      [[unitree-robotics]] 的創辦人是中國商人王興興，曾任職於 [[dji]]。公司由 [[sequoia-china]]、[[shunwei-capital]] 投資。
