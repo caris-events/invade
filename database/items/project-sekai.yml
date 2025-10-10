@@ -1,0 +1,21 @@
+#
+code       : project-sekai
+parent_code:
+
+#
+name       : "世界計畫 繽紛舞台！"
+name_alias : "Project Sekai"
+name_others: [世界計畫, "Project Sekai: Colorful Stage!", "世界計畫 繽紛舞台！ feat. 初音未來"]
+
+#
+category: ENTERTAINMENT
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://www.tw-pjsekai.com/
+description: |
+  [[project-sekai]] 是一款以 Vocaloid 虛擬歌手為主軸的音樂節奏手機遊戲。在台灣主要由 [[ariel-co]] 代理營運。
+
+#
+information:

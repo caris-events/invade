@@ -1,0 +1,21 @@
+#
+code       : trickcal-revive
+parent_code:
+
+#
+name       : 嘟嘟臉惡作劇
+name_alias : "Trickcal RE:VIVE"
+name_others: ["Trickcal:Chibi Go"]
+
+#
+category: ENTERTAINMENT
+type    : GAME
+owner   : FOREIGN
+
+#
+website    : https://trickcal.biligames.com/zh-tw/
+description: |
+  [[trickcal-revive]] 是一款以捏臉互動為核心玩法的卡牌養成手遊。在台灣由 [[bilibili]] 與 [[ariel-co]] 合作代理營運。
+
+#
+information:

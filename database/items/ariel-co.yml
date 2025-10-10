@@ -1,0 +1,24 @@
+#
+code       : ariel-co
+parent_code: nuverse
+
+#
+name       : 艾瑞爾網路
+name_alias : Ariel Co., Limited
+name_others: [艾瑞爾網路股份有限公司]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.ariel.com.tw/en/
+description: |
+  [[ariel-co]] 是只有宣傳業務的在台空殼公司，主要代理中國的手機遊戲。其隱私政策表明會收集玩家的身份證、指紋與保險單號。
+
+#
+information:
+  - source     : https://medium.com/%40ttiqa817/%E5%B0%8D%E6%96%BC%E5%8F%B0%E6%B8%AF%E6%BE%B3%E7%89%88project-sekai-%E3%83%97%E3%83%AD%E3%82%BB%E3%82%AB-%E7%9A%84%E7%8F%BE%E6%B3%81%E5%88%86%E6%9E%90%E5%8F%8A%E6%9C%AA%E4%BE%86%E8%B5%B0%E5%90%91%E9%A0%90%E6%83%B3-acddfe3b5768
+    description: |
+      [[ariel-co]] 曾代理一款僅交由 [[nuverse]] 負責亞洲營運的遊戲 [[project-sekai]]。由於客服使用簡體字，且遊戲公告曾連線至 [[bytedance]]，因此被認為兩者之間存在關聯。

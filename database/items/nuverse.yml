@@ -1,0 +1,21 @@
+#
+code       : nuverse
+parent_code: bytedance
+
+#
+name       : 朝夕光年
+name_alias : Nuverse
+name_others: [北京朝夕光年信息技術有限公司]
+
+#
+category: ENTERTAINMENT
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.nvsgames.com/
+description: |
+  [[nuverse]] 是 [[bytedance]] 旗下的遊戲品牌，在台業務通常交由 [[ariel-co]]。
+
+#
+information:
