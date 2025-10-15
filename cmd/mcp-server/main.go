@@ -28,7 +28,7 @@ func main() {
 
 	// Load data
 	dataLoader := NewDataLoader(databasePath)
-	
+
 	log.Printf("Loading items from %s...", databasePath)
 	if err := dataLoader.LoadItems(); err != nil {
 		log.Fatalf("Failed to load items: %v", err)
@@ -62,7 +62,7 @@ func main() {
 	log.Println("  - search_vocabs: Search for vocabulary terms")
 	log.Println("  - get_vocab: Get detailed info about a vocab")
 	log.Println("  - list_vocab_categories: List all vocab categories")
-	
+
 	// Create stdio server and listen
 	stdioServer := server.NewStdioServer(mcpServer)
 	if err := stdioServer.Listen(context.Background(), os.Stdin, os.Stdout); err != nil {
