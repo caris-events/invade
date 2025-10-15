@@ -55,11 +55,11 @@ go build -o invade-mcp-server
 - `INVADE_DB_PATH`: 資料庫路徑（選填）
   - 預設會自動尋找 `database` 目錄
 
-## 配置 MCP 客戶端
+## 設定 MCP 客戶端
 
 ### Claude Desktop
 
-在你的 Claude Desktop 配置文件中添加：
+在你的 Claude Desktop 設定文件中添加：
 
 **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
 **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
@@ -100,7 +100,7 @@ go build -o invade-mcp-server
 
 ## 使用範例
 
-配置完成後，你可以在 MCP 客戶端中使用以下查詢：
+設定完成後，你可以在 MCP 客戶端中使用以下查詢：
 
 ### 項目查詢範例
 
