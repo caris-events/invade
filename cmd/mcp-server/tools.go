@@ -127,6 +127,21 @@ func (mt *MCPTools) RegisterTools(s *server.MCPServer) {
 			Properties: map[string]interface{}{},
 		},
 	}, mt.listVocabCategories)
+
+	s.AddTool(mcp.Tool{
+		Name:        "check_vocab",
+		Description: "Check if a Chinese word or phrase is in the invasive vocabulary database (支語). Use this tool BEFORE outputting Chinese text to avoid using problematic terms. Returns whether the word exists in the database and suggests proper alternatives if it does.",
+		InputSchema: mcp.ToolInputSchema{
+			Type:     "object",
+			Required: []string{"word"},
+			Properties: map[string]interface{}{
+				"word": map[string]interface{}{
+					"type":        "string",
+					"description": "The Chinese word or phrase to check (e.g., '數據庫', '渲染', '硬件')",
+				},
+			},
+		},
+	}, mt.checkVocab)
 }
 
 // searchItems implements the search_items tool
@@ -451,6 +466,76 @@ func (mt *MCPTools) listVocabCategories(arguments map[string]interface{}) (*mcp.
 	for code, name := range categories {
 		output.WriteString(fmt.Sprintf("- %s: %s\n", code, name))
 	}
+
+	return mcp.NewToolResultText(output.String()), nil
+}
+
+// checkVocab implements the check_vocab tool
+func (mt *MCPTools) checkVocab(arguments map[string]interface{}) (*mcp.CallToolResult, error) {
+	word, ok := arguments["word"].(string)
+	if !ok || word == "" {
+		return mcp.NewToolResultError("word is required"), nil
+	}
+
+	vocab, exists := mt.dataLoader.GetVocab(word)
+
+	var output strings.Builder
+
+	if !exists {
+		// Word not in database - it's safe to use
+		output.WriteString(fmt.Sprintf("✓ 詞彙「%s」不在侵略性詞彙資料庫中，可以安全使用。\n", word))
+		return mcp.NewToolResultText(output.String()), nil
+	}
+
+	// Word exists in database - provide warning and alternatives
+	output.WriteString(fmt.Sprintf("⚠ 詞彙「%s」在侵略性詞彙資料庫中，建議避免使用。\n\n", word))
+
+	if vocab.Description != "" {
+		output.WriteString(fmt.Sprintf("說明: %s\n\n", vocab.Description))
+	}
+
+	// Extract correct alternatives from examples
+	var alternatives []string
+	if len(vocab.Examples) > 0 {
+		for _, example := range vocab.Examples {
+			if len(example.Words) > 0 {
+				for _, w := range example.Words {
+					if w != word && w != "" {
+						// Check if not already in list
+						found := false
+						for _, alt := range alternatives {
+							if alt == w {
+								found = true
+								break
+							}
+						}
+						if !found {
+							alternatives = append(alternatives, w)
+						}
+					}
+				}
+			}
+		}
+	}
+
+	if len(alternatives) > 0 {
+		output.WriteString("建議使用:\n")
+		for _, alt := range alternatives {
+			output.WriteString(fmt.Sprintf("  • %s\n", alt))
+		}
+		output.WriteString("\n")
+	}
+
+	// Show first example if available
+	if len(vocab.Examples) > 0 && vocab.Examples[0].Correct != "" {
+		output.WriteString(fmt.Sprintf("正確用法範例:\n%s\n\n", vocab.Examples[0].Correct))
+	}
+
+	if vocab.Deprecation != "" {
+		output.WriteString(fmt.Sprintf("不建議使用原因:\n%s\n\n", vocab.Deprecation))
+	}
+
+	output.WriteString(fmt.Sprintf("詳細資訊: https://invade.tw/v/%s\n", vocab.Word))
 
 	return mcp.NewToolResultText(output.String()), nil
 }

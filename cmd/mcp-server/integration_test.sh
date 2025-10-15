@@ -58,6 +58,20 @@ echo "$result" | head -6
 echo "✓ List categories successful"
 echo ""
 
+echo "Test 7: Check vocab (invasive)"
+echo "-------------------------------"
+result=$(echo '{"jsonrpc":"2.0","id":7,"method":"tools/call","params":{"name":"check_vocab","arguments":{"word":"數據庫"}}}' | ./invade-mcp-server 2>/dev/null | jq -r '.result.content[0].text')
+echo "$result" | head -6
+echo "✓ Check invasive vocab successful"
+echo ""
+
+echo "Test 8: Check vocab (safe)"
+echo "--------------------------"
+result=$(echo '{"jsonrpc":"2.0","id":8,"method":"tools/call","params":{"name":"check_vocab","arguments":{"word":"資料庫"}}}' | ./invade-mcp-server 2>/dev/null | jq -r '.result.content[0].text')
+echo "$result"
+echo "✓ Check safe vocab successful"
+echo ""
+
 echo "================================"
 echo "All tests passed! ✓"
 echo "================================"

@@ -62,6 +62,7 @@ func main() {
 	log.Println("  - search_vocabs: Search for vocabulary terms")
 	log.Println("  - get_vocab: Get detailed info about a vocab")
 	log.Println("  - list_vocab_categories: List all vocab categories")
+	log.Println("  - check_vocab: Check if a word is invasive (recommended before output)")
 
 	// Create stdio server and listen
 	stdioServer := server.NewStdioServer(mcpServer)
