@@ -4,6 +4,17 @@
 
 你可以透過 [Google 表單](https://invade.tw/contribute)來建議新增、編輯條目。
 
+## MCP 伺服器
+
+本專案提供 **Model Context Protocol (MCP) 伺服器**，讓 AI 助手可以方便地查詢資料庫：
+
+- 🔍 搜尋中資公司、品牌、遊戲等項目
+- 📖 查詢中國侵略性詞彙（支語）字典
+- 🏷️ 按類別、類型、擁有者、侵略等級篩選
+- 🌐 直接連結到 https://invade.tw/ 網站
+
+詳細說明請參閱 [cmd/mcp-server/README.md](cmd/mcp-server/README.md)
+
 ## 內容授權
 
 笨他侵略的原始碼授權為 [MIT](https://github.com/caris-events/invade/blob/master/LICENSE)，文字段落以 [CC 0 公眾領域](https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW)釋出，你可以盡情分享、改寫或用作商業用途。
