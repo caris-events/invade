@@ -24,7 +24,7 @@
     [TONE_DARK]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorDarkText, { opacity: 0.95 }),
     [TONE_LIGHT]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorLightText, { opacity: 0.85 })
   };
-  let debugSegmenter = false;
+  let debugSegmenter = true;
 
   async function bootstrap() {
     try {
