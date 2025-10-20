@@ -1,5 +1,64 @@
 [
   {
+    "word": "菜單",
+    "category": "TECHNOLOGY",
+    "categoryLabel": "科技",
+    "explicit": "",
+    "explicitLabel": "未知",
+    "description": "含有一系列的功能選單。",
+    "notice": "這個詞彙指的不是點餐時的菜餚選單。",
+    "recommended": [
+      "選單"
+    ],
+    "examples": [
+      {
+        "words": [
+          "選單"
+        ],
+        "correct": "進入設定{{選單}}就可以更改音量大小。",
+        "incorrect": "進入設置{{菜單}}就可以更改音量大小。"
+      }
+    ],
+    "matchOptions": {
+      "context": {
+        "baseScore": -1,
+        "features": [
+          {
+            "position": "prev",
+            "tokens": [
+              "設定",
+              "系統",
+              "功能",
+              "應用程式",
+              "工具",
+              "選單",
+              "菜單列",
+              "菜單鍵",
+              "菜單按鈕"
+            ],
+            "weight": 1
+          },
+          {
+            "position": "next",
+            "tokens": [
+              "設定",
+              "功能",
+              "選單",
+              "選項",
+              "編輯",
+              "工具",
+              "列",
+              "介面",
+              "系統"
+            ],
+            "weight": 1
+          }
+        ]
+      }
+    },
+    "lastModifiedTs": 1760977350
+  },
+  {
     "word": "寄",
     "category": "ADJECTIVE",
     "categoryLabel": "形容詞",
@@ -7717,28 +7776,6 @@
         ],
         "correct": "這隻{{羊駝}}的毛色很漂亮。",
         "incorrect": "這隻{{草泥馬}}的毛色很漂亮。"
-      }
-    ],
-    "lastModifiedTs": 1760527523
-  },
-  {
-    "word": "菜單",
-    "category": "TECHNOLOGY",
-    "categoryLabel": "科技",
-    "explicit": "",
-    "explicitLabel": "未知",
-    "description": "含有一系列的功能選單。",
-    "notice": "這個詞彙指的不是點餐時的菜餚選單。",
-    "recommended": [
-      "選單"
-    ],
-    "examples": [
-      {
-        "words": [
-          "選單"
-        ],
-        "correct": "進入設定{{選單}}就可以更改音量大小。",
-        "incorrect": "進入設置{{菜單}}就可以更改音量大小。"
       }
     ],
     "lastModifiedTs": 1760527523

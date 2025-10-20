@@ -8,6 +8,37 @@ category: TECHNOLOGY
 explicit:
 
 #
+matchOptions:
+  context:
+    baseScore: -1
+    threshold: 0
+    features:
+      - position: prev
+        tokens:
+          - 設定
+          - 系統
+          - 功能
+          - 應用程式
+          - 工具
+          - 選單
+          - 菜單列
+          - 菜單鍵
+          - 菜單按鈕
+        weight: 1
+      - position: next
+        tokens:
+          - 設定
+          - 功能
+          - 選單
+          - 選項
+          - 編輯
+          - 工具
+          - 列
+          - 介面
+          - 系統
+        weight: 1
+
+#
 description: |
   含有一系列的功能選單。
 
