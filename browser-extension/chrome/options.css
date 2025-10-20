@@ -1,141 +1,325 @@
 :root {
-  color-scheme: light dark;
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif;
+  font-family: 'Georgia', 'Times New Roman', 'Noto Serif TC', serif;
   font-size: 16px;
   line-height: 1.6;
-  background-color: #f5f6fa;
-  color: #222;
+  background-color: #f4f1e6;
+  color: #2f251a;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  padding: 32px;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
+  padding: 56px 16px;
+  background-image: repeating-linear-gradient(
+      90deg,
+      rgba(73, 58, 41, 0.03) 0,
+      rgba(73, 58, 41, 0.03) 1px,
+      transparent 1px,
+      transparent 32px
+    ),
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.7), rgba(244, 241, 230, 0.9));
 }
 
-.page {
-  width: min(720px, 100%);
+.paper {
+  width: min(760px, 100%);
 }
 
-.page__header {
+.paper__masthead {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.paper__edition {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(47, 36, 26, 0.6);
+}
+
+.paper__title {
+  font-size: clamp(28px, 6vw, 36px);
+  margin: 10px 0 6px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.paper__lead {
+  margin: 0 auto;
+  max-width: 560px;
+  font-size: 15px;
+  color: rgba(47, 36, 26, 0.75);
+}
+
+.paper__sheet {
+  background: #fffdf7;
+  border: 1px solid rgba(73, 58, 41, 0.36);
+  box-shadow:
+    0 28px 60px rgba(62, 49, 35, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  padding: 36px 40px;
+  display: grid;
+  gap: 32px;
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(73, 58, 41, 0.03) 0,
+      rgba(73, 58, 41, 0.03) 1px,
+      transparent 1px,
+      transparent 22px
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+}
+
+.paper__section {
+  display: grid;
+  gap: 18px;
+}
+
+.paper__section-title {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(47, 36, 26, 0.6);
+  border-top: 1px solid rgba(73, 58, 41, 0.35);
+  padding-top: 6px;
+}
+
+.paper__item {
   display: flex;
-  gap: 16px;
-  align-items: center;
-  margin-bottom: 24px;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dotted rgba(73, 58, 41, 0.25);
 }
 
-.page__logo {
-  border-radius: 9px;
-  box-shadow: 0 10px 24px rgba(64, 64, 64, 0.15);
+.paper__item:last-of-type {
+  border-bottom: none;
 }
 
-.page__subtitle {
-  margin: 4px 0 0;
-  color: #666;
-}
-
-.card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
-}
-
-legend {
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.group + .group {
-  margin-top: 24px;
-}
-
-.field {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  gap: 20px;
-}
-
-.field:last-child {
-  margin-bottom: 0;
-}
-
-.field input[type='color'] {
-  border: none;
-  padding: 0;
-  width: 56px;
-  height: 36px;
-  border-radius: 8px;
-  background: transparent;
+.paper__item input[type='checkbox'] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 4px;
+  border: 1px solid rgba(73, 58, 41, 0.55);
+  border-radius: 3px;
+  background: #f6e9c9;
+  position: relative;
   cursor: pointer;
+  transition: transform 120ms ease, box-shadow 180ms ease;
 }
 
-.field select {
-  padding: 6px 10px;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+.paper__item input[type='checkbox']::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: rgba(62, 49, 35, 0.8);
+  clip-path: polygon(15% 45%, 0 60%, 45% 100%, 100% 10%, 85% 0, 45% 65%);
+  opacity: 0;
+  transition: opacity 120ms ease;
 }
 
-.field__label {
+.paper__item input[type='checkbox']:checked::after {
+  opacity: 1;
+}
+
+.paper__item input[type='checkbox']:focus-visible {
+  outline: 2px solid rgba(62, 49, 35, 0.6);
+  outline-offset: 2px;
+}
+
+.paper__item input[type='checkbox']:hover {
+  box-shadow: 0 6px 14px rgba(62, 49, 35, 0.24);
+  transform: translateY(-1px);
+}
+
+.paper__item-body {
   flex: 1 1 auto;
+  display: grid;
+  gap: 4px;
 }
 
-.actions {
-  margin-top: 28px;
+.paper__item-headline {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.paper__item-note {
+  font-size: 13px;
+  color: rgba(47, 36, 26, 0.7);
+}
+
+.paper__field {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.paper__field-label {
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(47, 36, 26, 0.6);
+  margin-top: 6px;
+  flex: 0 0 160px;
+}
+
+.paper__field-control {
+  display: grid;
+  gap: 6px;
+}
+
+.paper__field-note {
+  font-size: 12px;
+  color: rgba(47, 36, 26, 0.6);
+}
+
+input[type='color'] {
+  width: 60px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid rgba(73, 58, 41, 0.45);
+  background: #fff8df;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+select {
+  padding: 8px 12px;
+  border: 1px solid rgba(73, 58, 41, 0.4);
+  border-radius: 6px;
+  background: #fffaf0;
+  font-family: inherit;
+  font-size: 14px;
+  min-width: 180px;
+  cursor: pointer;
+  color: inherit;
+}
+
+input[type='color']:disabled,
+select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.paper__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-top: 1px solid rgba(73, 58, 41, 0.25);
+  padding-top: 20px;
 }
 
-.actions__reset {
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: 0;
-  background: #f97316;
-  color: #fff;
-  font-weight: 600;
+.paper__reset {
+  border: 1px solid rgba(73, 58, 41, 0.5);
+  background: #f2d7a0;
+  color: #2f251a;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 8px 18px;
+  border-radius: 999px;
   cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 120ms ease, box-shadow 180ms ease;
 }
 
-#status {
-  min-height: 1.5em;
-  color: #16a34a;
-  font-weight: 600;
+.paper__reset:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(62, 49, 35, 0.2);
+}
+
+.paper__status {
+  min-height: 1.4em;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(47, 36, 26, 0.6);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .paper__sheet {
+    padding: 28px;
+  }
+
+  .paper__field {
+    flex-direction: column;
+  }
+
+  .paper__field-label {
+    flex: none;
+    margin-top: 0;
+  }
+
+  select {
+    min-width: 0;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    background-color: #0f172a;
-    color: #e2e8f0;
+    background-color: #17130e;
+    color: #f1e8d2;
   }
 
-  .card {
-    background: rgba(15, 23, 42, 0.65);
-    box-shadow: 0 20px 40px rgba(8, 11, 20, 0.6);
+  body {
+    background-image: repeating-linear-gradient(
+        90deg,
+        rgba(241, 232, 210, 0.08) 0,
+        rgba(241, 232, 210, 0.08) 1px,
+        transparent 1px,
+        transparent 32px
+      ),
+      radial-gradient(circle at top, rgba(54, 44, 31, 0.85), rgba(23, 19, 14, 0.95));
   }
 
-  .page__subtitle {
-    color: rgba(226, 232, 240, 0.7);
+  .paper__sheet {
+    background: rgba(31, 26, 20, 0.92);
+    border-color: rgba(241, 232, 210, 0.28);
+    box-shadow: 0 28px 60px rgba(10, 8, 6, 0.7);
   }
 
-  .field select {
-    background: rgba(15, 23, 42, 0.9);
-    color: #e2e8f0;
-    border-color: rgba(226, 232, 240, 0.3);
+  .paper__edition,
+  .paper__section-title,
+  .paper__field-label,
+  .paper__field-note,
+  .paper__status {
+    color: rgba(241, 232, 210, 0.7);
   }
 
-  .actions__reset {
-    background: #c2410c;
+  .paper__item-note {
+    color: rgba(241, 232, 210, 0.7);
   }
 
-  #status {
-    color: #4ade80;
+  .paper__item input[type='checkbox'] {
+    background: rgba(120, 90, 40, 0.25);
+    border-color: rgba(241, 232, 210, 0.5);
+  }
+
+  input[type='color'] {
+    border-color: rgba(241, 232, 210, 0.5);
+    background: rgba(120, 90, 40, 0.25);
+  }
+
+  select {
+    background: rgba(120, 90, 40, 0.15);
+    border-color: rgba(241, 232, 210, 0.4);
+    color: inherit;
+  }
+
+  .paper__reset {
+    background: rgba(191, 137, 60, 0.35);
+    border-color: rgba(241, 232, 210, 0.5);
+    color: inherit;
   }
 }

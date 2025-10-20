@@ -1,103 +1,209 @@
 :root {
-  --invade-highlight-color: #fff176;
+  --invade-highlight-color: #f4e6c1;
+  --invade-highlight-outline-color: rgba(73, 58, 41, 0.25);
+  --invade-highlight-focus-ring: rgba(73, 58, 41, 0.35);
+  --invade-highlight-underline-color: rgba(73, 58, 41, 0.55);
   --invade-highlight-underline-style: dotted;
+  --invade-highlight-underline-width: 1px;
 }
 
 .invade-highlight {
-  background-color: var(--invade-highlight-color, rgba(255, 241, 118, 0.9));
-  border-bottom: 1px var(--invade-highlight-underline-style, dotted) rgba(0, 0, 0, 0.35);
+  background-color: var(--invade-highlight-color, rgba(244, 230, 193, 0.95));
+  border-bottom: var(--invade-highlight-underline-width, 1px) var(--invade-highlight-underline-style, dotted)
+    var(--invade-highlight-underline-color, rgba(73, 58, 41, 0.55));
   cursor: help;
-  transition: box-shadow 120ms ease, background-color 120ms ease;
-  box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.35);
+  transition: background-color 160ms ease, box-shadow 200ms ease;
+  box-shadow:
+    0 0 0 1px var(--invade-highlight-outline-color, rgba(73, 58, 41, 0.25)),
+    inset 0 -0.2em 0 rgba(73, 58, 41, 0.08);
 }
 
 .invade-highlight--active,
 .invade-highlight:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.35);
+  box-shadow:
+    0 0 0 1px var(--invade-highlight-outline-color, rgba(73, 58, 41, 0.3)),
+    0 0 0 6px var(--invade-highlight-focus-ring, rgba(73, 58, 41, 0.3));
+}
+
+:root {
+  --invade-highlight-color: #f4e6c1;
+  --invade-highlight-outline-color: rgba(73, 58, 41, 0.25);
+  --invade-highlight-focus-ring: rgba(73, 58, 41, 0.35);
+  --invade-highlight-underline-color: rgba(73, 58, 41, 0.55);
+  --invade-highlight-underline-style: dotted;
+  --invade-highlight-underline-width: 1px;
+  --invade-tooltip-border-color: rgba(73, 58, 41, 0.5);
+  --invade-tooltip-bg-image: repeating-linear-gradient(
+      -45deg,
+      rgba(71, 58, 41, 0.02),
+      rgba(71, 58, 41, 0.02) 6px,
+      rgba(71, 58, 41, 0.04) 6px,
+      rgba(71, 58, 41, 0.04) 12px
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0));
 }
 
 #invade-tooltip {
   position: fixed;
   z-index: 2147483647;
-  max-width: 320px;
-  min-width: 220px;
-  background: #1f2933;
-  color: #fff;
-  padding: 12px 14px;
-  border-radius: 12px;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.32);
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif;
+  max-width: 340px;
+  min-width: 240px;
+  background-color: #fdf6eb;
+  background-image: var(--invade-tooltip-bg-image);
+  color: #2f251a;
+  padding: 18px 20px;
+  border: 1px solid var(--invade-tooltip-border-color);
+  box-shadow: 0 18px 38px rgba(47, 36, 26, 0.18);
+  font-family: 'Georgia', 'Times New Roman', 'Noto Serif TC', serif;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
   display: none;
   pointer-events: none;
+  letter-spacing: 0.01em;
 }
 
+#invade-tooltip::before,
 #invade-tooltip::after {
   content: '';
   position: absolute;
-  width: 12px;
-  height: 12px;
-  background: inherit;
-  transform: rotate(45deg);
-  filter: brightness(0.92);
+  width: 22px;
+  height: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+#invade-tooltip::before {
+  background-color: var(--invade-tooltip-border-color);
+}
+
+#invade-tooltip::after {
+  background-color: #fdf6eb;
+  background-image: var(--invade-tooltip-bg-image);
+}
+
+#invade-tooltip[data-position='bottom']::before,
+#invade-tooltip[data-position='bottom']::after {
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+#invade-tooltip[data-position='bottom']::before {
+  top: calc(100% - 1px);
 }
 
 #invade-tooltip[data-position='bottom']::after {
   top: 100%;
-  left: 50%;
-  margin-left: -6px;
+}
+
+#invade-tooltip[data-position='top']::before,
+#invade-tooltip[data-position='top']::after {
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+#invade-tooltip[data-position='top']::before {
+  bottom: calc(100% - 1px);
 }
 
 #invade-tooltip[data-position='top']::after {
   bottom: 100%;
-  left: 50%;
-  margin-left: -6px;
 }
 
-.invade-tooltip__title {
+.invade-tooltip__masthead {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(47, 36, 26, 0.6);
+  border-bottom: 1px solid rgba(73, 58, 41, 0.3);
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+
+.invade-tooltip__headline {
+  font-size: 20px;
+  margin: 0;
   font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 6px;
+  letter-spacing: 0.02em;
 }
 
-.invade-tooltip__description {
-  margin: 0 0 8px 0;
+.invade-tooltip__dek {
+  margin: 8px 0 12px;
+  font-size: 13px;
+  color: rgba(47, 36, 26, 0.82);
 }
 
-.invade-tooltip__line {
+.invade-tooltip__meta {
+  border-top: 1px dotted rgba(73, 58, 41, 0.4);
+  border-bottom: 1px dotted rgba(73, 58, 41, 0.4);
+  padding: 10px 0;
+  margin: 12px 0;
+  display: grid;
+  gap: 6px;
+}
+
+.invade-tooltip__meta-row {
   display: flex;
   gap: 8px;
-  margin-bottom: 4px;
+  font-size: 12px;
 }
 
-.invade-tooltip__label {
-  flex: 0 0 auto;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.76);
+.invade-tooltip__meta-label {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(47, 36, 26, 0.6);
 }
 
-.invade-tooltip__value {
+.invade-tooltip__meta-value {
   flex: 1 1 auto;
-  color: rgba(255, 255, 255, 0.92);
+  word-break: break-word;
 }
 
-.invade-tooltip__example-label {
-  margin-top: 10px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.76);
+.invade-tooltip__example {
+  margin: 12px 0 0;
+  font-size: 13px;
+  line-height: 1.7;
+  position: relative;
+  padding-left: 16px;
+}
+
+.invade-tooltip__example::before {
+  content: '“';
+  font-family: 'Times New Roman', serif;
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  top: -4px;
+  color: rgba(47, 36, 26, 0.3);
+}
+
+.invade-tooltip__example p {
+  margin: 0;
+}
+
+.invade-tooltip__kicker {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(47, 36, 26, 0.6);
+  margin: 12px 0 6px;
+}
+
+.invade-tooltip__footnote {
+  margin: 10px 0 0;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: rgba(47, 36, 26, 0.68);
+}
+
+.invade-tooltip__footnote + .invade-tooltip__footnote {
+  margin-top: 4px;
 }
 
 .invade-tooltip__example mark {
-  background: rgba(255, 255, 255, 0.18);
-  color: #fff;
-  padding: 0 3px;
-  border-radius: 4px;
-}
-
-.invade-tooltip__notice {
-  margin-top: 8px;
-  font-size: 12px;
-  color: rgba(255, 204, 128, 0.95);
+  background: rgba(204, 167, 120, 0.28);
+  color: inherit;
+  padding: 0 2px;
+  text-decoration: none;
+  box-shadow: inset 0 -0.15em 0 rgba(204, 167, 120, 0.4);
 }

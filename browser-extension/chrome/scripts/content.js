@@ -5,7 +5,6 @@
   const SKIP_PARENT_TAGS = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEXTAREA', 'CODE', 'PRE', 'KBD', 'SAMP']);
 
   let settings = invadeMergeSettings();
-  let vocabList = [];
   let vocabMap = new Map();
   let wordPattern = null;
   let observer = null;
@@ -45,12 +44,11 @@
       return;
     }
     const response = await fetch(chrome.runtime.getURL('data/vocabs.json'));
-    const json = await response.json();
-    vocabList = json;
+    const vocabularies = await response.json();
     vocabMap = new Map();
 
     const wordSet = new Set();
-    for (const vocab of json) {
+    for (const vocab of vocabularies) {
       if (!vocab.word) {
         continue;
       }
@@ -318,37 +316,46 @@
   }
 
   function renderTooltipContent(vocab) {
-    const recommended = vocab.recommended && vocab.recommended.length
-      ? `<div class="invade-tooltip__line"><span class="invade-tooltip__label">建議</span><span class="invade-tooltip__value">${vocab.recommended.map(escapeHtml).join('、')}</span></div>`
-      : '';
-    const category = vocab.categoryLabel
-      ? `<div class="invade-tooltip__line"><span class="invade-tooltip__label">分類</span><span class="invade-tooltip__value">${escapeHtml(vocab.categoryLabel)}</span></div>`
-      : '';
-    const explicit = vocab.explicitLabel && vocab.explicit !== ''
-      ? `<div class="invade-tooltip__line"><span class="invade-tooltip__label">備註</span><span class="invade-tooltip__value">${escapeHtml(vocab.explicitLabel)}</span></div>`
-      : '';
-    const description = vocab.description
-      ? `<p class="invade-tooltip__description">${escapeHtml(vocab.description)}</p>`
-      : '';
-    const example = vocab.examples && vocab.examples.length
-      ? `<div class="invade-tooltip__example-label">範例</div><div class="invade-tooltip__example">${formatExampleText(vocab.examples[0].correct)}</div>`
-      : '';
-    const notice = vocab.notice
-      ? `<div class="invade-tooltip__notice">${escapeHtml(vocab.notice)}</div>`
-      : '';
-    const deprecation = vocab.deprecation
-      ? `<div class="invade-tooltip__notice">${escapeHtml(vocab.deprecation)}</div>`
+    const dek = vocab.description
+      ? `<p class="invade-tooltip__dek">${escapeHtml(vocab.description)}</p>`
       : '';
 
+    const metaRows = [];
+    if (vocab.categoryLabel) {
+      metaRows.push(
+        `<div class="invade-tooltip__meta-row"><span class="invade-tooltip__meta-label">分類</span><span class="invade-tooltip__meta-value">${escapeHtml(vocab.categoryLabel)}</span></div>`
+      );
+    }
+    if (vocab.recommended && vocab.recommended.length) {
+      metaRows.push(
+        `<div class="invade-tooltip__meta-row"><span class="invade-tooltip__meta-label">建議</span><span class="invade-tooltip__meta-value">${vocab.recommended.map(escapeHtml).join('、')}</span></div>`
+      );
+    }
+    if (vocab.explicitLabel && vocab.explicit !== '') {
+      metaRows.push(
+        `<div class="invade-tooltip__meta-row"><span class="invade-tooltip__meta-label">備註</span><span class="invade-tooltip__meta-value">${escapeHtml(vocab.explicitLabel)}</span></div>`
+      );
+    }
+    const meta = metaRows.length ? `<section class="invade-tooltip__meta">${metaRows.join('')}</section>` : '';
+
+    const example = vocab.examples && vocab.examples.length
+      ? `<div class="invade-tooltip__kicker">用字示例</div><div class="invade-tooltip__example"><p>${formatExampleText(
+        vocab.examples[0].correct
+      )}</p></div>`
+      : '';
+
+    const footnotes = [vocab.notice, vocab.deprecation]
+      .filter(Boolean)
+      .map(note => `<p class="invade-tooltip__footnote">${escapeHtml(note)}</p>`)
+      .join('');
+
     return `
-      <div class="invade-tooltip__title">${escapeHtml(vocab.word)}</div>
-      ${description}
-      ${recommended}
-      ${category}
-      ${explicit}
+      <div class="invade-tooltip__masthead">支語觀察報</div>
+      <h2 class="invade-tooltip__headline">${escapeHtml(vocab.word)}</h2>
+      ${dek}
+      ${meta}
       ${example}
-      ${notice}
-      ${deprecation}
+      ${footnotes}
     `;
   }
 
@@ -447,8 +454,28 @@
   }
 
   function applySettingsStyles() {
-    document.documentElement.style.setProperty('--invade-highlight-color', settings.highlightColor);
-    document.documentElement.style.setProperty('--invade-highlight-underline-style', settings.underlineStyle);
+    const highlightColor = settings.enableHighlightFill ? settings.highlightColor : 'transparent';
+    const outlineColor = settings.enableHighlightFill
+      ? deriveTone(settings.highlightColor, 0.7, 0.35, 'rgba(73, 58, 41, 0.25)')
+      : 'rgba(73, 58, 41, 0.18)';
+    const focusRing = deriveTone(settings.highlightColor, 0.6, 0.3, 'rgba(73, 58, 41, 0.3)');
+    const underlineColor = settings.enableUnderline
+      ? deriveTone(settings.highlightColor, 0.65, 0.55, 'rgba(73, 58, 41, 0.55)')
+      : 'transparent';
+
+    document.documentElement.style.setProperty('--invade-highlight-color', highlightColor);
+    document.documentElement.style.setProperty('--invade-highlight-outline-color', outlineColor);
+    document.documentElement.style.setProperty('--invade-highlight-focus-ring', focusRing);
+
+    if (settings.enableUnderline) {
+      document.documentElement.style.setProperty('--invade-highlight-underline-width', '1px');
+      document.documentElement.style.setProperty('--invade-highlight-underline-style', settings.underlineStyle);
+      document.documentElement.style.setProperty('--invade-highlight-underline-color', underlineColor);
+    } else {
+      document.documentElement.style.setProperty('--invade-highlight-underline-width', '0');
+      document.documentElement.style.setProperty('--invade-highlight-underline-style', 'solid');
+      document.documentElement.style.setProperty('--invade-highlight-underline-color', underlineColor);
+    }
   }
 
   function escapeRegExp(text) {
@@ -485,6 +512,25 @@
       }
       return escapeHtml(part);
     }).join('');
+  }
+
+  function deriveTone(color, factor, alpha, fallback) {
+    if (!color || typeof color !== 'string') {
+      return fallback;
+    }
+    const match = color.trim().match(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/);
+    if (!match) {
+      return fallback;
+    }
+    let value = match[1];
+    if (value.length === 3) {
+      value = value.split('').map(ch => ch + ch).join('');
+    }
+    const r = parseInt(value.slice(0, 2), 16);
+    const g = parseInt(value.slice(2, 4), 16);
+    const b = parseInt(value.slice(4, 6), 16);
+    const tone = channel => Math.max(0, Math.min(255, Math.round(channel * factor)));
+    return `rgba(${tone(r)}, ${tone(g)}, ${tone(b)}, ${alpha})`;
   }
 
   bootstrap();

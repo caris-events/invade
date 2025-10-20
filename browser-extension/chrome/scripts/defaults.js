@@ -1,8 +1,10 @@
 const INVADE_DEFAULT_SETTINGS = Object.freeze({
   enabled: true,
   showTooltip: true,
-  highlightColor: '#fff176',
+  highlightColor: '#f4e6c1',
   underlineStyle: 'dotted',
+  enableHighlightFill: true,
+  enableUnderline: true,
   ignoreInputs: true
 });
 

@@ -8,6 +8,8 @@ async function init() {
   const elements = {
     enabled: document.getElementById('enabled'),
     showTooltip: document.getElementById('showTooltip'),
+    enableHighlightFill: document.getElementById('enableHighlightFill'),
+    enableUnderline: document.getElementById('enableUnderline'),
     highlightColor: document.getElementById('highlightColor'),
     underlineStyle: document.getElementById('underlineStyle'),
     ignoreInputs: document.getElementById('ignoreInputs'),
@@ -32,13 +34,19 @@ function attachListeners(elements) {
       [key]: value
     };
     saveCurrentSettings(elements.status);
+    if (key === 'enableHighlightFill' || key === 'enableUnderline') {
+      updateControlStates(elements, currentSettings);
+    }
   };
 
   elements.enabled.addEventListener('change', handler);
   elements.showTooltip.addEventListener('change', handler);
+  elements.enableHighlightFill.addEventListener('change', handler);
+  elements.enableUnderline.addEventListener('change', handler);
   elements.ignoreInputs.addEventListener('change', handler);
   elements.underlineStyle.addEventListener('change', handler);
   elements.highlightColor.addEventListener('input', handler);
+  elements.highlightColor.addEventListener('change', handler);
 
   elements.reset.addEventListener('click', async () => {
     currentSettings = invadeMergeSettings();
@@ -53,9 +61,12 @@ function attachListeners(elements) {
 function applyToForm(elements, settings) {
   elements.enabled.checked = settings.enabled;
   elements.showTooltip.checked = settings.showTooltip;
+  elements.enableHighlightFill.checked = settings.enableHighlightFill;
+  elements.enableUnderline.checked = settings.enableUnderline;
   elements.highlightColor.value = settings.highlightColor;
   elements.underlineStyle.value = settings.underlineStyle;
   elements.ignoreInputs.checked = settings.ignoreInputs;
+  updateControlStates(elements, settings);
 }
 
 async function loadStoredSettings() {
@@ -84,4 +95,9 @@ function showStatus(element, message) {
   statusTimeout = setTimeout(() => {
     element.textContent = '';
   }, 1800);
+}
+
+function updateControlStates(elements, settings) {
+  elements.highlightColor.disabled = !settings.enableHighlightFill;
+  elements.underlineStyle.disabled = !settings.enableUnderline;
 }

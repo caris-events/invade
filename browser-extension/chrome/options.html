@@ -7,56 +7,83 @@
   <link rel="stylesheet" href="options.css">
 </head>
 <body>
-  <main class="page">
-    <header class="page__header">
-      <img src="icons/icon48.png" alt="" width="32" height="32" class="page__logo">
-      <div>
-        <h1>支語提示器</h1>
-        <p class="page__subtitle">調整標示顏色與提示行為。</p>
-      </div>
+  <main class="paper">
+    <header class="paper__masthead">
+      <span class="paper__edition">VOL. 01</span>
+      <h1 class="paper__title">支語觀察報｜讀者設定</h1>
+      <p class="paper__lead">依照你的閱讀節奏調整標記方式，讓提示更像一份對味的報刊。</p>
     </header>
 
-    <form class="card" id="settings-form">
-      <fieldset class="group">
-        <legend>啟用狀態</legend>
-        <label class="field">
+    <form id="settings-form" class="paper__sheet">
+      <section class="paper__section">
+        <h2 class="paper__section-title">版面焦點</h2>
+        <label class="paper__item">
           <input type="checkbox" id="enabled">
-          <span>啟用支語標示</span>
+          <span class="paper__item-body">
+            <span class="paper__item-headline">啟用支語標記</span>
+            <span class="paper__item-note">掃描頁面並標示常見中國用語。</span>
+          </span>
         </label>
-        <label class="field">
+        <label class="paper__item">
           <input type="checkbox" id="showTooltip">
-          <span>顯示滑鼠提示資訊</span>
+          <span class="paper__item-body">
+            <span class="paper__item-headline">顯示懸浮資訊</span>
+            <span class="paper__item-note">游標靠近時浮現報章式摘要。</span>
+          </span>
         </label>
-      </fieldset>
+      </section>
 
-      <fieldset class="group">
-        <legend>視覺樣式</legend>
-        <label class="field">
-          <span class="field__label">標示顏色</span>
-          <input type="color" id="highlightColor">
+      <section class="paper__section">
+        <h2 class="paper__section-title">排版細節</h2>
+        <label class="paper__item">
+          <input type="checkbox" id="enableHighlightFill">
+          <span class="paper__item-body">
+            <span class="paper__item-headline">套用底色</span>
+            <span class="paper__item-note">以柔和紙張色塊提點支語。</span>
+          </span>
         </label>
-        <label class="field">
-          <span class="field__label">底線樣式</span>
-          <select id="underlineStyle">
-            <option value="dotted">虛線 (建議)</option>
-            <option value="dashed">破折線</option>
-            <option value="solid">實線</option>
-            <option value="none">無底線</option>
-          </select>
+        <label class="paper__item">
+          <input type="checkbox" id="enableUnderline">
+          <span class="paper__item-body">
+            <span class="paper__item-headline">保留底線</span>
+            <span class="paper__item-note">沿用報刊常見的虛線標記。</span>
+          </span>
         </label>
-      </fieldset>
+        <div class="paper__field">
+          <label for="highlightColor" class="paper__field-label">標記顏色</label>
+          <div class="paper__field-control">
+            <input type="color" id="highlightColor">
+            <span class="paper__field-note">調整紙張色塊色調。</span>
+          </div>
+        </div>
+        <div class="paper__field">
+          <label for="underlineStyle" class="paper__field-label">底線樣式</label>
+          <div class="paper__field-control">
+            <select id="underlineStyle">
+              <option value="dotted">虛線（建議）</option>
+              <option value="dashed">破折線</option>
+              <option value="solid">實線</option>
+              <option value="double">雙線</option>
+            </select>
+            <span class="paper__field-note">適合搭配不同版面風格。</span>
+          </div>
+        </div>
+      </section>
 
-      <fieldset class="group">
-        <legend>例外</legend>
-        <label class="field">
+      <section class="paper__section">
+        <h2 class="paper__section-title">讀者體驗</h2>
+        <label class="paper__item">
           <input type="checkbox" id="ignoreInputs">
-          <span>忽略文字輸入區與可編輯區塊</span>
+          <span class="paper__item-body">
+            <span class="paper__item-headline">忽略輸入區</span>
+            <span class="paper__item-note">撰寫文章或填表時不進行標記。</span>
+          </span>
         </label>
-      </fieldset>
+      </section>
 
-      <footer class="actions">
-        <button type="button" id="reset-button" class="actions__reset">恢復預設值</button>
-        <p id="status" role="status" aria-live="polite"></p>
+      <footer class="paper__footer">
+        <button type="button" id="reset-button" class="paper__reset">恢復預設值</button>
+        <p id="status" role="status" aria-live="polite" class="paper__status"></p>
       </footer>
     </form>
   </main>
