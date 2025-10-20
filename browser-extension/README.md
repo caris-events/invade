@@ -27,12 +27,45 @@ BAKAINVADE_DIR=$(pwd)/../.. go run . extension
 
 - `matchMode: "standalone"`：要求詞彙需出現在標點或空白邊界之間，適合英數縮寫或需獨立顯示的詞彙。
 - `skipPhrases`: `string[]`：列出遇到特定片語時要忽略的情境，例如 `"海內存知己"`。
+- `context`: 指定上下文加權規則，例如遇到特定前後詞時扣分（可用於排除常見誤判）。
 
 ```yaml
 # database/vocabs/內存.yml
 matchOptions:
   skipPhrases:
     - 海內存知己
+  context:
+    threshold: 0
+    features:
+      - position: next
+        tokens: ["海內存", "海內", "內存"]
+        weight: -1
+```
+
+### 上下文加權規則詳細
+
+`matchOptions.context` 屬性用於根據詞彙周遭的字詞給分或扣分，以避免單靠片語列舉仍會誤判的情境。支援以下設定：
+
+- `baseScore`: 初始分數（預設為 `0`）。
+- `threshold`: 達到此分數才視為命中（預設 `0`，若分數低於門檻視為忽略）。
+- `requireSegments`: 若為 `true`、而目前瀏覽器沒有 `Intl.Segmenter`，則直接忽略這項規則（預設 `false`）。
+- `maxTokens`: 取用的前後文 token 數量上限（預設 5）。
+- `features`: 由多個加權規則構成的陣列，每條規則說明如下：
+  - `position` / `positions`: 指定觀察的相對位置，支援 `prev`（前一個 token）、`next`（下一個 token）、`any`／`window`（回顧前後各數個 token）。
+  - `distance`: 向前或向後搜尋的距離（以 token 為單位，預設 1，被套用時會以 `distance - 1` 的索引取值）。
+  - `tokens`: 觸發本規則的詞彙清單。
+  - `weight`: 命中時調整的分數，可為負值（扣分）或正值（加分）。
+
+例如以下設定會在「寄」後面緊接「寄送服務／寄送資料」時扣 1 分，使整體分數低於 `threshold` 因而跳過標記：
+
+```yaml
+matchOptions:
+  context:
+    threshold: 0
+    features:
+      - position: next
+        tokens: ["寄送", "寄送服務", "寄送資料"]
+        weight: -1
 ```
 
 ## 斷詞與比對流程
@@ -45,8 +78,10 @@ Content script 會優先透過 `Intl.Segmenter('zh-Hant', { granularity: 'word' 
 
 - **記錄略過片語**：在 Console（需開啟 Verbose Level）輸出 `[invade] skipPhrases`，包含組合後的片語與是否被忽略。
 - **記錄斷詞結果**：輸出 `[invade] segments`，揭露每個文字節點的斷詞切分方式。
+- **記錄語境權重**：輸出 `[invade] weights`，顯示每個語境特徵的加減分情況與最終分數。
+- **在懸浮視窗顯示偵錯資訊**：提示卡會額外列出決策、分數與觸發規則，無須開啟 Console 即可檢視判斷依據。
 
-建議僅在排查時短暫開啟，以免大量輸出影響瀏覽體驗。
+建議僅在排查時短暫開啟，以免大量輸出或額外資訊影響瀏覽體驗。
 
 ## 在 Chrome 載入
 

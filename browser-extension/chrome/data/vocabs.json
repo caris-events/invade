@@ -1,5 +1,236 @@
 [
   {
+    "word": "菜單",
+    "category": "TECHNOLOGY",
+    "categoryLabel": "科技",
+    "explicit": "",
+    "explicitLabel": "未知",
+    "description": "含有一系列的功能選單。",
+    "notice": "這個詞彙指的不是點餐時的菜餚選單。",
+    "recommended": [
+      "選單"
+    ],
+    "examples": [
+      {
+        "words": [
+          "選單"
+        ],
+        "correct": "進入設定{{選單}}就可以更改音量大小。",
+        "incorrect": "進入設置{{菜單}}就可以更改音量大小。"
+      }
+    ],
+    "matchOptions": {
+      "skipPhrases": [
+        "菜單選項",
+        "菜單項目",
+        "菜單選擇"
+      ],
+      "context": {
+        "baseScore": -1,
+        "features": [
+          {
+            "position": "prev",
+            "tokens": [
+              "設定",
+              "系統",
+              "功能",
+              "應用程式",
+              "工具",
+              "選單",
+              "菜單列",
+              "菜單鍵",
+              "菜單按鈕"
+            ],
+            "weight": 1
+          },
+          {
+            "position": "next",
+            "tokens": [
+              "設定",
+              "功能",
+              "選單",
+              "編輯",
+              "工具",
+              "列",
+              "介面",
+              "系統"
+            ],
+            "weight": 1
+          },
+          {
+            "position": "prev",
+            "tokens": [
+              "純素",
+              "餐點",
+              "菜色",
+              "料理",
+              "菜餚",
+              "甜點",
+              "菜品",
+              "菜系",
+              "套餐"
+            ],
+            "weight": -1
+          },
+          {
+            "position": "window",
+            "tokens": [
+              "純素",
+              "餐點",
+              "料理",
+              "菜餚",
+              "菜色",
+              "菜品",
+              "菜系",
+              "套餐",
+              "餐廳"
+            ],
+            "weight": -0.5
+          }
+        ]
+      }
+    },
+    "lastModifiedTs": 1760979329
+  },
+  {
+    "word": "宏",
+    "category": "TECHNOLOGY",
+    "categoryLabel": "科技",
+    "explicit": "",
+    "explicitLabel": "未知",
+    "description": "電腦裡能夠批次處理資料的程式碼（Macro）。因為一段指令就可以做很多事，在中國被稱為「宏」，有宏大、很大的意思。",
+    "recommended": [
+      "巨集"
+    ],
+    "examples": [
+      {
+        "words": [
+          "巨集"
+        ],
+        "correct": "Office 辦公軟體的{{巨集}}指令可以計算出所有資料的總金額。",
+        "incorrect": "Office 辦公軟體的{{宏}}可以計算出所有資料的總金額。"
+      }
+    ],
+    "matchOptions": {
+      "context": {
+        "baseScore": -1,
+        "features": [
+          {
+            "position": "prev",
+            "tokens": [
+              "巨集",
+              "自動化",
+              "指令",
+              "批次",
+              "程式",
+              "程序",
+              "腳本",
+              "功能",
+              "自訂"
+            ],
+            "weight": 1
+          },
+          {
+            "position": "next",
+            "tokens": [
+              "指令",
+              "功能",
+              "程式",
+              "腳本",
+              "自動化",
+              "巨集"
+            ],
+            "weight": 1
+          },
+          {
+            "position": "window",
+            "tokens": [
+              "巨集",
+              "自動化",
+              "指令",
+              "程式",
+              "批次",
+              "腳本"
+            ],
+            "weight": 0.5
+          }
+        ]
+      }
+    },
+    "lastModifiedTs": 1760977824
+  },
+  {
+    "word": "支持",
+    "category": "TECHNOLOGY",
+    "categoryLabel": "科技",
+    "explicit": "",
+    "explicitLabel": "未知",
+    "description": "有能力足以使用某個功能。",
+    "notice": "這個詞彙指的不是精神層面上的支持。",
+    "recommended": [
+      "支援"
+    ],
+    "examples": [
+      {
+        "words": [
+          "支援"
+        ],
+        "correct": "這個社群網站{{支援}}多種語言。",
+        "incorrect": "這個社群網站{{支持}}多種語言。"
+      }
+    ],
+    "matchOptions": {
+      "context": {
+        "baseScore": -1,
+        "features": [
+          {
+            "position": "prev",
+            "tokens": [
+              "不",
+              "尚未",
+              "無法",
+              "不再",
+              "不會"
+            ],
+            "weight": 1
+          },
+          {
+            "position": "next",
+            "tokens": [
+              "功能",
+              "版本",
+              "格式",
+              "協議",
+              "語言",
+              "平台",
+              "模式",
+              "API",
+              "檔案",
+              "裝置"
+            ],
+            "weight": 1
+          },
+          {
+            "position": "window",
+            "tokens": [
+              "功能",
+              "版本",
+              "格式",
+              "協議",
+              "語言",
+              "平台",
+              "模式",
+              "API",
+              "裝置"
+            ],
+            "weight": 0.5
+          }
+        ]
+      }
+    },
+    "lastModifiedTs": 1760977671
+  },
+  {
     "word": "寄",
     "category": "ADJECTIVE",
     "categoryLabel": "形容詞",
@@ -35,9 +266,26 @@
         "寄信",
         "寄包裹",
         "寄東西"
-      ]
+      ],
+      "context": {
+        "features": [
+          {
+            "position": "next",
+            "tokens": [
+              "寄送",
+              "寄送服務",
+              "寄送資料",
+              "寄送通知",
+              "寄件",
+              "寄信",
+              "送"
+            ],
+            "weight": -1
+          }
+        ]
+      }
     },
-    "lastModifiedTs": 1760974597
+    "lastModifiedTs": 1760976739
   },
   {
     "word": "內存",
@@ -2723,27 +2971,6 @@
     "lastModifiedTs": 1760527523
   },
   {
-    "word": "宏",
-    "category": "TECHNOLOGY",
-    "categoryLabel": "科技",
-    "explicit": "",
-    "explicitLabel": "未知",
-    "description": "電腦裡能夠批次處理資料的程式碼（Macro）。因為一段指令就可以做很多事，在中國被稱為「宏」，有宏大、很大的意思。",
-    "recommended": [
-      "巨集"
-    ],
-    "examples": [
-      {
-        "words": [
-          "巨集"
-        ],
-        "correct": "Office 辦公軟體的{{巨集}}指令可以計算出所有資料的總金額。",
-        "incorrect": "Office 辦公軟體的{{宏}}可以計算出所有資料的總金額。"
-      }
-    ],
-    "lastModifiedTs": 1760527523
-  },
-  {
     "word": "實屬",
     "category": "ADVERB",
     "categoryLabel": "副詞",
@@ -4592,28 +4819,6 @@
         ],
         "correct": "筆記型電腦的前置{{鏡頭}}可以用來視訊通話。",
         "incorrect": "筆記型電腦的前{{攝像頭}}可以用來視訊通話。"
-      }
-    ],
-    "lastModifiedTs": 1760527523
-  },
-  {
-    "word": "支持",
-    "category": "TECHNOLOGY",
-    "categoryLabel": "科技",
-    "explicit": "",
-    "explicitLabel": "未知",
-    "description": "有能力足以使用某個功能。",
-    "notice": "這個詞彙指的不是精神層面上的支持。",
-    "recommended": [
-      "支援"
-    ],
-    "examples": [
-      {
-        "words": [
-          "支援"
-        ],
-        "correct": "這個社群網站{{支援}}多種語言。",
-        "incorrect": "這個社群網站{{支持}}多種語言。"
       }
     ],
     "lastModifiedTs": 1760527523
@@ -7700,28 +7905,6 @@
         ],
         "correct": "這隻{{羊駝}}的毛色很漂亮。",
         "incorrect": "這隻{{草泥馬}}的毛色很漂亮。"
-      }
-    ],
-    "lastModifiedTs": 1760527523
-  },
-  {
-    "word": "菜單",
-    "category": "TECHNOLOGY",
-    "categoryLabel": "科技",
-    "explicit": "",
-    "explicitLabel": "未知",
-    "description": "含有一系列的功能選單。",
-    "notice": "這個詞彙指的不是點餐時的菜餚選單。",
-    "recommended": [
-      "選單"
-    ],
-    "examples": [
-      {
-        "words": [
-          "選單"
-        ],
-        "correct": "進入設定{{選單}}就可以更改音量大小。",
-        "incorrect": "進入設置{{菜單}}就可以更改音量大小。"
       }
     ],
     "lastModifiedTs": 1760527523

@@ -9,6 +9,7 @@
   const TONE_DARK = 'dark';
   const TONE_LIGHT = 'light';
   const ASCII_PUNCTUATION_REGEX = /[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
+  const MAX_CONTEXT_TOKENS = 5;
 
   let settings = invadeMergeSettings();
   let vocabMap = new Map();
@@ -25,12 +26,16 @@
     [TONE_LIGHT]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorLightText, { opacity: 0.85 })
   };
   let debugSegmenter = false;
+  let debugTooltipEnabled = false;
+  let debugWeightsEnabled = false;
 
   async function bootstrap() {
     try {
       settings = invadeMergeSettings(await readSettings());
       debugSkipChecks = Boolean(settings.debugSkip);
       debugSegmenter = Boolean(settings.debugSegments);
+      debugTooltipEnabled = Boolean(settings.debugTooltip);
+      debugWeightsEnabled = Boolean(settings.debugWeights);
       applySettingsStyles();
       if (!settings.enabled) {
         installSettingsListener();
@@ -155,6 +160,12 @@
       span.className = HIGHLIGHT_CLASS;
       span.dataset.invadeWord = result.vocab.word;
       span.dataset.invadeOriginal = result.word;
+      if (result.debug && (debugTooltipEnabled || debugWeightsEnabled)) {
+        const serialized = serializeDebugInfo(result.debug);
+        if (serialized) {
+          span.dataset.invadeDebug = serialized;
+        }
+      }
       span.tabIndex = 0;
       span.textContent = text.slice(result.index, result.index + result.length);
       applyHighlightPalette(span, tone);
@@ -216,7 +227,12 @@
         if (!vocab) {
           continue;
         }
-        if (!shouldHighlightMatch(textNode, text, start, end - start, slice, vocab)) {
+        const debugInfo = prepareMatchDebugInfo(vocab, slice, 'segmenter');
+        if (!shouldHighlightMatch(textNode, text, start, end - start, slice, vocab, {
+          segments,
+          matchStart: i,
+          matchEnd: j
+        }, debugInfo)) {
           continue;
         }
         bestMatch = {
@@ -224,7 +240,8 @@
           length: end - start,
           word: slice,
           vocab,
-          segments: j - i + 1
+          segments: j - i + 1,
+          debug: debugInfo
         };
       }
       if (bestMatch) {
@@ -245,23 +262,42 @@
       if (!vocab) {
         continue;
       }
-      if (!shouldHighlightMatch(textNode, text, match.index, word.length, word, vocab)) {
+      const debugInfo = prepareMatchDebugInfo(vocab, word, 'regex');
+      if (!shouldHighlightMatch(textNode, text, match.index, word.length, word, vocab, null, debugInfo)) {
         continue;
       }
       matches.push({
         index: match.index,
         length: word.length,
         word,
-        vocab
+        vocab,
+        debug: debugInfo
       });
     }
     return matches;
   }
 
-  function shouldHighlightMatch(textNode, text, index, length, matchedWord, vocab) {
+  function shouldHighlightMatch(textNode, text, index, length, matchedWord, vocab, contextInfo, debugInfo) {
     const options = vocab.matchOptions || {};
+    if (debugInfo) {
+      debugInfo.vocab = vocab.word;
+      debugInfo.original = matchedWord;
+    }
     if (Array.isArray(options.skipPhrases) && options.skipPhrases.length) {
-      if (isPartOfSkipPhrase(textNode, text, index, length, matchedWord, vocab, options.skipPhrases)) {
+      const skipPhrase = isPartOfSkipPhrase(textNode, text, index, length, matchedWord, vocab, options.skipPhrases);
+      if (skipPhrase) {
+        if (debugInfo) {
+          debugInfo.decision = 'skip-phrase';
+          debugInfo.skipPhrase = skipPhrase;
+        }
+        if (debugWeightsEnabled && debugInfo) {
+          console.debug('[invade] weights', {
+            word: matchedWord,
+            vocab: vocab.word,
+            decision: 'skip-phrase',
+            skipPhrase
+          });
+        }
         return false;
       }
     }
@@ -270,7 +306,52 @@
       const before = text[index - 1];
       const after = text[index + length];
       if (!isBoundaryCharacter(before) || !isBoundaryCharacter(after)) {
+        if (debugInfo) {
+          debugInfo.decision = 'standalone-boundary';
+        }
+        if (debugWeightsEnabled && debugInfo) {
+          console.debug('[invade] weights', {
+            word: matchedWord,
+            vocab: vocab.word,
+            decision: 'standalone-boundary'
+          });
+        }
         return false;
+      }
+    }
+    let contextResult = null;
+    if (options.context) {
+      contextResult = evaluateContextFeatures(textNode, text, index, length, matchedWord, vocab, contextInfo, options.context, debugInfo);
+      if (!contextResult.passed) {
+        if (debugInfo) {
+          debugInfo.decision = 'context-threshold';
+          debugInfo.context = contextResult;
+        }
+        if (debugWeightsEnabled && debugInfo) {
+          console.debug('[invade] weights', {
+            word: matchedWord,
+            vocab: vocab.word,
+            decision: debugInfo.decision,
+            skipPhrase: debugInfo.skipPhrase,
+            context: contextResult
+          });
+        }
+        return false;
+      }
+    }
+    if (debugInfo) {
+      debugInfo.decision = debugInfo.decision || 'matched';
+      if (contextResult) {
+        debugInfo.context = contextResult;
+      }
+      if (debugWeightsEnabled) {
+        console.debug('[invade] weights', {
+          word: matchedWord,
+          vocab: vocab.word,
+          decision: debugInfo.decision,
+          skipPhrase: debugInfo.skipPhrase,
+          context: contextResult
+        });
       }
     }
     return true;
@@ -305,10 +386,10 @@
         continue;
       }
       if (matchesSkipPhrase(textNode, text, index, length, matchedWord, vocab, phrase)) {
-        return true;
+        return phrase;
       }
     }
-    return false;
+    return null;
   }
 
   function matchesSkipPhrase(textNode, text, index, length, matchedWord, vocab, phrase) {
@@ -441,6 +522,273 @@
       return true;
     }
     return isBoundaryCharacter(char);
+  }
+
+  function evaluateContextFeatures(textNode, text, index, length, matchedWord, vocab, contextInfo, contextOptions, debugInfo) {
+    const features = Array.isArray(contextOptions.features) ? contextOptions.features : [];
+    if (!features.length) {
+      return {
+        passed: true,
+        score: typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0,
+        threshold: typeof contextOptions.threshold === 'number' ? contextOptions.threshold : 0,
+        baseScore: typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0,
+        contributions: []
+      };
+    }
+    const accessor = createContextTokenAccessor(textNode, text, index, length, contextInfo, contextOptions);
+    if (!accessor) {
+      const passed = !contextOptions.requireSegments;
+      const result = {
+        passed,
+        score: typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0,
+        threshold: typeof contextOptions.threshold === 'number' ? contextOptions.threshold : 0,
+        baseScore: typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0,
+        contributions: [],
+        segmenterAvailable: false,
+        requireSegments: Boolean(contextOptions.requireSegments),
+        maxTokens:
+          typeof contextOptions.maxTokens === 'number' && contextOptions.maxTokens > 0
+            ? Math.min(Math.floor(contextOptions.maxTokens), 12)
+            : MAX_CONTEXT_TOKENS
+      };
+      if (debugInfo) {
+        debugInfo.context = result;
+      }
+      return result;
+    }
+    const threshold = typeof contextOptions.threshold === 'number' ? contextOptions.threshold : 0;
+    let score = typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0;
+    const contributions = [];
+    for (const feature of features) {
+      const tokens = normalizeContextTokens(feature);
+      if (!tokens.length) {
+        continue;
+      }
+      const weight = typeof feature.weight === 'number' ? feature.weight : 0;
+      if (!weight) {
+        continue;
+      }
+      const positions = normalizeContextPositions(feature);
+      const distance = Number.isFinite(feature.distance) && feature.distance > 0 ? Math.floor(feature.distance) : 1;
+      let matched = false;
+      let matchedToken = null;
+      for (const position of positions) {
+        const token = accessor(position, tokens, distance);
+        if (token) {
+          matched = true;
+          matchedToken = token;
+          break;
+        }
+      }
+      if (matched) {
+        score += weight;
+      }
+      contributions.push({
+        position: positions.join(','),
+        weight,
+        matched,
+        token: matchedToken,
+        tokens,
+        distance,
+        contribution: matched ? weight : 0
+      });
+    }
+    const result = {
+      passed: score >= threshold,
+      score,
+      threshold,
+      baseScore: typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0,
+      contributions,
+      segmenterAvailable: true,
+      requireSegments: Boolean(contextOptions.requireSegments),
+      maxTokens:
+        typeof contextOptions.maxTokens === 'number' && contextOptions.maxTokens > 0
+          ? Math.min(Math.floor(contextOptions.maxTokens), 12)
+          : MAX_CONTEXT_TOKENS
+    };
+    if (debugInfo) {
+      debugInfo.context = result;
+    }
+    return result;
+  }
+
+  function prepareMatchDebugInfo(vocab, matchedWord, source) {
+    if (!debugTooltipEnabled && !debugWeightsEnabled) {
+      return null;
+    }
+    return {
+      vocab: vocab && vocab.word ? vocab.word : '',
+      matched: matchedWord,
+      timestamp: Date.now(),
+      source: source || ''
+    };
+  }
+
+  function createContextTokenAccessor(textNode, text, index, length, contextInfo, contextOptions) {
+    if (!segmenter || typeof segmenter.segment !== 'function') {
+      return null;
+    }
+    const maxTokens = typeof contextOptions.maxTokens === 'number' && contextOptions.maxTokens > 0
+      ? Math.min(Math.floor(contextOptions.maxTokens), 12)
+      : MAX_CONTEXT_TOKENS;
+
+    let segments = null;
+    let matchStart = null;
+    let matchEnd = null;
+
+    if (contextInfo && Array.isArray(contextInfo.segments)) {
+      segments = contextInfo.segments;
+      matchStart = contextInfo.matchStart;
+      matchEnd = contextInfo.matchEnd;
+    } else {
+      const generated = Array.from(segmenter.segment(text || ''));
+      segments = generated.map(segment => ({
+        value: segment.segment,
+        index: segment.index,
+        isWordLike: Boolean(segment.isWordLike)
+      }));
+      for (let i = 0; i < segments.length; i += 1) {
+        const seg = segments[i];
+        if (seg.index <= index && seg.index + seg.value.length > index) {
+          if (matchStart === null) {
+            matchStart = i;
+          }
+          matchEnd = i;
+        } else if (seg.index >= index && seg.index < index + length) {
+          if (matchStart === null) {
+            matchStart = i;
+          }
+          matchEnd = i;
+        }
+      }
+      if (matchStart === null) {
+        matchStart = 0;
+      }
+      if (matchEnd === null) {
+        matchEnd = matchStart;
+      }
+    }
+
+    const prevTokens = collectNeighborTokens(segments, matchStart - 1, -1, maxTokens);
+    const nextTokens = collectNeighborTokens(segments, matchEnd + 1, 1, maxTokens);
+
+    if (textNode) {
+      const prevExtra = collectAdjacentText(textNode, maxTokens * 3, -1);
+      if (prevExtra.text) {
+        appendExtraTokens(prevTokens, prevExtra.text, -1, maxTokens);
+      }
+      const nextExtra = collectAdjacentText(textNode, maxTokens * 3, 1);
+      if (nextExtra.text) {
+        appendExtraTokens(nextTokens, nextExtra.text, 1, maxTokens);
+      }
+    }
+
+    return (position, tokens, distance) => {
+      if (!tokens || !tokens.length) {
+        return null;
+      }
+      const targetSet = new Set(tokens);
+      const offset = Math.max(1, distance || 1) - 1;
+      if (position === 'prev') {
+        if (offset < prevTokens.length) {
+          const candidate = prevTokens[offset];
+          return candidate && targetSet.has(candidate) ? candidate : null;
+        }
+        return null;
+      }
+      if (position === 'next') {
+        if (offset < nextTokens.length) {
+          const candidate = nextTokens[offset];
+          return candidate && targetSet.has(candidate) ? candidate : null;
+        }
+        return null;
+      }
+      if (position === 'any' || position === 'window') {
+        for (const candidate of prevTokens) {
+          if (candidate && targetSet.has(candidate)) {
+            return candidate;
+          }
+        }
+        for (const candidate of nextTokens) {
+          if (candidate && targetSet.has(candidate)) {
+            return candidate;
+          }
+        }
+        return null;
+      }
+      return null;
+    };
+  }
+
+  function collectNeighborTokens(segments, startIndex, step, maxTokens) {
+    const tokens = [];
+    if (!Array.isArray(segments) || !segments.length) {
+      return tokens;
+    }
+    for (let i = startIndex; i >= 0 && i < segments.length && tokens.length < maxTokens; i += step) {
+      const segment = segments[i];
+      if (!segment || !segment.value || !segment.value.trim()) {
+        continue;
+      }
+      if (segment.isWordLike === false) {
+        continue;
+      }
+      tokens.push(segment.value);
+    }
+    return tokens;
+  }
+
+  function appendExtraTokens(currentTokens, text, direction, maxTokens) {
+    if (!segmenter || !text) {
+      return;
+    }
+    try {
+      const extraSegments = Array.from(segmenter.segment(text)).filter(segment => {
+        return Boolean(segment.segment && segment.segment.trim() && segment.isWordLike !== false);
+      });
+      if (!extraSegments.length) {
+        return;
+      }
+      if (direction === -1) {
+        for (let i = extraSegments.length - 1; i >= 0 && currentTokens.length < maxTokens; i -= 1) {
+          const token = extraSegments[i].segment;
+          if (!currentTokens.includes(token)) {
+            currentTokens.push(token);
+          }
+        }
+      } else {
+        for (let i = 0; i < extraSegments.length && currentTokens.length < maxTokens; i += 1) {
+          const token = extraSegments[i].segment;
+          if (!currentTokens.includes(token)) {
+            currentTokens.push(token);
+          }
+        }
+      }
+    } catch (error) {
+      if (debugSegmenter) {
+        console.debug('[invade] context token collection failed:', error);
+      }
+    }
+  }
+
+  function normalizeContextTokens(feature) {
+    if (Array.isArray(feature.tokens)) {
+      return feature.tokens.filter(Boolean);
+    }
+    if (feature.token) {
+      return [feature.token];
+    }
+    return [];
+  }
+
+  function normalizeContextPositions(feature) {
+    if (Array.isArray(feature.positions) && feature.positions.length) {
+      return feature.positions;
+    }
+    if (typeof feature.position === 'string' && feature.position) {
+      return [feature.position];
+    }
+    return ['any'];
   }
 
   function debugSegmenterLog(textNode, text, segments) {
@@ -653,7 +1001,11 @@
     if (!vocab) {
       return;
     }
-    tooltipEl.innerHTML = renderTooltipContent(vocab);
+    let debugData = null;
+    if (debugTooltipEnabled && anchor.dataset.invadeDebug) {
+      debugData = parseDebugInfo(anchor.dataset.invadeDebug);
+    }
+    tooltipEl.innerHTML = renderTooltipContent(vocab, debugData);
     tooltipEl.style.display = 'block';
     requestAnimationFrame(() => positionTooltip(anchor, tooltipEl));
   }
@@ -665,7 +1017,7 @@
     }
   }
 
-  function renderTooltipContent(vocab) {
+  function renderTooltipContent(vocab, debugData) {
     const dek = vocab.description
       ? `<p class="invade-tooltip__dek">${escapeHtml(vocab.description)}</p>`
       : '';
@@ -699,6 +1051,8 @@
       .map(note => `<p class="invade-tooltip__footnote">${escapeHtml(note)}</p>`)
       .join('');
 
+    const debugSection = debugTooltipEnabled && debugData ? renderDebugSection(debugData) : '';
+
     return `
       <div class="invade-tooltip__masthead">支語觀察報</div>
       <h2 class="invade-tooltip__headline">${escapeHtml(vocab.word)}</h2>
@@ -706,7 +1060,108 @@
       ${meta}
       ${example}
       ${footnotes}
+      ${debugSection}
     `;
+  }
+
+  function renderDebugSection(data) {
+    if (!data) {
+      return '';
+    }
+    const lines = [];
+    const summary = [];
+    if (data.matched) {
+      summary.push(`<li><strong>Matched</strong>：${escapeHtml(data.matched)}</li>`);
+    }
+    if (data.vocab) {
+      summary.push(`<li><strong>Vocabulary</strong>：${escapeHtml(data.vocab)}</li>`);
+    }
+    if (data.source) {
+      summary.push(`<li><strong>Source</strong>：${escapeHtml(data.source)}</li>`);
+    }
+    if (data.timestamp) {
+      summary.push(`<li><strong>Timestamp</strong>：${escapeHtml(formatTimestamp(data.timestamp))}</li>`);
+    }
+    if (summary.length) {
+      lines.push(`<li><strong>Summary</strong><ul class="invade-tooltip__debug-sublist">${summary.join('')}</ul></li>`);
+    }
+    if (data.decision) {
+      lines.push(`<li><strong>Decision</strong>：${escapeHtml(data.decision)}</li>`);
+    }
+    if (data.skipPhrase) {
+      lines.push(`<li><strong>Skip Phrase</strong>：${escapeHtml(data.skipPhrase)}</li>`);
+    }
+    if (data.context) {
+      const base = `基準 ${escapeHtml(String(data.context.baseScore))}`;
+      const scoreLine = `<li><strong>Score</strong>：${escapeHtml(String(data.context.score))} / 阈值 ${escapeHtml(String(data.context.threshold))}（${base}）</li>`;
+      lines.push(scoreLine);
+      const metaBits = [];
+      if (typeof data.context.segmenterAvailable === 'boolean') {
+        metaBits.push(`Segmenter：${data.context.segmenterAvailable ? '使用' : '未使用'}`);
+      }
+      if (typeof data.context.requireSegments === 'boolean') {
+        metaBits.push(`RequireSegments：${data.context.requireSegments ? '是' : '否'}`);
+      }
+      if (data.context.maxTokens) {
+        metaBits.push(`MaxTokens：${escapeHtml(String(data.context.maxTokens))}`);
+      }
+      if (metaBits.length) {
+        lines.push(`<li>${metaBits.join(' / ')}</li>`);
+      }
+      if (Array.isArray(data.context.contributions) && data.context.contributions.length) {
+        const contributions = data.context.contributions
+          .map(entry => {
+            const indicator = entry.matched ? '✓' : '✗';
+            const token = entry.token ? `→ ${escapeHtml(String(entry.token))}` : '';
+            const tokensList = entry.tokens ? `〔${escapeHtml(entry.tokens.join('、'))}〕` : '';
+            const distance = entry.distance ? `距離 ${escapeHtml(String(entry.distance))}` : '';
+            return `<li class="invade-tooltip__debug-entry">${indicator} ${escapeHtml(entry.position || '')} (${escapeHtml(String(entry.weight))}) ${token} ${tokensList} ${distance}</li>`;
+          })
+          .join('');
+        lines.push(`<li><strong>Features</strong><ul class="invade-tooltip__debug-sublist">${contributions}</ul></li>`);
+      } else {
+        lines.push('<li>無語境特徵命中</li>');
+      }
+    } else {
+      lines.push('<li>未設定語境加權規則（直接吻合）</li>');
+    }
+    if (!lines.length) {
+      return '';
+    }
+    return `<section class="invade-tooltip__debug"><div class="invade-tooltip__debug-title">Debug</div><ul class="invade-tooltip__debug-list">${lines.join('')}</ul></section>`;
+  }
+
+  function formatTimestamp(value) {
+    if (!value) {
+      return '';
+    }
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) {
+      return '';
+    }
+    return date.toLocaleString();
+  }
+
+  function serializeDebugInfo(info) {
+    if (!info) {
+      return '';
+    }
+    try {
+      return JSON.stringify(info);
+    } catch (error) {
+      return '';
+    }
+  }
+
+  function parseDebugInfo(raw) {
+    if (!raw) {
+      return null;
+    }
+    try {
+      return JSON.parse(raw);
+    } catch (error) {
+      return null;
+    }
   }
 
   function positionTooltip(anchor, tooltip) {
@@ -744,6 +1199,8 @@
       settings = newSettings;
       debugSkipChecks = Boolean(settings.debugSkip);
       debugSegmenter = Boolean(settings.debugSegments);
+      debugTooltipEnabled = Boolean(settings.debugTooltip);
+      debugWeightsEnabled = Boolean(settings.debugWeights);
       applySettingsStyles();
 
       if (!wasEnabled && settings.enabled) {

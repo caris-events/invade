@@ -16,6 +16,19 @@ matchOptions:
     - 寄信
     - 寄包裹
     - 寄東西
+  context:
+    threshold: 0
+    features:
+      - position: next
+        tokens:
+          - 寄送
+          - 寄送服務
+          - 寄送資料
+          - 寄送通知
+          - 寄件
+          - 寄信
+          - 送
+        weight: -1
 
 #
 examples:

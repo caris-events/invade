@@ -10,7 +10,9 @@ const INVADE_DEFAULT_SETTINGS = Object.freeze({
   enableUnderline: true,
   ignoreInputs: true,
   debugSkip: false,
-  debugSegments: false
+  debugSegments: false,
+  debugTooltip: false,
+  debugWeights: false
 });
 
 function invadeMergeSettings(overrides = {}) {
