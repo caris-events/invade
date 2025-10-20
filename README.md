@@ -11,7 +11,7 @@
 ## Chrome 擴充套件：支語提示器
 
 - 在網頁上自動標示中國用語，滑鼠靠近即可查看建議替代詞與例句
-- 底色與底線可分別啟用，並自動依文字顏色切換底色（可自訂色調與線型）
+- 底色與底線可分別啟用，並自動依文字顏色切換底色（可自訂色調、線型與粗細）
 - 報章雜誌風格的設定頁與懸浮資訊卡
 - 資料來源與本專案一致，始終同步 `database/vocabs` 內容
 
@@ -23,6 +23,8 @@ BAKAINVADE_DIR=$(pwd)/../.. go run . extension
 ```
 
 然後於 Chrome 的 `chrome://extensions` 啟用「開發人員模式」，載入 `browser-extension/chrome` 即可。更多細節請見 [browser-extension/README.md](browser-extension/README.md)。
+
+Firefox 使用者可在 `about:debugging#/runtime/this-firefox` 以「臨時載入附加元件」選擇同一份 `manifest.json`（Firefox 109+）。
 
 ## 內容授權
 

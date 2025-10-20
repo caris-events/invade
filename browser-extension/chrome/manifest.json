@@ -12,7 +12,10 @@
       "128": "icons/icon128.png"
     }
   },
-  "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
   "permissions": [
     "storage"
   ],
@@ -44,5 +47,11 @@
         "<all_urls>"
       ]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "invade-support@invade.tw",
+      "strict_min_version": "109.0"
+    }
+  }
 }

@@ -28,6 +28,13 @@ BAKAINVADE_DIR=$(pwd)/../.. go run . extension
 3. 選擇「載入未封裝項目」
 4. 指定 `browser-extension/chrome` 目錄
 
+## 在 Firefox 載入
+
+1. 開啟 `about:debugging#/runtime/this-firefox`
+2. 點選「臨時載入附加元件」
+3. 選擇 `browser-extension/chrome/manifest.json`
+4. 之後可在 `about:addons` 內調整權限或重新載入（Firefox 109 以上）
+
 ## 設定項目
 
 擴充套件提供簡易設定頁（`chrome://extensions` → 擴充套件詳細資料 → **擴充功能選項**）：

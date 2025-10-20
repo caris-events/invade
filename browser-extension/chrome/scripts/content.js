@@ -1,4 +1,7 @@
 (function () {
+  if (typeof browser !== 'undefined' && typeof globalThis.chrome === 'undefined') {
+    globalThis.chrome = browser;
+  }
   const HIGHLIGHT_CLASS = 'invade-highlight';
   const ACTIVE_CLASS = 'invade-highlight--active';
   const TOOLTIP_ID = 'invade-tooltip';

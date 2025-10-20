@@ -1,3 +1,7 @@
+if (typeof browser !== 'undefined' && typeof window.chrome === 'undefined') {
+  window.chrome = browser;
+}
+
 let currentSettings = invadeMergeSettings();
 let statusTimeout = null;
 let saveTimeoutId = null;
