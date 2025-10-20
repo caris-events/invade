@@ -8,6 +8,46 @@ category: TECHNOLOGY
 explicit:
 
 #
+matchOptions:
+  context:
+    baseScore: -1
+    threshold: 0
+    features:
+      - position: prev
+        tokens:
+          - 不
+          - 尚未
+          - 無法
+          - 不再
+          - 不會
+        weight: 1
+      - position: next
+        tokens:
+          - 功能
+          - 版本
+          - 格式
+          - 協議
+          - 語言
+          - 平台
+          - 模式
+          - API
+          - 檔案
+          - 裝置
+        weight: 1
+      - position: window
+        tokens:
+          - 功能
+          - 版本
+          - 格式
+          - 協議
+          - 語言
+          - 平台
+          - 模式
+          - API
+          - 裝置
+        weight: 0.5
+
+#
 description: |
   有能力足以使用某個功能。
 

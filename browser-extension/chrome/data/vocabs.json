@@ -1,5 +1,76 @@
 [
   {
+    "word": "支持",
+    "category": "TECHNOLOGY",
+    "categoryLabel": "科技",
+    "explicit": "",
+    "explicitLabel": "未知",
+    "description": "有能力足以使用某個功能。",
+    "notice": "這個詞彙指的不是精神層面上的支持。",
+    "recommended": [
+      "支援"
+    ],
+    "examples": [
+      {
+        "words": [
+          "支援"
+        ],
+        "correct": "這個社群網站{{支援}}多種語言。",
+        "incorrect": "這個社群網站{{支持}}多種語言。"
+      }
+    ],
+    "matchOptions": {
+      "context": {
+        "baseScore": -1,
+        "features": [
+          {
+            "position": "prev",
+            "tokens": [
+              "不",
+              "尚未",
+              "無法",
+              "不再",
+              "不會"
+            ],
+            "weight": 1
+          },
+          {
+            "position": "next",
+            "tokens": [
+              "功能",
+              "版本",
+              "格式",
+              "協議",
+              "語言",
+              "平台",
+              "模式",
+              "API",
+              "檔案",
+              "裝置"
+            ],
+            "weight": 1
+          },
+          {
+            "position": "window",
+            "tokens": [
+              "功能",
+              "版本",
+              "格式",
+              "協議",
+              "語言",
+              "平台",
+              "模式",
+              "API",
+              "裝置"
+            ],
+            "weight": 0.5
+          }
+        ]
+      }
+    },
+    "lastModifiedTs": 1760977671
+  },
+  {
     "word": "菜單",
     "category": "TECHNOLOGY",
     "categoryLabel": "科技",
@@ -4668,28 +4739,6 @@
         ],
         "correct": "筆記型電腦的前置{{鏡頭}}可以用來視訊通話。",
         "incorrect": "筆記型電腦的前{{攝像頭}}可以用來視訊通話。"
-      }
-    ],
-    "lastModifiedTs": 1760527523
-  },
-  {
-    "word": "支持",
-    "category": "TECHNOLOGY",
-    "categoryLabel": "科技",
-    "explicit": "",
-    "explicitLabel": "未知",
-    "description": "有能力足以使用某個功能。",
-    "notice": "這個詞彙指的不是精神層面上的支持。",
-    "recommended": [
-      "支援"
-    ],
-    "examples": [
-      {
-        "words": [
-          "支援"
-        ],
-        "correct": "這個社群網站{{支援}}多種語言。",
-        "incorrect": "這個社群網站{{支持}}多種語言。"
       }
     ],
     "lastModifiedTs": 1760527523
