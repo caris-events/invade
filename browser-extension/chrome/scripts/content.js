@@ -9,7 +9,6 @@
   const TONE_DARK = 'dark';
   const TONE_LIGHT = 'light';
   const ASCII_PUNCTUATION_REGEX = /[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
-  const CONTEXT_IGNORABLE_CHAR_REGEX = /\s/;
 
   let settings = invadeMergeSettings();
   let vocabMap = new Map();
@@ -432,7 +431,13 @@
   }
 
   function isSkippableContextChar(char) {
-    return !char || CONTEXT_IGNORABLE_CHAR_REGEX.test(char);
+    if (!char) {
+      return true;
+    }
+    if (/\s/.test(char)) {
+      return true;
+    }
+    return isBoundaryCharacter(char);
   }
 
   function debugSkipLog(textNode, word, phrase, payload, matched) {
