@@ -13,10 +13,12 @@
   let settings = invadeMergeSettings();
   let vocabMap = new Map();
   let wordPattern = null;
+  let segmenter = null;
   let observer = null;
   let mutationLock = false;
   let dataLoaded = false;
   let tooltipEl = null;
+  let maxWordLength = 0;
   let highlightPalettes = {
     [TONE_DARK]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorDarkText, { opacity: 0.95 }),
     [TONE_LIGHT]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorLightText, { opacity: 0.85 })
@@ -32,6 +34,7 @@
       }
 
       await ensureVocabData();
+      initializeSegmenter();
       highlightDocument(document.body);
       installObserver();
       installTooltip();
@@ -56,6 +59,7 @@
     const response = await fetch(chrome.runtime.getURL('data/vocabs.json'));
     const vocabularies = await response.json();
     vocabMap = new Map();
+    maxWordLength = 0;
 
     const wordSet = new Set();
     for (const vocab of vocabularies) {
@@ -63,6 +67,9 @@
         continue;
       }
       vocabMap.set(vocab.word, vocab);
+      if (vocab.word.length > maxWordLength) {
+        maxWordLength = vocab.word.length;
+      }
       wordSet.add(vocab.word);
       if (/^[A-Za-z0-9\s]+$/.test(vocab.word)) {
         const lower = vocab.word.toLowerCase();
@@ -128,25 +135,7 @@
     if (!text || !text.trim()) {
       return;
     }
-    wordPattern.lastIndex = 0;
-    const matches = [];
-    let match;
-    while ((match = wordPattern.exec(text)) !== null) {
-      const word = match[0];
-      const vocab = vocabMap.get(word);
-      if (!vocab) {
-        continue;
-      }
-      if (!shouldHighlightMatch(text, match.index, word.length, word, vocab)) {
-        continue;
-      }
-      matches.push({
-        index: match.index,
-        length: word.length,
-        word,
-        vocab
-      });
-    }
+    const matches = findVocabMatches(text);
     if (!matches.length) {
       return;
     }
@@ -172,6 +161,96 @@
       fragment.append(textNode.ownerDocument.createTextNode(text.slice(cursor)));
     }
     textNode.parentNode.replaceChild(fragment, textNode);
+  }
+
+  function findVocabMatches(text) {
+    if (segmenter) {
+      return findSegmenterMatches(text);
+    }
+    return findRegexMatches(text);
+  }
+
+  function findSegmenterMatches(text) {
+    const matches = [];
+    const segments = [];
+    const iterator = segmenter.segment(text);
+    for (const segment of iterator) {
+      segments.push({
+        value: segment.segment,
+        index: segment.index,
+        isWordLike: Boolean(segment.isWordLike)
+      });
+    }
+    for (let i = 0; i < segments.length; i += 1) {
+      const current = segments[i];
+      if (!current.value || !current.value.trim() || !current.isWordLike) {
+        continue;
+      }
+      const start = current.index;
+      let bestMatch = null;
+      for (let j = i; j < segments.length; j += 1) {
+        const next = segments[j];
+        if (!next.value || !next.value.trim()) {
+          break;
+        }
+        if (!next.isWordLike) {
+          if (j === i) {
+            break;
+          }
+          break;
+        }
+        const end = next.index + next.value.length;
+        const slice = text.slice(start, end);
+        if (!slice) {
+          break;
+        }
+        if (maxWordLength && slice.length > maxWordLength) {
+          break;
+        }
+        const vocab = vocabMap.get(slice);
+        if (!vocab) {
+          continue;
+        }
+        if (!shouldHighlightMatch(text, start, end - start, slice, vocab)) {
+          continue;
+        }
+        bestMatch = {
+          index: start,
+          length: end - start,
+          word: slice,
+          vocab,
+          segments: j - i + 1
+        };
+      }
+      if (bestMatch) {
+        matches.push(bestMatch);
+        i += bestMatch.segments - 1;
+      }
+    }
+    return matches;
+  }
+
+  function findRegexMatches(text) {
+    const matches = [];
+    wordPattern.lastIndex = 0;
+    let match;
+    while ((match = wordPattern.exec(text)) !== null) {
+      const word = match[0];
+      const vocab = vocabMap.get(word);
+      if (!vocab) {
+        continue;
+      }
+      if (!shouldHighlightMatch(text, match.index, word.length, word, vocab)) {
+        continue;
+      }
+      matches.push({
+        index: match.index,
+        length: word.length,
+        word,
+        vocab
+      });
+    }
+    return matches;
   }
 
   function shouldHighlightMatch(text, index, length, matchedWord, vocab) {
@@ -227,6 +306,23 @@
       return true;
     }
     return false;
+  }
+
+  function initializeSegmenter() {
+    if (typeof Intl === 'undefined' || typeof Intl.Segmenter !== 'function') {
+      segmenter = null;
+      return;
+    }
+    try {
+      segmenter = new Intl.Segmenter('zh-Hant', { granularity: 'word' });
+    } catch (errorHant) {
+      try {
+        segmenter = new Intl.Segmenter('zh', { granularity: 'word' });
+      } catch (error) {
+        console.warn('[invade] 無法建立斷詞器：', error);
+        segmenter = null;
+      }
+    }
   }
 
   function installObserver() {

@@ -25,18 +25,21 @@ BAKAINVADE_DIR=$(pwd)/../.. go run . extension
 
 每筆詞彙可額外帶有 `matchOptions` 來細調比對行為：
 
-- `matchMode: "standalone"`：要求詞彙需出現在標點或空白邊界之間，避免被嵌在較長詞句時誤判。
+- `matchMode: "standalone"`：要求詞彙需出現在標點或空白邊界之間，適合英數縮寫或需獨立顯示的詞彙。
 - `skipPhrases`: `string[]`：列出遇到特定片語時要忽略的情境，例如 `"海內存知己"`。
 
 ```jsonc
 {
   "word": "內存",
   "matchOptions": {
-    "matchMode": "standalone",
     "skipPhrases": ["海內存知己"]
   }
 }
 ```
+
+## 斷詞與比對流程
+
+Content script 會優先透過 `Intl.Segmenter('zh-Hant', { granularity: 'word' })` 斷詞，僅針對分出的 token 嘗試比對詞庫，以降低「海內存知己 → 內存」這類誤判。瀏覽器若不支援 `Intl.Segmenter`，才會回退至既有的正則比對邏輯。需要支援的最低版本：Chrome 87、Firefox 114、Edge 87。
 
 ## 在 Chrome 載入
 
