@@ -18,6 +18,7 @@ async function init() {
     highlightColorDarkText: document.getElementById('highlightColorDarkText'),
     highlightColorLightText: document.getElementById('highlightColorLightText'),
     underlineStyle: document.getElementById('underlineStyle'),
+    underlineWeight: document.getElementById('underlineWeight'),
     ignoreInputs: document.getElementById('ignoreInputs'),
     status: document.getElementById('status'),
     reset: document.getElementById('reset-button')
@@ -54,6 +55,7 @@ function attachListeners(elements) {
   elements.enableUnderline.addEventListener('change', handler);
   elements.ignoreInputs.addEventListener('change', handler);
   elements.underlineStyle.addEventListener('change', handler);
+  elements.underlineWeight.addEventListener('change', handler);
   elements.highlightColorDarkText.addEventListener('input', handler);
   elements.highlightColorDarkText.addEventListener('change', handler);
   elements.highlightColorLightText.addEventListener('input', handler);
@@ -75,6 +77,7 @@ function applyToForm(elements, settings) {
   elements.highlightColorDarkText.value = settings.highlightColorDarkText || settings.highlightColor;
   elements.highlightColorLightText.value = settings.highlightColorLightText || settings.highlightColor;
   elements.underlineStyle.value = settings.underlineStyle;
+  elements.underlineWeight.value = settings.underlineWeight || 'medium';
   elements.ignoreInputs.checked = settings.ignoreInputs;
   updateControlStates(elements, settings);
 }
@@ -104,7 +107,9 @@ function updateControlStates(elements, settings) {
   const disableFillControls = !settings.enableHighlightFill;
   elements.highlightColorDarkText.disabled = disableFillControls;
   elements.highlightColorLightText.disabled = disableFillControls;
-  elements.underlineStyle.disabled = !settings.enableUnderline;
+  const disableUnderlineControls = !settings.enableUnderline;
+  elements.underlineStyle.disabled = disableUnderlineControls;
+  elements.underlineWeight.disabled = disableUnderlineControls;
 }
 
 function queueSave(statusElement) {
@@ -143,6 +148,9 @@ function migrateLegacySettings(stored) {
   }
   if (!migrated.highlightColorLightText && migrated.highlightColor) {
     migrated.highlightColorLightText = darkenHex(migrated.highlightColor, 0.55);
+  }
+  if (!migrated.underlineWeight) {
+    migrated.underlineWeight = 'medium';
   }
   return migrated;
 }

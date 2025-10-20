@@ -482,11 +482,13 @@
     const fillOpacity = settings.enableHighlightFill ? '1' : '0';
     document.documentElement.style.setProperty('--invade-highlight-fill-opacity', fillOpacity);
 
+    const underlineWidth = getUnderlineWidth(settings.underlineWeight);
+
     if (settings.enableUnderline) {
-      document.documentElement.style.setProperty('--invade-highlight-underline-width', '1px');
+      document.documentElement.style.setProperty('--invade-highlight-underline-width', underlineWidth);
       document.documentElement.style.setProperty('--invade-highlight-underline-style', settings.underlineStyle);
     } else {
-      document.documentElement.style.setProperty('--invade-highlight-underline-width', '0');
+      document.documentElement.style.setProperty('--invade-highlight-underline-width', '0px');
       document.documentElement.style.setProperty('--invade-highlight-underline-style', 'solid');
     }
   }
@@ -641,6 +643,18 @@
       underline: deriveTone(base, 0.7, 0.55, 'rgba(73, 58, 41, 0.55)'),
       opacity: String(opacity)
     };
+  }
+
+  function getUnderlineWidth(weight) {
+    switch (weight) {
+      case 'thin':
+        return '0.75px';
+      case 'bold':
+        return '2px';
+      case 'medium':
+      default:
+        return '1.2px';
+    }
   }
 
   function deriveTone(color, factor, alpha, fallback) {

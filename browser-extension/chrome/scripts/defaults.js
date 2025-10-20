@@ -5,6 +5,7 @@ const INVADE_DEFAULT_SETTINGS = Object.freeze({
   highlightColorDarkText: '#e2d4a2',
   highlightColorLightText: '#625233',
   underlineStyle: 'dotted',
+  underlineWeight: 'medium',
   enableHighlightFill: true,
   enableUnderline: true,
   ignoreInputs: true

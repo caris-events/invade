@@ -4,7 +4,7 @@
   --invade-highlight-focus-ring: rgba(73, 58, 41, 0.32);
   --invade-highlight-underline-color: rgba(73, 58, 41, 0.52);
   --invade-highlight-underline-style: dotted;
-  --invade-highlight-underline-width: 1px;
+  --invade-highlight-underline-width: 1.2px;
   --invade-highlight-fill-opacity: 1;
   --invade-highlight-fill-opacity-local: 1;
 }
