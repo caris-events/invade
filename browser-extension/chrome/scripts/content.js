@@ -227,7 +227,7 @@
         if (!vocab) {
           continue;
         }
-        const debugInfo = prepareMatchDebugInfo(vocab, slice);
+        const debugInfo = prepareMatchDebugInfo(vocab, slice, 'segmenter');
         if (!shouldHighlightMatch(textNode, text, start, end - start, slice, vocab, {
           segments,
           matchStart: i,
@@ -262,7 +262,7 @@
       if (!vocab) {
         continue;
       }
-      const debugInfo = prepareMatchDebugInfo(vocab, word);
+      const debugInfo = prepareMatchDebugInfo(vocab, word, 'regex');
       if (!shouldHighlightMatch(textNode, text, match.index, word.length, word, vocab, null, debugInfo)) {
         continue;
       }
@@ -612,14 +612,15 @@
     return result;
   }
 
-  function prepareMatchDebugInfo(vocab, matchedWord) {
+  function prepareMatchDebugInfo(vocab, matchedWord, source) {
     if (!debugTooltipEnabled && !debugWeightsEnabled) {
       return null;
     }
     return {
       vocab: vocab && vocab.word ? vocab.word : '',
       matched: matchedWord,
-      timestamp: Date.now()
+      timestamp: Date.now(),
+      source: source || ''
     };
   }
 
@@ -1068,8 +1069,24 @@
       return '';
     }
     const lines = [];
+    const summary = [];
+    if (data.matched) {
+      summary.push(`<li><strong>Matched</strong>：${escapeHtml(data.matched)}</li>`);
+    }
+    if (data.vocab) {
+      summary.push(`<li><strong>Vocabulary</strong>：${escapeHtml(data.vocab)}</li>`);
+    }
+    if (data.source) {
+      summary.push(`<li><strong>Source</strong>：${escapeHtml(data.source)}</li>`);
+    }
+    if (data.timestamp) {
+      summary.push(`<li><strong>Timestamp</strong>：${escapeHtml(formatTimestamp(data.timestamp))}</li>`);
+    }
+    if (summary.length) {
+      lines.push(`<li><strong>Summary</strong><ul class="invade-tooltip__debug-sublist">${summary.join('')}</ul></li>`);
+    }
     if (data.decision) {
-    lines.push(`<li><strong>Decision</strong>：${escapeHtml(data.decision)}</li>`);
+      lines.push(`<li><strong>Decision</strong>：${escapeHtml(data.decision)}</li>`);
     }
     if (data.skipPhrase) {
       lines.push(`<li><strong>Skip Phrase</strong>：${escapeHtml(data.skipPhrase)}</li>`);
@@ -1102,12 +1119,27 @@
           })
           .join('');
         lines.push(`<li><strong>Features</strong><ul class="invade-tooltip__debug-sublist">${contributions}</ul></li>`);
+      } else {
+        lines.push('<li>無語境特徵命中</li>');
       }
+    } else {
+      lines.push('<li>未設定語境加權規則（直接匹配）</li>');
     }
     if (!lines.length) {
       return '';
     }
     return `<section class="invade-tooltip__debug"><div class="invade-tooltip__debug-title">Debug</div><ul class="invade-tooltip__debug-list">${lines.join('')}</ul></section>`;
+  }
+
+  function formatTimestamp(value) {
+    if (!value) {
+      return '';
+    }
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) {
+      return '';
+    }
+    return date.toLocaleString();
   }
 
   function serializeDebugInfo(info) {
