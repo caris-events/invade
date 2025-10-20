@@ -544,7 +544,12 @@
         threshold: typeof contextOptions.threshold === 'number' ? contextOptions.threshold : 0,
         baseScore: typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0,
         contributions: [],
-        segmenterAvailable: false
+        segmenterAvailable: false,
+        requireSegments: Boolean(contextOptions.requireSegments),
+        maxTokens:
+          typeof contextOptions.maxTokens === 'number' && contextOptions.maxTokens > 0
+            ? Math.min(Math.floor(contextOptions.maxTokens), 12)
+            : MAX_CONTEXT_TOKENS
       };
       if (debugInfo) {
         debugInfo.context = result;
@@ -594,7 +599,12 @@
       threshold,
       baseScore: typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0,
       contributions,
-      segmenterAvailable: true
+      segmenterAvailable: true,
+      requireSegments: Boolean(contextOptions.requireSegments),
+      maxTokens:
+        typeof contextOptions.maxTokens === 'number' && contextOptions.maxTokens > 0
+          ? Math.min(Math.floor(contextOptions.maxTokens), 12)
+          : MAX_CONTEXT_TOKENS
     };
     if (debugInfo) {
       debugInfo.context = result;
@@ -608,7 +618,8 @@
     }
     return {
       vocab: vocab && vocab.word ? vocab.word : '',
-      matched: matchedWord
+      matched: matchedWord,
+      timestamp: Date.now()
     };
   }
 
@@ -1058,20 +1069,36 @@
     }
     const lines = [];
     if (data.decision) {
-      lines.push(`<li><strong>Decision</strong>：${escapeHtml(data.decision)}</li>`);
+    lines.push(`<li><strong>Decision</strong>：${escapeHtml(data.decision)}</li>`);
     }
     if (data.skipPhrase) {
       lines.push(`<li><strong>Skip Phrase</strong>：${escapeHtml(data.skipPhrase)}</li>`);
     }
     if (data.context) {
-      const scoreLine = `<li><strong>Score</strong>：${escapeHtml(String(data.context.score))} / 阈值 ${escapeHtml(String(data.context.threshold))}</li>`;
+      const base = `基準 ${escapeHtml(String(data.context.baseScore))}`;
+      const scoreLine = `<li><strong>Score</strong>：${escapeHtml(String(data.context.score))} / 阈值 ${escapeHtml(String(data.context.threshold))}（${base}）</li>`;
       lines.push(scoreLine);
+      const metaBits = [];
+      if (typeof data.context.segmenterAvailable === 'boolean') {
+        metaBits.push(`Segmenter：${data.context.segmenterAvailable ? '使用' : '未使用'}`);
+      }
+      if (typeof data.context.requireSegments === 'boolean') {
+        metaBits.push(`RequireSegments：${data.context.requireSegments ? '是' : '否'}`);
+      }
+      if (data.context.maxTokens) {
+        metaBits.push(`MaxTokens：${escapeHtml(String(data.context.maxTokens))}`);
+      }
+      if (metaBits.length) {
+        lines.push(`<li>${metaBits.join(' / ')}</li>`);
+      }
       if (Array.isArray(data.context.contributions) && data.context.contributions.length) {
         const contributions = data.context.contributions
           .map(entry => {
             const indicator = entry.matched ? '✓' : '✗';
             const token = entry.token ? `→ ${escapeHtml(String(entry.token))}` : '';
-            return `<li class="invade-tooltip__debug-entry">${indicator} ${escapeHtml(entry.position || '')} (${escapeHtml(String(entry.weight))}) ${token}</li>`;
+            const tokensList = entry.tokens ? `〔${escapeHtml(entry.tokens.join('、'))}〕` : '';
+            const distance = entry.distance ? `距離 ${escapeHtml(String(entry.distance))}` : '';
+            return `<li class="invade-tooltip__debug-entry">${indicator} ${escapeHtml(entry.position || '')} (${escapeHtml(String(entry.weight))}) ${token} ${tokensList} ${distance}</li>`;
           })
           .join('');
         lines.push(`<li><strong>Features</strong><ul class="invade-tooltip__debug-sublist">${contributions}</ul></li>`);
