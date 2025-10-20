@@ -1,5 +1,8 @@
 let currentSettings = invadeMergeSettings();
 let statusTimeout = null;
+let saveTimeoutId = null;
+let pendingStatusElement = null;
+const SAVE_DEBOUNCE_MS = 400;
 
 document.addEventListener('DOMContentLoaded', init);
 
@@ -32,11 +35,14 @@ function attachListeners(elements) {
       return;
     }
     const value = target.type === 'checkbox' ? target.checked : target.value;
+    if (currentSettings[key] === value) {
+      return;
+    }
     currentSettings = {
       ...currentSettings,
       [key]: value
     };
-    saveCurrentSettings(elements.status);
+    queueSave(elements.status);
     if (key === 'enableHighlightFill' || key === 'enableUnderline') {
       updateControlStates(elements, currentSettings);
     }
@@ -56,9 +62,7 @@ function attachListeners(elements) {
   elements.reset.addEventListener('click', async () => {
     currentSettings = invadeMergeSettings();
     applyToForm(elements, currentSettings);
-    await new Promise(resolve => {
-      chrome.storage.sync.set({ settings: currentSettings }, resolve);
-    });
+    await flushSave(elements.status);
     showStatus(elements.status, '預設設定已套用');
   });
 }
@@ -83,13 +87,6 @@ async function loadStoredSettings() {
   });
 }
 
-async function saveCurrentSettings(statusElement) {
-  await new Promise(resolve => {
-    chrome.storage.sync.set({ settings: currentSettings }, resolve);
-  });
-  showStatus(statusElement, '已儲存');
-}
-
 function showStatus(element, message) {
   if (!element) {
     return;
@@ -108,6 +105,32 @@ function updateControlStates(elements, settings) {
   elements.highlightColorDarkText.disabled = disableFillControls;
   elements.highlightColorLightText.disabled = disableFillControls;
   elements.underlineStyle.disabled = !settings.enableUnderline;
+}
+
+function queueSave(statusElement) {
+  pendingStatusElement = statusElement;
+  if (saveTimeoutId) {
+    clearTimeout(saveTimeoutId);
+  }
+  saveTimeoutId = setTimeout(() => {
+    saveTimeoutId = null;
+    persistSettings(pendingStatusElement);
+  }, SAVE_DEBOUNCE_MS);
+}
+
+async function flushSave(statusElement) {
+  if (saveTimeoutId) {
+    clearTimeout(saveTimeoutId);
+    saveTimeoutId = null;
+  }
+  await persistSettings(statusElement);
+}
+
+async function persistSettings(statusElement) {
+  await new Promise(resolve => {
+    chrome.storage.sync.set({ settings: currentSettings }, resolve);
+  });
+  showStatus(statusElement, '已儲存');
 }
 
 function migrateLegacySettings(stored) {

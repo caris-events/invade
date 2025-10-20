@@ -102,11 +102,11 @@
 }
 
 #invade-tooltip[data-position='bottom']::before {
-  top: calc(100% + 2px);
+  top: calc(100%);
 }
 
 #invade-tooltip[data-position='bottom']::after {
-  top: calc(100% + 3px);
+  top: calc(100%);
 }
 
 #invade-tooltip[data-position='top']::before,
@@ -115,11 +115,11 @@
 }
 
 #invade-tooltip[data-position='top']::before {
-  bottom: calc(100% + 2px);
+  bottom: calc(100%);
 }
 
 #invade-tooltip[data-position='top']::after {
-  bottom: calc(100% + 3px);
+  bottom: calc(100%);
 }
 
 .invade-tooltip__masthead {
