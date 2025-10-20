@@ -23,18 +23,16 @@ BAKAINVADE_DIR=$(pwd)/../.. go run . extension
 
 ## 詞彙欄位補充
 
-每筆詞彙可額外帶有 `matchOptions` 來細調比對行為：
+在 `database/vocabs/*.yml` 的詞彙資料中，可額外帶有 `matchOptions` 來細調比對行為，重新執行 `go run . extension` 後就會被帶入 `vocabs.json`：
 
 - `matchMode: "standalone"`：要求詞彙需出現在標點或空白邊界之間，適合英數縮寫或需獨立顯示的詞彙。
 - `skipPhrases`: `string[]`：列出遇到特定片語時要忽略的情境，例如 `"海內存知己"`。
 
-```jsonc
-{
-  "word": "內存",
-  "matchOptions": {
-    "skipPhrases": ["海內存知己"]
-  }
-}
+```yaml
+# database/vocabs/內存.yml
+matchOptions:
+  skipPhrases:
+    - 海內存知己
 ```
 
 ## 斷詞與比對流程
