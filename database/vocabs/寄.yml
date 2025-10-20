@@ -8,6 +8,16 @@ category: ADJECTIVE
 explicit:
 
 #
+matchOptions:
+  matchMode: standalone
+  skipPhrases:
+    - 寄送
+    - 寄件
+    - 寄信
+    - 寄包裹
+    - 寄東西
+
+#
 examples:
   - words      : [完蛋了]
     description: |
