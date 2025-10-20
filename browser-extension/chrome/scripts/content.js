@@ -8,6 +8,7 @@
   const SKIP_PARENT_TAGS = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEXTAREA', 'CODE', 'PRE', 'KBD', 'SAMP']);
   const TONE_DARK = 'dark';
   const TONE_LIGHT = 'light';
+  const ASCII_PUNCTUATION_REGEX = /[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
 
   let settings = invadeMergeSettings();
   let vocabMap = new Map();
@@ -136,6 +137,9 @@
       if (!vocab) {
         continue;
       }
+      if (!shouldHighlightMatch(text, match.index, word.length, word, vocab)) {
+        continue;
+      }
       matches.push({
         index: match.index,
         length: word.length,
@@ -168,6 +172,61 @@
       fragment.append(textNode.ownerDocument.createTextNode(text.slice(cursor)));
     }
     textNode.parentNode.replaceChild(fragment, textNode);
+  }
+
+  function shouldHighlightMatch(text, index, length, matchedWord, vocab) {
+    const options = vocab.matchOptions || {};
+    if (Array.isArray(options.skipPhrases) && options.skipPhrases.length) {
+      for (const phrase of options.skipPhrases) {
+        if (!phrase) {
+          continue;
+        }
+        const offsetInPhrase = phrase.indexOf(matchedWord);
+        const offset = offsetInPhrase >= 0 ? offsetInPhrase : phrase.indexOf(vocab.word);
+        if (offset < 0) {
+          continue;
+        }
+        const start = index - offset;
+        if (start < 0 || start + phrase.length > text.length) {
+          continue;
+        }
+        if (text.slice(start, start + phrase.length) === phrase) {
+          return false;
+        }
+      }
+    }
+    const mode = options.mode || options.matchMode;
+    if (mode === 'standalone') {
+      const before = text[index - 1];
+      const after = text[index + length];
+      if (!isBoundaryCharacter(before) || !isBoundaryCharacter(after)) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function isBoundaryCharacter(character) {
+    if (!character) {
+      return true;
+    }
+    if (/\s/.test(character)) {
+      return true;
+    }
+    if (ASCII_PUNCTUATION_REGEX.test(character)) {
+      return true;
+    }
+    const codePoint = character.codePointAt(0);
+    if (!codePoint) {
+      return true;
+    }
+    if (
+      (codePoint >= 0x3000 && codePoint <= 0x303f) || // CJK punctuation
+      (codePoint >= 0xff00 && codePoint <= 0xff65) // full-width punctuation
+    ) {
+      return true;
+    }
+    return false;
   }
 
   function installObserver() {

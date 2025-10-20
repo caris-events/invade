@@ -21,6 +21,23 @@ BAKAINVADE_DIR=$(pwd)/../.. go run . extension
 
 執行後會在 `browser-extension/chrome/data/vocabs.json` 生成最新的詞彙資料。
 
+## 詞彙欄位補充
+
+每筆詞彙可額外帶有 `matchOptions` 來細調比對行為：
+
+- `matchMode: "standalone"`：要求詞彙需出現在標點或空白邊界之間，避免被嵌在較長詞句時誤判。
+- `skipPhrases`: `string[]`：列出遇到特定片語時要忽略的情境，例如 `"海內存知己"`。
+
+```jsonc
+{
+  "word": "內存",
+  "matchOptions": {
+    "matchMode": "standalone",
+    "skipPhrases": ["海內存知己"]
+  }
+}
+```
+
 ## 在 Chrome 載入
 
 1. 開啟 `chrome://extensions`
