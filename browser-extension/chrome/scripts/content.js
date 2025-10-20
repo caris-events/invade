@@ -135,7 +135,7 @@
     if (!text || !text.trim()) {
       return;
     }
-    const matches = findVocabMatches(text);
+    const matches = findVocabMatches(textNode, text);
     if (!matches.length) {
       return;
     }
@@ -163,14 +163,14 @@
     textNode.parentNode.replaceChild(fragment, textNode);
   }
 
-  function findVocabMatches(text) {
+  function findVocabMatches(textNode, text) {
     if (segmenter) {
-      return findSegmenterMatches(text);
+      return findSegmenterMatches(textNode, text);
     }
-    return findRegexMatches(text);
+    return findRegexMatches(textNode, text);
   }
 
-  function findSegmenterMatches(text) {
+  function findSegmenterMatches(textNode, text) {
     const matches = [];
     const segments = [];
     const iterator = segmenter.segment(text);
@@ -211,7 +211,7 @@
         if (!vocab) {
           continue;
         }
-        if (!shouldHighlightMatch(text, start, end - start, slice, vocab)) {
+        if (!shouldHighlightMatch(textNode, text, start, end - start, slice, vocab)) {
           continue;
         }
         bestMatch = {
@@ -230,7 +230,7 @@
     return matches;
   }
 
-  function findRegexMatches(text) {
+  function findRegexMatches(textNode, text) {
     const matches = [];
     wordPattern.lastIndex = 0;
     let match;
@@ -240,7 +240,7 @@
       if (!vocab) {
         continue;
       }
-      if (!shouldHighlightMatch(text, match.index, word.length, word, vocab)) {
+      if (!shouldHighlightMatch(textNode, text, match.index, word.length, word, vocab)) {
         continue;
       }
       matches.push({
@@ -253,25 +253,11 @@
     return matches;
   }
 
-  function shouldHighlightMatch(text, index, length, matchedWord, vocab) {
+  function shouldHighlightMatch(textNode, text, index, length, matchedWord, vocab) {
     const options = vocab.matchOptions || {};
     if (Array.isArray(options.skipPhrases) && options.skipPhrases.length) {
-      for (const phrase of options.skipPhrases) {
-        if (!phrase) {
-          continue;
-        }
-        const offsetInPhrase = phrase.indexOf(matchedWord);
-        const offset = offsetInPhrase >= 0 ? offsetInPhrase : phrase.indexOf(vocab.word);
-        if (offset < 0) {
-          continue;
-        }
-        const start = index - offset;
-        if (start < 0 || start + phrase.length > text.length) {
-          continue;
-        }
-        if (text.slice(start, start + phrase.length) === phrase) {
-          return false;
-        }
+      if (isPartOfSkipPhrase(textNode, text, index, length, matchedWord, vocab, options.skipPhrases)) {
+        return false;
       }
     }
     const mode = options.mode || options.matchMode;
@@ -306,6 +292,91 @@
       return true;
     }
     return false;
+  }
+
+  function isPartOfSkipPhrase(textNode, text, index, length, matchedWord, vocab, phrases) {
+    for (const phrase of phrases) {
+      if (!phrase) {
+        continue;
+      }
+      if (matchesSkipPhrase(textNode, text, index, length, matchedWord, vocab, phrase)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function matchesSkipPhrase(textNode, text, index, length, matchedWord, vocab, phrase) {
+    const phraseLength = phrase.length;
+    if (!phraseLength) {
+      return false;
+    }
+    const offsetInPhrase = phrase.indexOf(matchedWord);
+    const offset = offsetInPhrase >= 0 ? offsetInPhrase : phrase.indexOf(vocab.word);
+    if (offset < 0) {
+      return false;
+    }
+    const localStart = index - offset;
+    const localEnd = localStart + phraseLength;
+    if (localStart >= 0 && localEnd <= text.length) {
+      return text.slice(localStart, localEnd) === phrase;
+    }
+    const innerStart = Math.max(localStart, 0);
+    const innerEnd = Math.min(localEnd, text.length);
+    const innerSlice = text.slice(innerStart, innerEnd);
+    let prefix = '';
+    if (localStart < 0) {
+      const neededBefore = -localStart;
+      const collectedBefore = collectAdjacentText(textNode, neededBefore, -1);
+      if (!collectedBefore.complete) {
+        return false;
+      }
+      prefix = collectedBefore.text;
+    }
+    let suffix = '';
+    if (localEnd > text.length) {
+      const neededAfter = localEnd - text.length;
+      const collectedAfter = collectAdjacentText(textNode, neededAfter, 1);
+      if (!collectedAfter.complete) {
+        return false;
+      }
+      suffix = collectedAfter.text;
+    }
+    const combined = prefix + innerSlice + suffix;
+    return combined === phrase;
+  }
+
+  function collectAdjacentText(textNode, required, direction) {
+    if (!textNode || required <= 0) {
+      return { text: '', complete: required <= 0 };
+    }
+    const doc = textNode.ownerDocument;
+    if (!doc) {
+      return { text: '', complete: false };
+    }
+    const root = doc.body || doc.documentElement || doc;
+    const walker = doc.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    walker.currentNode = textNode;
+    let remaining = required;
+    let collected = '';
+    while (remaining > 0) {
+      const neighbor = direction === -1 ? walker.previousNode() : walker.nextNode();
+      if (!neighbor) {
+        break;
+      }
+      const value = neighbor.nodeValue;
+      if (!value) {
+        continue;
+      }
+      const take = Math.min(remaining, value.length);
+      if (direction === -1) {
+        collected = value.slice(value.length - take) + collected;
+      } else {
+        collected += value.slice(0, take);
+      }
+      remaining -= take;
+    }
+    return { text: collected, complete: remaining === 0 };
   }
 
   function initializeSegmenter() {
