@@ -99,6 +99,25 @@
         </label>
       </section>
 
+      <section class="paper__section">
+        <h2 class="paper__section-title">偵錯工具</h2>
+        <p class="paper__section-lede">需要協助排查誤判時，可在瀏覽器開發者工具的 Console 觀察輸出。</p>
+        <label class="paper__item">
+          <input type="checkbox" id="debugSkip">
+          <span class="paper__item-body">
+            <span class="paper__item-headline">記錄略過片語</span>
+            <span class="paper__item-note">在 Console 以 <code>[invade] skipPhrases</code> 顯示判斷結果。</span>
+          </span>
+        </label>
+        <label class="paper__item">
+          <input type="checkbox" id="debugSegments">
+          <span class="paper__item-body">
+            <span class="paper__item-headline">記錄斷詞結果</span>
+            <span class="paper__item-note">輸出 <code>[invade] segments</code>，協助檢視文字節點的拆分情況。</span>
+          </span>
+        </label>
+      </section>
+
       <footer class="paper__footer">
         <button type="button" id="reset-button" class="paper__reset">恢復預設值</button>
         <p id="status" role="status" aria-live="polite" class="paper__status"></p>

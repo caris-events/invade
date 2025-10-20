@@ -39,6 +39,15 @@ matchOptions:
 
 Content script 會優先透過 `Intl.Segmenter('zh-Hant', { granularity: 'word' })` 斷詞，僅針對分出的 token 嘗試比對詞庫，以降低「海內存知己 → 內存」這類誤判。瀏覽器若不支援 `Intl.Segmenter`，才會回退至既有的正則比對邏輯。需要支援的最低版本：Chrome 87、Firefox 114、Edge 87。
 
+## 偵錯工具
+
+若要分析誤判情形，可在選項頁面啟用以下開關：
+
+- **記錄略過片語**：在 Console（需開啟 Verbose Level）輸出 `[invade] skipPhrases`，包含組合後的片語與是否被忽略。
+- **記錄斷詞結果**：輸出 `[invade] segments`，揭露每個文字節點的斷詞切分方式。
+
+建議僅在排查時短暫開啟，以免大量輸出影響瀏覽體驗。
+
 ## 在 Chrome 載入
 
 1. 開啟 `chrome://extensions`

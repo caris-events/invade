@@ -19,17 +19,17 @@
   let dataLoaded = false;
   let tooltipEl = null;
   let maxWordLength = 0;
-  let debugSkipChecks = true;
+  let debugSkipChecks = false;
   let highlightPalettes = {
     [TONE_DARK]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorDarkText, { opacity: 0.95 }),
     [TONE_LIGHT]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorLightText, { opacity: 0.85 })
   };
-  let debugSegmenter = true;
+  let debugSegmenter = false;
 
   async function bootstrap() {
     try {
       settings = invadeMergeSettings(await readSettings());
-      debugSkipChecks = settings.debugSkip !== false;
+      debugSkipChecks = Boolean(settings.debugSkip);
       debugSegmenter = Boolean(settings.debugSegments);
       applySettingsStyles();
       if (!settings.enabled) {
@@ -742,7 +742,7 @@
       const newSettings = invadeMergeSettings(changes.settings.newValue);
       const wasEnabled = settings.enabled;
       settings = newSettings;
-      debugSkipChecks = settings.debugSkip !== false;
+      debugSkipChecks = Boolean(settings.debugSkip);
       debugSegmenter = Boolean(settings.debugSegments);
       applySettingsStyles();
 

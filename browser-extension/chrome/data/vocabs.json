@@ -1,5 +1,45 @@
 [
   {
+    "word": "寄",
+    "category": "ADJECTIVE",
+    "categoryLabel": "形容詞",
+    "explicit": "",
+    "explicitLabel": "未知",
+    "description": "",
+    "notice": "這個詞彙指的不是寄送物品的行為。",
+    "recommended": [
+      "GG",
+      "完蛋了"
+    ],
+    "examples": [
+      {
+        "words": [
+          "完蛋了"
+        ],
+        "correct": "我不小心把重要的資料刪了，這下子{{完蛋了}}。",
+        "incorrect": "我不小心把重要的資料刪了，{{寄}}了。"
+      },
+      {
+        "words": [
+          "GG"
+        ],
+        "correct": "{{GG}}",
+        "incorrect": "{{寄}}"
+      }
+    ],
+    "matchOptions": {
+      "matchMode": "standalone",
+      "skipPhrases": [
+        "寄送",
+        "寄件",
+        "寄信",
+        "寄包裹",
+        "寄東西"
+      ]
+    },
+    "lastModifiedTs": 1760974597
+  },
+  {
     "word": "內存",
     "category": "HARDWARE",
     "categoryLabel": "硬體與設備",
@@ -2699,36 +2739,6 @@
         ],
         "correct": "Office 辦公軟體的{{巨集}}指令可以計算出所有資料的總金額。",
         "incorrect": "Office 辦公軟體的{{宏}}可以計算出所有資料的總金額。"
-      }
-    ],
-    "lastModifiedTs": 1760527523
-  },
-  {
-    "word": "寄",
-    "category": "ADJECTIVE",
-    "categoryLabel": "形容詞",
-    "explicit": "",
-    "explicitLabel": "未知",
-    "description": "",
-    "notice": "這個詞彙指的不是寄送物品的行為。",
-    "recommended": [
-      "GG",
-      "完蛋了"
-    ],
-    "examples": [
-      {
-        "words": [
-          "完蛋了"
-        ],
-        "correct": "我不小心把重要的資料刪了，這下子{{完蛋了}}。",
-        "incorrect": "我不小心把重要的資料刪了，{{寄}}了。"
-      },
-      {
-        "words": [
-          "GG"
-        ],
-        "correct": "{{GG}}",
-        "incorrect": "{{寄}}"
       }
     ],
     "lastModifiedTs": 1760527523
