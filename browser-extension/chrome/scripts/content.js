@@ -462,10 +462,12 @@
     const underlineColor = settings.enableUnderline
       ? deriveTone(settings.highlightColor, 0.65, 0.55, 'rgba(73, 58, 41, 0.55)')
       : 'transparent';
+    const fillOpacity = settings.enableHighlightFill ? '1' : '0';
 
     document.documentElement.style.setProperty('--invade-highlight-color', highlightColor);
     document.documentElement.style.setProperty('--invade-highlight-outline-color', outlineColor);
     document.documentElement.style.setProperty('--invade-highlight-focus-ring', focusRing);
+    document.documentElement.style.setProperty('--invade-highlight-fill-opacity', fillOpacity);
 
     if (settings.enableUnderline) {
       document.documentElement.style.setProperty('--invade-highlight-underline-width', '1px');

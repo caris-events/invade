@@ -5,34 +5,69 @@
   --invade-highlight-underline-color: rgba(73, 58, 41, 0.55);
   --invade-highlight-underline-style: dotted;
   --invade-highlight-underline-width: 1px;
+  --invade-highlight-fill-opacity: 1;
 }
 
 .invade-highlight {
-  background-color: var(--invade-highlight-color, rgba(244, 230, 193, 0.95));
+  position: relative;
+  background: none;
   border-bottom: var(--invade-highlight-underline-width, 1px) var(--invade-highlight-underline-style, dotted)
     var(--invade-highlight-underline-color, rgba(73, 58, 41, 0.55));
   cursor: help;
-  transition: background-color 160ms ease, box-shadow 200ms ease;
-  box-shadow:
-    0 0 0 1px var(--invade-highlight-outline-color, rgba(73, 58, 41, 0.25)),
-    inset 0 -0.2em 0 rgba(73, 58, 41, 0.08);
+  transition: box-shadow 200ms ease;
+  padding: 0 0.05em;
+}
+
+.invade-highlight::before {
+  content: '';
+  position: absolute;
+  inset: -0.25em -0.28em;
+  z-index: -1;
+  background: var(--invade-highlight-color, rgba(244, 230, 193, 0.95));
+  background-image:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 60%),
+    linear-gradient(0deg, rgba(255, 193, 120, 0.18), rgba(255, 193, 120, 0));
+  filter: saturate(115%);
+  mix-blend-mode: multiply;
+  clip-path: polygon(
+    3% 10%,
+    0% 28%,
+    4% 48%,
+    1% 74%,
+    6% 96%,
+    13% 88%,
+    20% 100%,
+    82% 100%,
+    88% 92%,
+    96% 100%,
+    100% 74%,
+    96% 48%,
+    100% 24%,
+    94% 8%,
+    84% 16%,
+    78% 0%,
+    66% 12%,
+    50% 2%,
+    36% 12%,
+    30% 0%,
+    18% 14%
+  );
+  opacity: var(--invade-highlight-fill-opacity, 1);
+  transition: opacity 160ms ease;
 }
 
 .invade-highlight--active,
 .invade-highlight:focus-visible {
   outline: none;
-  box-shadow:
-    0 0 0 1px var(--invade-highlight-outline-color, rgba(73, 58, 41, 0.3)),
-    0 0 0 6px var(--invade-highlight-focus-ring, rgba(73, 58, 41, 0.3));
+  box-shadow: 0 0 0 6px var(--invade-highlight-focus-ring, rgba(73, 58, 41, 0.3));
+}
+
+.invade-highlight--active::before,
+.invade-highlight:focus-visible::before {
+  filter: saturate(130%);
 }
 
 :root {
-  --invade-highlight-color: #f4e6c1;
-  --invade-highlight-outline-color: rgba(73, 58, 41, 0.25);
-  --invade-highlight-focus-ring: rgba(73, 58, 41, 0.35);
-  --invade-highlight-underline-color: rgba(73, 58, 41, 0.55);
-  --invade-highlight-underline-style: dotted;
-  --invade-highlight-underline-width: 1px;
   --invade-tooltip-border-color: rgba(73, 58, 41, 0.5);
   --invade-tooltip-bg-image: repeating-linear-gradient(
       -45deg,
@@ -70,7 +105,7 @@
   width: 22px;
   height: 14px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
   pointer-events: none;
 }
 
@@ -90,10 +125,12 @@
 
 #invade-tooltip[data-position='bottom']::before {
   top: calc(100% - 1px);
+  transform: translate(-50%, 8px);
 }
 
 #invade-tooltip[data-position='bottom']::after {
   top: 100%;
+  transform: translate(-50%, 8px);
 }
 
 #invade-tooltip[data-position='top']::before,
@@ -103,10 +140,12 @@
 
 #invade-tooltip[data-position='top']::before {
   bottom: calc(100% - 1px);
+  transform: translate(-50%, -8px);
 }
 
 #invade-tooltip[data-position='top']::after {
   bottom: 100%;
+  transform: translate(-50%, -8px);
 }
 
 .invade-tooltip__masthead {
