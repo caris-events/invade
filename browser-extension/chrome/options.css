@@ -107,38 +107,56 @@ body {
 
 .paper__item input[type='checkbox'] {
   appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   margin-top: 4px;
-  border: 1px solid rgba(73, 58, 41, 0.55);
-  border-radius: 3px;
-  background: #f6e9c9;
+  border-radius: 4px;
   position: relative;
   cursor: pointer;
-  transition: transform 120ms ease, box-shadow 180ms ease;
+  background: linear-gradient(155deg, rgba(255, 241, 205, 0.96), rgba(248, 220, 168, 0.85));
+  box-shadow:
+    inset 0 0 0 1px rgba(73, 58, 41, 0.5),
+    0 8px 20px rgba(10, 8, 6, 0.28),
+    inset 0 0 12px rgba(255, 255, 255, 0.35);
+  transition: transform 120ms ease, box-shadow 200ms ease;
 }
 
 .paper__item input[type='checkbox']::after {
   content: '';
   position: absolute;
-  inset: 3px;
-  background: rgba(62, 49, 35, 0.8);
-  clip-path: polygon(15% 45%, 0 60%, 45% 100%, 100% 10%, 85% 0, 45% 65%);
-  opacity: 0;
-  transition: opacity 120ms ease;
+  top: 3px;
+  left: 6px;
+  width: 8px;
+  height: 12px;
+  border-right: 2px solid rgba(62, 49, 35, 0);
+  border-bottom: 2px solid rgba(62, 49, 35, 0);
+  transform: rotate(45deg);
+  transition: border-color 140ms ease;
 }
 
 .paper__item input[type='checkbox']:checked::after {
-  opacity: 1;
+  border-right-color: rgba(62, 49, 35, 0.95);
+  border-bottom-color: rgba(62, 49, 35, 0.95);
+}
+
+.paper__item input[type='checkbox']:checked {
+  background: linear-gradient(150deg, rgba(255, 233, 184, 0.98), rgba(229, 200, 138, 0.92));
+  box-shadow:
+    inset 0 0 0 1px rgba(73, 58, 41, 0.65),
+    inset 0 0 16px rgba(255, 255, 255, 0.4),
+    0 12px 24px rgba(10, 8, 6, 0.35);
 }
 
 .paper__item input[type='checkbox']:focus-visible {
-  outline: 2px solid rgba(62, 49, 35, 0.6);
-  outline-offset: 2px;
+  outline: 2px solid rgba(253, 221, 149, 0.9);
+  outline-offset: 3px;
 }
 
 .paper__item input[type='checkbox']:hover {
-  box-shadow: 0 6px 14px rgba(62, 49, 35, 0.24);
+  box-shadow:
+    inset 0 0 0 1px rgba(73, 58, 41, 0.55),
+    inset 0 0 16px rgba(255, 255, 255, 0.4),
+    0 14px 26px rgba(10, 8, 6, 0.38);
   transform: translateY(-1px);
 }
 
