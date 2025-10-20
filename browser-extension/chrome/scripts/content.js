@@ -1123,7 +1123,7 @@
         lines.push('<li>無語境特徵命中</li>');
       }
     } else {
-      lines.push('<li>未設定語境加權規則（直接匹配）</li>');
+      lines.push('<li>未設定語境加權規則（直接吻合）</li>');
     }
     if (!lines.length) {
       return '';
