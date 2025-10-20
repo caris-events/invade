@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "笨他侵略：支語提示器",
+  "description": "在頁面上標示常見的中國用語，並提供替代字詞與補充資訊。",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "笨他侵略：支語提示器",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "https://chrome.google.com/*",
+        "https://*.googleusercontent.com/*"
+      ],
+      "js": [
+        "scripts/defaults.js",
+        "scripts/content.js"
+      ],
+      "css": [
+        "styles/content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "data/vocabs.json"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

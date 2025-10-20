@@ -1,0 +1,103 @@
+:root {
+  --invade-highlight-color: #fff176;
+  --invade-highlight-underline-style: dotted;
+}
+
+.invade-highlight {
+  background-color: var(--invade-highlight-color, rgba(255, 241, 118, 0.9));
+  border-bottom: 1px var(--invade-highlight-underline-style, dotted) rgba(0, 0, 0, 0.35);
+  cursor: help;
+  transition: box-shadow 120ms ease, background-color 120ms ease;
+  box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.35);
+}
+
+.invade-highlight--active,
+.invade-highlight:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.35);
+}
+
+#invade-tooltip {
+  position: fixed;
+  z-index: 2147483647;
+  max-width: 320px;
+  min-width: 220px;
+  background: #1f2933;
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.32);
+  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  display: none;
+  pointer-events: none;
+}
+
+#invade-tooltip::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: inherit;
+  transform: rotate(45deg);
+  filter: brightness(0.92);
+}
+
+#invade-tooltip[data-position='bottom']::after {
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+}
+
+#invade-tooltip[data-position='top']::after {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -6px;
+}
+
+.invade-tooltip__title {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.invade-tooltip__description {
+  margin: 0 0 8px 0;
+}
+
+.invade-tooltip__line {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.invade-tooltip__label {
+  flex: 0 0 auto;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.invade-tooltip__value {
+  flex: 1 1 auto;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.invade-tooltip__example-label {
+  margin-top: 10px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.invade-tooltip__example mark {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  padding: 0 3px;
+  border-radius: 4px;
+}
+
+.invade-tooltip__notice {
+  margin-top: 8px;
+  font-size: 12px;
+  color: rgba(255, 204, 128, 0.95);
+}

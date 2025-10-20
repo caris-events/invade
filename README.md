@@ -8,6 +8,21 @@
 
 本專案提供 Model Context Protocol (MCP) 伺服器，讓 AI 助手（如 Claude Desktop）可以方便地查詢資料庫。請參閱 [MCP 伺服器完整文件](cmd/mcp-server/README.md)。
 
+## Chrome 擴充套件：支語提示器
+
+- 在網頁上自動標示中國用語，滑鼠靠近即可查看建議替代詞與例句
+- 設定頁可調整標示顏色、底線樣式，或忽略輸入框、停用提示
+- 資料來源與本專案一致，始終同步 `database/vocabs` 內容
+
+建立資料並載入：
+
+```bash
+cd cmd/build
+BAKAINVADE_DIR=$(pwd)/../.. go run . extension
+```
+
+然後於 Chrome 的 `chrome://extensions` 啟用「開發人員模式」，載入 `browser-extension/chrome` 即可。更多細節請見 [browser-extension/README.md](browser-extension/README.md)。
+
 ## 內容授權
 
 笨他侵略的原始碼授權為 [MIT](https://github.com/caris-events/invade/blob/master/LICENSE)，文字段落以 [CC 0 公眾領域](https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW)釋出，你可以盡情分享、改寫或用作商業用途。

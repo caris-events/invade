@@ -17,6 +17,11 @@ func main() {
 				Usage:  "build the pages and covers",
 				Action: build,
 			},
+			{
+				Name:   "extension",
+				Usage:  "generate assets for the browser extension",
+				Action: buildExtensionAssets,
+			},
 		},
 	}
 	if err := app.Run(os.Args); err != nil {

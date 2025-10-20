@@ -1,0 +1,141 @@
+:root {
+  color-scheme: light dark;
+  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #f5f6fa;
+  color: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  width: min(720px, 100%);
+}
+
+.page__header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.page__logo {
+  border-radius: 9px;
+  box-shadow: 0 10px 24px rgba(64, 64, 64, 0.15);
+}
+
+.page__subtitle {
+  margin: 4px 0 0;
+  color: #666;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.group + .group {
+  margin-top: 24px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 20px;
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+.field input[type='color'] {
+  border: none;
+  padding: 0;
+  width: 56px;
+  height: 36px;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.field select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.field__label {
+  flex: 1 1 auto;
+}
+
+.actions {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actions__reset {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 0;
+  background: #f97316;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#status {
+  min-height: 1.5em;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: #0f172a;
+    color: #e2e8f0;
+  }
+
+  .card {
+    background: rgba(15, 23, 42, 0.65);
+    box-shadow: 0 20px 40px rgba(8, 11, 20, 0.6);
+  }
+
+  .page__subtitle {
+    color: rgba(226, 232, 240, 0.7);
+  }
+
+  .field select {
+    background: rgba(15, 23, 42, 0.9);
+    color: #e2e8f0;
+    border-color: rgba(226, 232, 240, 0.3);
+  }
+
+  .actions__reset {
+    background: #c2410c;
+  }
+
+  #status {
+    color: #4ade80;
+  }
+}

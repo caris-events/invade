@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <title>笨他侵略：支語提示器設定</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main class="page">
+    <header class="page__header">
+      <img src="icons/icon48.png" alt="" width="32" height="32" class="page__logo">
+      <div>
+        <h1>支語提示器</h1>
+        <p class="page__subtitle">調整標示顏色與提示行為。</p>
+      </div>
+    </header>
+
+    <form class="card" id="settings-form">
+      <fieldset class="group">
+        <legend>啟用狀態</legend>
+        <label class="field">
+          <input type="checkbox" id="enabled">
+          <span>啟用支語標示</span>
+        </label>
+        <label class="field">
+          <input type="checkbox" id="showTooltip">
+          <span>顯示滑鼠提示資訊</span>
+        </label>
+      </fieldset>
+
+      <fieldset class="group">
+        <legend>視覺樣式</legend>
+        <label class="field">
+          <span class="field__label">標示顏色</span>
+          <input type="color" id="highlightColor">
+        </label>
+        <label class="field">
+          <span class="field__label">底線樣式</span>
+          <select id="underlineStyle">
+            <option value="dotted">虛線 (建議)</option>
+            <option value="dashed">破折線</option>
+            <option value="solid">實線</option>
+            <option value="none">無底線</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset class="group">
+        <legend>例外</legend>
+        <label class="field">
+          <input type="checkbox" id="ignoreInputs">
+          <span>忽略文字輸入區與可編輯區塊</span>
+        </label>
+      </fieldset>
+
+      <footer class="actions">
+        <button type="button" id="reset-button" class="actions__reset">恢復預設值</button>
+        <p id="status" role="status" aria-live="polite"></p>
+      </footer>
+    </form>
+  </main>
+
+  <script src="scripts/defaults.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
