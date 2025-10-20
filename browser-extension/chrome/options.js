@@ -24,6 +24,8 @@ async function init() {
     underlineStyle: document.getElementById('underlineStyle'),
     underlineWeight: document.getElementById('underlineWeight'),
     ignoreInputs: document.getElementById('ignoreInputs'),
+    debugSkip: document.getElementById('debugSkip'),
+    debugSegments: document.getElementById('debugSegments'),
     status: document.getElementById('status'),
     reset: document.getElementById('reset-button')
   };
@@ -58,6 +60,8 @@ function attachListeners(elements) {
   elements.enableHighlightFill.addEventListener('change', handler);
   elements.enableUnderline.addEventListener('change', handler);
   elements.ignoreInputs.addEventListener('change', handler);
+  elements.debugSkip.addEventListener('change', handler);
+  elements.debugSegments.addEventListener('change', handler);
   elements.underlineStyle.addEventListener('change', handler);
   elements.underlineWeight.addEventListener('change', handler);
   elements.highlightColorDarkText.addEventListener('input', handler);
@@ -83,6 +87,8 @@ function applyToForm(elements, settings) {
   elements.underlineStyle.value = settings.underlineStyle;
   elements.underlineWeight.value = settings.underlineWeight || 'medium';
   elements.ignoreInputs.checked = settings.ignoreInputs;
+  elements.debugSkip.checked = Boolean(settings.debugSkip);
+  elements.debugSegments.checked = Boolean(settings.debugSegments);
   updateControlStates(elements, settings);
 }
 

@@ -83,6 +83,12 @@ body {
   gap: 18px;
 }
 
+.paper__section-lede {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(47, 36, 26, 0.7);
+}
+
 .paper__section-title {
   margin: 0;
   font-size: 14px;

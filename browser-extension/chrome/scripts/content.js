@@ -19,22 +19,24 @@
   let dataLoaded = false;
   let tooltipEl = null;
   let maxWordLength = 0;
-  let debugSkipChecks = true;
+  let debugSkipChecks = false;
   let highlightPalettes = {
     [TONE_DARK]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorDarkText, { opacity: 0.95 }),
     [TONE_LIGHT]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorLightText, { opacity: 0.85 })
   };
+  let debugSegmenter = false;
 
   async function bootstrap() {
     try {
       settings = invadeMergeSettings(await readSettings());
+      debugSkipChecks = Boolean(settings.debugSkip);
+      debugSegmenter = Boolean(settings.debugSegments);
       applySettingsStyles();
       if (!settings.enabled) {
         installSettingsListener();
         return;
       }
 
-      debugSkipChecks = settings.debugSkip !== false;
       await ensureVocabData();
       initializeSegmenter();
       highlightDocument(document.body);
@@ -183,6 +185,7 @@
         isWordLike: Boolean(segment.isWordLike)
       });
     }
+    debugSegmenterLog(textNode, text, segments);
     for (let i = 0; i < segments.length; i += 1) {
       const current = segments[i];
       if (!current.value || !current.value.trim() || !current.isWordLike) {
@@ -438,6 +441,28 @@
       return true;
     }
     return isBoundaryCharacter(char);
+  }
+
+  function debugSegmenterLog(textNode, text, segments) {
+    if (!debugSegmenter) {
+      return;
+    }
+    try {
+      const context = buildDebugContext(textNode);
+      const snippet = text.length > 120 ? text.slice(0, 120) + '…' : text;
+      console.debug('[invade] segments', {
+        snippet,
+        text,
+        context,
+        segments: segments.map(segment => ({
+          value: segment.value,
+          index: segment.index,
+          isWordLike: segment.isWordLike
+        }))
+      });
+    } catch (error) {
+      console.debug('[invade] segments log error:', error);
+    }
   }
 
   function debugSkipLog(textNode, word, phrase, payload, matched) {
@@ -717,6 +742,8 @@
       const newSettings = invadeMergeSettings(changes.settings.newValue);
       const wasEnabled = settings.enabled;
       settings = newSettings;
+      debugSkipChecks = Boolean(settings.debugSkip);
+      debugSegmenter = Boolean(settings.debugSegments);
       applySettingsStyles();
 
       if (!wasEnabled && settings.enabled) {
