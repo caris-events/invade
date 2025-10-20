@@ -9,6 +9,7 @@
   const TONE_DARK = 'dark';
   const TONE_LIGHT = 'light';
   const ASCII_PUNCTUATION_REGEX = /[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
+  const CONTEXT_IGNORABLE_CHAR_REGEX = /\s/;
 
   let settings = invadeMergeSettings();
   let vocabMap = new Map();
@@ -19,6 +20,7 @@
   let dataLoaded = false;
   let tooltipEl = null;
   let maxWordLength = 0;
+  let debugSkipChecks = true;
   let highlightPalettes = {
     [TONE_DARK]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorDarkText, { opacity: 0.95 }),
     [TONE_LIGHT]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorLightText, { opacity: 0.85 })
@@ -33,6 +35,7 @@
         return;
       }
 
+      debugSkipChecks = settings.debugSkip !== false;
       await ensureVocabData();
       initializeSegmenter();
       highlightDocument(document.body);
@@ -319,16 +322,29 @@
     const localStart = index - offset;
     const localEnd = localStart + phraseLength;
     if (localStart >= 0 && localEnd <= text.length) {
-      return text.slice(localStart, localEnd) === phrase;
+      const inner = removeIgnorableContextChars(text.slice(localStart, localEnd));
+      const matches = inner === removeIgnorableContextChars(phrase);
+      debugSkipLog(textNode, vocab.word, phrase, {
+        combined: inner,
+        source: 'local',
+        matchedWord
+      }, matches);
+      return matches;
     }
     const innerStart = Math.max(localStart, 0);
     const innerEnd = Math.min(localEnd, text.length);
-    const innerSlice = text.slice(innerStart, innerEnd);
+    const innerSlice = removeIgnorableContextChars(text.slice(innerStart, innerEnd));
     let prefix = '';
     if (localStart < 0) {
       const neededBefore = -localStart;
       const collectedBefore = collectAdjacentText(textNode, neededBefore, -1);
       if (!collectedBefore.complete) {
+        debugSkipLog(textNode, vocab.word, phrase, {
+          reason: 'missing-prefix',
+          required: neededBefore,
+          collected: collectedBefore.text,
+          matchedWord
+        }, false);
         return false;
       }
       prefix = collectedBefore.text;
@@ -338,12 +354,28 @@
       const neededAfter = localEnd - text.length;
       const collectedAfter = collectAdjacentText(textNode, neededAfter, 1);
       if (!collectedAfter.complete) {
+        debugSkipLog(textNode, vocab.word, phrase, {
+          reason: 'missing-suffix',
+          required: neededAfter,
+          collected: collectedAfter.text,
+          matchedWord
+        }, false);
         return false;
       }
       suffix = collectedAfter.text;
     }
     const combined = prefix + innerSlice + suffix;
-    return combined === phrase;
+    const normalizedPhrase = removeIgnorableContextChars(phrase);
+    const matches = combined === normalizedPhrase;
+    debugSkipLog(textNode, vocab.word, phrase, {
+      combined,
+      prefix,
+      innerSlice,
+      suffix,
+      normalizedPhrase,
+      matchedWord
+    }, matches);
+    return matches;
   }
 
   function collectAdjacentText(textNode, required, direction) {
@@ -358,7 +390,7 @@
     const walker = doc.createTreeWalker(root, NodeFilter.SHOW_TEXT);
     walker.currentNode = textNode;
     let remaining = required;
-    let collected = '';
+    const characters = [];
     while (remaining > 0) {
       const neighbor = direction === -1 ? walker.previousNode() : walker.nextNode();
       if (!neighbor) {
@@ -368,15 +400,66 @@
       if (!value) {
         continue;
       }
-      const take = Math.min(remaining, value.length);
+      const units = Array.from(value);
       if (direction === -1) {
-        collected = value.slice(value.length - take) + collected;
+        for (let i = units.length - 1; i >= 0 && remaining > 0; i -= 1) {
+          const char = units[i];
+          if (isSkippableContextChar(char)) {
+            continue;
+          }
+          characters.unshift(char);
+          remaining -= 1;
+        }
       } else {
-        collected += value.slice(0, take);
+        for (let i = 0; i < units.length && remaining > 0; i += 1) {
+          const char = units[i];
+          if (isSkippableContextChar(char)) {
+            continue;
+          }
+          characters.push(char);
+          remaining -= 1;
+        }
       }
-      remaining -= take;
     }
-    return { text: collected, complete: remaining === 0 };
+    return { text: characters.join(''), complete: remaining === 0 };
+  }
+
+  function removeIgnorableContextChars(input) {
+    if (!input) {
+      return '';
+    }
+    return Array.from(input).filter(char => !isSkippableContextChar(char)).join('');
+  }
+
+  function isSkippableContextChar(char) {
+    return !char || CONTEXT_IGNORABLE_CHAR_REGEX.test(char);
+  }
+
+  function debugSkipLog(textNode, word, phrase, payload, matched) {
+    if (!debugSkipChecks) {
+      return;
+    }
+    const context = buildDebugContext(textNode);
+    console.debug('[invade] skipPhrases', {
+      word,
+      phrase,
+      matched,
+      context,
+      ...payload
+    });
+  }
+
+  function buildDebugContext(textNode) {
+    try {
+      const parent = textNode && textNode.parentElement;
+      if (!parent) {
+        return textNode ? textNode.nodeValue : '';
+      }
+      const textContent = parent.textContent || '';
+      return textContent.trim().slice(0, 120);
+    } catch (_error) {
+      return '';
+    }
   }
 
   function initializeSegmenter() {
