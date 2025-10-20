@@ -26,6 +26,8 @@ async function init() {
     ignoreInputs: document.getElementById('ignoreInputs'),
     debugSkip: document.getElementById('debugSkip'),
     debugSegments: document.getElementById('debugSegments'),
+    debugTooltip: document.getElementById('debugTooltip'),
+    debugWeights: document.getElementById('debugWeights'),
     status: document.getElementById('status'),
     reset: document.getElementById('reset-button')
   };
@@ -62,6 +64,8 @@ function attachListeners(elements) {
   elements.ignoreInputs.addEventListener('change', handler);
   elements.debugSkip.addEventListener('change', handler);
   elements.debugSegments.addEventListener('change', handler);
+  elements.debugTooltip.addEventListener('change', handler);
+  elements.debugWeights.addEventListener('change', handler);
   elements.underlineStyle.addEventListener('change', handler);
   elements.underlineWeight.addEventListener('change', handler);
   elements.highlightColorDarkText.addEventListener('input', handler);
@@ -89,6 +93,8 @@ function applyToForm(elements, settings) {
   elements.ignoreInputs.checked = settings.ignoreInputs;
   elements.debugSkip.checked = Boolean(settings.debugSkip);
   elements.debugSegments.checked = Boolean(settings.debugSegments);
+  elements.debugTooltip.checked = Boolean(settings.debugTooltip);
+  elements.debugWeights.checked = Boolean(settings.debugWeights);
   updateControlStates(elements, settings);
 }
 

@@ -9,6 +9,10 @@ explicit:
 
 #
 matchOptions:
+  skipPhrases:
+    - 菜單選項
+    - 菜單項目
+    - 菜單選擇
   context:
     baseScore: -1
     threshold: 0
@@ -30,13 +34,36 @@ matchOptions:
           - 設定
           - 功能
           - 選單
-          - 選項
           - 編輯
           - 工具
           - 列
           - 介面
           - 系統
         weight: 1
+      - position: prev
+        tokens:
+          - 純素
+          - 餐點
+          - 菜色
+          - 料理
+          - 菜餚
+          - 甜點
+          - 菜品
+          - 菜系
+          - 套餐
+        weight: -1
+      - position: window
+        tokens:
+          - 純素
+          - 餐點
+          - 料理
+          - 菜餚
+          - 菜色
+          - 菜品
+          - 菜系
+          - 套餐
+          - 餐廳
+        weight: -0.5
 
 #
 description: |

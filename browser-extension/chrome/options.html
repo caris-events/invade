@@ -101,7 +101,7 @@
 
       <section class="paper__section">
         <h2 class="paper__section-title">偵錯工具</h2>
-        <p class="paper__section-lede">需要協助排查誤判時，可在瀏覽器開發者工具的 Console 觀察輸出。</p>
+        <p class="paper__section-lede">需要協助排查誤判時，可在瀏覽器開發者工具觀察輸出或直接在懸浮視窗檢視偵錯資訊。</p>
         <label class="paper__item">
           <input type="checkbox" id="debugSkip">
           <span class="paper__item-body">
@@ -114,6 +114,20 @@
           <span class="paper__item-body">
             <span class="paper__item-headline">記錄斷詞結果</span>
             <span class="paper__item-note">輸出 <code>[invade] segments</code>，協助檢視文字節點的拆分情況。</span>
+          </span>
+        </label>
+        <label class="paper__item">
+          <input type="checkbox" id="debugWeights">
+          <span class="paper__item-body">
+            <span class="paper__item-headline">記錄語境權重</span>
+            <span class="paper__item-note">在 Console 以 <code>[invade] weights</code> 顯示上下文加權的判斷過程。</span>
+          </span>
+        </label>
+        <label class="paper__item">
+          <input type="checkbox" id="debugTooltip">
+          <span class="paper__item-body">
+            <span class="paper__item-headline">在懸浮視窗顯示偵錯資訊</span>
+            <span class="paper__item-note">提示視窗會額外列出加權分數與觸發規則，方便檢視單字為何被標記。</span>
           </span>
         </label>
       </section>

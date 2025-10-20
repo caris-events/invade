@@ -26,12 +26,16 @@
     [TONE_LIGHT]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorLightText, { opacity: 0.85 })
   };
   let debugSegmenter = false;
+  let debugTooltipEnabled = false;
+  let debugWeightsEnabled = false;
 
   async function bootstrap() {
     try {
       settings = invadeMergeSettings(await readSettings());
       debugSkipChecks = Boolean(settings.debugSkip);
       debugSegmenter = Boolean(settings.debugSegments);
+      debugTooltipEnabled = Boolean(settings.debugTooltip);
+      debugWeightsEnabled = Boolean(settings.debugWeights);
       applySettingsStyles();
       if (!settings.enabled) {
         installSettingsListener();
@@ -156,6 +160,12 @@
       span.className = HIGHLIGHT_CLASS;
       span.dataset.invadeWord = result.vocab.word;
       span.dataset.invadeOriginal = result.word;
+      if (result.debug && (debugTooltipEnabled || debugWeightsEnabled)) {
+        const serialized = serializeDebugInfo(result.debug);
+        if (serialized) {
+          span.dataset.invadeDebug = serialized;
+        }
+      }
       span.tabIndex = 0;
       span.textContent = text.slice(result.index, result.index + result.length);
       applyHighlightPalette(span, tone);
@@ -217,11 +227,12 @@
         if (!vocab) {
           continue;
         }
+        const debugInfo = prepareMatchDebugInfo(vocab, slice);
         if (!shouldHighlightMatch(textNode, text, start, end - start, slice, vocab, {
           segments,
           matchStart: i,
           matchEnd: j
-        })) {
+        }, debugInfo)) {
           continue;
         }
         bestMatch = {
@@ -229,7 +240,8 @@
           length: end - start,
           word: slice,
           vocab,
-          segments: j - i + 1
+          segments: j - i + 1,
+          debug: debugInfo
         };
       }
       if (bestMatch) {
@@ -250,23 +262,42 @@
       if (!vocab) {
         continue;
       }
-      if (!shouldHighlightMatch(textNode, text, match.index, word.length, word, vocab, null)) {
+      const debugInfo = prepareMatchDebugInfo(vocab, word);
+      if (!shouldHighlightMatch(textNode, text, match.index, word.length, word, vocab, null, debugInfo)) {
         continue;
       }
       matches.push({
         index: match.index,
         length: word.length,
         word,
-        vocab
+        vocab,
+        debug: debugInfo
       });
     }
     return matches;
   }
 
-  function shouldHighlightMatch(textNode, text, index, length, matchedWord, vocab, contextInfo) {
+  function shouldHighlightMatch(textNode, text, index, length, matchedWord, vocab, contextInfo, debugInfo) {
     const options = vocab.matchOptions || {};
+    if (debugInfo) {
+      debugInfo.vocab = vocab.word;
+      debugInfo.original = matchedWord;
+    }
     if (Array.isArray(options.skipPhrases) && options.skipPhrases.length) {
-      if (isPartOfSkipPhrase(textNode, text, index, length, matchedWord, vocab, options.skipPhrases)) {
+      const skipPhrase = isPartOfSkipPhrase(textNode, text, index, length, matchedWord, vocab, options.skipPhrases);
+      if (skipPhrase) {
+        if (debugInfo) {
+          debugInfo.decision = 'skip-phrase';
+          debugInfo.skipPhrase = skipPhrase;
+        }
+        if (debugWeightsEnabled && debugInfo) {
+          console.debug('[invade] weights', {
+            word: matchedWord,
+            vocab: vocab.word,
+            decision: 'skip-phrase',
+            skipPhrase
+          });
+        }
         return false;
       }
     }
@@ -275,11 +306,53 @@
       const before = text[index - 1];
       const after = text[index + length];
       if (!isBoundaryCharacter(before) || !isBoundaryCharacter(after)) {
+        if (debugInfo) {
+          debugInfo.decision = 'standalone-boundary';
+        }
+        if (debugWeightsEnabled && debugInfo) {
+          console.debug('[invade] weights', {
+            word: matchedWord,
+            vocab: vocab.word,
+            decision: 'standalone-boundary'
+          });
+        }
         return false;
       }
     }
-    if (options.context && !evaluateContextFeatures(textNode, text, index, length, matchedWord, vocab, contextInfo, options.context)) {
-      return false;
+    let contextResult = null;
+    if (options.context) {
+      contextResult = evaluateContextFeatures(textNode, text, index, length, matchedWord, vocab, contextInfo, options.context, debugInfo);
+      if (!contextResult.passed) {
+        if (debugInfo) {
+          debugInfo.decision = 'context-threshold';
+          debugInfo.context = contextResult;
+        }
+        if (debugWeightsEnabled && debugInfo) {
+          console.debug('[invade] weights', {
+            word: matchedWord,
+            vocab: vocab.word,
+            decision: debugInfo.decision,
+            skipPhrase: debugInfo.skipPhrase,
+            context: contextResult
+          });
+        }
+        return false;
+      }
+    }
+    if (debugInfo) {
+      debugInfo.decision = debugInfo.decision || 'matched';
+      if (contextResult) {
+        debugInfo.context = contextResult;
+      }
+      if (debugWeightsEnabled) {
+        console.debug('[invade] weights', {
+          word: matchedWord,
+          vocab: vocab.word,
+          decision: debugInfo.decision,
+          skipPhrase: debugInfo.skipPhrase,
+          context: contextResult
+        });
+      }
     }
     return true;
   }
@@ -313,10 +386,10 @@
         continue;
       }
       if (matchesSkipPhrase(textNode, text, index, length, matchedWord, vocab, phrase)) {
-        return true;
+        return phrase;
       }
     }
-    return false;
+    return null;
   }
 
   function matchesSkipPhrase(textNode, text, index, length, matchedWord, vocab, phrase) {
@@ -451,17 +524,36 @@
     return isBoundaryCharacter(char);
   }
 
-  function evaluateContextFeatures(textNode, text, index, length, matchedWord, vocab, contextInfo, contextOptions) {
+  function evaluateContextFeatures(textNode, text, index, length, matchedWord, vocab, contextInfo, contextOptions, debugInfo) {
     const features = Array.isArray(contextOptions.features) ? contextOptions.features : [];
     if (!features.length) {
-      return true;
+      return {
+        passed: true,
+        score: typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0,
+        threshold: typeof contextOptions.threshold === 'number' ? contextOptions.threshold : 0,
+        baseScore: typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0,
+        contributions: []
+      };
     }
     const accessor = createContextTokenAccessor(textNode, text, index, length, contextInfo, contextOptions);
     if (!accessor) {
-      return !contextOptions.requireSegments;
+      const passed = !contextOptions.requireSegments;
+      const result = {
+        passed,
+        score: typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0,
+        threshold: typeof contextOptions.threshold === 'number' ? contextOptions.threshold : 0,
+        baseScore: typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0,
+        contributions: [],
+        segmenterAvailable: false
+      };
+      if (debugInfo) {
+        debugInfo.context = result;
+      }
+      return result;
     }
     const threshold = typeof contextOptions.threshold === 'number' ? contextOptions.threshold : 0;
     let score = typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0;
+    const contributions = [];
     for (const feature of features) {
       const tokens = normalizeContextTokens(feature);
       if (!tokens.length) {
@@ -473,12 +565,51 @@
       }
       const positions = normalizeContextPositions(feature);
       const distance = Number.isFinite(feature.distance) && feature.distance > 0 ? Math.floor(feature.distance) : 1;
-      const matched = positions.some(position => accessor(position, tokens, distance));
+      let matched = false;
+      let matchedToken = null;
+      for (const position of positions) {
+        const token = accessor(position, tokens, distance);
+        if (token) {
+          matched = true;
+          matchedToken = token;
+          break;
+        }
+      }
       if (matched) {
         score += weight;
       }
+      contributions.push({
+        position: positions.join(','),
+        weight,
+        matched,
+        token: matchedToken,
+        tokens,
+        distance,
+        contribution: matched ? weight : 0
+      });
     }
-    return score >= threshold;
+    const result = {
+      passed: score >= threshold,
+      score,
+      threshold,
+      baseScore: typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0,
+      contributions,
+      segmenterAvailable: true
+    };
+    if (debugInfo) {
+      debugInfo.context = result;
+    }
+    return result;
+  }
+
+  function prepareMatchDebugInfo(vocab, matchedWord) {
+    if (!debugTooltipEnabled && !debugWeightsEnabled) {
+      return null;
+    }
+    return {
+      vocab: vocab && vocab.word ? vocab.word : '',
+      matched: matchedWord
+    };
   }
 
   function createContextTokenAccessor(textNode, text, index, length, contextInfo, contextOptions) {
@@ -542,20 +673,38 @@
 
     return (position, tokens, distance) => {
       if (!tokens || !tokens.length) {
-        return false;
+        return null;
       }
       const targetSet = new Set(tokens);
       const offset = Math.max(1, distance || 1) - 1;
       if (position === 'prev') {
-        return offset < prevTokens.length ? targetSet.has(prevTokens[offset]) : false;
+        if (offset < prevTokens.length) {
+          const candidate = prevTokens[offset];
+          return candidate && targetSet.has(candidate) ? candidate : null;
+        }
+        return null;
       }
       if (position === 'next') {
-        return offset < nextTokens.length ? targetSet.has(nextTokens[offset]) : false;
+        if (offset < nextTokens.length) {
+          const candidate = nextTokens[offset];
+          return candidate && targetSet.has(candidate) ? candidate : null;
+        }
+        return null;
       }
       if (position === 'any' || position === 'window') {
-        return prevTokens.some(token => targetSet.has(token)) || nextTokens.some(token => targetSet.has(token));
+        for (const candidate of prevTokens) {
+          if (candidate && targetSet.has(candidate)) {
+            return candidate;
+          }
+        }
+        for (const candidate of nextTokens) {
+          if (candidate && targetSet.has(candidate)) {
+            return candidate;
+          }
+        }
+        return null;
       }
-      return false;
+      return null;
     };
   }
 
@@ -840,7 +989,11 @@
     if (!vocab) {
       return;
     }
-    tooltipEl.innerHTML = renderTooltipContent(vocab);
+    let debugData = null;
+    if (debugTooltipEnabled && anchor.dataset.invadeDebug) {
+      debugData = parseDebugInfo(anchor.dataset.invadeDebug);
+    }
+    tooltipEl.innerHTML = renderTooltipContent(vocab, debugData);
     tooltipEl.style.display = 'block';
     requestAnimationFrame(() => positionTooltip(anchor, tooltipEl));
   }
@@ -852,7 +1005,7 @@
     }
   }
 
-  function renderTooltipContent(vocab) {
+  function renderTooltipContent(vocab, debugData) {
     const dek = vocab.description
       ? `<p class="invade-tooltip__dek">${escapeHtml(vocab.description)}</p>`
       : '';
@@ -886,6 +1039,8 @@
       .map(note => `<p class="invade-tooltip__footnote">${escapeHtml(note)}</p>`)
       .join('');
 
+    const debugSection = debugTooltipEnabled && debugData ? renderDebugSection(debugData) : '';
+
     return `
       <div class="invade-tooltip__masthead">支語觀察報</div>
       <h2 class="invade-tooltip__headline">${escapeHtml(vocab.word)}</h2>
@@ -893,7 +1048,61 @@
       ${meta}
       ${example}
       ${footnotes}
+      ${debugSection}
     `;
+  }
+
+  function renderDebugSection(data) {
+    if (!data) {
+      return '';
+    }
+    const lines = [];
+    if (data.decision) {
+      lines.push(`<li><strong>Decision</strong>：${escapeHtml(data.decision)}</li>`);
+    }
+    if (data.skipPhrase) {
+      lines.push(`<li><strong>Skip Phrase</strong>：${escapeHtml(data.skipPhrase)}</li>`);
+    }
+    if (data.context) {
+      const scoreLine = `<li><strong>Score</strong>：${escapeHtml(String(data.context.score))} / 阈值 ${escapeHtml(String(data.context.threshold))}</li>`;
+      lines.push(scoreLine);
+      if (Array.isArray(data.context.contributions) && data.context.contributions.length) {
+        const contributions = data.context.contributions
+          .map(entry => {
+            const indicator = entry.matched ? '✓' : '✗';
+            const token = entry.token ? `→ ${escapeHtml(String(entry.token))}` : '';
+            return `<li class="invade-tooltip__debug-entry">${indicator} ${escapeHtml(entry.position || '')} (${escapeHtml(String(entry.weight))}) ${token}</li>`;
+          })
+          .join('');
+        lines.push(`<li><strong>Features</strong><ul class="invade-tooltip__debug-sublist">${contributions}</ul></li>`);
+      }
+    }
+    if (!lines.length) {
+      return '';
+    }
+    return `<section class="invade-tooltip__debug"><div class="invade-tooltip__debug-title">Debug</div><ul class="invade-tooltip__debug-list">${lines.join('')}</ul></section>`;
+  }
+
+  function serializeDebugInfo(info) {
+    if (!info) {
+      return '';
+    }
+    try {
+      return JSON.stringify(info);
+    } catch (error) {
+      return '';
+    }
+  }
+
+  function parseDebugInfo(raw) {
+    if (!raw) {
+      return null;
+    }
+    try {
+      return JSON.parse(raw);
+    } catch (error) {
+      return null;
+    }
   }
 
   function positionTooltip(anchor, tooltip) {
@@ -931,6 +1140,8 @@
       settings = newSettings;
       debugSkipChecks = Boolean(settings.debugSkip);
       debugSegmenter = Boolean(settings.debugSegments);
+      debugTooltipEnabled = Boolean(settings.debugTooltip);
+      debugWeightsEnabled = Boolean(settings.debugWeights);
       applySettingsStyles();
 
       if (!wasEnabled && settings.enabled) {

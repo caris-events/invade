@@ -1,5 +1,98 @@
 [
   {
+    "word": "菜單",
+    "category": "TECHNOLOGY",
+    "categoryLabel": "科技",
+    "explicit": "",
+    "explicitLabel": "未知",
+    "description": "含有一系列的功能選單。",
+    "notice": "這個詞彙指的不是點餐時的菜餚選單。",
+    "recommended": [
+      "選單"
+    ],
+    "examples": [
+      {
+        "words": [
+          "選單"
+        ],
+        "correct": "進入設定{{選單}}就可以更改音量大小。",
+        "incorrect": "進入設置{{菜單}}就可以更改音量大小。"
+      }
+    ],
+    "matchOptions": {
+      "skipPhrases": [
+        "菜單選項",
+        "菜單項目",
+        "菜單選擇"
+      ],
+      "context": {
+        "baseScore": -1,
+        "features": [
+          {
+            "position": "prev",
+            "tokens": [
+              "設定",
+              "系統",
+              "功能",
+              "應用程式",
+              "工具",
+              "選單",
+              "菜單列",
+              "菜單鍵",
+              "菜單按鈕"
+            ],
+            "weight": 1
+          },
+          {
+            "position": "next",
+            "tokens": [
+              "設定",
+              "功能",
+              "選單",
+              "編輯",
+              "工具",
+              "列",
+              "介面",
+              "系統"
+            ],
+            "weight": 1
+          },
+          {
+            "position": "prev",
+            "tokens": [
+              "純素",
+              "餐點",
+              "菜色",
+              "料理",
+              "菜餚",
+              "甜點",
+              "菜品",
+              "菜系",
+              "套餐"
+            ],
+            "weight": -1
+          },
+          {
+            "position": "window",
+            "tokens": [
+              "純素",
+              "餐點",
+              "料理",
+              "菜餚",
+              "菜色",
+              "菜品",
+              "菜系",
+              "套餐",
+              "餐廳"
+            ],
+            "weight": -0.5
+          }
+        ]
+      }
+    },
+    "lastModifiedTs": 1760979329
+  },
+  {
     "word": "宏",
     "category": "TECHNOLOGY",
     "categoryLabel": "科技",
@@ -136,65 +229,6 @@
       }
     },
     "lastModifiedTs": 1760977671
-  },
-  {
-    "word": "菜單",
-    "category": "TECHNOLOGY",
-    "categoryLabel": "科技",
-    "explicit": "",
-    "explicitLabel": "未知",
-    "description": "含有一系列的功能選單。",
-    "notice": "這個詞彙指的不是點餐時的菜餚選單。",
-    "recommended": [
-      "選單"
-    ],
-    "examples": [
-      {
-        "words": [
-          "選單"
-        ],
-        "correct": "進入設定{{選單}}就可以更改音量大小。",
-        "incorrect": "進入設置{{菜單}}就可以更改音量大小。"
-      }
-    ],
-    "matchOptions": {
-      "context": {
-        "baseScore": -1,
-        "features": [
-          {
-            "position": "prev",
-            "tokens": [
-              "設定",
-              "系統",
-              "功能",
-              "應用程式",
-              "工具",
-              "選單",
-              "菜單列",
-              "菜單鍵",
-              "菜單按鈕"
-            ],
-            "weight": 1
-          },
-          {
-            "position": "next",
-            "tokens": [
-              "設定",
-              "功能",
-              "選單",
-              "選項",
-              "編輯",
-              "工具",
-              "列",
-              "介面",
-              "系統"
-            ],
-            "weight": 1
-          }
-        ]
-      }
-    },
-    "lastModifiedTs": 1760977350
   },
   {
     "word": "寄",

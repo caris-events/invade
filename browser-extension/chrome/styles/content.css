@@ -122,6 +122,39 @@
   bottom: calc(100%);
 }
 
+.invade-tooltip__debug {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(73, 58, 41, 0.35);
+  font-size: 11px;
+  color: rgba(47, 36, 26, 0.7);
+  letter-spacing: 0.01em;
+}
+
+.invade-tooltip__debug-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  margin-bottom: 6px;
+  color: rgba(47, 36, 26, 0.6);
+}
+
+.invade-tooltip__debug-list,
+.invade-tooltip__debug-sublist {
+  margin: 0;
+  padding-left: 16px;
+  list-style: disc;
+}
+
+.invade-tooltip__debug-sublist {
+  list-style: circle;
+  padding-left: 14px;
+}
+
+.invade-tooltip__debug-entry {
+  margin: 2px 0;
+}
+
 .invade-tooltip__masthead {
   font-size: 11px;
   letter-spacing: 0.3em;

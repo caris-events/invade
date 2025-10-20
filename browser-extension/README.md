@@ -78,8 +78,10 @@ Content script 會優先透過 `Intl.Segmenter('zh-Hant', { granularity: 'word' 
 
 - **記錄略過片語**：在 Console（需開啟 Verbose Level）輸出 `[invade] skipPhrases`，包含組合後的片語與是否被忽略。
 - **記錄斷詞結果**：輸出 `[invade] segments`，揭露每個文字節點的斷詞切分方式。
+- **記錄語境權重**：輸出 `[invade] weights`，顯示每個語境特徵的加減分情況與最終分數。
+- **在懸浮視窗顯示偵錯資訊**：提示卡會額外列出決策、分數與觸發規則，無須開啟 Console 即可檢視判斷依據。
 
-建議僅在排查時短暫開啟，以免大量輸出影響瀏覽體驗。
+建議僅在排查時短暫開啟，以免大量輸出或額外資訊影響瀏覽體驗。
 
 ## 在 Chrome 載入
 
