@@ -9,6 +9,7 @@
   const TONE_DARK = 'dark';
   const TONE_LIGHT = 'light';
   const ASCII_PUNCTUATION_REGEX = /[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
+  const MAX_CONTEXT_TOKENS = 5;
 
   let settings = invadeMergeSettings();
   let vocabMap = new Map();
@@ -216,7 +217,11 @@
         if (!vocab) {
           continue;
         }
-        if (!shouldHighlightMatch(textNode, text, start, end - start, slice, vocab)) {
+        if (!shouldHighlightMatch(textNode, text, start, end - start, slice, vocab, {
+          segments,
+          matchStart: i,
+          matchEnd: j
+        })) {
           continue;
         }
         bestMatch = {
@@ -245,7 +250,7 @@
       if (!vocab) {
         continue;
       }
-      if (!shouldHighlightMatch(textNode, text, match.index, word.length, word, vocab)) {
+      if (!shouldHighlightMatch(textNode, text, match.index, word.length, word, vocab, null)) {
         continue;
       }
       matches.push({
@@ -258,7 +263,7 @@
     return matches;
   }
 
-  function shouldHighlightMatch(textNode, text, index, length, matchedWord, vocab) {
+  function shouldHighlightMatch(textNode, text, index, length, matchedWord, vocab, contextInfo) {
     const options = vocab.matchOptions || {};
     if (Array.isArray(options.skipPhrases) && options.skipPhrases.length) {
       if (isPartOfSkipPhrase(textNode, text, index, length, matchedWord, vocab, options.skipPhrases)) {
@@ -272,6 +277,9 @@
       if (!isBoundaryCharacter(before) || !isBoundaryCharacter(after)) {
         return false;
       }
+    }
+    if (options.context && !evaluateContextFeatures(textNode, text, index, length, matchedWord, vocab, contextInfo, options.context)) {
+      return false;
     }
     return true;
   }
@@ -441,6 +449,185 @@
       return true;
     }
     return isBoundaryCharacter(char);
+  }
+
+  function evaluateContextFeatures(textNode, text, index, length, matchedWord, vocab, contextInfo, contextOptions) {
+    const features = Array.isArray(contextOptions.features) ? contextOptions.features : [];
+    if (!features.length) {
+      return true;
+    }
+    const accessor = createContextTokenAccessor(textNode, text, index, length, contextInfo, contextOptions);
+    if (!accessor) {
+      return !contextOptions.requireSegments;
+    }
+    const threshold = typeof contextOptions.threshold === 'number' ? contextOptions.threshold : 0;
+    let score = typeof contextOptions.baseScore === 'number' ? contextOptions.baseScore : 0;
+    for (const feature of features) {
+      const tokens = normalizeContextTokens(feature);
+      if (!tokens.length) {
+        continue;
+      }
+      const weight = typeof feature.weight === 'number' ? feature.weight : 0;
+      if (!weight) {
+        continue;
+      }
+      const positions = normalizeContextPositions(feature);
+      const distance = Number.isFinite(feature.distance) && feature.distance > 0 ? Math.floor(feature.distance) : 1;
+      const matched = positions.some(position => accessor(position, tokens, distance));
+      if (matched) {
+        score += weight;
+      }
+    }
+    return score >= threshold;
+  }
+
+  function createContextTokenAccessor(textNode, text, index, length, contextInfo, contextOptions) {
+    if (!segmenter || typeof segmenter.segment !== 'function') {
+      return null;
+    }
+    const maxTokens = typeof contextOptions.maxTokens === 'number' && contextOptions.maxTokens > 0
+      ? Math.min(Math.floor(contextOptions.maxTokens), 12)
+      : MAX_CONTEXT_TOKENS;
+
+    let segments = null;
+    let matchStart = null;
+    let matchEnd = null;
+
+    if (contextInfo && Array.isArray(contextInfo.segments)) {
+      segments = contextInfo.segments;
+      matchStart = contextInfo.matchStart;
+      matchEnd = contextInfo.matchEnd;
+    } else {
+      const generated = Array.from(segmenter.segment(text || ''));
+      segments = generated.map(segment => ({
+        value: segment.segment,
+        index: segment.index,
+        isWordLike: Boolean(segment.isWordLike)
+      }));
+      for (let i = 0; i < segments.length; i += 1) {
+        const seg = segments[i];
+        if (seg.index <= index && seg.index + seg.value.length > index) {
+          if (matchStart === null) {
+            matchStart = i;
+          }
+          matchEnd = i;
+        } else if (seg.index >= index && seg.index < index + length) {
+          if (matchStart === null) {
+            matchStart = i;
+          }
+          matchEnd = i;
+        }
+      }
+      if (matchStart === null) {
+        matchStart = 0;
+      }
+      if (matchEnd === null) {
+        matchEnd = matchStart;
+      }
+    }
+
+    const prevTokens = collectNeighborTokens(segments, matchStart - 1, -1, maxTokens);
+    const nextTokens = collectNeighborTokens(segments, matchEnd + 1, 1, maxTokens);
+
+    if (textNode) {
+      const prevExtra = collectAdjacentText(textNode, maxTokens * 3, -1);
+      if (prevExtra.text) {
+        appendExtraTokens(prevTokens, prevExtra.text, -1, maxTokens);
+      }
+      const nextExtra = collectAdjacentText(textNode, maxTokens * 3, 1);
+      if (nextExtra.text) {
+        appendExtraTokens(nextTokens, nextExtra.text, 1, maxTokens);
+      }
+    }
+
+    return (position, tokens, distance) => {
+      if (!tokens || !tokens.length) {
+        return false;
+      }
+      const targetSet = new Set(tokens);
+      const offset = Math.max(1, distance || 1) - 1;
+      if (position === 'prev') {
+        return offset < prevTokens.length ? targetSet.has(prevTokens[offset]) : false;
+      }
+      if (position === 'next') {
+        return offset < nextTokens.length ? targetSet.has(nextTokens[offset]) : false;
+      }
+      if (position === 'any' || position === 'window') {
+        return prevTokens.some(token => targetSet.has(token)) || nextTokens.some(token => targetSet.has(token));
+      }
+      return false;
+    };
+  }
+
+  function collectNeighborTokens(segments, startIndex, step, maxTokens) {
+    const tokens = [];
+    if (!Array.isArray(segments) || !segments.length) {
+      return tokens;
+    }
+    for (let i = startIndex; i >= 0 && i < segments.length && tokens.length < maxTokens; i += step) {
+      const segment = segments[i];
+      if (!segment || !segment.value || !segment.value.trim()) {
+        continue;
+      }
+      if (segment.isWordLike === false) {
+        continue;
+      }
+      tokens.push(segment.value);
+    }
+    return tokens;
+  }
+
+  function appendExtraTokens(currentTokens, text, direction, maxTokens) {
+    if (!segmenter || !text) {
+      return;
+    }
+    try {
+      const extraSegments = Array.from(segmenter.segment(text)).filter(segment => {
+        return Boolean(segment.segment && segment.segment.trim() && segment.isWordLike !== false);
+      });
+      if (!extraSegments.length) {
+        return;
+      }
+      if (direction === -1) {
+        for (let i = extraSegments.length - 1; i >= 0 && currentTokens.length < maxTokens; i -= 1) {
+          const token = extraSegments[i].segment;
+          if (!currentTokens.includes(token)) {
+            currentTokens.push(token);
+          }
+        }
+      } else {
+        for (let i = 0; i < extraSegments.length && currentTokens.length < maxTokens; i += 1) {
+          const token = extraSegments[i].segment;
+          if (!currentTokens.includes(token)) {
+            currentTokens.push(token);
+          }
+        }
+      }
+    } catch (error) {
+      if (debugSegmenter) {
+        console.debug('[invade] context token collection failed:', error);
+      }
+    }
+  }
+
+  function normalizeContextTokens(feature) {
+    if (Array.isArray(feature.tokens)) {
+      return feature.tokens.filter(Boolean);
+    }
+    if (feature.token) {
+      return [feature.token];
+    }
+    return [];
+  }
+
+  function normalizeContextPositions(feature) {
+    if (Array.isArray(feature.positions) && feature.positions.length) {
+      return feature.positions;
+    }
+    if (typeof feature.position === 'string' && feature.position) {
+      return [feature.position];
+    }
+    return ['any'];
   }
 
   function debugSegmenterLog(textNode, text, segments) {

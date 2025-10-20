@@ -69,8 +69,24 @@ type VocabExample struct {
 }
 
 type VocabMatchOptions struct {
-	MatchMode   string   `yaml:"matchMode" json:"matchMode,omitempty"`
-	SkipPhrases []string `yaml:"skipPhrases" json:"skipPhrases,omitempty"`
+	MatchMode   string             `yaml:"matchMode" json:"matchMode,omitempty"`
+	SkipPhrases []string           `yaml:"skipPhrases" json:"skipPhrases,omitempty"`
+	Context     *VocabMatchContext `yaml:"context" json:"context,omitempty"`
+}
+
+type VocabMatchContext struct {
+	BaseScore       float64                `yaml:"baseScore" json:"baseScore,omitempty"`
+	Threshold       float64                `yaml:"threshold" json:"threshold,omitempty"`
+	RequireSegments bool                   `yaml:"requireSegments" json:"requireSegments,omitempty"`
+	Features        []*VocabContextFeature `yaml:"features" json:"features,omitempty"`
+}
+
+type VocabContextFeature struct {
+	Position  string   `yaml:"position" json:"position,omitempty"`
+	Positions []string `yaml:"positions" json:"positions,omitempty"`
+	Tokens    []string `yaml:"tokens" json:"tokens,omitempty"`
+	Weight    float64  `yaml:"weight" json:"weight,omitempty"`
+	Distance  int      `yaml:"distance" json:"distance,omitempty"`
 }
 
 func (v *VocabExample) WordsStr() string {
