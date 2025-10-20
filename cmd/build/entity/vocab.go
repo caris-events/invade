@@ -45,15 +45,16 @@ const (
 // ================================
 
 type Vocab struct {
-	Word        string          `yaml:"word"`
-	Bopomofo    string          `yaml:"bopomofo"`
-	Category    VocabCategory   `yaml:"category"`
-	Explicit    VocabExplicit   `yaml:"explicit"`
-	Description string          `yaml:"description"`
-	Deprecation string          `yaml:"deprecation"`
-	Notice      string          `yaml:"notice"`
-	Examples    []*VocabExample `yaml:"examples"`
-	ModTime     time.Time
+	Word         string             `yaml:"word"`
+	Bopomofo     string             `yaml:"bopomofo"`
+	Category     VocabCategory      `yaml:"category"`
+	Explicit     VocabExplicit      `yaml:"explicit"`
+	Description  string             `yaml:"description"`
+	Deprecation  string             `yaml:"deprecation"`
+	Notice       string             `yaml:"notice"`
+	Examples     []*VocabExample    `yaml:"examples"`
+	MatchOptions *VocabMatchOptions `yaml:"matchOptions"`
+	ModTime      time.Time
 }
 
 func (v *Vocab) SetModTime(t time.Time) {
@@ -65,6 +66,11 @@ type VocabExample struct {
 	Description string   `yaml:"description"`
 	Correct     string   `yaml:"correct"`
 	Incorrect   string   `yaml:"incorrect"`
+}
+
+type VocabMatchOptions struct {
+	MatchMode   string   `yaml:"matchMode" json:"matchMode,omitempty"`
+	SkipPhrases []string `yaml:"skipPhrases" json:"skipPhrases,omitempty"`
 }
 
 func (v *VocabExample) WordsStr() string {

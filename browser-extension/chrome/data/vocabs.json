@@ -1,5 +1,33 @@
 [
   {
+    "word": "內存",
+    "category": "HARDWARE",
+    "categoryLabel": "硬體與設備",
+    "explicit": "",
+    "explicitLabel": "未知",
+    "description": "電腦資料處理時，會將資料暫時存放至硬體晶片，也作隨機存取記憶體。",
+    "recommended": [
+      "RAM",
+      "記憶體"
+    ],
+    "examples": [
+      {
+        "words": [
+          "記憶體",
+          "RAM"
+        ],
+        "correct": "要順暢地執行遊戲，必須升級電腦的{{記憶體}}。",
+        "incorrect": "要順暢地[[運行]]遊戲，必須升級電腦的{{內存}}。"
+      }
+    ],
+    "matchOptions": {
+      "skipPhrases": [
+        "海內存知己"
+      ]
+    },
+    "lastModifiedTs": 1760970640
+  },
+  {
     "word": "AWSL",
     "category": "SLANG",
     "categoryLabel": "俚語",
@@ -1046,29 +1074,6 @@
         ],
         "correct": "公司裡每個人都自願加班，又具備一身十八般武藝，{{內鬥}}地相當激烈。",
         "incorrect": "公司裡每個人都自願加班，又具備一身十八般武藝，十分{{內卷}}。"
-      }
-    ],
-    "lastModifiedTs": 1760527523
-  },
-  {
-    "word": "內存",
-    "category": "HARDWARE",
-    "categoryLabel": "硬體與設備",
-    "explicit": "",
-    "explicitLabel": "未知",
-    "description": "電腦資料處理時，會將資料暫時存放至硬體晶片，也作隨機存取記憶體。",
-    "recommended": [
-      "RAM",
-      "記憶體"
-    ],
-    "examples": [
-      {
-        "words": [
-          "記憶體",
-          "RAM"
-        ],
-        "correct": "要順暢地執行遊戲，必須升級電腦的{{記憶體}}。",
-        "incorrect": "要順暢地[[運行]]遊戲，必須升級電腦的{{內存}}。"
       }
     ],
     "lastModifiedTs": 1760527523

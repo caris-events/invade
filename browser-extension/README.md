@@ -21,6 +21,24 @@ BAKAINVADE_DIR=$(pwd)/../.. go run . extension
 
 執行後會在 `browser-extension/chrome/data/vocabs.json` 生成最新的詞彙資料。
 
+## 詞彙欄位補充
+
+在 `database/vocabs/*.yml` 的詞彙資料中，可額外帶有 `matchOptions` 來細調比對行為，重新執行 `go run . extension` 後就會被帶入 `vocabs.json`：
+
+- `matchMode: "standalone"`：要求詞彙需出現在標點或空白邊界之間，適合英數縮寫或需獨立顯示的詞彙。
+- `skipPhrases`: `string[]`：列出遇到特定片語時要忽略的情境，例如 `"海內存知己"`。
+
+```yaml
+# database/vocabs/內存.yml
+matchOptions:
+  skipPhrases:
+    - 海內存知己
+```
+
+## 斷詞與比對流程
+
+Content script 會優先透過 `Intl.Segmenter('zh-Hant', { granularity: 'word' })` 斷詞，僅針對分出的 token 嘗試比對詞庫，以降低「海內存知己 → 內存」這類誤判。瀏覽器若不支援 `Intl.Segmenter`，才會回退至既有的正則比對邏輯。需要支援的最低版本：Chrome 87、Firefox 114、Edge 87。
+
 ## 在 Chrome 載入
 
 1. 開啟 `chrome://extensions`

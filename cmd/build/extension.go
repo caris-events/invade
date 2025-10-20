@@ -14,17 +14,18 @@ import (
 )
 
 type extensionVocab struct {
-	Word           string                `json:"word"`
-	Category       entity.VocabCategory  `json:"category"`
-	CategoryLabel  string                `json:"categoryLabel"`
-	Explicit       entity.VocabExplicit  `json:"explicit"`
-	ExplicitLabel  string                `json:"explicitLabel"`
-	Description    string                `json:"description"`
-	Notice         string                `json:"notice,omitempty"`
-	Deprecation    string                `json:"deprecation,omitempty"`
-	Recommended    []string              `json:"recommended"`
-	Examples       []extensionVocabEntry `json:"examples,omitempty"`
-	LastModifiedTs int64                 `json:"lastModifiedTs,omitempty"`
+	Word           string                    `json:"word"`
+	Category       entity.VocabCategory      `json:"category"`
+	CategoryLabel  string                    `json:"categoryLabel"`
+	Explicit       entity.VocabExplicit      `json:"explicit"`
+	ExplicitLabel  string                    `json:"explicitLabel"`
+	Description    string                    `json:"description"`
+	Notice         string                    `json:"notice,omitempty"`
+	Deprecation    string                    `json:"deprecation,omitempty"`
+	Recommended    []string                  `json:"recommended"`
+	Examples       []extensionVocabEntry     `json:"examples,omitempty"`
+	MatchOptions   *entity.VocabMatchOptions `json:"matchOptions,omitempty"`
+	LastModifiedTs int64                     `json:"lastModifiedTs,omitempty"`
 }
 
 type extensionVocabEntry struct {
@@ -85,6 +86,7 @@ func buildExtensionAssets(_ *cli.Context) error {
 			Deprecation:    strings.TrimSpace(vocab.Deprecation),
 			Recommended:    recommended,
 			Examples:       formattedExamples,
+			MatchOptions:   vocab.MatchOptions,
 			LastModifiedTs: vocab.ModTime.Unix(),
 		})
 	}

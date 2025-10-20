@@ -11,6 +11,11 @@ description: |
   電腦資料處理時，會將資料暫時存放至硬體晶片，也作隨機存取記憶體。
 
 #
+matchOptions:
+  skipPhrases:
+    - 海內存知己
+
+#
 examples:
   - words      : [記憶體, RAM]
     correct    : |

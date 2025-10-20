@@ -8,14 +8,18 @@
   const SKIP_PARENT_TAGS = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEXTAREA', 'CODE', 'PRE', 'KBD', 'SAMP']);
   const TONE_DARK = 'dark';
   const TONE_LIGHT = 'light';
+  const ASCII_PUNCTUATION_REGEX = /[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
 
   let settings = invadeMergeSettings();
   let vocabMap = new Map();
   let wordPattern = null;
+  let segmenter = null;
   let observer = null;
   let mutationLock = false;
   let dataLoaded = false;
   let tooltipEl = null;
+  let maxWordLength = 0;
+  let debugSkipChecks = true;
   let highlightPalettes = {
     [TONE_DARK]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorDarkText, { opacity: 0.95 }),
     [TONE_LIGHT]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorLightText, { opacity: 0.85 })
@@ -30,7 +34,9 @@
         return;
       }
 
+      debugSkipChecks = settings.debugSkip !== false;
       await ensureVocabData();
+      initializeSegmenter();
       highlightDocument(document.body);
       installObserver();
       installTooltip();
@@ -55,6 +61,7 @@
     const response = await fetch(chrome.runtime.getURL('data/vocabs.json'));
     const vocabularies = await response.json();
     vocabMap = new Map();
+    maxWordLength = 0;
 
     const wordSet = new Set();
     for (const vocab of vocabularies) {
@@ -62,6 +69,9 @@
         continue;
       }
       vocabMap.set(vocab.word, vocab);
+      if (vocab.word.length > maxWordLength) {
+        maxWordLength = vocab.word.length;
+      }
       wordSet.add(vocab.word);
       if (/^[A-Za-z0-9\s]+$/.test(vocab.word)) {
         const lower = vocab.word.toLowerCase();
@@ -127,22 +137,7 @@
     if (!text || !text.trim()) {
       return;
     }
-    wordPattern.lastIndex = 0;
-    const matches = [];
-    let match;
-    while ((match = wordPattern.exec(text)) !== null) {
-      const word = match[0];
-      const vocab = vocabMap.get(word);
-      if (!vocab) {
-        continue;
-      }
-      matches.push({
-        index: match.index,
-        length: word.length,
-        word,
-        vocab
-      });
-    }
+    const matches = findVocabMatches(textNode, text);
     if (!matches.length) {
       return;
     }
@@ -168,6 +163,325 @@
       fragment.append(textNode.ownerDocument.createTextNode(text.slice(cursor)));
     }
     textNode.parentNode.replaceChild(fragment, textNode);
+  }
+
+  function findVocabMatches(textNode, text) {
+    if (segmenter) {
+      return findSegmenterMatches(textNode, text);
+    }
+    return findRegexMatches(textNode, text);
+  }
+
+  function findSegmenterMatches(textNode, text) {
+    const matches = [];
+    const segments = [];
+    const iterator = segmenter.segment(text);
+    for (const segment of iterator) {
+      segments.push({
+        value: segment.segment,
+        index: segment.index,
+        isWordLike: Boolean(segment.isWordLike)
+      });
+    }
+    for (let i = 0; i < segments.length; i += 1) {
+      const current = segments[i];
+      if (!current.value || !current.value.trim() || !current.isWordLike) {
+        continue;
+      }
+      const start = current.index;
+      let bestMatch = null;
+      for (let j = i; j < segments.length; j += 1) {
+        const next = segments[j];
+        if (!next.value || !next.value.trim()) {
+          break;
+        }
+        if (!next.isWordLike) {
+          if (j === i) {
+            break;
+          }
+          break;
+        }
+        const end = next.index + next.value.length;
+        const slice = text.slice(start, end);
+        if (!slice) {
+          break;
+        }
+        if (maxWordLength && slice.length > maxWordLength) {
+          break;
+        }
+        const vocab = vocabMap.get(slice);
+        if (!vocab) {
+          continue;
+        }
+        if (!shouldHighlightMatch(textNode, text, start, end - start, slice, vocab)) {
+          continue;
+        }
+        bestMatch = {
+          index: start,
+          length: end - start,
+          word: slice,
+          vocab,
+          segments: j - i + 1
+        };
+      }
+      if (bestMatch) {
+        matches.push(bestMatch);
+        i += bestMatch.segments - 1;
+      }
+    }
+    return matches;
+  }
+
+  function findRegexMatches(textNode, text) {
+    const matches = [];
+    wordPattern.lastIndex = 0;
+    let match;
+    while ((match = wordPattern.exec(text)) !== null) {
+      const word = match[0];
+      const vocab = vocabMap.get(word);
+      if (!vocab) {
+        continue;
+      }
+      if (!shouldHighlightMatch(textNode, text, match.index, word.length, word, vocab)) {
+        continue;
+      }
+      matches.push({
+        index: match.index,
+        length: word.length,
+        word,
+        vocab
+      });
+    }
+    return matches;
+  }
+
+  function shouldHighlightMatch(textNode, text, index, length, matchedWord, vocab) {
+    const options = vocab.matchOptions || {};
+    if (Array.isArray(options.skipPhrases) && options.skipPhrases.length) {
+      if (isPartOfSkipPhrase(textNode, text, index, length, matchedWord, vocab, options.skipPhrases)) {
+        return false;
+      }
+    }
+    const mode = options.mode || options.matchMode;
+    if (mode === 'standalone') {
+      const before = text[index - 1];
+      const after = text[index + length];
+      if (!isBoundaryCharacter(before) || !isBoundaryCharacter(after)) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function isBoundaryCharacter(character) {
+    if (!character) {
+      return true;
+    }
+    if (/\s/.test(character)) {
+      return true;
+    }
+    if (ASCII_PUNCTUATION_REGEX.test(character)) {
+      return true;
+    }
+    const codePoint = character.codePointAt(0);
+    if (!codePoint) {
+      return true;
+    }
+    if (
+      (codePoint >= 0x3000 && codePoint <= 0x303f) || // CJK punctuation
+      (codePoint >= 0xff00 && codePoint <= 0xff65) // full-width punctuation
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  function isPartOfSkipPhrase(textNode, text, index, length, matchedWord, vocab, phrases) {
+    for (const phrase of phrases) {
+      if (!phrase) {
+        continue;
+      }
+      if (matchesSkipPhrase(textNode, text, index, length, matchedWord, vocab, phrase)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function matchesSkipPhrase(textNode, text, index, length, matchedWord, vocab, phrase) {
+    const phraseLength = phrase.length;
+    if (!phraseLength) {
+      return false;
+    }
+    const offsetInPhrase = phrase.indexOf(matchedWord);
+    const offset = offsetInPhrase >= 0 ? offsetInPhrase : phrase.indexOf(vocab.word);
+    if (offset < 0) {
+      return false;
+    }
+    const localStart = index - offset;
+    const localEnd = localStart + phraseLength;
+    if (localStart >= 0 && localEnd <= text.length) {
+      const inner = removeIgnorableContextChars(text.slice(localStart, localEnd));
+      const matches = inner === removeIgnorableContextChars(phrase);
+      debugSkipLog(textNode, vocab.word, phrase, {
+        combined: inner,
+        source: 'local',
+        matchedWord
+      }, matches);
+      return matches;
+    }
+    const innerStart = Math.max(localStart, 0);
+    const innerEnd = Math.min(localEnd, text.length);
+    const innerSlice = removeIgnorableContextChars(text.slice(innerStart, innerEnd));
+    let prefix = '';
+    if (localStart < 0) {
+      const neededBefore = -localStart;
+      const collectedBefore = collectAdjacentText(textNode, neededBefore, -1);
+      if (!collectedBefore.complete) {
+        debugSkipLog(textNode, vocab.word, phrase, {
+          reason: 'missing-prefix',
+          required: neededBefore,
+          collected: collectedBefore.text,
+          matchedWord
+        }, false);
+        return false;
+      }
+      prefix = collectedBefore.text;
+    }
+    let suffix = '';
+    if (localEnd > text.length) {
+      const neededAfter = localEnd - text.length;
+      const collectedAfter = collectAdjacentText(textNode, neededAfter, 1);
+      if (!collectedAfter.complete) {
+        debugSkipLog(textNode, vocab.word, phrase, {
+          reason: 'missing-suffix',
+          required: neededAfter,
+          collected: collectedAfter.text,
+          matchedWord
+        }, false);
+        return false;
+      }
+      suffix = collectedAfter.text;
+    }
+    const combined = prefix + innerSlice + suffix;
+    const normalizedPhrase = removeIgnorableContextChars(phrase);
+    const matches = combined === normalizedPhrase;
+    debugSkipLog(textNode, vocab.word, phrase, {
+      combined,
+      prefix,
+      innerSlice,
+      suffix,
+      normalizedPhrase,
+      matchedWord
+    }, matches);
+    return matches;
+  }
+
+  function collectAdjacentText(textNode, required, direction) {
+    if (!textNode || required <= 0) {
+      return { text: '', complete: required <= 0 };
+    }
+    const doc = textNode.ownerDocument;
+    if (!doc) {
+      return { text: '', complete: false };
+    }
+    const root = doc.body || doc.documentElement || doc;
+    const walker = doc.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    walker.currentNode = textNode;
+    let remaining = required;
+    const characters = [];
+    while (remaining > 0) {
+      const neighbor = direction === -1 ? walker.previousNode() : walker.nextNode();
+      if (!neighbor) {
+        break;
+      }
+      const value = neighbor.nodeValue;
+      if (!value) {
+        continue;
+      }
+      const units = Array.from(value);
+      if (direction === -1) {
+        for (let i = units.length - 1; i >= 0 && remaining > 0; i -= 1) {
+          const char = units[i];
+          if (isSkippableContextChar(char)) {
+            continue;
+          }
+          characters.unshift(char);
+          remaining -= 1;
+        }
+      } else {
+        for (let i = 0; i < units.length && remaining > 0; i += 1) {
+          const char = units[i];
+          if (isSkippableContextChar(char)) {
+            continue;
+          }
+          characters.push(char);
+          remaining -= 1;
+        }
+      }
+    }
+    return { text: characters.join(''), complete: remaining === 0 };
+  }
+
+  function removeIgnorableContextChars(input) {
+    if (!input) {
+      return '';
+    }
+    return Array.from(input).filter(char => !isSkippableContextChar(char)).join('');
+  }
+
+  function isSkippableContextChar(char) {
+    if (!char) {
+      return true;
+    }
+    if (/\s/.test(char)) {
+      return true;
+    }
+    return isBoundaryCharacter(char);
+  }
+
+  function debugSkipLog(textNode, word, phrase, payload, matched) {
+    if (!debugSkipChecks) {
+      return;
+    }
+    const context = buildDebugContext(textNode);
+    console.debug('[invade] skipPhrases', {
+      word,
+      phrase,
+      matched,
+      context,
+      ...payload
+    });
+  }
+
+  function buildDebugContext(textNode) {
+    try {
+      const parent = textNode && textNode.parentElement;
+      if (!parent) {
+        return textNode ? textNode.nodeValue : '';
+      }
+      const textContent = parent.textContent || '';
+      return textContent.trim().slice(0, 120);
+    } catch (_error) {
+      return '';
+    }
+  }
+
+  function initializeSegmenter() {
+    if (typeof Intl === 'undefined' || typeof Intl.Segmenter !== 'function') {
+      segmenter = null;
+      return;
+    }
+    try {
+      segmenter = new Intl.Segmenter('zh-Hant', { granularity: 'word' });
+    } catch (errorHant) {
+      try {
+        segmenter = new Intl.Segmenter('zh', { granularity: 'word' });
+      } catch (error) {
+        console.warn('[invade] 無法建立斷詞器：', error);
+        segmenter = null;
+      }
+    }
   }
 
   function installObserver() {
