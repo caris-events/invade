@@ -1,5 +1,85 @@
 [
   {
+    "word": "項目",
+    "category": "NOUN",
+    "categoryLabel": "名詞",
+    "explicit": "",
+    "explicitLabel": "未知",
+    "description": "",
+    "notice": "這個詞彙指的不是販售的商品、菜單品項。",
+    "recommended": [
+      "專案",
+      "選項"
+    ],
+    "examples": [
+      {
+        "words": [
+          "專案"
+        ],
+        "correct": "我們公司有很多{{專案}}正在進行。",
+        "incorrect": "我們公司有很多{{項目}}正在進行。"
+      },
+      {
+        "words": [
+          "選項"
+        ],
+        "correct": "這些系統{{選項}}都可以自行調整。",
+        "incorrect": "這些系統{{項目}}都可以自行調整。"
+      }
+    ],
+    "matchOptions": {
+      "context": {
+        "baseScore": -1,
+        "threshold": 0.5,
+        "features": [
+          {
+            "position": "prev",
+            "tokens": [
+              "開幕",
+              "展覽",
+              "活動",
+              "案例",
+              "店舖",
+              "公司",
+              "合作",
+              "品牌",
+              "上線",
+              "項目",
+              "項目列表"
+            ],
+            "weight": -1
+          },
+          {
+            "position": "next",
+            "tokens": [
+              "推出",
+              "開幕",
+              "登場",
+              "活動",
+              "品牌",
+              "店舖",
+              "合作"
+            ],
+            "weight": -1
+          },
+          {
+            "position": "window",
+            "tokens": [
+              "專案",
+              "計畫",
+              "系統",
+              "開發",
+              "工程",
+              "任務"
+            ],
+            "weight": 1
+          }
+        ]
+      }
+    },
+    "lastModifiedTs": 1760984864
+  },
+  {
     "word": "菜單",
     "category": "TECHNOLOGY",
     "categoryLabel": "科技",
@@ -9568,36 +9648,6 @@
         ],
         "correct": "她穿著太清涼，我快{{受不了}}了。",
         "incorrect": "她穿著太清涼，我快{{頂不住}}了。"
-      }
-    ],
-    "lastModifiedTs": 1760527523
-  },
-  {
-    "word": "項目",
-    "category": "NOUN",
-    "categoryLabel": "名詞",
-    "explicit": "",
-    "explicitLabel": "未知",
-    "description": "",
-    "notice": "這個詞彙指的不是販售的商品、菜單品項。",
-    "recommended": [
-      "專案",
-      "選項"
-    ],
-    "examples": [
-      {
-        "words": [
-          "專案"
-        ],
-        "correct": "我們公司有很多{{專案}}正在進行。",
-        "incorrect": "我們公司有很多{{項目}}正在進行。"
-      },
-      {
-        "words": [
-          "選項"
-        ],
-        "correct": "這些系統{{選項}}都可以自行調整。",
-        "incorrect": "這些系統{{項目}}都可以自行調整。"
       }
     ],
     "lastModifiedTs": 1760527523

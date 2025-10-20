@@ -8,6 +8,45 @@ category: NOUN
 explicit:
 
 #
+matchOptions:
+  context:
+    baseScore: -1
+    threshold: 0.5
+    features:
+      - position: prev
+        tokens:
+          - 開幕
+          - 展覽
+          - 活動
+          - 案例
+          - 店舖
+          - 公司
+          - 合作
+          - 品牌
+          - 上線
+          - 項目
+          - 項目列表
+        weight: -1
+      - position: next
+        tokens:
+          - 推出
+          - 開幕
+          - 登場
+          - 活動
+          - 品牌
+          - 店舖
+          - 合作
+        weight: -1
+      - position: window
+        tokens:
+          - 專案
+          - 計畫
+          - 系統
+          - 開發
+          - 工程
+          - 任務
+        weight: 1
+
 examples:
   - words      : [專案]
     description: |

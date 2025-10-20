@@ -12,7 +12,8 @@ const INVADE_DEFAULT_SETTINGS = Object.freeze({
   debugSkip: false,
   debugSegments: false,
   debugTooltip: false,
-  debugWeights: false
+  debugWeights: false,
+  customIgnoreWords: []
 });
 
 function invadeMergeSettings(overrides = {}) {

@@ -202,6 +202,25 @@ body {
   gap: 6px;
 }
 
+.paper__field-control textarea {
+  width: min(320px, 100%);
+  min-height: 120px;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 8px 10px;
+  border: 1px solid rgba(73, 58, 41, 0.35);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  resize: vertical;
+  color: inherit;
+}
+
+.paper__field-control textarea:focus-visible {
+  outline: 2px solid rgba(253, 221, 149, 0.9);
+  outline-offset: 2px;
+}
+
 .paper__field-note {
   font-size: 12px;
   color: rgba(47, 36, 26, 0.6);
