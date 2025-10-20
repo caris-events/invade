@@ -214,6 +214,7 @@ body {
   background: rgba(255, 255, 255, 0.85);
   resize: vertical;
   color: inherit;
+  color: #2f251a;
 }
 
 .paper__field-control textarea:focus-visible {
