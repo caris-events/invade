@@ -1,5 +1,72 @@
 [
   {
+    "word": "宏",
+    "category": "TECHNOLOGY",
+    "categoryLabel": "科技",
+    "explicit": "",
+    "explicitLabel": "未知",
+    "description": "電腦裡能夠批次處理資料的程式碼（Macro）。因為一段指令就可以做很多事，在中國被稱為「宏」，有宏大、很大的意思。",
+    "recommended": [
+      "巨集"
+    ],
+    "examples": [
+      {
+        "words": [
+          "巨集"
+        ],
+        "correct": "Office 辦公軟體的{{巨集}}指令可以計算出所有資料的總金額。",
+        "incorrect": "Office 辦公軟體的{{宏}}可以計算出所有資料的總金額。"
+      }
+    ],
+    "matchOptions": {
+      "context": {
+        "baseScore": -1,
+        "features": [
+          {
+            "position": "prev",
+            "tokens": [
+              "巨集",
+              "自動化",
+              "指令",
+              "批次",
+              "程式",
+              "程序",
+              "腳本",
+              "功能",
+              "自訂"
+            ],
+            "weight": 1
+          },
+          {
+            "position": "next",
+            "tokens": [
+              "指令",
+              "功能",
+              "程式",
+              "腳本",
+              "自動化",
+              "巨集"
+            ],
+            "weight": 1
+          },
+          {
+            "position": "window",
+            "tokens": [
+              "巨集",
+              "自動化",
+              "指令",
+              "程式",
+              "批次",
+              "腳本"
+            ],
+            "weight": 0.5
+          }
+        ]
+      }
+    },
+    "lastModifiedTs": 1760977824
+  },
+  {
     "word": "支持",
     "category": "TECHNOLOGY",
     "categoryLabel": "科技",
@@ -2865,27 +2932,6 @@
         ],
         "correct": "他是個{{資優生}}，每次段考總能名列前茅。",
         "incorrect": "他是個{{學霸}}，每次段考總能名列前茅。"
-      }
-    ],
-    "lastModifiedTs": 1760527523
-  },
-  {
-    "word": "宏",
-    "category": "TECHNOLOGY",
-    "categoryLabel": "科技",
-    "explicit": "",
-    "explicitLabel": "未知",
-    "description": "電腦裡能夠批次處理資料的程式碼（Macro）。因為一段指令就可以做很多事，在中國被稱為「宏」，有宏大、很大的意思。",
-    "recommended": [
-      "巨集"
-    ],
-    "examples": [
-      {
-        "words": [
-          "巨集"
-        ],
-        "correct": "Office 辦公軟體的{{巨集}}指令可以計算出所有資料的總金額。",
-        "incorrect": "Office 辦公軟體的{{宏}}可以計算出所有資料的總金額。"
       }
     ],
     "lastModifiedTs": 1760527523

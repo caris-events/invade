@@ -7,6 +7,43 @@ category: TECHNOLOGY
 explicit:
 
 #
+matchOptions:
+  context:
+    baseScore: -1
+    threshold: 0
+    features:
+      - position: prev
+        tokens:
+          - 巨集
+          - 自動化
+          - 指令
+          - 批次
+          - 程式
+          - 程序
+          - 腳本
+          - 功能
+          - 自訂
+        weight: 1
+      - position: next
+        tokens:
+          - 指令
+          - 功能
+          - 程式
+          - 腳本
+          - 自動化
+          - 巨集
+        weight: 1
+      - position: window
+        tokens:
+          - 巨集
+          - 自動化
+          - 指令
+          - 程式
+          - 批次
+          - 腳本
+        weight: 0.5
+
+#
 description: |
   電腦裡能夠批次處理資料的程式碼（Macro）。因為一段指令就可以做很多事，在中國被稱為「宏」，有宏大、很大的意思。
 
