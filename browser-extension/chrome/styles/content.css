@@ -1,11 +1,12 @@
 :root {
-  --invade-highlight-color: #f4e6c1;
-  --invade-highlight-outline-color: rgba(73, 58, 41, 0.25);
-  --invade-highlight-focus-ring: rgba(73, 58, 41, 0.35);
-  --invade-highlight-underline-color: rgba(73, 58, 41, 0.55);
+  --invade-highlight-color: #e2d4a2;
+  --invade-highlight-outline-color: rgba(73, 58, 41, 0.26);
+  --invade-highlight-focus-ring: rgba(73, 58, 41, 0.32);
+  --invade-highlight-underline-color: rgba(73, 58, 41, 0.52);
   --invade-highlight-underline-style: dotted;
   --invade-highlight-underline-width: 1px;
   --invade-highlight-fill-opacity: 1;
+  --invade-highlight-fill-opacity-local: 1;
 }
 
 .invade-highlight {
@@ -23,12 +24,12 @@
   position: absolute;
   inset: -0.2em -0.12em;
   z-index: -1;
-  background: var(--invade-highlight-color, rgba(244, 230, 193, 0.95));
+  background: var(--invade-highlight-color, #e2d4a2);
   background-image:
     linear-gradient(120deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0) 60%),
     linear-gradient(0deg, rgba(255, 193, 120, 0.15), rgba(255, 193, 120, 0));
   border-radius: 0.15em;
-  opacity: var(--invade-highlight-fill-opacity, 1);
+  opacity: calc(var(--invade-highlight-fill-opacity, 1) * var(--invade-highlight-fill-opacity-local, 1));
   transition: opacity 160ms ease;
   box-shadow: 0 0 0 1px var(--invade-highlight-outline-color, rgba(73, 58, 41, 0.18));
 }
@@ -101,11 +102,11 @@
 }
 
 #invade-tooltip[data-position='bottom']::before {
-  top: calc(100%);
+  top: calc(100% + 2px);
 }
 
 #invade-tooltip[data-position='bottom']::after {
-  top: calc(100%);
+  top: calc(100% + 3px);
 }
 
 #invade-tooltip[data-position='top']::before,
@@ -114,11 +115,11 @@
 }
 
 #invade-tooltip[data-position='top']::before {
-  bottom: calc(100%);
+  bottom: calc(100% + 2px);
 }
 
 #invade-tooltip[data-position='top']::after {
-  bottom: calc(100%);
+  bottom: calc(100% + 3px);
 }
 
 .invade-tooltip__masthead {

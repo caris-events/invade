@@ -4,13 +4,16 @@ let statusTimeout = null;
 document.addEventListener('DOMContentLoaded', init);
 
 async function init() {
-  currentSettings = invadeMergeSettings(await loadStoredSettings());
+  const stored = await loadStoredSettings();
+  const migrated = migrateLegacySettings(stored);
+  currentSettings = invadeMergeSettings(migrated);
   const elements = {
     enabled: document.getElementById('enabled'),
     showTooltip: document.getElementById('showTooltip'),
     enableHighlightFill: document.getElementById('enableHighlightFill'),
     enableUnderline: document.getElementById('enableUnderline'),
-    highlightColor: document.getElementById('highlightColor'),
+    highlightColorDarkText: document.getElementById('highlightColorDarkText'),
+    highlightColorLightText: document.getElementById('highlightColorLightText'),
     underlineStyle: document.getElementById('underlineStyle'),
     ignoreInputs: document.getElementById('ignoreInputs'),
     status: document.getElementById('status'),
@@ -45,8 +48,10 @@ function attachListeners(elements) {
   elements.enableUnderline.addEventListener('change', handler);
   elements.ignoreInputs.addEventListener('change', handler);
   elements.underlineStyle.addEventListener('change', handler);
-  elements.highlightColor.addEventListener('input', handler);
-  elements.highlightColor.addEventListener('change', handler);
+  elements.highlightColorDarkText.addEventListener('input', handler);
+  elements.highlightColorDarkText.addEventListener('change', handler);
+  elements.highlightColorLightText.addEventListener('input', handler);
+  elements.highlightColorLightText.addEventListener('change', handler);
 
   elements.reset.addEventListener('click', async () => {
     currentSettings = invadeMergeSettings();
@@ -63,7 +68,8 @@ function applyToForm(elements, settings) {
   elements.showTooltip.checked = settings.showTooltip;
   elements.enableHighlightFill.checked = settings.enableHighlightFill;
   elements.enableUnderline.checked = settings.enableUnderline;
-  elements.highlightColor.value = settings.highlightColor;
+  elements.highlightColorDarkText.value = settings.highlightColorDarkText || settings.highlightColor;
+  elements.highlightColorLightText.value = settings.highlightColorLightText || settings.highlightColor;
   elements.underlineStyle.value = settings.underlineStyle;
   elements.ignoreInputs.checked = settings.ignoreInputs;
   updateControlStates(elements, settings);
@@ -98,6 +104,43 @@ function showStatus(element, message) {
 }
 
 function updateControlStates(elements, settings) {
-  elements.highlightColor.disabled = !settings.enableHighlightFill;
+  const disableFillControls = !settings.enableHighlightFill;
+  elements.highlightColorDarkText.disabled = disableFillControls;
+  elements.highlightColorLightText.disabled = disableFillControls;
   elements.underlineStyle.disabled = !settings.enableUnderline;
+}
+
+function migrateLegacySettings(stored) {
+  if (!stored) {
+    return {};
+  }
+  const migrated = { ...stored };
+  if (!migrated.highlightColorDarkText && migrated.highlightColor) {
+    migrated.highlightColorDarkText = migrated.highlightColor;
+  }
+  if (!migrated.highlightColorLightText && migrated.highlightColor) {
+    migrated.highlightColorLightText = darkenHex(migrated.highlightColor, 0.55);
+  }
+  return migrated;
+}
+
+function darkenHex(hex, factor) {
+  const match = typeof hex === 'string' ? hex.trim().match(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/) : null;
+  if (!match) {
+    return '#625233';
+  }
+  let value = match[1];
+  if (value.length === 3) {
+    value = value.split('').map(ch => ch + ch).join('');
+  }
+  const clamp = component => Math.max(0, Math.min(255, Math.round(component * factor)));
+  const r = clamp(parseInt(value.slice(0, 2), 16));
+  const g = clamp(parseInt(value.slice(2, 4), 16));
+  const b = clamp(parseInt(value.slice(4, 6), 16));
+  return (
+    '#' +
+    r.toString(16).padStart(2, '0') +
+    g.toString(16).padStart(2, '0') +
+    b.toString(16).padStart(2, '0')
+  );
 }

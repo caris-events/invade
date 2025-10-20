@@ -3,6 +3,8 @@
   const ACTIVE_CLASS = 'invade-highlight--active';
   const TOOLTIP_ID = 'invade-tooltip';
   const SKIP_PARENT_TAGS = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEXTAREA', 'CODE', 'PRE', 'KBD', 'SAMP']);
+  const TONE_DARK = 'dark';
+  const TONE_LIGHT = 'light';
 
   let settings = invadeMergeSettings();
   let vocabMap = new Map();
@@ -11,6 +13,10 @@
   let mutationLock = false;
   let dataLoaded = false;
   let tooltipEl = null;
+  let highlightPalettes = {
+    [TONE_DARK]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorDarkText, { opacity: 0.95 }),
+    [TONE_LIGHT]: createPalette(INVADE_DEFAULT_SETTINGS.highlightColorLightText, { opacity: 0.85 })
+  };
 
   async function bootstrap() {
     try {
@@ -139,6 +145,7 @@
     }
 
     const fragment = document.createDocumentFragment();
+    const tone = classifyTextTone(textNode.parentElement);
     let cursor = 0;
     for (const result of matches) {
       if (result.index > cursor) {
@@ -150,6 +157,7 @@
       span.dataset.invadeOriginal = result.word;
       span.tabIndex = 0;
       span.textContent = text.slice(result.index, result.index + result.length);
+      applyHighlightPalette(span, tone);
       fragment.append(span);
       cursor = result.index + result.length;
     }
@@ -454,29 +462,32 @@
   }
 
   function applySettingsStyles() {
-    const highlightColor = settings.enableHighlightFill ? settings.highlightColor : 'transparent';
-    const outlineColor = settings.enableHighlightFill
-      ? deriveTone(settings.highlightColor, 0.7, 0.35, 'rgba(73, 58, 41, 0.25)')
-      : 'rgba(73, 58, 41, 0.18)';
-    const focusRing = deriveTone(settings.highlightColor, 0.6, 0.3, 'rgba(73, 58, 41, 0.3)');
-    const underlineColor = settings.enableUnderline
-      ? deriveTone(settings.highlightColor, 0.65, 0.55, 'rgba(73, 58, 41, 0.55)')
-      : 'transparent';
-    const fillOpacity = settings.enableHighlightFill ? '1' : '0';
+    const darkTextColor =
+      settings.highlightColorDarkText || settings.highlightColor || INVADE_DEFAULT_SETTINGS.highlightColorDarkText;
+    const lightTextColor =
+      settings.highlightColorLightText || settings.highlightColor || INVADE_DEFAULT_SETTINGS.highlightColorLightText;
 
-    document.documentElement.style.setProperty('--invade-highlight-color', highlightColor);
-    document.documentElement.style.setProperty('--invade-highlight-outline-color', outlineColor);
-    document.documentElement.style.setProperty('--invade-highlight-focus-ring', focusRing);
+    const darkPalette = createPalette(darkTextColor, { opacity: 0.95 });
+    const lightPalette = createPalette(lightTextColor, { opacity: 0.85 });
+    highlightPalettes = {
+      [TONE_DARK]: darkPalette,
+      [TONE_LIGHT]: lightPalette
+    };
+
+    document.documentElement.style.setProperty('--invade-highlight-color', darkPalette.fill);
+    document.documentElement.style.setProperty('--invade-highlight-outline-color', darkPalette.outline);
+    document.documentElement.style.setProperty('--invade-highlight-focus-ring', darkPalette.focusRing);
+    document.documentElement.style.setProperty('--invade-highlight-underline-color', darkPalette.underline);
+
+    const fillOpacity = settings.enableHighlightFill ? '1' : '0';
     document.documentElement.style.setProperty('--invade-highlight-fill-opacity', fillOpacity);
 
     if (settings.enableUnderline) {
       document.documentElement.style.setProperty('--invade-highlight-underline-width', '1px');
       document.documentElement.style.setProperty('--invade-highlight-underline-style', settings.underlineStyle);
-      document.documentElement.style.setProperty('--invade-highlight-underline-color', underlineColor);
     } else {
       document.documentElement.style.setProperty('--invade-highlight-underline-width', '0');
       document.documentElement.style.setProperty('--invade-highlight-underline-style', 'solid');
-      document.documentElement.style.setProperty('--invade-highlight-underline-color', underlineColor);
     }
   }
 
@@ -514,6 +525,122 @@
       }
       return escapeHtml(part);
     }).join('');
+  }
+
+  function applyHighlightPalette(span, tone) {
+    const palette = highlightPalettes[tone] || highlightPalettes[TONE_DARK];
+    span.dataset.invadeTone = tone;
+    if (!palette) {
+      return;
+    }
+    span.style.setProperty('--invade-highlight-color', palette.fill);
+    span.style.setProperty('--invade-highlight-outline-color', palette.outline);
+    span.style.setProperty('--invade-highlight-focus-ring', palette.focusRing);
+    span.style.setProperty('--invade-highlight-underline-color', palette.underline);
+    span.style.setProperty('--invade-highlight-fill-opacity-local', palette.opacity);
+  }
+
+  function classifyTextTone(element) {
+    const rgba = getEffectiveTextColor(element);
+    if (!rgba) {
+      return TONE_DARK;
+    }
+    if (rgba.a < 0.35) {
+      return TONE_DARK;
+    }
+    const luminance = relativeLuminance(rgba);
+    return luminance >= 0.6 ? TONE_LIGHT : TONE_DARK;
+  }
+
+  function getEffectiveTextColor(element) {
+    let current = element;
+    while (current) {
+      try {
+        const style = window.getComputedStyle(current);
+        if (style) {
+          const parsed = parseColorToRgba(style.color);
+          if (parsed) {
+            return parsed;
+          }
+        }
+      } catch (error) {
+        console.warn('[invade] 讀取文字色彩失敗：', error);
+        break;
+      }
+      current = current.parentElement;
+    }
+    return { r: 20, g: 20, b: 20, a: 1 };
+  }
+
+  function parseColorToRgba(value) {
+    if (!value || typeof value !== 'string') {
+      return null;
+    }
+    const trimmed = value.trim();
+    const rgbMatch = trimmed.match(/^rgba?\(([^)]+)\)$/i);
+    if (rgbMatch) {
+      const parts = rgbMatch[1].split(',').map(part => part.trim());
+      if (parts.length >= 3) {
+        const r = clampColorComponent(parseFloat(parts[0]));
+        const g = clampColorComponent(parseFloat(parts[1]));
+        const b = clampColorComponent(parseFloat(parts[2]));
+        const a = parts[3] !== undefined ? clampAlpha(parseFloat(parts[3])) : 1;
+        return { r, g, b, a };
+      }
+    }
+    const hexMatch = trimmed.match(/^#([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/);
+    if (hexMatch) {
+      const hex = hexMatch[1];
+      if (hex.length === 3 || hex.length === 4) {
+        const r = parseInt(hex[0] + hex[0], 16);
+        const g = parseInt(hex[1] + hex[1], 16);
+        const b = parseInt(hex[2] + hex[2], 16);
+        const a = hex.length === 4 ? parseInt(hex[3] + hex[3], 16) / 255 : 1;
+        return { r, g, b, a };
+      }
+      if (hex.length === 6 || hex.length === 8) {
+        const r = parseInt(hex.slice(0, 2), 16);
+        const g = parseInt(hex.slice(2, 4), 16);
+        const b = parseInt(hex.slice(4, 6), 16);
+        const a = hex.length === 8 ? parseInt(hex.slice(6, 8), 16) / 255 : 1;
+        return { r, g, b, a };
+      }
+    }
+    return null;
+  }
+
+  function clampColorComponent(value) {
+    if (Number.isNaN(value)) {
+      return 0;
+    }
+    return Math.max(0, Math.min(255, Math.round(value)));
+  }
+
+  function clampAlpha(value) {
+    if (Number.isNaN(value)) {
+      return 1;
+    }
+    return Math.max(0, Math.min(1, value));
+  }
+
+  function relativeLuminance({ r, g, b }) {
+    const normalize = channel => {
+      const value = channel / 255;
+      return value <= 0.03928 ? value / 12.92 : Math.pow((value + 0.055) / 1.055, 2.4);
+    };
+    return 0.2126 * normalize(r) + 0.7152 * normalize(g) + 0.0722 * normalize(b);
+  }
+
+  function createPalette(color, options = {}) {
+    const base = color || INVADE_DEFAULT_SETTINGS.highlightColorDarkText;
+    const opacity = typeof options.opacity === 'number' ? Math.max(0, Math.min(1, options.opacity)) : 1;
+    return {
+      fill: base,
+      outline: deriveTone(base, 0.75, 0.32, 'rgba(73, 58, 41, 0.25)'),
+      focusRing: deriveTone(base, 0.6, 0.3, 'rgba(73, 58, 41, 0.3)'),
+      underline: deriveTone(base, 0.7, 0.55, 'rgba(73, 58, 41, 0.55)'),
+      opacity: String(opacity)
+    };
   }
 
   function deriveTone(color, factor, alpha, fallback) {
