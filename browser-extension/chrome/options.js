@@ -28,6 +28,7 @@ async function init() {
     debugSegments: document.getElementById('debugSegments'),
     debugTooltip: document.getElementById('debugTooltip'),
     debugWeights: document.getElementById('debugWeights'),
+    customIgnoreWords: document.getElementById('customIgnoreWords'),
     status: document.getElementById('status'),
     reset: document.getElementById('reset-button')
   };
@@ -43,8 +44,13 @@ function attachListeners(elements) {
     if (!(key in currentSettings)) {
       return;
     }
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    if (currentSettings[key] === value) {
+    let value = target.type === 'checkbox' ? target.checked : target.value;
+    if (key === 'customIgnoreWords') {
+      value = parseCustomIgnoreWords(value);
+      if (areIgnoreListsEqual(currentSettings.customIgnoreWords || [], value)) {
+        return;
+      }
+    } else if (currentSettings[key] === value) {
       return;
     }
     currentSettings = {
@@ -66,6 +72,7 @@ function attachListeners(elements) {
   elements.debugSegments.addEventListener('change', handler);
   elements.debugTooltip.addEventListener('change', handler);
   elements.debugWeights.addEventListener('change', handler);
+  elements.customIgnoreWords.addEventListener('input', handler);
   elements.underlineStyle.addEventListener('change', handler);
   elements.underlineWeight.addEventListener('change', handler);
   elements.highlightColorDarkText.addEventListener('input', handler);
@@ -95,6 +102,7 @@ function applyToForm(elements, settings) {
   elements.debugSegments.checked = Boolean(settings.debugSegments);
   elements.debugTooltip.checked = Boolean(settings.debugTooltip);
   elements.debugWeights.checked = Boolean(settings.debugWeights);
+  elements.customIgnoreWords.value = (settings.customIgnoreWords || []).join('\n');
   updateControlStates(elements, settings);
 }
 
@@ -190,4 +198,46 @@ function darkenHex(hex, factor) {
     g.toString(16).padStart(2, '0') +
     b.toString(16).padStart(2, '0')
   );
+}
+
+function parseCustomIgnoreWords(raw) {
+  if (!raw) {
+    return [];
+  }
+  const parts = raw.split(/[\n,]/);
+  const seen = new Set();
+  const words = [];
+  for (const part of parts) {
+    if (typeof part !== 'string') {
+      continue;
+    }
+    const trimmed = part.trim();
+    if (!trimmed) {
+      continue;
+    }
+    const lower = trimmed.toLowerCase();
+    if (seen.has(lower)) {
+      continue;
+    }
+    seen.add(lower);
+    words.push(trimmed);
+  }
+  return words;
+}
+
+function areIgnoreListsEqual(a, b) {
+  const first = Array.isArray(a) ? a : [];
+  const second = Array.isArray(b) ? b : [];
+  if (first.length !== second.length) {
+    return false;
+  }
+  const normalize = list => list.map(item => (typeof item === 'string' ? item.trim().toLowerCase() : '')).filter(Boolean).sort();
+  const normA = normalize(first);
+  const normB = normalize(second);
+  for (let i = 0; i < normA.length; i += 1) {
+    if (normA[i] !== normB[i]) {
+      return false;
+    }
+  }
+  return true;
 }

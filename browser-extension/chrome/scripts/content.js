@@ -28,6 +28,7 @@
   let debugSegmenter = false;
   let debugTooltipEnabled = false;
   let debugWeightsEnabled = false;
+  let customIgnoreSet = new Set();
 
   async function bootstrap() {
     try {
@@ -36,6 +37,7 @@
       debugSegmenter = Boolean(settings.debugSegments);
       debugTooltipEnabled = Boolean(settings.debugTooltip);
       debugWeightsEnabled = Boolean(settings.debugWeights);
+      applyCustomIgnoreWords(settings.customIgnoreWords);
       applySettingsStyles();
       if (!settings.enabled) {
         installSettingsListener();
@@ -228,6 +230,19 @@
           continue;
         }
         const debugInfo = prepareMatchDebugInfo(vocab, slice, 'segmenter');
+        if (isIgnoredWord(slice) || isIgnoredWord(vocab.word)) {
+          if (debugInfo) {
+            debugInfo.decision = 'custom-ignore';
+            if (debugWeightsEnabled) {
+              console.debug('[invade] weights', {
+                word: slice,
+                vocab: vocab.word,
+                decision: 'custom-ignore'
+              });
+            }
+          }
+          continue;
+        }
         if (!shouldHighlightMatch(textNode, text, start, end - start, slice, vocab, {
           segments,
           matchStart: i,
@@ -263,6 +278,19 @@
         continue;
       }
       const debugInfo = prepareMatchDebugInfo(vocab, word, 'regex');
+      if (isIgnoredWord(word) || isIgnoredWord(vocab.word)) {
+        if (debugInfo) {
+          debugInfo.decision = 'custom-ignore';
+          if (debugWeightsEnabled) {
+            console.debug('[invade] weights', {
+              word,
+              vocab: vocab.word,
+              decision: 'custom-ignore'
+            });
+          }
+        }
+        continue;
+      }
       if (!shouldHighlightMatch(textNode, text, match.index, word.length, word, vocab, null, debugInfo)) {
         continue;
       }
@@ -622,6 +650,45 @@
       timestamp: Date.now(),
       source: source || ''
     };
+  }
+
+  function applyCustomIgnoreWords(words) {
+    customIgnoreSet = new Set();
+    if (!words) {
+      return;
+    }
+    let list = words;
+    if (typeof list === 'string') {
+      list = list.split(/[\n,]/);
+    }
+    if (!Array.isArray(list)) {
+      return;
+    }
+    for (const entry of list) {
+      if (typeof entry !== 'string') {
+        continue;
+      }
+      const trimmed = entry.trim();
+      if (!trimmed) {
+        continue;
+      }
+      customIgnoreSet.add(trimmed);
+      customIgnoreSet.add(trimmed.toLowerCase());
+    }
+  }
+
+  function isIgnoredWord(word) {
+    if (!word) {
+      return false;
+    }
+    if (customIgnoreSet.size === 0) {
+      return false;
+    }
+    if (customIgnoreSet.has(word)) {
+      return true;
+    }
+    const lower = word.toLowerCase();
+    return customIgnoreSet.has(lower);
   }
 
   function createContextTokenAccessor(textNode, text, index, length, contextInfo, contextOptions) {
@@ -1201,6 +1268,7 @@
       debugSegmenter = Boolean(settings.debugSegments);
       debugTooltipEnabled = Boolean(settings.debugTooltip);
       debugWeightsEnabled = Boolean(settings.debugWeights);
+      applyCustomIgnoreWords(settings.customIgnoreWords);
       applySettingsStyles();
 
       if (!wasEnabled && settings.enabled) {
