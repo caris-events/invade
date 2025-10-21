@@ -107,23 +107,7 @@
     }
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
       acceptNode(node) {
-        if (!node.nodeValue || !node.nodeValue.trim()) {
-          return NodeFilter.FILTER_REJECT;
-        }
-        const parent = node.parentElement;
-        if (!parent) {
-          return NodeFilter.FILTER_REJECT;
-        }
-        if (parent.classList && parent.classList.contains(HIGHLIGHT_CLASS)) {
-          return NodeFilter.FILTER_REJECT;
-        }
-        if (SKIP_PARENT_TAGS.has(parent.tagName)) {
-          return NodeFilter.FILTER_REJECT;
-        }
-        if (settings.ignoreInputs && (parent.isContentEditable || parent.closest('input, textarea, [contenteditable=""], [contenteditable="true"]'))) {
-          return NodeFilter.FILTER_REJECT;
-        }
-        return NodeFilter.FILTER_ACCEPT;
+        return shouldProcessTextNode(node) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
       }
     });
 
@@ -141,11 +125,44 @@
     mutationLock = false;
   }
 
-  function highlightTextNode(textNode) {
-    const text = textNode.nodeValue;
+  function shouldProcessTextNode(node) {
+    if (!node || node.nodeType !== Node.TEXT_NODE) {
+      return false;
+    }
+    const text = node.nodeValue;
     if (!text || !text.trim()) {
+      return false;
+    }
+    const parent = node.parentElement;
+    if (!parent) {
+      return false;
+    }
+    if (parent.classList && parent.classList.contains(HIGHLIGHT_CLASS)) {
+      return false;
+    }
+    if (SKIP_PARENT_TAGS.has(parent.tagName)) {
+      return false;
+    }
+    if (settings.ignoreInputs) {
+      if (parent.isContentEditable) {
+        return false;
+      }
+      if (
+        parent.closest(
+          'input, textarea, [contenteditable=""], [contenteditable="true"], [contenteditable="plaintext-only"], [contenteditable="plaintext"]'
+        )
+      ) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function highlightTextNode(textNode) {
+    if (!shouldProcessTextNode(textNode)) {
       return;
     }
+    const text = textNode.nodeValue;
     const matches = findVocabMatches(textNode, text);
     if (!matches.length) {
       return;
@@ -954,7 +971,7 @@
       }
       mutationLock = true;
       for (const textNode of targets) {
-        if (!textNode.parentElement || (textNode.parentElement.classList && textNode.parentElement.classList.contains(HIGHLIGHT_CLASS))) {
+        if (!shouldProcessTextNode(textNode)) {
           continue;
         }
         highlightTextNode(textNode);
