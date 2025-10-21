@@ -10,6 +10,7 @@
   const TONE_LIGHT = 'light';
   const ASCII_PUNCTUATION_REGEX = /[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
   const MAX_CONTEXT_TOKENS = 5;
+  const DEFAULT_UNCERTAIN_RANGE = { min: -0.5, max: 0.5 };
 
   let settings = invadeMergeSettings();
   let vocabMap = new Map();
@@ -29,6 +30,7 @@
   let debugTooltipEnabled = false;
   let debugWeightsEnabled = false;
   let customIgnoreSet = new Set();
+  const semanticRuntime = createSemanticRuntime();
 
   async function bootstrap() {
     try {
@@ -365,6 +367,8 @@
       }
     }
     let contextResult = null;
+    let classifierResult = null;
+    let semanticResult = null;
     if (options.context) {
       contextResult = evaluateContextFeatures(textNode, text, index, length, matchedWord, vocab, contextInfo, options.context, debugInfo);
       if (!contextResult.passed) {
@@ -383,11 +387,83 @@
         }
         return false;
       }
+
+      if (shouldEvaluateClassifier(options.context, contextResult)) {
+        classifierResult = evaluateContextClassifier(textNode, text, index, length, matchedWord, vocab, contextInfo, options.context, debugInfo);
+        if (debugInfo && classifierResult) {
+          debugInfo.classifier = classifierResult;
+        }
+        if (classifierResult && classifierResult.decision === 'reject') {
+          if (debugInfo) {
+            debugInfo.decision = 'classifier-reject';
+          }
+          if (debugWeightsEnabled) {
+            console.debug('[invade] classifier', {
+              word: matchedWord,
+              vocab: vocab.word,
+              decision: 'reject',
+              classifier: classifierResult
+            });
+          }
+          return false;
+        }
+        if (classifierResult && classifierResult.decision === 'accept') {
+          if (debugInfo) {
+            debugInfo.decision = 'classifier-accept';
+          }
+          if (debugWeightsEnabled) {
+            console.debug('[invade] classifier', {
+              word: matchedWord,
+              vocab: vocab.word,
+              decision: 'accept',
+              classifier: classifierResult
+            });
+          }
+          return true;
+        }
+      }
+      if (shouldEvaluateSemantic(options.context, classifierResult)) {
+        semanticResult = evaluateSemanticContext(textNode, text, index, length, matchedWord, vocab, contextInfo, options.context, classifierResult, debugInfo);
+        if (semanticResult && semanticResult.decision === 'reject') {
+          if (debugInfo) {
+            debugInfo.decision = 'semantic-reject';
+          }
+          if (debugWeightsEnabled) {
+            console.debug('[invade] semantic', {
+              word: matchedWord,
+              vocab: vocab.word,
+              decision: 'reject',
+              semantic: semanticResult
+            });
+          }
+          return false;
+        }
+        if (semanticResult && semanticResult.decision === 'accept') {
+          if (debugInfo) {
+            debugInfo.decision = 'semantic-accept';
+          }
+          if (debugWeightsEnabled) {
+            console.debug('[invade] semantic', {
+              word: matchedWord,
+              vocab: vocab.word,
+              decision: 'accept',
+              semantic: semanticResult
+            });
+          }
+          return true;
+        }
+      }
     }
     if (debugInfo) {
       debugInfo.decision = debugInfo.decision || 'matched';
       if (contextResult) {
         debugInfo.context = contextResult;
+      }
+      if (classifierResult) {
+        debugInfo.classifier = classifierResult;
+      }
+      if (semanticResult) {
+        debugInfo.semantic = semanticResult;
       }
       if (debugWeightsEnabled) {
         console.debug('[invade] weights', {
@@ -395,7 +471,9 @@
           vocab: vocab.word,
           decision: debugInfo.decision,
           skipPhrase: debugInfo.skipPhrase,
-          context: contextResult
+          context: contextResult,
+          classifier: classifierResult,
+          semantic: semanticResult
         });
       }
     }
@@ -655,6 +733,340 @@
       debugInfo.context = result;
     }
     return result;
+  }
+
+  function shouldEvaluateClassifier(contextOptions, contextResult) {
+    if (!contextOptions || !contextOptions.classifier) {
+      return false;
+    }
+    const classifier = contextOptions.classifier;
+    if (!classifier || !classifier.features || Object.keys(classifier.features).length === 0) {
+      return false;
+    }
+    if (classifier.requireSegments && (!segmenter || typeof segmenter.segment !== 'function')) {
+      return false;
+    }
+    const range = normalizeUncertainRange(contextOptions.uncertainRange, classifier);
+    if (!range) {
+      return false;
+    }
+    if (!contextResult || typeof contextResult.score !== 'number') {
+      return true;
+    }
+    return contextResult.score >= range.min && contextResult.score <= range.max;
+  }
+
+  function normalizeUncertainRange(range, classifier) {
+    if (!range || typeof range !== 'object') {
+      if (classifier && classifier.allowUnknown === false) {
+        return null;
+      }
+      return {
+        min: DEFAULT_UNCERTAIN_RANGE.min,
+        max: DEFAULT_UNCERTAIN_RANGE.max
+      };
+    }
+    const min = Number(range.min);
+    const max = Number(range.max);
+    if (!Number.isFinite(min) || !Number.isFinite(max)) {
+      return null;
+    }
+    if (min > max) {
+      return { min: max, max: min };
+    }
+    return { min, max };
+  }
+
+  function evaluateContextClassifier(textNode, text, index, length, matchedWord, vocab, contextInfo, contextOptions, debugInfo) {
+    const classifier = contextOptions.classifier;
+    if (!classifier) {
+      return null;
+    }
+    const weights = classifier.features || {};
+    const weightKeys = Object.keys(weights);
+    if (!weightKeys.length) {
+      return {
+        decision: classifier.allowUnknown === false ? 'reject' : 'unknown',
+        reason: 'empty-weights'
+      };
+    }
+
+    const windowSize = clampWindowSize(classifier.window);
+    const contextTokens = collectClassifierContext(textNode, text, index, length, contextInfo, windowSize, classifier.requireSegments);
+    if (!contextTokens) {
+      return {
+        decision: classifier.allowUnknown === false ? 'reject' : 'unknown',
+        reason: 'no-context-tokens'
+      };
+    }
+
+    const featureVector = buildClassifierFeatureVector(contextTokens, classifier);
+    let logit = typeof classifier.bias === 'number' ? classifier.bias : 0;
+    const contributions = [];
+    for (const key of weightKeys) {
+      const weight = weights[key];
+      if (!Number.isFinite(weight)) {
+        continue;
+      }
+      const value = featureVector[key] || 0;
+      if (!value) {
+        continue;
+      }
+      const contribution = weight * value;
+      logit += contribution;
+      contributions.push({
+        feature: key,
+        weight,
+        value,
+        contribution
+      });
+    }
+    const probability = sigmoid(logit);
+    const threshold = determineClassifierThreshold(classifier);
+    const allowUnknown = classifier.allowUnknown !== false;
+    const decision = decideClassifierOutcome(logit, probability, threshold, allowUnknown);
+
+    const result = {
+      decision,
+      score: logit,
+      probability,
+      threshold: threshold.value,
+      thresholdType: threshold.type,
+      bias: typeof classifier.bias === 'number' ? classifier.bias : 0,
+      contributions,
+      features: Object.keys(featureVector),
+      positive: classifier.positiveLabel || (Array.isArray(classifier.labels) && classifier.labels.length ? classifier.labels[0] : 'positive'),
+      tokens: contextTokens,
+      reason: decision === 'unknown' && !contributions.length ? 'no-active-features' : undefined
+    };
+
+    if (debugInfo && debugWeightsEnabled) {
+      result.debug = {
+        matchedWord,
+        vocab: vocab.word,
+        context: contextTokens.normalizedContext
+      };
+    }
+    return result;
+  }
+
+  function determineClassifierThreshold(classifier) {
+    if (typeof classifier.threshold === 'number' && Number.isFinite(classifier.threshold)) {
+      if (classifier.threshold >= 0 && classifier.threshold <= 1) {
+        return { type: 'probability', value: classifier.threshold };
+      }
+      return { type: 'logit', value: classifier.threshold };
+    }
+    return { type: 'probability', value: 0.5 };
+  }
+
+  function decideClassifierOutcome(logit, probability, threshold, allowUnknown) {
+    if (threshold.type === 'logit') {
+      if (logit >= threshold.value) {
+        return 'accept';
+      }
+      return allowUnknown ? 'unknown' : 'reject';
+    }
+    if (probability >= threshold.value) {
+      return 'accept';
+    }
+    return allowUnknown ? 'unknown' : 'reject';
+  }
+
+  function shouldEvaluateSemantic(contextOptions, classifierResult) {
+    if (!contextOptions || !contextOptions.semantic) {
+      return false;
+    }
+    const semantic = contextOptions.semantic;
+    if (semantic.enabled === false) {
+      return false;
+    }
+    if (!semanticRuntime || !semanticRuntime.ready) {
+      return false;
+    }
+    if (semantic.highRiskOnly && classifierResult && classifierResult.decision && classifierResult.decision !== 'unknown') {
+      return false;
+    }
+    return typeof semanticRuntime.evaluate === 'function';
+  }
+
+  function evaluateSemanticContext(textNode, text, index, length, matchedWord, vocab, contextInfo, contextOptions, classifierResult, debugInfo) {
+    try {
+      return semanticRuntime.evaluate({
+        text,
+        index,
+        length,
+        matchedWord,
+        vocab,
+        contextInfo,
+        options: contextOptions.semantic,
+        classifierResult,
+        debugInfo
+      });
+    } catch (error) {
+      if (debugWeightsEnabled) {
+        console.debug('[invade] semantic evaluation failed', error);
+      }
+      return {
+        decision: 'unknown',
+        reason: 'semantic-runtime-error',
+        error: error ? String(error) : 'unknown'
+      };
+    }
+  }
+
+  function createSemanticRuntime() {
+    return {
+      ready: false,
+      evaluate() {
+        return null;
+      }
+    };
+  }
+
+  function collectClassifierContext(textNode, text, index, length, contextInfo, windowSize, requireSegments) {
+    if (!segmenter || typeof segmenter.segment !== 'function') {
+      if (requireSegments) {
+        return null;
+      }
+      return collectFallbackContext(text, index, length, windowSize);
+    }
+
+    let segments = null;
+    let matchStart = null;
+    let matchEnd = null;
+
+    if (contextInfo && Array.isArray(contextInfo.segments)) {
+      segments = contextInfo.segments;
+      matchStart = contextInfo.matchStart;
+      matchEnd = contextInfo.matchEnd;
+    }
+    if (!segments) {
+      const generated = Array.from(segmenter.segment(text || ''));
+      segments = generated.map(segment => ({
+        value: segment.segment,
+        index: segment.index,
+        isWordLike: Boolean(segment.isWordLike)
+      }));
+      for (let i = 0; i < segments.length; i += 1) {
+        const seg = segments[i];
+        if (seg.index <= index && seg.index + seg.value.length > index) {
+          if (matchStart === null) {
+            matchStart = i;
+          }
+          matchEnd = i;
+        } else if (seg.index >= index && seg.index < index + length) {
+          if (matchStart === null) {
+            matchStart = i;
+          }
+          matchEnd = i;
+        }
+      }
+    }
+    if (matchStart === null) {
+      matchStart = 0;
+    }
+    if (matchEnd === null) {
+      matchEnd = matchStart;
+    }
+
+    const prevTokens = collectNeighborTokens(segments, matchStart - 1, -1, windowSize);
+    const nextTokens = collectNeighborTokens(segments, matchEnd + 1, 1, windowSize);
+
+    if (textNode) {
+      const prevExtra = collectAdjacentText(textNode, windowSize * 3, -1);
+      if (prevExtra.text) {
+        appendExtraTokens(prevTokens, prevExtra.text, -1, windowSize);
+      }
+      const nextExtra = collectAdjacentText(textNode, windowSize * 3, 1);
+      if (nextExtra.text) {
+        appendExtraTokens(nextTokens, nextExtra.text, 1, windowSize);
+      }
+    }
+
+    const windowTokens = [...prevTokens].reverse().concat(nextTokens);
+    return {
+      prev: prevTokens.slice(0, windowSize),
+      next: nextTokens.slice(0, windowSize),
+      window: windowTokens.slice(0, windowSize * 2),
+      normalizedContext: buildNormalizedContextString(text, index, length, prevTokens, nextTokens)
+    };
+  }
+
+  function collectFallbackContext(text, index, length, windowSize) {
+    const before = text.slice(Math.max(0, index - windowSize * 3), index);
+    const after = text.slice(index + length, index + length + windowSize * 3);
+    const prevTokens = before.split(/[\s，。、《》、「」；：,;.!?]/).filter(Boolean).slice(-windowSize).reverse();
+    const nextTokens = after.split(/[\s，。、《》、「」；：,;.!?]/).filter(Boolean).slice(0, windowSize);
+    const windowTokens = [...prevTokens].reverse().concat(nextTokens);
+    if (!prevTokens.length && !nextTokens.length) {
+      return null;
+    }
+    return {
+      prev: prevTokens,
+      next: nextTokens,
+      window: windowTokens.slice(0, windowSize * 2),
+      normalizedContext: buildNormalizedContextString(text, index, length, prevTokens, nextTokens)
+    };
+  }
+
+  function buildNormalizedContextString(text, index, length, prevTokens, nextTokens) {
+    const before = prevTokens.slice().reverse().join(' ');
+    const after = nextTokens.join(' ');
+    const core = text.slice(index, index + length);
+    return `${before ? before + ' ' : ''}[${core}]${after ? ' ' + after : ''}`.trim();
+  }
+
+  function clampWindowSize(value) {
+    if (!Number.isFinite(value) || value <= 0) {
+      return 3;
+    }
+    return Math.min(Math.max(1, Math.floor(value)), 6);
+  }
+
+  function buildClassifierFeatureVector(contextTokens, classifier) {
+    const features = Object.create(null);
+    const norm = classifier.featureNorm || 'binary';
+    const prev = Array.isArray(contextTokens.prev) ? contextTokens.prev : [];
+    const next = Array.isArray(contextTokens.next) ? contextTokens.next : [];
+    const window = Array.isArray(contextTokens.window) ? contextTokens.window : [];
+
+    for (let i = 0; i < prev.length; i += 1) {
+      const token = prev[i];
+      const key = `token:prev:${i + 1}:${token}`;
+      features[key] = accumulateFeatureValue(features[key], norm);
+    }
+    for (let i = 0; i < next.length; i += 1) {
+      const token = next[i];
+      const key = `token:next:${i + 1}:${token}`;
+      features[key] = accumulateFeatureValue(features[key], norm);
+    }
+    for (let i = 0; i < window.length; i += 1) {
+      const token = window[i];
+      const key = `token:window:${token}`;
+      features[key] = accumulateFeatureValue(features[key], norm);
+    }
+    return features;
+  }
+
+  function accumulateFeatureValue(current, norm) {
+    if (norm === 'count') {
+      return (current || 0) + 1;
+    }
+    return 1;
+  }
+
+  function sigmoid(x) {
+    if (!Number.isFinite(x)) {
+      return 0.5;
+    }
+    if (x < -60) {
+      return 0;
+    }
+    if (x > 60) {
+      return 1;
+    }
+    return 1 / (1 + Math.exp(-x));
   }
 
   function prepareMatchDebugInfo(vocab, matchedWord, source) {
