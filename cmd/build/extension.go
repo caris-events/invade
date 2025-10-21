@@ -49,8 +49,31 @@ func buildExtensionAssets(_ *cli.Context) error {
 		return fmt.Errorf("load vocab files: %w", err)
 	}
 
+	contextModels, err := util.LoadContextModels(filepath.Join(baseDir, "tools", "menu_classifier", "output"))
+	if err != nil {
+		return fmt.Errorf("load context models: %w", err)
+	}
+
 	results := make([]extensionVocab, 0, len(vocabs))
 	for _, vocab := range vocabs {
+		if model := contextModels[vocab.Word]; model != nil {
+			if vocab.MatchOptions == nil {
+				vocab.MatchOptions = &entity.VocabMatchOptions{}
+			}
+			if vocab.MatchOptions.Context == nil {
+				vocab.MatchOptions.Context = &entity.VocabMatchContext{}
+			}
+			if model.UncertainRange != nil {
+				vocab.MatchOptions.Context.UncertainRange = model.UncertainRange
+			}
+			if model.Classifier != nil {
+				vocab.MatchOptions.Context.Classifier = model.Classifier
+			}
+			if model.Semantic != nil {
+				vocab.MatchOptions.Context.Semantic = model.Semantic
+			}
+		}
+
 		recommendedSet := make(map[string]struct{})
 		for _, example := range vocab.Examples {
 			for _, w := range example.Words {
