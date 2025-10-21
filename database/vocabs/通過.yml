@@ -8,6 +8,54 @@ category: ADJECTIVE
 explicit:
 
 #
+matchOptions:
+  skipPhrases:
+    - 通過年齡驗證
+    - 通過身份驗證
+    - 通過身分驗證
+    - 通過審核
+    - 通過審查
+    - 通過考試
+    - 通過測試
+  context:
+    baseScore: 0.6
+    threshold: 0
+    features:
+      - position: window
+        tokens:
+          - HDMI
+          - 音訊
+          - 音頻
+          - 音源
+          - 訊號
+          - 網路
+          - 連線
+          - 介面
+        weight: 0.6
+      - position: next
+        tokens:
+          - 年齡
+          - 身分
+          - 身份
+          - 審核
+          - 審查
+          - 驗證
+          - 認證
+          - 考試
+          - 測試
+          - 評估
+          - 評審
+        weight: -1
+      - position: prev
+        tokens:
+          - 必須
+          - 需要
+          - 已經
+          - 須
+          - 通常
+        weight: -0.4
+
+#
 description: |
   表示數位資料傳遞時會經過的路線，英文稱作 Through 或 By。
 

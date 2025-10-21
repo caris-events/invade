@@ -75,10 +75,13 @@ type VocabMatchOptions struct {
 }
 
 type VocabMatchContext struct {
-	BaseScore       float64                `yaml:"baseScore" json:"baseScore,omitempty"`
-	Threshold       float64                `yaml:"threshold" json:"threshold,omitempty"`
-	RequireSegments bool                   `yaml:"requireSegments" json:"requireSegments,omitempty"`
-	Features        []*VocabContextFeature `yaml:"features" json:"features,omitempty"`
+	BaseScore       float64                    `yaml:"baseScore" json:"baseScore,omitempty"`
+	Threshold       float64                    `yaml:"threshold" json:"threshold,omitempty"`
+	RequireSegments bool                       `yaml:"requireSegments" json:"requireSegments,omitempty"`
+	Features        []*VocabContextFeature     `yaml:"features" json:"features,omitempty"`
+	UncertainRange  *VocabContextRange         `yaml:"uncertainRange" json:"uncertainRange,omitempty"`
+	Classifier      *VocabContextClassifier    `yaml:"classifier" json:"classifier,omitempty"`
+	Semantic        *VocabContextSemanticModel `yaml:"semantic" json:"semantic,omitempty"`
 }
 
 type VocabContextFeature struct {
@@ -87,6 +90,44 @@ type VocabContextFeature struct {
 	Tokens    []string `yaml:"tokens" json:"tokens,omitempty"`
 	Weight    float64  `yaml:"weight" json:"weight,omitempty"`
 	Distance  int      `yaml:"distance" json:"distance,omitempty"`
+}
+
+type VocabContextRange struct {
+	Min float64 `yaml:"min" json:"min,omitempty"`
+	Max float64 `yaml:"max" json:"max,omitempty"`
+}
+
+type VocabContextClassifier struct {
+	Strategy      string             `yaml:"strategy" json:"strategy,omitempty"`
+	Version       int                `yaml:"version" json:"version,omitempty"`
+	Window        int                `yaml:"window" json:"window,omitempty"`
+	Bias          float64            `yaml:"bias" json:"bias,omitempty"`
+	Threshold     float64            `yaml:"threshold" json:"threshold,omitempty"`
+	Weights       map[string]float64 `yaml:"features" json:"features,omitempty"`
+	Labels        []string           `yaml:"labels" json:"labels,omitempty"`
+	PositiveLabel string             `yaml:"positiveLabel" json:"positiveLabel,omitempty"`
+	FeatureNorm   string             `yaml:"featureNorm" json:"featureNorm,omitempty"`
+	RequireSeg    bool               `yaml:"requireSegments" json:"requireSegments,omitempty"`
+	Metadata      map[string]any     `yaml:"metadata" json:"metadata,omitempty"`
+	Fallback      string             `yaml:"fallback" json:"fallback,omitempty"`
+	AllowUnknown  bool               `yaml:"allowUnknown" json:"allowUnknown,omitempty"`
+}
+
+type VocabContextSemanticModel struct {
+	Model        string                           `yaml:"model" json:"model,omitempty"`
+	Enabled      bool                             `yaml:"enabled" json:"enabled,omitempty"`
+	Window       int                              `yaml:"window" json:"window,omitempty"`
+	Threshold    float64                          `yaml:"threshold" json:"threshold,omitempty"`
+	HighRiskOnly bool                             `yaml:"highRiskOnly" json:"highRiskOnly,omitempty"`
+	Prototypes   []*VocabContextSemanticPrototype `yaml:"prototypes" json:"prototypes,omitempty"`
+	Metadata     map[string]any                   `yaml:"metadata" json:"metadata,omitempty"`
+	CacheTTL     int                              `yaml:"cacheTtlSeconds" json:"cacheTtlSeconds,omitempty"`
+}
+
+type VocabContextSemanticPrototype struct {
+	Label  string    `yaml:"label" json:"label,omitempty"`
+	Vector []float64 `yaml:"vector" json:"vector,omitempty"`
+	Weight float64   `yaml:"weight" json:"weight,omitempty"`
 }
 
 func (v *VocabExample) WordsStr() string {

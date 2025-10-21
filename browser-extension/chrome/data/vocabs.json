@@ -1,83 +1,203 @@
 [
   {
-    "word": "項目",
-    "category": "NOUN",
-    "categoryLabel": "名詞",
+    "word": "通過",
+    "category": "ADJECTIVE",
+    "categoryLabel": "形容詞",
     "explicit": "",
     "explicitLabel": "未知",
-    "description": "",
-    "notice": "這個詞彙指的不是販售的商品、菜單品項。",
+    "description": "表示數位資料傳遞時會經過的路線，英文稱作 Through 或 By。",
+    "notice": "這個詞彙指的是電腦術語，而非「穿過」某項事物。",
     "recommended": [
-      "專案",
-      "選項"
+      "透過"
     ],
     "examples": [
       {
         "words": [
-          "專案"
+          "透過"
         ],
-        "correct": "我們公司有很多{{專案}}正在進行。",
-        "incorrect": "我們公司有很多{{項目}}正在進行。"
-      },
-      {
-        "words": [
-          "選項"
-        ],
-        "correct": "這些系統{{選項}}都可以自行調整。",
-        "incorrect": "這些系統{{項目}}都可以自行調整。"
+        "correct": "這項功能讓音訊可以直接{{透過}} HDMI 輸出到電視。",
+        "incorrect": "這項功能讓[[音頻]]可以直接{{通過}} HDMI 輸出到電視。"
       }
     ],
     "matchOptions": {
+      "skipPhrases": [
+        "通過年齡驗證",
+        "通過身份驗證",
+        "通過身分驗證",
+        "通過審核",
+        "通過審查",
+        "通過考試",
+        "通過測試"
+      ],
       "context": {
-        "baseScore": -1,
-        "threshold": 0.5,
+        "baseScore": 0.6,
         "features": [
           {
-            "position": "prev",
+            "position": "window",
             "tokens": [
-              "開幕",
-              "展覽",
-              "活動",
-              "案例",
-              "店舖",
-              "公司",
-              "合作",
-              "品牌",
-              "上線",
-              "項目",
-              "項目列表"
+              "HDMI",
+              "音訊",
+              "音頻",
+              "音源",
+              "訊號",
+              "網路",
+              "連線",
+              "介面"
             ],
-            "weight": -1
+            "weight": 0.6
           },
           {
             "position": "next",
             "tokens": [
-              "推出",
-              "開幕",
-              "登場",
-              "活動",
-              "品牌",
-              "店舖",
-              "合作"
+              "年齡",
+              "身分",
+              "身份",
+              "審核",
+              "審查",
+              "驗證",
+              "認證",
+              "考試",
+              "測試",
+              "評估",
+              "評審"
             ],
             "weight": -1
           },
           {
-            "position": "window",
+            "position": "prev",
             "tokens": [
-              "專案",
-              "計畫",
-              "系統",
-              "開發",
-              "工程",
-              "任務"
+              "必須",
+              "需要",
+              "已經",
+              "須",
+              "通常"
             ],
-            "weight": 1
+            "weight": -0.4
           }
         ]
       }
     },
-    "lastModifiedTs": 1760984864
+    "lastModifiedTs": 1761052358
+  },
+  {
+    "word": "質量",
+    "category": "NOUN",
+    "categoryLabel": "名詞",
+    "explicit": "",
+    "explicitLabel": "未知",
+    "description": "形容事物的品質、內在或資質，有時會根據情境而有不同解釋。",
+    "notice": "這個詞彙指的不是科學或物理上的密度形容詞。",
+    "recommended": [
+      "品質",
+      "數值",
+      "素質"
+    ],
+    "examples": [
+      {
+        "words": [
+          "品質"
+        ],
+        "correct": "這個影片的內容{{品質}}非常高，讓我十分有收穫。",
+        "incorrect": "這個[[視頻]]的{{質量}}非常高，讓我十分有收穫。"
+      },
+      {
+        "words": [
+          "素質"
+        ],
+        "correct": "這次比賽選手的{{素質}}較高，競爭十分激烈。",
+        "incorrect": "這次比賽選手的{{質量}}較高，競爭十分激烈。"
+      },
+      {
+        "words": [
+          "數值"
+        ],
+        "correct": "這台體重計測出的{{數值}}很精準。",
+        "incorrect": "這台體重計測出的{{質量}}很精準。"
+      }
+    ],
+    "matchOptions": {
+      "skipPhrases": [
+        "超大質量黑洞",
+        "質量守恆",
+        "質量中心",
+        "質量分布",
+        "質量測量",
+        "質量公式",
+        "質量數據",
+        "質量體積"
+      ],
+      "context": {
+        "baseScore": -0.5,
+        "features": [
+          {
+            "position": "prev",
+            "tokens": [
+              "產品",
+              "商品",
+              "影片",
+              "內容",
+              "服務",
+              "团队",
+              "團隊",
+              "文稿",
+              "提案",
+              "做工",
+              "工程",
+              "品牌",
+              "比賽",
+              "作品"
+            ],
+            "weight": 0.7
+          },
+          {
+            "position": "next",
+            "tokens": [
+              "很好",
+              "穩定",
+              "很高",
+              "提升",
+              "表現",
+              "水準",
+              "需求",
+              "保證"
+            ],
+            "weight": 0.6
+          },
+          {
+            "position": "window",
+            "tokens": [
+              "黑洞",
+              "星體",
+              "守恆",
+              "測量",
+              "中心",
+              "定律",
+              "粒子",
+              "密度",
+              "天文",
+              "引力"
+            ],
+            "weight": -0.9
+          },
+          {
+            "position": "prev",
+            "tokens": [
+              "超大",
+              "天文",
+              "物理",
+              "科學",
+              "成像"
+            ],
+            "weight": -0.8
+          }
+        ],
+        "uncertainRange": {
+          "min": -0.3,
+          "max": 0.3
+        }
+      }
+    },
+    "lastModifiedTs": 1761051626
   },
   {
     "word": "菜單",
@@ -170,7 +290,115 @@
         ]
       }
     },
-    "lastModifiedTs": 1760979329
+    "lastModifiedTs": 1761048788
+  },
+  {
+    "word": "項目",
+    "category": "NOUN",
+    "categoryLabel": "名詞",
+    "explicit": "",
+    "explicitLabel": "未知",
+    "description": "",
+    "notice": "這個詞彙指的不是販售的商品、菜單品項。",
+    "recommended": [
+      "專案",
+      "選項"
+    ],
+    "examples": [
+      {
+        "words": [
+          "專案"
+        ],
+        "correct": "我們公司有很多{{專案}}正在進行。",
+        "incorrect": "我們公司有很多{{項目}}正在進行。"
+      },
+      {
+        "words": [
+          "選項"
+        ],
+        "correct": "這些系統{{選項}}都可以自行調整。",
+        "incorrect": "這些系統{{項目}}都可以自行調整。"
+      }
+    ],
+    "matchOptions": {
+      "context": {
+        "baseScore": -1,
+        "threshold": 0.5,
+        "features": [
+          {
+            "position": "prev",
+            "tokens": [
+              "開幕",
+              "展覽",
+              "活動",
+              "案例",
+              "店舖",
+              "公司",
+              "合作",
+              "品牌",
+              "上線",
+              "項目",
+              "項目列表"
+            ],
+            "weight": -1
+          },
+          {
+            "position": "next",
+            "tokens": [
+              "推出",
+              "開幕",
+              "登場",
+              "活動",
+              "品牌",
+              "店舖",
+              "合作"
+            ],
+            "weight": -1
+          },
+          {
+            "position": "window",
+            "tokens": [
+              "專案",
+              "計畫",
+              "系統",
+              "開發",
+              "工程",
+              "任務"
+            ],
+            "weight": 1
+          }
+        ]
+      }
+    },
+    "lastModifiedTs": 1760988354
+  },
+  {
+    "word": "內存",
+    "category": "HARDWARE",
+    "categoryLabel": "硬體與設備",
+    "explicit": "",
+    "explicitLabel": "未知",
+    "description": "電腦資料處理時，會將資料暫時存放至硬體晶片，也作隨機存取記憶體。",
+    "recommended": [
+      "RAM",
+      "記憶體"
+    ],
+    "examples": [
+      {
+        "words": [
+          "記憶體",
+          "RAM"
+        ],
+        "correct": "要順暢地執行遊戲，必須升級電腦的{{記憶體}}。",
+        "incorrect": "要順暢地[[運行]]遊戲，必須升級電腦的{{內存}}。"
+      }
+    ],
+    "matchOptions": {
+      "skipPhrases": [
+        "海內存知己"
+      ]
+    },
+    "lastModifiedTs": 1760985916
   },
   {
     "word": "宏",
@@ -237,7 +465,64 @@
         ]
       }
     },
-    "lastModifiedTs": 1760977824
+    "lastModifiedTs": 1760985916
+  },
+  {
+    "word": "寄",
+    "category": "ADJECTIVE",
+    "categoryLabel": "形容詞",
+    "explicit": "",
+    "explicitLabel": "未知",
+    "description": "",
+    "notice": "這個詞彙指的不是寄送物品的行為。",
+    "recommended": [
+      "GG",
+      "完蛋了"
+    ],
+    "examples": [
+      {
+        "words": [
+          "完蛋了"
+        ],
+        "correct": "我不小心把重要的資料刪了，這下子{{完蛋了}}。",
+        "incorrect": "我不小心把重要的資料刪了，{{寄}}了。"
+      },
+      {
+        "words": [
+          "GG"
+        ],
+        "correct": "{{GG}}",
+        "incorrect": "{{寄}}"
+      }
+    ],
+    "matchOptions": {
+      "matchMode": "standalone",
+      "skipPhrases": [
+        "寄送",
+        "寄件",
+        "寄信",
+        "寄包裹",
+        "寄東西"
+      ],
+      "context": {
+        "features": [
+          {
+            "position": "next",
+            "tokens": [
+              "寄送",
+              "寄送服務",
+              "寄送資料",
+              "寄送通知",
+              "寄件",
+              "寄信",
+              "送"
+            ],
+            "weight": -1
+          }
+        ]
+      }
+    },
+    "lastModifiedTs": 1760985916
   },
   {
     "word": "支持",
@@ -308,92 +593,7 @@
         ]
       }
     },
-    "lastModifiedTs": 1760977671
-  },
-  {
-    "word": "寄",
-    "category": "ADJECTIVE",
-    "categoryLabel": "形容詞",
-    "explicit": "",
-    "explicitLabel": "未知",
-    "description": "",
-    "notice": "這個詞彙指的不是寄送物品的行為。",
-    "recommended": [
-      "GG",
-      "完蛋了"
-    ],
-    "examples": [
-      {
-        "words": [
-          "完蛋了"
-        ],
-        "correct": "我不小心把重要的資料刪了，這下子{{完蛋了}}。",
-        "incorrect": "我不小心把重要的資料刪了，{{寄}}了。"
-      },
-      {
-        "words": [
-          "GG"
-        ],
-        "correct": "{{GG}}",
-        "incorrect": "{{寄}}"
-      }
-    ],
-    "matchOptions": {
-      "matchMode": "standalone",
-      "skipPhrases": [
-        "寄送",
-        "寄件",
-        "寄信",
-        "寄包裹",
-        "寄東西"
-      ],
-      "context": {
-        "features": [
-          {
-            "position": "next",
-            "tokens": [
-              "寄送",
-              "寄送服務",
-              "寄送資料",
-              "寄送通知",
-              "寄件",
-              "寄信",
-              "送"
-            ],
-            "weight": -1
-          }
-        ]
-      }
-    },
-    "lastModifiedTs": 1760976739
-  },
-  {
-    "word": "內存",
-    "category": "HARDWARE",
-    "categoryLabel": "硬體與設備",
-    "explicit": "",
-    "explicitLabel": "未知",
-    "description": "電腦資料處理時，會將資料暫時存放至硬體晶片，也作隨機存取記憶體。",
-    "recommended": [
-      "RAM",
-      "記憶體"
-    ],
-    "examples": [
-      {
-        "words": [
-          "記憶體",
-          "RAM"
-        ],
-        "correct": "要順暢地執行遊戲，必須升級電腦的{{記憶體}}。",
-        "incorrect": "要順暢地[[運行]]遊戲，必須升級電腦的{{內存}}。"
-      }
-    ],
-    "matchOptions": {
-      "skipPhrases": [
-        "海內存知己"
-      ]
-    },
-    "lastModifiedTs": 1760970640
+    "lastModifiedTs": 1760985916
   },
   {
     "word": "AWSL",
@@ -8594,44 +8794,6 @@
     "lastModifiedTs": 1760527523
   },
   {
-    "word": "質量",
-    "category": "NOUN",
-    "categoryLabel": "名詞",
-    "explicit": "",
-    "explicitLabel": "未知",
-    "description": "形容事物的品質、內在或資質，有時會根據情境而有不同解釋。",
-    "notice": "這個詞彙指的不是科學或物理上的密度形容詞。",
-    "recommended": [
-      "品質",
-      "數值",
-      "素質"
-    ],
-    "examples": [
-      {
-        "words": [
-          "品質"
-        ],
-        "correct": "這個影片的內容{{品質}}非常高，讓我十分有收穫。",
-        "incorrect": "這個[[視頻]]的{{質量}}非常高，讓我十分有收穫。"
-      },
-      {
-        "words": [
-          "素質"
-        ],
-        "correct": "這次比賽選手的{{素質}}較高，競爭十分激烈。",
-        "incorrect": "這次比賽選手的{{質量}}較高，競爭十分激烈。"
-      },
-      {
-        "words": [
-          "數值"
-        ],
-        "correct": "這台體重計測出的{{數值}}很精準。",
-        "incorrect": "這台體重計測出的{{質量}}很精準。"
-      }
-    ],
-    "lastModifiedTs": 1760527523
-  },
-  {
     "word": "贏麻",
     "category": "VERB",
     "categoryLabel": "動詞",
@@ -8964,28 +9126,6 @@
         ],
         "correct": "現在購買就可以獲得五元的{{現金回饋}}。",
         "incorrect": "現在購買就可以{{返現}}五元。"
-      }
-    ],
-    "lastModifiedTs": 1760527523
-  },
-  {
-    "word": "通過",
-    "category": "ADJECTIVE",
-    "categoryLabel": "形容詞",
-    "explicit": "",
-    "explicitLabel": "未知",
-    "description": "表示數位資料傳遞時會經過的路線，英文稱作 Through 或 By。",
-    "notice": "這個詞彙指的是電腦術語，而非「穿過」某項事物。",
-    "recommended": [
-      "透過"
-    ],
-    "examples": [
-      {
-        "words": [
-          "透過"
-        ],
-        "correct": "這項功能讓音訊可以直接{{透過}} HDMI 輸出到電視。",
-        "incorrect": "這項功能讓[[音頻]]可以直接{{通過}} HDMI 輸出到電視。"
       }
     ],
     "lastModifiedTs": 1760527523
