@@ -25,6 +25,17 @@ python3 build_model.py \
 
 This command produces `output/context_models.json`. Any existing entries are merged, so you can train multiple vocabularies sequentially.
 
+若要處理「質量」的情境，可以改成：
+
+```bash
+python3 build_model.py \
+  --input data/質量_contexts.jsonl \
+  --target 質量 \
+  --positive-label quality \
+  --window 3 \
+  --threshold 0.6
+```
+
 ## Data Format
 
 `data/menu_contexts.jsonl` is a newline-delimited JSON file containing objects with at least:

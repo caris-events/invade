@@ -8,6 +8,74 @@ category: NOUN
 explicit:
 
 #
+matchOptions:
+  skipPhrases:
+    - 超大質量黑洞
+    - 質量守恆
+    - 質量中心
+    - 質量分布
+    - 質量測量
+    - 質量公式
+    - 質量數據
+    - 質量體積
+  context:
+    baseScore: -0.5
+    threshold: 0
+    uncertainRange:
+      min: -0.3
+      max: 0.3
+    features:
+      - position: prev
+        tokens:
+          - 產品
+          - 商品
+          - 影片
+          - 內容
+          - 服務
+          - 团队
+          - 團隊
+          - 文稿
+          - 提案
+          - 做工
+          - 工程
+          - 品牌
+          - 比賽
+          - 作品
+        weight: 0.7
+      - position: next
+        tokens:
+          - 很好
+          - 穩定
+          - 很高
+          - 提升
+          - 表現
+          - 水準
+          - 需求
+          - 保證
+        weight: 0.6
+      - position: window
+        tokens:
+          - 黑洞
+          - 星體
+          - 守恆
+          - 測量
+          - 中心
+          - 定律
+          - 粒子
+          - 密度
+          - 天文
+          - 引力
+        weight: -0.9
+      - position: prev
+        tokens:
+          - 超大
+          - 天文
+          - 物理
+          - 科學
+          - 成像
+        weight: -0.8
+
+#
 description: |
   形容事物的品質、內在或資質，有時會根據情境而有不同解釋。
 
