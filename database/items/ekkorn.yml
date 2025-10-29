@@ -1,0 +1,21 @@
+#
+code       : ekkorn
+parent_code: showyouapp
+
+#
+name       : Ekkorn
+name_alias :
+name_others: []
+
+#
+category: INTERNET
+type    : PLATFORM
+owner   : TAIWANESE
+
+#
+website    : https://www.ekkorn.com/
+description: |
+  [[ekkorn]] 是 [[cti-news]] 連鎖體系所建立的台灣社群網站，主打沒有廣告干擾的創作互動內容平台。
+
+#
+information:

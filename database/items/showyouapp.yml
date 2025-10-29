@@ -1,0 +1,21 @@
+#
+code       : showyouapp
+parent_code: cti-news
+
+#
+name       : 秀曜匯智
+name_alias : ShowYou Technology
+name_others: ["秀曜匯智股份有限公司", "ShowYou Technology Co., Ltd.", "ShowYou Group Limited"]
+
+#
+category: INTERNET
+type    : COMPANY
+owner   : TAIWANESE
+
+#
+website    : https://www.showyouapp.com/
+description: |
+  [[showyouapp]] 前身為《黑劍製作》，是 [[cti-news]] 與《日本電視控股》合資的公司。改名後由 [[cti-news]] 成為大股東，並從電視產業轉為網路科技公司。
+
+#
+information:
