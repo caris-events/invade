@@ -4,6 +4,10 @@
 
 你可以透過 [Google 表單](https://invade.tw/contribute)來建議新增、編輯條目。
 
+## MCP 伺服器
+
+本專案提供 Model Context Protocol (MCP) 伺服器，讓 AI 助手（如 Claude Desktop）可以方便地查詢資料庫。請參閱 [MCP 伺服器完整文件](cmd/mcp-server/README.md)。
+
 ## 內容授權
 
 笨他侵略的原始碼授權為 [MIT](https://github.com/caris-events/invade/blob/master/LICENSE)，文字段落以 [CC 0 公眾領域](https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW)釋出，你可以盡情分享、改寫或用作商業用途。
