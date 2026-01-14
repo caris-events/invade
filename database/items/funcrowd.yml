@@ -13,7 +13,7 @@ type    : SOFTWARE
 owner   : CHINESE
 
 #
-website    :
+website    : https://play.google.com/store/apps/details?id=com.magicdata.magiccollection
 description: |
   [[funcrowd]] 是收集語音資料以供 AI 模型訓練的中國應用程式，又稱「趣众包」。以提供報酬招募使用者上傳語音，但有使用者反映常因「內容不合格」而未獲報酬，因而被質疑可能涉及詐騙。
 
