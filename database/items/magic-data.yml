@@ -1,0 +1,31 @@
+#
+code       : magic-data
+parent_code:
+
+#
+name       : 晴數智慧
+name_alias : Magic Data
+name_others: [北京晴數智慧科技有限公司, 北京愛數智慧科技有限公司]
+
+#
+category: TECHNOLOGY
+type    : COMPANY
+owner   : CHINESE
+
+#
+website    : https://www.magicdatatech.cn
+description: |
+  [[magic-data]] 是中國北京的人工智慧公司，前身為「北京愛數智慧科技」。主要業務為收集語音資料以供 AI 模型訓練。
+
+#
+information:
+  - year       : 2023
+    invasion   : COLLABORATED
+    source     : https://tech.china.com/article/20230629/062023_1362485.html
+    description: |
+      [[magic-data]] 入選中國北京市「人工智慧大模型高品質資料集」，該資料應用於政治、教育與醫療，並與 [[alibaba]]、[[tencent]] 等公司合作。
+
+  - invasion   : FUNDED
+    description: |
+      [[magic-data]] 的創辦人是中國商人張晴晴。
+
